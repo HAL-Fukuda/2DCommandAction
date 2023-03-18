@@ -38,6 +38,7 @@ public class MovePlayer : MonoBehaviour
         if (playerPos.y <= 0.5 && Input.GetKey(KeyCode.Space))  //ジャンプ
         {
             transform.Translate(0, jumpSpeed * Time.deltaTime, 0);
+            Debug.Log("Space");
         }
 
         //攻撃（パンチ）
@@ -45,6 +46,7 @@ public class MovePlayer : MonoBehaviour
         {
             //PunchObjを生成
             Instantiate(PunchObj, transform.position + punchPoint, Quaternion.identity);
+            Debug.Log("Return");
         }
         //防御
         //道具
