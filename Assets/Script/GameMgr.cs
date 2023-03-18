@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public partial class GameMgr : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public partial class GameMgr : MonoBehaviour
     private GameMgr() { }
 
     // このクラスのインスタンス（他スクリプトから参照するときはこのインスタンスを介して行う）
-    private static GameMgr instance = null; 
-   
+    private static GameMgr instance = null;
+
     public static GameMgr Instance
     {
         get
@@ -26,7 +27,7 @@ public partial class GameMgr : MonoBehaviour
     // 変数定義-------------------------
 
     public bool battle = true; // 戦闘中かどうか
-    
+
     // バトルステート
     private enum eBattleState
     {
@@ -84,10 +85,11 @@ public partial class GameMgr : MonoBehaviour
         switch (battleState)
         {
             case eBattleState.COMMAND_SELECT: // コマンド選択
-                if(selectedCommand != null && selectedCommand.GetComponent<Command>().IsActive())
+                if (selectedCommand != null && selectedCommand.GetComponent<Command>().IsActive())
                 {
                     // コマンドが選択されていたらプレイヤーの行動へ
                     battleState = eBattleState.PLAYER;
+                    CommandMgr.Instance.HideCommand();
                 }
                 Debug.Log("コマンド選択");
                 break;
@@ -119,6 +121,7 @@ public partial class GameMgr : MonoBehaviour
                 //if (enemy.GetComponent<Enemy>().IsActive() != true)
                 //{
                 //    battleState = eBattleState.COMMAND_SELECT;
+                //    CommandMgr.Instance.ShowCommand();
                 //}
 
                 Debug.Log("敵の行動");

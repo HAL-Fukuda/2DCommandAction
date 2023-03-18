@@ -32,6 +32,25 @@ public class CommandMgr : MonoBehaviour
 
     // 関数定義-------------------------
 
+    //追加
+    public void HideCommand()
+    {
+        command1.SetActive(false);
+        command2.SetActive(false);
+        command3.SetActive(false);
+        command4.SetActive(false);
+    }
+    public void ShowCommand()
+    {
+        command1.SetActive(true);
+        command2.SetActive(true);
+        command3.SetActive(true);
+        command4.SetActive(true);
+    }
+    //
+
+
+
     // 攻撃が当たったときのコマンド選択処理
     public void AttackHit(GameObject selectedCommand)
     {
