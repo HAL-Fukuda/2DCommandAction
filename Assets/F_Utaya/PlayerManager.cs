@@ -54,7 +54,7 @@ public class PlayerManager : MonoBehaviour
             Attack();
         }
         //ƒWƒƒƒ“ƒv
-        if(Input.GetKeyUp(KeyCode.W) && isGround)
+        if(Input.GetKeyDown(KeyCode.W) && isGround)
         {
             animator.SetTrigger("isJump");
             rb.AddForce(new Vector3(0, upForce, 0));
