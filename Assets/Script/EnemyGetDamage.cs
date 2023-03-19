@@ -24,12 +24,12 @@ public partial class Enemy : MonoBehaviour
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         material = renderer.material;
         originalColor = material.color;
-
-        originalPosition = transform.position;
     }
 
     public void GetDamage()
     {
+        // UŒ‚‚³‚ê‚½‚ÌˆÊ’u‚ğæ“¾‚·‚é
+        originalPosition = transform.position;
 
         // HP‚ğ1Œ¸‚ç‚·
         hp--;
