@@ -34,24 +34,3 @@ public class WindowONOFF : MonoBehaviour
         WindowSwitch();
     }
 }
-//if (Input.GetKey(KeyCode.O))
-//{
-//    if (WindowStat == true)
-//    {
-//        if (quad.activeSelf)
-//        {
-//            quad.SetActive(false);
-//            WindowStat = false;
-//        }
-//    }
-//    else if(WindowStat == false)
-//    {
-//        if (quad.activeSelf)
-//        {
-//            quad.SetActive(true);
-//            WindowStat = true;
-//        }
-//    }
-//}
-////Debug.Log(quad.activeSelf);
-//Debug.Log(WindowStat);
