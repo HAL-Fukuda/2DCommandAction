@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     public Transform    attackPoint;
     public float        attackRadius;
     public LayerMask    enemyLayer;
+    public LayerMask    commandLayer;
 
     Rigidbody2D         rb;
     Animator            animator;
@@ -86,10 +87,16 @@ public class PlayerManager : MonoBehaviour
     {
         animator.SetTrigger("isAttack");
         Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
-        //foreach(Collider2D hitEnemy in hitEnemys)
-        //{
-        //    hitEnemy.GetComponent<EnemyManager>().OnDamage();
-        //}
+        foreach (Collider2D hitEnemy in hitEnemys)
+        {
+            hitEnemy.GetComponent<Enemy>().GetDamage();
+        }
+        Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);
+        foreach (Collider2D hitCommand in hitCommands)
+        {
+            hitCommand.GetComponent<CommandMgr>().AttackHit(this.gameObject);
+        }
+        Debug.Log("çUåÇíÜ");
     }
 
     //ìñÇΩÇËîªíËÇÃÇ∆Ç±Çê‘Ç¢â~Ç≈ï`Ç≠
