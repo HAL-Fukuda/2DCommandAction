@@ -4,45 +4,31 @@ using UnityEngine;
 
 public class moveEnemy : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public float gravityScale = 1f;
-    //private Renderer renderer;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = gravityScale;
-
-        //renderer = GetComponent<Renderer>();
-
-    }
+    public float WindowOutposition;
 
     // Update is called once per frame
     void Update()
     {
-
-        // transformÇéÊìæ
-        Transform myTransform = this.transform;
-
-        // ç¿ïWÇéÊìæ
-        Vector3 pos = myTransform.position;
-
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            rb.gravityScale = 1f;
-            //renderer.material.color = Color.red;
-        }
-        else
-        {
-            rb.gravityScale = 0f;
-            //renderer.material.color = Color.white;
+            WindowIn();
         }
 
-        if (rb.gravityScale == 0f && pos.y < 4)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.Translate(Vector3.up * Time.deltaTime * 5.0f);
+            WindowOut();
         }
+    }
 
+    void WindowIn()
+    {
+        transform.position = new Vector3(0, 4, 0);
+        transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    void WindowOut()
+    {
+        transform.position = new Vector3(0, WindowOutposition, 0);
+        transform.localScale = new Vector3(2, 2, 1);
     }
 }
