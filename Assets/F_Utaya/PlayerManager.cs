@@ -94,7 +94,7 @@ public class PlayerManager : MonoBehaviour
         Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);
         foreach (Collider2D hitCommand in hitCommands)
         {
-            hitCommand.GetComponent<CommandMgr>().AttackHit(this.gameObject);
+            CommandMgr.Instance.AttackHit(hitCommand.gameObject);
         }
         Debug.Log("çUåÇíÜ");
     }
