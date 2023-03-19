@@ -23,6 +23,12 @@ public class Command : MonoBehaviour
 
     private MeshRenderer meshRenderer;
 
+    //
+    //public GameObject objectToToggle;
+    //private bool objectWasActive = true;
+    public GameObject objectToShowHide;
+    //
+
     // 関数定義-------------------------
 
     // Start is called before the first frame update
@@ -43,6 +49,18 @@ public class Command : MonoBehaviour
         return isActive;
     }
 
+    //
+    //public void ShowObject()
+    //{
+    //    objectToShowHide.SetActive(true);
+    //}
+
+    //public void HideObject()
+    //{
+    //    objectToShowHide.SetActive(false);
+    //}
+    //
+
     // 衝突時
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -59,6 +77,7 @@ public class Command : MonoBehaviour
     {
         isActive = true;
         meshRenderer.material = materialActive;
+        //HideObject();
     }
 
     // 非アクティブ状態にする
@@ -66,5 +85,6 @@ public class Command : MonoBehaviour
     {
         isActive = false;
         meshRenderer.material = materialStandard;
+        //ShowObject();
     }
 }

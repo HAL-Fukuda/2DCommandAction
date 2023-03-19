@@ -367,9 +367,34 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
       propertyPath: commandType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: materialActive
+      value: 
+      objectReference: {fileID: 2100000, guid: e6d9a06459f8b2b498403d73a69fcaa0, type: 2}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToToggle
+      value: 
+      objectReference: {fileID: 73200208}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: materialStandard
+      value: 
+      objectReference: {fileID: 2100000, guid: 73e975a40ca37f446a6a3a774ddf44e0, type: 2}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToShowHide
+      value: 
+      objectReference: {fileID: 73200208}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_RootOrder
@@ -378,12 +403,12 @@ PrefabInstance:
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.44
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
@@ -425,6 +450,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6601558885966123003, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601558885966123003, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6d9a06459f8b2b498403d73a69fcaa0, type: 2}
     - target: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_Name
@@ -504,23 +539,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3586362629379961317, guid: 7886cc143253b6143a954459927383e9,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586362629379961317, guid: 7886cc143253b6143a954459927383e9,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586362629379961317, guid: 7886cc143253b6143a954459927383e9,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3586362629379961317, guid: 7886cc143253b6143a954459927383e9, type: 3}
     - {fileID: 1662228771960452335, guid: 7886cc143253b6143a954459927383e9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7886cc143253b6143a954459927383e9, type: 3}
 --- !u!1 &657259985
@@ -755,6 +774,16 @@ PrefabInstance:
       propertyPath: commandType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToToggle
+      value: 
+      objectReference: {fileID: 1730760475}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToShowHide
+      value: 
+      objectReference: {fileID: 1730760475}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_RootOrder
@@ -896,6 +925,16 @@ PrefabInstance:
       propertyPath: commandType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToToggle
+      value: 
+      objectReference: {fileID: 149947694}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToShowHide
+      value: 
+      objectReference: {fileID: 149947694}
     - target: {fileID: 4332996818335900895, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_IsTrigger
@@ -909,12 +948,12 @@ PrefabInstance:
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.39
+      value: -10.66
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
@@ -1191,8 +1230,8 @@ GameObject:
   - component: {fileID: 1573626331}
   - component: {fileID: 1573626330}
   - component: {fileID: 1573626329}
-  - component: {fileID: 1573626332}
   - component: {fileID: 1573626333}
+  - component: {fileID: 1573626334}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1250,19 +1289,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1573626332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573626328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 659ce4cad9c57fa4d9a32fce3b8914ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battle: 0
 --- !u!114 &1573626333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,6 +1305,19 @@ MonoBehaviour:
   command2: {fileID: 73200208}
   command3: {fileID: 1214870070}
   command4: {fileID: 1730760475}
+--- !u!114 &1573626334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573626328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ce4cad9c57fa4d9a32fce3b8914ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battle: 1
 --- !u!1001 &1647696276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1291,6 +1330,16 @@ PrefabInstance:
       propertyPath: commandType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToToggle
+      value: 
+      objectReference: {fileID: 1214870070}
+    - target: {fileID: 3168636353867371420, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: objectToShowHide
+      value: 
+      objectReference: {fileID: 1214870070}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_RootOrder
