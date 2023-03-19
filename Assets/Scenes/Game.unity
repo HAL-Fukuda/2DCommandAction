@@ -1280,6 +1280,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: lifeTime
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: spawnInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5146405506448140029, guid: 17fc464d2a875174f88d5d8c6108f955,
         type: 3}
       propertyPath: m_RootOrder
