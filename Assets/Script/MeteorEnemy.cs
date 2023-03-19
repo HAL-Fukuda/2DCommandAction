@@ -11,7 +11,7 @@ public partial class EnemyAttack : MonoBehaviour //クラス名統一
     public float lifeTime = 5f;  // オブジェクトの寿命
     private float timer = 0f;
 
-    void MeteorAttack()
+    public void MeteorAttack()
     {
 
         timer += Time.deltaTime;

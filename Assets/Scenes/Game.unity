@@ -333,6 +333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6996815595469731541, guid: c68798a30998df340a94b20ed90a4e65,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996815595469731541, guid: c68798a30998df340a94b20ed90a4e65,
+        type: 3}
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
@@ -1207,6 +1212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battle: 1
+  enemy: {fileID: 2111329386}
 --- !u!1001 &1647696276
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,8 +14,8 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
     // Update is called once per frame
     void Update()
     {
-        MeteorAttack();
-       // ReflectionAttack();
+        // MeteorAttack();
+        // ReflectionAttack();
     }
 
 }
