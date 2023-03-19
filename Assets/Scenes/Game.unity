@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 657259988}
   - component: {fileID: 657259987}
   - component: {fileID: 657259986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GetDamageObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

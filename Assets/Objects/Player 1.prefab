@@ -247,7 +247,10 @@ MonoBehaviour:
   attackRadius: 0.27
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  commandLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &154224578952292958
 GameObject:
   m_ObjectHideFlags: 0
