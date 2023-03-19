@@ -15,12 +15,16 @@ public class WindowONOFF : MonoBehaviour
             if (quad.activeSelf)
             {
                 quad.SetActive(false);
+                WindowStat = false;
+
             }
             else
             {
                 quad.SetActive(true);
+                WindowStat = true;
             }
-            Debug.Log(quad.activeSelf);
+            //Debug.Log(quad.activeSelf);
+            Debug.Log(WindowStat);
         }
         
     }
