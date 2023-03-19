@@ -14,9 +14,13 @@ public partial class Enemy : MonoBehaviour
     public float shakeIntensity = 0.1f; // —h‚ê‚Ì‹­‚³
     public float shakeDuration = 0.2f; // —h‚ê‚éŠÔ
 
+    private int hp = 3; // HP‚Ì‰Šú’l
+
     // ‰Šú‰»ˆ—B•K‚¸Start()‚ÅŒÄ‚Ño‚·‚±‚ÆB
     public void GetDamageInitialize()
     {
+
+
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         material = renderer.material;
         originalColor = material.color;
@@ -26,6 +30,16 @@ public partial class Enemy : MonoBehaviour
 
     public void GetDamage()
     {
+
+        // HP‚ğ1Œ¸‚ç‚·
+        hp--;
+
+        // HP‚ª0‚É‚È‚Á‚½‚çíœ‚·‚é
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         // ”•bŒãŒ³‚ÌF‚É–ß‚·
         StartCoroutine(ChangeAndResetColor(ColorDuration));
         // U“®‚³‚¹‚é
