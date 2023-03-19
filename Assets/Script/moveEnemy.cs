@@ -20,13 +20,13 @@ public class moveEnemy : MonoBehaviour
         }
     }
 
-    void WindowIn()
+    public void WindowIn()
     {
         transform.position = new Vector3(0, 4, 0);
         transform.localScale = new Vector3(1, 1, 1);
     }
 
-    void WindowOut()
+    public void WindowOut()
     {
         transform.position = new Vector3(0, WindowOutposition, 0);
         transform.localScale = new Vector3(2, 2, 1);

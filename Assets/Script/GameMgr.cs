@@ -81,6 +81,7 @@ public partial class GameMgr : MonoBehaviour
         battleState = eBattleState.COMMAND_SELECT;
         selectedCommand = null;
         CommandMgr.Instance.DeactivateALL();
+        runningCoroutine = false; 
 
         // ウィンドウを表示する
         // 敵を配置する
@@ -122,19 +123,17 @@ public partial class GameMgr : MonoBehaviour
                             Debug.Log("ATTACK");
 
                             // 敵が地面に降りてくる
-                            //enemy.GetComponent<Enemy>.ToGround();
-                            EnemyToGround();
+                            enemy.GetComponent<moveEnemy>().WindowOut();
 
                             // 一定時間後にウィンドウに戻る
                             StartCoroutine(EnemyToWindow(2));
-
                             break;
                         case Command.eCommandType.ITEM: // アイテム
                             Debug.Log("ITEM");
+                            // 敵の行動へ
+                            battleState = eBattleState.ENEMY;
                             break;
                     }
-                    // 敵の行動へ
-                    battleState = eBattleState.ENEMY;
                 }
                 else
                 {
@@ -206,21 +205,13 @@ public partial class GameMgr : MonoBehaviour
         // 一定時間待機
         yield return new WaitForSeconds(delay);
         // ウィンドウへ移動
-        EnemyToWindow();
+        enemy.GetComponent<moveEnemy>().WindowIn();
+
+        // 敵の行動へ
+        battleState = eBattleState.ENEMY;
 
         // コルーチンが完了したことを示すために null を返す
         runningCoroutine = false;
         yield return null;
-    }
-
-    // デバッグ
-    void EnemyToGround()
-    {
-        Debug.Log("敵が地面に移動する");
-    }
-
-    void EnemyToWindow()
-    {
-        Debug.Log("敵がウィンドウに移動する");
     }
 }
