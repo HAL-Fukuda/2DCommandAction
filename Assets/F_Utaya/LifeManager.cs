@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LifeManager : MonoBehaviour
 {
-    public GameObject[] lifeArray = new GameObject[3];
-    private int lifePoint = 3;
+    public GameObject[] lifeArray = new GameObject[5];
+    private int lifePoint = 5;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && lifePoint < 3)
+        if (Input.GetMouseButtonDown(0) && lifePoint < 5)
         {
             lifePoint++;
             lifeArray[lifePoint - 1].SetActive(true);
