@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class moveEnemy : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
+    public float gravityScale = 1f;
+    //private Renderer renderer;
+
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = gravityScale;
+
+        //renderer = GetComponent<Renderer>();
+
     }
 
+    // Update is called once per frame
     void Update()
     {
 
@@ -19,18 +28,21 @@ public class moveEnemy : MonoBehaviour
         // ç¿ïWÇéÊìæ
         Vector3 pos = myTransform.position;
 
-        if (true)
+        if (Input.GetKey(KeyCode.Z))
         {
-            rb.useGravity = true;
+            rb.gravityScale = 1f;
+            //renderer.material.color = Color.red;
         }
         else
         {
-            rb.useGravity = false;
+            rb.gravityScale = 0f;
+            //renderer.material.color = Color.white;
         }
 
-        if (rb.useGravity == false && pos.y < 4)
+        if (rb.gravityScale == 0f && pos.y < 4)
         {
             transform.Translate(Vector3.up * Time.deltaTime * 5.0f);
         }
+
     }
 }
