@@ -26,4 +26,9 @@ public partial class Enemy : MonoBehaviour
             GetDamage();
         }
     }
+
+    public void Hitcheck()
+    {
+        Debug.Log("“G‚É‚ ‚½‚Á‚Ä‚¢‚é");
+    }
 }

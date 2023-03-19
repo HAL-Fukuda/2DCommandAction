@@ -67,4 +67,9 @@ public class Command : MonoBehaviour
         isActive = false;
         meshRenderer.material = materialStandard;
     }
+
+    public void Hitcheck()
+    {
+        Debug.Log("ƒRƒ}ƒ“ƒh‚É‚ ‚½‚Á‚Ä‚¢‚é");
+    }
 }

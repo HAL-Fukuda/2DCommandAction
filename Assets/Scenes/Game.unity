@@ -480,6 +480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Command (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d44c3d65e926146849d1fb999fe58b, type: 3}
 --- !u!1001 &610866950
@@ -657,7 +662,7 @@ GameObject:
   - component: {fileID: 657259988}
   - component: {fileID: 657259987}
   - component: {fileID: 657259986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GetDamageObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,6 +947,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Command (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d44c3d65e926146849d1fb999fe58b, type: 3}
 --- !u!850595691 &841183363
@@ -1082,6 +1092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Command
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d44c3d65e926146849d1fb999fe58b, type: 3}
@@ -1763,6 +1778,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Command (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d44c3d65e926146849d1fb999fe58b, type: 3}
 --- !u!1 &1730760475 stripped
@@ -1941,10 +1961,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   attackPoint: {fileID: 2093998856}
-  attackRadius: 0.27
+  attackRadius: 0.3
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  commandLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &2093998855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093998855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 0.48, z: 0}
+  m_LocalPosition: {x: 0.02, y: 1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
