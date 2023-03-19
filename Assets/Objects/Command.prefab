@@ -149,3 +149,4 @@ MonoBehaviour:
   materialActive: {fileID: 2100000, guid: e6d9a06459f8b2b498403d73a69fcaa0, type: 2}
   commandType: 0
   isActive: 0
+  objectToShowHide: {fileID: 0}
