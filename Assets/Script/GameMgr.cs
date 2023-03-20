@@ -28,17 +28,19 @@ public partial class GameMgr : MonoBehaviour
     public bool battle = true; // 戦闘中かどうか
     
     // バトルステート
-    private enum eBattleState
+    public enum eBattleState
     {
         COMMAND_SELECT,
         PLAYER,
         ENEMY,
     }
-    private eBattleState battleState; // 現在のバトルステート
+    public eBattleState battleState; // 現在のバトルステート
 
     private GameObject selectedCommand; // 選択されたコマンド
 
     private GameObject enemy; // 敵のオブジェクト
+
+    private eBattleState previousState; // 直前のバトルステート
 
     // 関数定義-------------------------
 
@@ -124,5 +126,34 @@ public partial class GameMgr : MonoBehaviour
                 Debug.Log("敵の行動");
                 break;
         }
+    }
+
+    // デバッグ用にメッセージを取得する
+    public string GetDebugMessage()
+    {
+        string message = "";
+
+        // 直前のバトルステートと比較
+        if (previousState != battleState)
+        {
+            message = "【" + battleState.ToString() + "】"; // ステートが変更されたときのみ表示
+            previousState = battleState;
+        }
+
+        //switch (battleState)
+        //{
+        //    case eBattleState.COMMAND_SELECT: // コマンド選択
+        //        message = "コマンド選択中";
+        //        break;
+
+        //    case eBattleState.PLAYER: // プレイヤーの行動
+        //        message = "プレイヤーの行動中";
+        //        break;
+
+        //    case eBattleState.ENEMY: // 敵の行動
+        //        message = "敵の行動中";
+        //        break;
+        //}
+        return message;
     }
 }
