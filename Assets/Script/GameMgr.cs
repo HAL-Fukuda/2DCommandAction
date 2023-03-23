@@ -29,13 +29,14 @@ public partial class GameMgr : MonoBehaviour
     public bool battle = true; // 戦闘中かどうか
 
     // バトルステート
-    private enum eBattleState
+    public enum eBattleState
     {
         COMMAND_SELECT,
         PLAYER,
         ENEMY,
     }
-    private eBattleState battleState; // 現在のバトルステート
+    public eBattleState battleState; // 現在のバトルステート
+    private eBattleState previousState; // 直前のバトルステート
 
     private GameObject selectedCommand; // 選択されたコマンド
 
@@ -43,6 +44,7 @@ public partial class GameMgr : MonoBehaviour
     // プロトタイプ版では敵を直接指定するが、今後変更する必要がある。
 
     private bool runningCoroutine;
+
 
     // 関数定義-------------------------
 
@@ -213,5 +215,20 @@ public partial class GameMgr : MonoBehaviour
         // コルーチンが完了したことを示すために null を返す
         runningCoroutine = false;
         yield return null;
+    }
+
+    // メッセージを取得する
+    public string GetDebugMessage()
+    {
+        string message = "";
+
+        // 直前のバトルステートと比較
+        if (previousState != battleState)
+        {
+            message = "(" + battleState.ToString() + ")"; // ステートが変更された時のみ表示
+            previousState = battleState;
+        }
+
+        return message;
     }
 }
