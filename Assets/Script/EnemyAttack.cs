@@ -16,6 +16,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
     {
         // MeteorAttack();
         // ReflectionAttack();
+        // SidewaysAttack();
     }
 
 }

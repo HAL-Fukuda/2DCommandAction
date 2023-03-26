@@ -1339,12 +1339,12 @@ PrefabInstance:
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.22
+      value: 5.27
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 5637835743846722608, guid: 75d44c3d65e926146849d1fb999fe58b,
         type: 3}
@@ -1510,6 +1510,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448139777, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5146405506448139778, guid: 17fc464d2a875174f88d5d8c6108f955,
         type: 3}
       propertyPath: m_Name
@@ -1522,6 +1527,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
         type: 3}
+      propertyPath: prefab2
+      value: 
+      objectReference: {fileID: 2003962541657192211, guid: 11b49346811f9f24d92f5ba62d8394cd,
+        type: 3}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
       propertyPath: lifeTime
       value: 1.4
       objectReference: {fileID: 0}
@@ -1529,6 +1540,27 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnInterval
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: sidewaysAttackSettings.timer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: sidewaysAttackSettings.prefab
+      value: 
+      objectReference: {fileID: 2003962541657192211, guid: 11b49346811f9f24d92f5ba62d8394cd,
+        type: 3}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: sidewaysAttackSettings.duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146405506448140027, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: sidewaysAttackSettings.spawnInterval
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5146405506448140029, guid: 17fc464d2a875174f88d5d8c6108f955,
         type: 3}
