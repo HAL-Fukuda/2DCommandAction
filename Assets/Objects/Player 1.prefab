@@ -268,8 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  upForce: 300
-  isGround: 0
+  AvoidanceForce: 5000
+  upForce: 250
+  isDoubleJump: 0
   attackPoint: {fileID: 154224578952292945}
   attackRadius: 0.27
   enemyLayer:
@@ -278,6 +279,8 @@ MonoBehaviour:
   commandLayer:
     serializedVersion: 2
     m_Bits: 128
+  Chargeingcount: 0
+  isGround: 0
 --- !u!1 &154224578952292958
 GameObject:
   m_ObjectHideFlags: 0

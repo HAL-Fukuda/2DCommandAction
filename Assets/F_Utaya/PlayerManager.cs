@@ -5,15 +5,19 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     //インスペクターで設定する
-    public float        moveSpeed;      //移動速度
-    public float        upForce;        //ジャンプ力
-  
-    public bool isGround;         //接地判定
-   
+    public float        moveSpeed;          //移動速度
+    public int          AvoidanceForce;     //回避速度
+    public float        upForce;            //ジャンプ力
+    public bool         isDoubleJump;
+
     public Transform    attackPoint;
     public float        attackRadius;
     public LayerMask    enemyLayer;
     public LayerMask    commandLayer;
+
+    public float Chargeingcount = 0.0f;
+
+    public bool isGround;         //接地判定
 
     Rigidbody2D         rb;
     Animator            animator;
@@ -42,22 +46,58 @@ public class PlayerManager : MonoBehaviour
         if (x > 0)
         {
             transform.localScale = new Vector3(-2, 2, 1);
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Debug.Log("右回避");
+                rb.AddForce(new Vector3(AvoidanceForce, 0, 0));
+            }
         }
         //左向き
         else if (x < 0)
         {
             transform.localScale = new Vector3(2, 2, 1);
+            //回避
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Debug.Log("左回避");
+                rb.AddForce(new Vector3(-AvoidanceForce, 0, 0));
+            }
         }
-        //攻撃
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        //ため中
+        if (Input.GetKey(KeyCode.Return))
         {
-            Attack();
+            Chargeing();
         }
+        //ため攻撃
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
+            {
+                Debug.Log("攻撃：一段階");
+                Attack();
+            }
+            else if (Chargeingcount >= 400.0f)
+            {
+                Debug.Log("攻撃：二段階");
+                Attack();
+            }
+            Chargeingcount = 0.0f;
+        }
+
         //ジャンプ
-        if(Input.GetKeyDown(KeyCode.W) && isGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
-            animator.SetTrigger("isJump");
+            isDoubleJump = false;
             rb.AddForce(new Vector3(0, upForce, 0));
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false)
+            {
+                rb.AddForce(new Vector3(0, upForce, 0));
+                isDoubleJump = true;
+            }
         }
 
 
@@ -82,11 +122,21 @@ public class PlayerManager : MonoBehaviour
             isGround = false;
         }
     }
+    
+    //溜め中
+    void Chargeing()
+    {
+        Debug.Log("溜め中");
+        animator.SetTrigger("isChargeing");
+        Chargeingcount += 0.1f;
+        Debug.Log(Chargeingcount);
+    }
 
     //攻撃の処理
     void Attack()
     {
         animator.SetTrigger("isAttack");
+        Debug.Log("攻撃");
         //エネミーに
         Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
         foreach (Collider2D hitEnemy in hitEnemys)
