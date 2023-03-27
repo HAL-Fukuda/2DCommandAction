@@ -36,7 +36,7 @@ public partial class GameMgr : MonoBehaviour
         ENEMY,
     }
     public eBattleState battleState; // 現在のバトルステート
-    private eBattleState previousState; // 直前のバトルステート
+    public eBattleState? previousState; // 直前のバトルステート
 
     private GameObject selectedCommand; // 選択されたコマンド
 
@@ -45,6 +45,7 @@ public partial class GameMgr : MonoBehaviour
 
     private bool runningCoroutine;
 
+    public MessageWindow messageWindow;
 
     // 関数定義-------------------------
 
@@ -81,6 +82,7 @@ public partial class GameMgr : MonoBehaviour
         // 変数の初期化
         battle = true;
         battleState = eBattleState.COMMAND_SELECT;
+        previousState = null;
         selectedCommand = null;
         CommandMgr.Instance.DeactivateALL();
         runningCoroutine = false; 
@@ -225,6 +227,7 @@ public partial class GameMgr : MonoBehaviour
         // 直前のバトルステートと比較
         if (previousState != battleState)
         {
+            messageWindow.ClearText(); // MessageWindowのテキストをクリアする
             message = "(" + battleState.ToString() + ")"; // ステートが変更された時のみ表示
             previousState = battleState;
         }
