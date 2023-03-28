@@ -65,13 +65,14 @@ public class PlayerManager : MonoBehaviour
         }
 
         //‚½‚ß’†
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return) && isGround)
         {
             Chargeing();
         }
         //‚½‚ßUŒ‚
         if (Input.GetKeyUp(KeyCode.Return))
         {
+
             if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
             {
                 Debug.Log("UŒ‚Fˆê’iŠK");
@@ -82,6 +83,7 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("UŒ‚F“ñ’iŠK");
                 Attack();
             }
+            
             Chargeingcount = 0.0f;
         }
 
@@ -127,7 +129,7 @@ public class PlayerManager : MonoBehaviour
     void Chargeing()
     {
         Debug.Log("—­‚ß’†");
-        animator.SetTrigger("isChargeing");
+        animator.SetBool("ChargingNow",true);
         Chargeingcount += 0.1f;
         Debug.Log(Chargeingcount);
     }
