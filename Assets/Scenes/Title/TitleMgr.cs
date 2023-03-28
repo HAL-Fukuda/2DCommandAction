@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class TitleMgr : MonoBehaviour
 {
     bool updateflag = true;
-    [SerializeField] private string gameSceneName = "Game"; // ゲームシーンの名前
     [SerializeField] private GameObject titleLogo; // タイトル画面のUIオブジェクト
     [SerializeField] private GameObject StartLogo;
     [SerializeField] private GameObject Setting; // 操作説明画面のUIオブジェクト
@@ -47,11 +46,6 @@ public class TitleMgr : MonoBehaviour
     public void HideInstructions()
     {
 
-    }
-
-    public void GameStart()
-    {
-        SceneManager.LoadScene("Game");
     }
 
     // ゲームを終了するボタンが押されたときの処理

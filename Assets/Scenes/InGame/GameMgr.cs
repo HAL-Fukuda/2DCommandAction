@@ -46,6 +46,7 @@ public partial class GameMgr : MonoBehaviour
     private bool runningCoroutine;
 
     public MessageWindow messageWindow;
+    private string Message = "";
 
     // 関数定義-------------------------
 
@@ -106,6 +107,7 @@ public partial class GameMgr : MonoBehaviour
         {
             case eBattleState.COMMAND_SELECT: // コマンド選択
                 Debug.Log("コマンド選択");
+                Message = "コマンド選択";
                 if (selectedCommand != null && selectedCommand.GetComponent<Command>().IsActive())
                 {
                     // コマンドが選択されていたら少し待ってプレイヤーの行動へ
@@ -118,6 +120,7 @@ public partial class GameMgr : MonoBehaviour
 
             case eBattleState.PLAYER: // プレイヤーの行動
                 Debug.Log("プレイヤーの行動");
+                Message = "プレイヤーの行動";
                 if (selectedCommand != null)
                 {
                     // 選択されたコマンドに応じた処理
@@ -125,7 +128,7 @@ public partial class GameMgr : MonoBehaviour
                     {
                         case Command.eCommandType.ATTACK: // たたかう
                             Debug.Log("ATTACK");
-
+                            Message = "ATTACK";
                             // 敵が地面に降りてくる
                             enemy.GetComponent<moveEnemy>().WindowOut();
 
@@ -134,6 +137,7 @@ public partial class GameMgr : MonoBehaviour
                             break;
                         case Command.eCommandType.ITEM: // アイテム
                             Debug.Log("ITEM");
+                            Message = "ITEM";
                             // 敵の行動へ
                             battleState = eBattleState.ENEMY;
                             break;
@@ -147,6 +151,7 @@ public partial class GameMgr : MonoBehaviour
 
             case eBattleState.ENEMY: // 敵の行動
                 Debug.Log("敵の行動");
+                Message = "敵の行動";
                 if (enemy != null)
                 {
                     // 流星群
@@ -228,7 +233,7 @@ public partial class GameMgr : MonoBehaviour
         if (previousState != battleState)
         {
             messageWindow.ClearText(); // MessageWindowのテキストをクリアする
-            message = "(" + battleState.ToString() + ")"; // ステートが変更された時のみ表示
+            message = battleState.ToString(); // ステートが変更された時のみ表示
             previousState = battleState;
         }
 
