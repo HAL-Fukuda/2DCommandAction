@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SceneChanger : MonoBehaviour
 {
-    public string sceneName = "Game";
+    public string sceneName = "StageSelect";
 
     public void GameStart()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("StageSelect");
     }
 }
