@@ -11,6 +11,7 @@ TagManager:
   - Undefined
   - Punch
   - Platform
+  - AttackPoint
   layers:
   - Default
   - TransparentFX

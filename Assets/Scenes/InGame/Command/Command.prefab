@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4695493758490338325}
   - component: {fileID: 4332996818335900895}
   - component: {fileID: 3168636353867371420}
+  - component: {fileID: -8537812532888418145}
+  - component: {fileID: 5911031404387384473}
   m_Layer: 0
   m_Name: Command
   m_TagString: Untagged
@@ -150,3 +152,49 @@ MonoBehaviour:
   commandType: 0
   isActive: 0
   objectToShowHide: {fileID: 0}
+--- !u!114 &-8537812532888418145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335506221992566931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03856c8eb08a9cb498c58e350592d412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rendererComponent: {fileID: 0}
+  targetPosition: {x: 1, y: 0, z: 0}
+  objectScale: {x: 1, y: 1, z: 1}
+  ease: 1
+  duration: 1
+  scaleTimer: 1
+  jumpPower: 1
+  numJump: 1
+  colorTimer: 1
+  alpha: 1
+  alphaTimer: 1
+  CommandMoveStat: 0
+  CommandRotateStat: 0
+  CommandScaleStat: 0
+  CommandJumpStat: 0
+  CommandPathStat: 0
+  CommandColorStat: 0
+  CommandFadeStat: 0
+--- !u!114 &5911031404387384473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335506221992566931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999677bcde0f0274db709e945717679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,
+    type: 3}
+  SoundPrefab: {fileID: 1645102665934355776, guid: 067888f0952cad74182f77980d0b6559,
+    type: 3}
