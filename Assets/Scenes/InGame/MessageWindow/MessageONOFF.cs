@@ -1,30 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MessageONOFF : MonoBehaviour
 {
+    [SerializeField] GameObject text;  //windowのオブジェクトを取得
     [SerializeField] GameObject quad;  //windowのオブジェクトを取得
 
-    bool MessageStat = true;
+    public bool MessageStat = true;
     public GameMgr gameMgr;
 
     void MessageSwitch()
     {
-        if (gameMgr.previousState != gameMgr.battleState)
+        if (text.GetComponent<Text>().text == "")
         {
-            if (quad.activeSelf)
-            {
-                quad.SetActive(true);
-                MessageStat = true;
-            }
-            else
-            {
-                quad.SetActive(false);
-                MessageStat = false;
-            }
-            Debug.Log(quad.activeSelf);
-            Debug.Log(MessageStat);
+            quad.SetActive(false);
+            MessageStat = false;
+        }
+        else if (text.activeSelf)
+        {
+            quad.SetActive(true);
+            MessageStat = true;
         }
     }
 
