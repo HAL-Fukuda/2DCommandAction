@@ -11,7 +11,7 @@ public partial class EnemyAttack : MonoBehaviour
         public GameObject prefab;
         public float spawnInterval;
         public float duration;
-        public float timer;
+        [SerializeField][Header("‚¢‚¶‚ç‚È‚¢‚Å")] public float timer;
 
         public AttackSettings(GameObject prefab, float spawnInterval, float duration)
         {
