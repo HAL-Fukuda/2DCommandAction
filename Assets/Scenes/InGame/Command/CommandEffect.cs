@@ -30,7 +30,7 @@ public class CommandEffect : MonoBehaviour
             EffectPlay();
 
             //ƒRƒ}ƒ“ƒh‚ğíœ
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 
