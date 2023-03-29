@@ -1142,6 +1142,7 @@ GameObject:
   - component: {fileID: 1573626329}
   - component: {fileID: 1573626333}
   - component: {fileID: 1573626334}
+  - component: {fileID: 1573626335}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1231,6 +1232,24 @@ MonoBehaviour:
   battleState: 0
   enemy: {fileID: 2111329386}
   messageWindow: {fileID: 833790767}
+--- !u!114 &1573626335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573626328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136efa3f9fd289d4d94df5a50de97e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createPrefab: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+    type: 3}
+  rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
+  rangeB: {fileID: 5771637033348842335, guid: e5bd1e084e243944980f281248612782, type: 3}
+  num: 10
+  dropMode: 1
 --- !u!1001 &1647696276
 PrefabInstance:
   m_ObjectHideFlags: 0
