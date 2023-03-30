@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandEffect : MonoBehaviour
+public partial class Command : MonoBehaviour
 {
     Rigidbody2D rb2d;
     [SerializeField] private ParticleSystem EffectPrefab;  //EffectのPrefabを設定
@@ -11,17 +11,17 @@ public class CommandEffect : MonoBehaviour
     private ParticleSystem _effectInstance;
     private GameObject _soundInstance;
    
-    void Start()
+    void CommandEffectInitialize()
     {
         rb2d = this.GetComponent<Rigidbody2D>();  //衝突時にオブジェクトを消す際に使用
     }
     
-    void Update()
+    void CommandEffectUpdate()
     {
        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void CommandEffectOnCollisionEnter(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -55,35 +55,4 @@ public class CommandEffect : MonoBehaviour
         _soundInstance.transform.position = this.transform.position;
         //Soundは発生と同時に鳴るようにしている
     }
-    //private void Awake()
-    //{
-    //    _effectInstance = Instantiate(EffectPrefab, transform);
-    //    Debug.Log(_effectInstance);
-    //}
-
-    //void OnCollisionEnter2D(Collision2D col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("HIT");
-
-    //        EffectPlay();  //Effect再生
-    //        if (Input.GetKey(KeyCode.Return))
-    //        {
-    //            Debug.Log("Return");
-    //        }
-    //    }
-    //}
-
-    //void EffectPlay()
-    //{
-    //    if (_effectInstance)
-    //    {
-    //        //ぶつかった位置にEffectのprefabを配置する
-    //        Instantiate(EffectPrefab, this.transform.position, Quaternion.identity);
-    //        _effectInstance.Play();
-    //        Debug.Log("EffectPlay");
-    //        //Destroy(gameObject);  //オブジェクト破壊
-    //    }
-    //}
 }

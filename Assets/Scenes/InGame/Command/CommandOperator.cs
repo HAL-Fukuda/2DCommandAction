@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;  //DOTweenを使うのに必要
 
-public class CommandOperator : MonoBehaviour
+public partial class Command : MonoBehaviour
 {
     [SerializeField] Renderer rendererComponent;  //RendererComponentを取得
     [SerializeField] Vector3  targetPosition = new Vector3(1, 0, 0); //移動先の座標
@@ -34,47 +34,47 @@ public class CommandOperator : MonoBehaviour
         new Vector3(10.46641f,0.2349713f,0)
     };
 
-    void Start()
+    void CommandOperatorInitialize()
     {
         if (CommandMoveStat)
         {
             CommandMove();
-            Debug.Log(CommandMoveStat);
+            //Debug.Log(CommandMoveStat);
         }
         else if (CommandRotateStat)
         {
             CommandRotate();
-            Debug.Log(CommandRotateStat);
+            //Debug.Log(CommandRotateStat);
         }
         else if (CommandScaleStat)
         {
             CommandScale();
-            Debug.Log(CommandScaleStat);
+            //Debug.Log(CommandScaleStat);
         }
         else if (CommandJumpStat)
         {
             CommandJump();
-            Debug.Log(CommandJumpStat);
+            //Debug.Log(CommandJumpStat);
         }
         else if (CommandPathStat)
         {
             CommandPath();
-            Debug.Log(CommandPathStat);
+            //Debug.Log(CommandPathStat);
         }
         else if (CommandColorStat)
         {
             CommandColor();
-            Debug.Log(CommandColorStat);
+            //Debug.Log(CommandColorStat);
         }
         else if (CommandFadeStat)
         {
             CommandFade();
-            Debug.Log(CommandFadeStat);
+            //Debug.Log(CommandFadeStat);
         }
     }
 
     
-    void Update()
+    void CommandOperatorUpdate()
     {
         
     }
@@ -84,7 +84,7 @@ public class CommandOperator : MonoBehaviour
     {
         //this.transform.DOMove(targetPosition, duration);  //ループしないやつ
         this.transform.DOMove(targetPosition, duration).SetLoops(-1, LoopType.Yoyo).SetEase(ease);
-        Debug.Log("CommandMove Active");
+        //Debug.Log("CommandMove Active");
     }
 
     //コマンドを回転させる処理
@@ -92,7 +92,7 @@ public class CommandOperator : MonoBehaviour
     {
         //this.transform.DORotate(Vector3.up * 180f, 10f);  //ループしないやつ
         this.transform.DORotate(Vector3.up * 180f, 10f).SetLoops(-1, LoopType.Restart).SetEase(ease);
-        Debug.Log("CommandRotate Active");
+        //Debug.Log("CommandRotate Active");
     }
 
     //コマンドを拡大・縮小させる処理（未実装）
@@ -100,7 +100,7 @@ public class CommandOperator : MonoBehaviour
     {
         //this.transform.DOScale(objectScale, scaleTimer);  //ループしないやつ
         this.transform.DOScale(objectScale, scaleTimer).SetLoops(-1, LoopType.Yoyo).SetEase(ease);
-        Debug.Log("CommandScale Active");
+        //Debug.Log("CommandScale Active");
     }
 
     //コマンドをバウンド移動させる処理
@@ -108,7 +108,7 @@ public class CommandOperator : MonoBehaviour
     {
         //this.transform.DOJump(targetPosition, jumpPower, numJump, duration);  //ループしないやつ
         this.transform.DOJump(targetPosition, jumpPower, numJump, duration).SetLoops(-1, LoopType.Yoyo).SetEase(ease);
-        Debug.Log("CommandJump Active");
+        //Debug.Log("CommandJump Active");
     }
 
     //コマンドを指定した位置を移動させる処理
@@ -116,7 +116,7 @@ public class CommandOperator : MonoBehaviour
     {
         //this.transform.DOPath(path, duration);  //ループしないやつ
         this.transform.DOPath(path, duration).SetLoops(-1, LoopType.Restart).SetEase(ease);
-        Debug.Log("CommandPath Active");
+        //Debug.Log("CommandPath Active");
     }
 
     //コマンドの色を変える処理
@@ -124,12 +124,12 @@ public class CommandOperator : MonoBehaviour
     {
         //this.rendererComponent.material.DOColor(Color.red, colorTimer); //ループしないやつ
         this.rendererComponent.material.DOColor(Color.red, colorTimer).SetLoops(-1,LoopType.Yoyo).SetEase(ease);
-        Debug.Log("CommandColor Active");
+        //Debug.Log("CommandColor Active");
     }
 
     //コマンドのアルファ値を変化させる処理（未実装）
     void CommandFade()
     {
-        Debug.Log("CommandFade Active");
+        //Debug.Log("CommandFade Active");
     }
 }
