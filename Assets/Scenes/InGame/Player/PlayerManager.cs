@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -38,10 +39,8 @@ public class PlayerManager : MonoBehaviour
     //à⁄ìÆÇÃèàóù
     void Movement()
     {
-     
         float x = Input.GetAxisRaw("Horizontal");       //â°ï˚å¸
- 
-        
+
         //âEå¸Ç´
         if (x > 0)
         {
@@ -101,6 +100,16 @@ public class PlayerManager : MonoBehaviour
                 isDoubleJump = true;
             }
         }
+        
+        //ñhå‰
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeMetal();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            animator.SetBool("ChangeMetal", false);
+        }
 
 
         animator.SetFloat("Speed", Mathf.Abs(x));
@@ -137,6 +146,7 @@ public class PlayerManager : MonoBehaviour
     //çUåÇÇÃèàóù
     void Attack()
     {
+        animator.SetBool("ChargingNow", false);
         animator.SetTrigger("isAttack");
         Debug.Log("çUåÇ");
         //ÉGÉlÉ~Å[Ç…
@@ -158,6 +168,11 @@ public class PlayerManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+    }
+
+    void ChangeMetal()
+    {
+        animator.SetBool("ChangeMetal", true);
     }
 
 }

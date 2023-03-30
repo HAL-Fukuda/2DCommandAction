@@ -9,16 +9,24 @@ public class LifeManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && lifePoint < 5)
+        if (Input.GetMouseButtonDown(0)/* && lifePoint < 5*/)
         {
-            lifePoint++;
-            lifeArray[lifePoint - 1].SetActive(true);
+            Lifeplus();
         }
 
         else if (Input.GetMouseButtonDown(1) && lifePoint > 0)
         {
             lifeArray[lifePoint - 1].SetActive(false);
             lifePoint--;
+        }
+    }
+
+    void Lifeplus()
+    {
+        if(lifePoint < 5)
+        {
+            lifePoint++;
+            lifeArray[lifePoint - 1].SetActive(true);
         }
     }
 }

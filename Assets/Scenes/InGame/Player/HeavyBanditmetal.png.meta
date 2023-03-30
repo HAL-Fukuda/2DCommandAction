@@ -1,0 +1,915 @@
+fileFormatVersion: 2
+guid: f159766d710455f4f840c74771ed8d7a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeavyBanditmetal_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 210
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83def11270f6a674ba2e65f884094815
+      internalID: 1168210256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 210
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23198de7ec3ce8745b398d33f02813db
+      internalID: 2069067330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 210
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a68947348269554384d6667a2fca499
+      internalID: 1886442814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 210
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de78805d93b412f43abe3523609323fc
+      internalID: -124860495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 210
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51d44b2ef8c0bb4286612128cb7916f
+      internalID: -141357778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 210
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1723a376816bcf543a5040f488f759e0
+      internalID: 1729703506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 210
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496ba406f07a58c4898ad43c83416597
+      internalID: 650673811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_7
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 210
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e82e419282dae449a1e71bdae1e7a9b
+      internalID: -1550799593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 162
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a6c0ce7e7512e4a914bf413a5b59fc
+      internalID: 294891061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 163
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40a30c9329d32a4eae91343f7476719
+      internalID: 1870139349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 162
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485736bad6a86ad428963cd4c6ef2f0b
+      internalID: 1074866871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 161
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43033ea053d548d4d878f5aa67f5c3fe
+      internalID: -1298752154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_12
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 162
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0649a91635db94e4291e70b249de8780
+      internalID: 1743609685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_13
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 164
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0b8b08d28868545811832786063f34
+      internalID: 753007905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 162
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88578c8c985aced4e88eff8c77839f61
+      internalID: 1411720304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_15
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 162
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9156e83991a9c34d80ccc72cad1d633
+      internalID: 769602443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 114
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554168e0e6f7ed840a91441a4bf276a0
+      internalID: 68831043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_17
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 114
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790807385b103114487ae4fea28ed273
+      internalID: -1646176080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 114
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b847de5eec703424dbdc48970770f4a0
+      internalID: -1530445376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_19
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 114
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41377bdc36e2c8e408c2e158e7c40ac3
+      internalID: -193751551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 114
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a417b66c46ebd724b9d8121dd96826ca
+      internalID: -460508052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 114
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ebb074e5aa7f24bae02b8a205e4681
+      internalID: -1051764956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 114
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3fcaa89df9243429ec3846d1192ba8
+      internalID: 781627757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_23
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 114
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f11ddef3974b154a8bc2097b8b564f2
+      internalID: 592678346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 66
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a001bce39809144993c88664bafe80b
+      internalID: -187867479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 66
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4657437f2bb434c8cf7c8e5eb6557f
+      internalID: -507684467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_26
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 66
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628685f2f6cece144ac88b82ac74dc1a
+      internalID: -472385569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 66
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f432c5a79c82f2046949f0d65a573b1b
+      internalID: -1962324767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_28
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 66
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01aeabb623cba94680fcc6b0c2b02df
+      internalID: -208054345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_29
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 66
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fb1af795e26884280ce29ccb1396fd
+      internalID: 1301677811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_30
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 66
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395de005a59ccf8438bbbebf786b8262
+      internalID: -597243451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_31
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 66
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1d8ab779465044d9f159cc12f34b76
+      internalID: 1197383783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_32
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 18
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240963a61fd2e0d48a62cd5bf211d598
+      internalID: 1715525236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_33
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 18
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b65599844ad8d4abd16e5134ebf180
+      internalID: -2036719232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_34
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 18
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c118fd896592747b890bafbddef101
+      internalID: -1952575843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyBanditmetal_35
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 18
+        width: 44
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61652c9727c662745a49e431c4edf59c
+      internalID: -2133834295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HeavyBanditmetal_0: 1168210256
+      HeavyBanditmetal_1: 2069067330
+      HeavyBanditmetal_10: 1074866871
+      HeavyBanditmetal_11: -1298752154
+      HeavyBanditmetal_12: 1743609685
+      HeavyBanditmetal_13: 753007905
+      HeavyBanditmetal_14: 1411720304
+      HeavyBanditmetal_15: 769602443
+      HeavyBanditmetal_16: 68831043
+      HeavyBanditmetal_17: -1646176080
+      HeavyBanditmetal_18: -1530445376
+      HeavyBanditmetal_19: -193751551
+      HeavyBanditmetal_2: 1886442814
+      HeavyBanditmetal_20: -460508052
+      HeavyBanditmetal_21: -1051764956
+      HeavyBanditmetal_22: 781627757
+      HeavyBanditmetal_23: 592678346
+      HeavyBanditmetal_24: -187867479
+      HeavyBanditmetal_25: -507684467
+      HeavyBanditmetal_26: -472385569
+      HeavyBanditmetal_27: -1962324767
+      HeavyBanditmetal_28: -208054345
+      HeavyBanditmetal_29: 1301677811
+      HeavyBanditmetal_3: -124860495
+      HeavyBanditmetal_30: -597243451
+      HeavyBanditmetal_31: 1197383783
+      HeavyBanditmetal_32: 1715525236
+      HeavyBanditmetal_33: -2036719232
+      HeavyBanditmetal_34: -1952575843
+      HeavyBanditmetal_35: -2133834295
+      HeavyBanditmetal_4: -141357778
+      HeavyBanditmetal_5: 1729703506
+      HeavyBanditmetal_6: 650673811
+      HeavyBanditmetal_7: -1550799593
+      HeavyBanditmetal_8: 294891061
+      HeavyBanditmetal_9: 1870139349
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
