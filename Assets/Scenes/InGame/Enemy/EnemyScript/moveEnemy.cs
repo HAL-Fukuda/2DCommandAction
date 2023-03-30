@@ -2,23 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveEnemy : MonoBehaviour
+public partial class Enemy : MonoBehaviour
 {
     public float WindowOutposition;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            WindowIn();
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            WindowOut();
-        }
-    }
 
     public void WindowIn()
     {

@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 5146405506448140031}
   - component: {fileID: 5146405506448139776}
   - component: {fileID: 5146405506448139777}
-  - component: {fileID: 5146405506448140028}
-  - component: {fileID: 5146405506448140027}
-  m_Layer: 0
-  m_Name: Enemy2
+  - component: {fileID: 4265264062535433641}
+  m_Layer: 6
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &5146405506448139777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5146405506448140028
+--- !u!114 &4265264062535433641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,28 +142,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5146405506448139778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fbec1a56c208e7449d2e48d2405acd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 1
---- !u!114 &5146405506448140027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5146405506448139778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
+  m_Script: {fileID: 11500000, guid: 616396cef336e534bb5ebd2fbcce756c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  prefab: {fileID: 6008591195322904412, guid: eb76c59fb271cdf49be1d48c3a7736d6, type: 3}
-  spawnInterval: 2
-  minSpeed: 2
-  maxSpeed: 4
-  lifeTime: 5
-  projectilePrefab: {fileID: 6008591195322904412, guid: eb76c59fb271cdf49be1d48c3a7736d6,
-    type: 3}
-  projectileSpeed: 10
+  ColorDuration: 0.1
+  shakeIntensity: 0.1
+  shakeDuration: 0.2
+  meteorAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    duration: 10
+    timer: 0
+  WindowOutposition: 0
+  sidewaysAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    duration: 10
+    timer: 0

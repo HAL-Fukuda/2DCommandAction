@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public partial class EnemyAttack : MonoBehaviour //クラス名統一
+public partial class Enemy : MonoBehaviour //クラス名統一
 {
     public AttackSettings meteorAttackSettings;
 

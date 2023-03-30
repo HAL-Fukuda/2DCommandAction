@@ -4,16 +4,27 @@ using UnityEngine;
 
 public partial class Enemy : MonoBehaviour
 {
+    // 汎用的に使える変数はここ！
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        // GetDamage
         GetDamageInitialize();
+        // EnemyAttack
+        EnemyAttackInitialize();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // EnemyAttack
+        if (Input.GetKey(KeyCode.E))
+        {
+            EnemyAttackUpdate();
+        }
     }
 
     // 衝突時

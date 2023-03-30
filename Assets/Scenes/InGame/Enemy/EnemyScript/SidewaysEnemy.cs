@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public partial class EnemyAttack : MonoBehaviour
+public partial class Enemy : MonoBehaviour
 {
     [System.Serializable]
     public struct AttackSettings

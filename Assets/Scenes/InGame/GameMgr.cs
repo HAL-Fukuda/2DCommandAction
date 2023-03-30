@@ -130,7 +130,7 @@ public partial class GameMgr : MonoBehaviour
                             Debug.Log("ATTACK");
                             Message = "ATTACK";
                             // 敵が地面に降りてくる
-                            enemy.GetComponent<moveEnemy>().WindowOut();
+                            enemy.GetComponent<Enemy>().WindowOut();
 
                             // 一定時間後にウィンドウに戻る
                             StartCoroutine(EnemyToWindow(2));
@@ -155,7 +155,7 @@ public partial class GameMgr : MonoBehaviour
                 if (enemy != null)
                 {
                     // 流星群
-                    enemy.GetComponent<EnemyAttack>().MeteorAttack();
+                    enemy.GetComponent<Enemy>().MeteorAttack();
 
                     // 一定時間後にコマンドを表示してコマンドセレクトへ
                     if (runningCoroutine != true)
@@ -214,7 +214,7 @@ public partial class GameMgr : MonoBehaviour
         // 一定時間待機
         yield return new WaitForSeconds(delay);
         // ウィンドウへ移動
-        enemy.GetComponent<moveEnemy>().WindowIn();
+        enemy.GetComponent<Enemy>().WindowIn();
 
         // 敵の行動へ
         battleState = eBattleState.ENEMY;
