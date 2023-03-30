@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandDrop : MonoBehaviour
+public partial class CommandMgr : MonoBehaviour
 {
     [SerializeField] private GameObject createPrefab;  //生成するPreFab
     [SerializeField] private Transform rangeA;         //生成する範囲A
@@ -17,12 +17,12 @@ public class CommandDrop : MonoBehaviour
 
     public DropMode dropMode;  //プルダウン用
 
-    void Start()
+    void CommandDropInitialize()
     {
-        
+
     }
-    
-    void Update()
+
+    void CommandDropUpdate()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {

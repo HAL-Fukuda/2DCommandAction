@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandMgr : MonoBehaviour
+public partial class CommandMgr : MonoBehaviour
 {
     // コンストラクタを private にすることで、クラスの外部からのインスタンス生成を防ぐ（シングルトンパターン）
     private CommandMgr() { }
@@ -47,9 +47,6 @@ public class CommandMgr : MonoBehaviour
         command3.SetActive(true);
         command4.SetActive(true);
     }
-    //
-
-
 
     // 攻撃が当たったときのコマンド選択処理
     public void AttackHit(GameObject selectedCommand)

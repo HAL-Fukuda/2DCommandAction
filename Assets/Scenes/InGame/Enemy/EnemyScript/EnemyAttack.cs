@@ -5,18 +5,15 @@ using UnityEngine;
 public partial class EnemyAttack : MonoBehaviour //partial C++ÇÃÉNÉâÉX
 {
     public Transform playerTransform;
-    // Start is called before the first frame update
-    void Start()//èâä˙âª
+
+    void EnemyAttackInitialize()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    void EnemyAttackUpdate()
     {
-        // MeteorAttack();
-        // ReflectionAttack();
-        // SidewaysAttack();
+        //MeteorAttack();
+        SidewaysAttack();
     }
-
 }

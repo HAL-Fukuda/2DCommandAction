@@ -143,7 +143,7 @@ public class PlayerManager : MonoBehaviour
         Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
         foreach (Collider2D hitEnemy in hitEnemys)
         {
-            hitEnemy.GetComponent<Enemy>().GetDamage();
+            hitEnemy.GetComponent<EnemyGetDamage>().GetDamage();
         }
         //ƒRƒ}ƒ“ƒh‚É
         Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);

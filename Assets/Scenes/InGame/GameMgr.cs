@@ -34,6 +34,7 @@ public partial class GameMgr : MonoBehaviour
         COMMAND_SELECT,
         PLAYER,
         ENEMY,
+        DEBUG,
     }
     public eBattleState battleState; // 現在のバトルステート
     public eBattleState? previousState; // 直前のバトルステート
@@ -163,6 +164,8 @@ public partial class GameMgr : MonoBehaviour
                         StartCoroutine(ToCommandSelect(5));
                     }
                 }
+                break;
+            case eBattleState.DEBUG:// デバッグ
                 break;
         }
     }

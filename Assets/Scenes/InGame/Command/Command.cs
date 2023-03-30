@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Command : MonoBehaviour
+public partial class Command : MonoBehaviour
 {
     // 変数定義-------------------------
 
@@ -23,22 +23,16 @@ public class Command : MonoBehaviour
 
     private MeshRenderer meshRenderer;
 
-    //
-    //public GameObject objectToToggle;
-    //private bool objectWasActive = true;
-    public GameObject objectToShowHide;
-    //
-
     // 関数定義-------------------------
 
     // Start is called before the first frame update
-    void Start()
+    void CommandInitialize()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    void CommandUpdate()
     {
 
     }
@@ -49,18 +43,6 @@ public class Command : MonoBehaviour
         return isActive;
     }
 
-    //
-    //public void ShowObject()
-    //{
-    //    objectToShowHide.SetActive(true);
-    //}
-
-    //public void HideObject()
-    //{
-    //    objectToShowHide.SetActive(false);
-    //}
-    //
-
     // 衝突時
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -70,6 +52,8 @@ public class Command : MonoBehaviour
             // コマンドに攻撃が当たった時の処理を呼び出す
             CommandMgr.Instance.AttackHit(this.gameObject);
         }
+        // エフェクト再生
+        CommandEffectOnCollisionEnter(collision);
     }
 
     // アクティブ状態にする
@@ -77,7 +61,6 @@ public class Command : MonoBehaviour
     {
         isActive = true;
         meshRenderer.material = materialActive;
-        //HideObject();
     }
 
     // 非アクティブ状態にする
@@ -85,6 +68,5 @@ public class Command : MonoBehaviour
     {
         isActive = false;
         meshRenderer.material = materialStandard;
-        //ShowObject();
     }
 }
