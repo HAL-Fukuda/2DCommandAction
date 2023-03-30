@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class Enemy : MonoBehaviour //partial C++のクラス
+public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
 {
     public Transform playerTransform;
 

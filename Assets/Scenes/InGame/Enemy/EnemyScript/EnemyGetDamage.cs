@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class Enemy : MonoBehaviour
+public class EnemyGetDamage : MonoBehaviour
 {
     private Material material; // マテリアル
     private Color originalColor; // 元の色

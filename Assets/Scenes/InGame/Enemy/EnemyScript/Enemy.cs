@@ -2,39 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    // 汎用的に使える変数はここ！
+    int hp;
+    int speed;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    void EnemyInitialize()
     {
-        // GetDamage
-        GetDamageInitialize();
-        // EnemyAttack
-        EnemyAttackInitialize();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void EnemyUpdate()
     {
-        // EnemyAttack
-        if (Input.GetKey(KeyCode.E))
-        {
-            EnemyAttackUpdate();
-        }
+
     }
 
-    // 衝突時
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Attack()
     {
-        // タグがPunchかどうか
-        if (collision.gameObject.CompareTag("Punch"))
-        {
-            // コマンドに攻撃が当たった時の処理を呼び出す
-            GetDamage();
-        }
+
+    }
+
+    void GetDamage()
+    {
+
     }
 }

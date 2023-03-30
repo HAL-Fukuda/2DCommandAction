@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class Enemy : MonoBehaviour
+public class moveEnemy : MonoBehaviour
 {
     public float WindowOutposition;
 
