@@ -10,6 +10,8 @@ public partial class Command : MonoBehaviour
 
     private ParticleSystem _effectInstance;
     private GameObject _soundInstance;
+
+    public int commandHP;  //コマンドのHP
    
     void CommandEffectInitialize()
     {
@@ -21,20 +23,39 @@ public partial class Command : MonoBehaviour
        
     }
 
+    //Playerタグが付いたオブジェクトが一定回数当たったらコマンドを消す
     private void CommandEffectOnCollisionEnter(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("HIT");
+            commandHP -= 1;  //コマンドのHP減少
+            Debug.Log(commandHP);
 
-            EffectPlay();
+            if (commandHP <= 0)
+            {
+                EffectPlay();  //Effect再生
+                Destroy(gameObject);  //コマンドを削除
+            }
 
-            //コマンドを削除
-           // Destroy(gameObject);
         }
     }
 
-    void EffectPlay()
+    //コマンドにHPを持たせる
+    void CommandHit()  
+    {
+        commandHP -= 1;  //コマンドのHP減少
+        //Debug.Log(commandHP);
+
+        if (commandHP <= 0)
+        {
+            EffectPlay();  //Effect再生
+            Destroy(gameObject);  //コマンドを削除
+        }
+    }
+
+    //エフェクト再生
+    void EffectPlay()  
     {
         //ParticleSystemのインスタンスを生成
         _effectInstance = Instantiate(EffectPrefab);
@@ -47,7 +68,8 @@ public partial class Command : MonoBehaviour
         SoundPlay();
     }
 
-    void SoundPlay()
+    //SE再生
+    void SoundPlay()  
     {
         //Soundのインスタンスを生成
         _soundInstance = Instantiate(SoundPrefab);
