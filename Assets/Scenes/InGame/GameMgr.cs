@@ -45,8 +45,6 @@ public partial class GameMgr : MonoBehaviour
     public GameObject enemy; // 敵のオブジェクト
     // プロトタイプ版では敵を直接指定するが、今後変更する必要がある。
 
-    public MessageWindow messageWindow;
-
     // 関数定義-------------------------
 
     // Start is called before the first frame update
@@ -106,21 +104,5 @@ public partial class GameMgr : MonoBehaviour
     {
         // ウィンドウを閉じる
         // BGMを停止する
-    }
-
-    // メッセージを取得する
-    public string GetDebugMessage()
-    {
-        string message = "";
-
-        // 直前のバトルステートと比較
-        if (previousState != battleState)
-        {
-            messageWindow.ClearText(); // MessageWindowのテキストをクリアする
-            message = battleState.ToString(); // ステートが変更された時のみ表示
-            previousState = battleState;
-        }
-
-        return message;
     }
 }
