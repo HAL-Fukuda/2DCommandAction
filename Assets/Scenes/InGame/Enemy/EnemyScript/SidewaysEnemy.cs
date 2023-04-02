@@ -10,14 +10,14 @@ public partial class EnemyAttack : MonoBehaviour
     {
         public GameObject prefab;
         public float spawnInterval;
-        public float duration;
+        public float life;
         [SerializeField][Header("‚¢‚¶‚ç‚È‚¢‚Å")] public float timer;
 
-        public AttackSettings(GameObject prefab, float spawnInterval, float duration)
+        public AttackSettings(GameObject prefab, float spawnInterval, float life)
         {
             this.prefab = prefab;
             this.spawnInterval = spawnInterval;
-            this.duration = duration;
+            this.life = life;
             this.timer = 0f;
         }
     }
@@ -38,7 +38,7 @@ public partial class EnemyAttack : MonoBehaviour
 
             obj.transform.DOMoveX(
                 30f, //ˆÚ“®—Ê
-                sidewaysAttackSettings.duration // ‰‰oŽžŠÔ
+                sidewaysAttackSettings.life // ‰‰oŽžŠÔ
             ).OnComplete(() =>
             {
                 Destroy(obj);

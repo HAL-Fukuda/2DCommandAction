@@ -44,9 +44,4 @@ public class ActionBarControl : MonoBehaviour
     {
         return isReady;
     }
-
-    void Update()
-    {
-        ActionBarUpdate();
-    }
 }

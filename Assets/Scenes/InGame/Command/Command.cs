@@ -6,34 +6,54 @@ public partial class Command : MonoBehaviour
 {
     // 変数定義-------------------------
 
-    public Material materialStandard; // 非アクティブ時のマテリアル
-    public Material materialActive; // アクティブ時のマテリアル
 
     // コマンドの種類
     public enum eCommandType
     {
-        NONE,
         ATTACK,
-        ITEM,
+        DEFENCE,
+        HEAL
     }
 
     public eCommandType commandType;
 
     public bool isActive = false; // アクティブかどうか
 
-    private MeshRenderer meshRenderer;
 
     // 関数定義-------------------------
 
-    // Start is called before the first frame update
     void CommandInitialize()
     {
-        meshRenderer = this.GetComponent<MeshRenderer>();
+
     }
 
-    // Update is called once per frame
-    void CommandUpdate()
+    public void CommandAction()
     {
+        Activate(); // アクティブ状態にする
+
+        // コマンドに応じた処理
+        switch (commandType)
+        {
+            case eCommandType.ATTACK:// 攻撃の処理    
+
+
+                // 処理が終わったら非アクティブ状態にする
+                Deactivate();
+
+                break;
+            case eCommandType.DEFENCE:// 防御の処理    
+
+
+                // 処理が終わったら非アクティブ状態にする
+                Deactivate();
+                break;
+            case eCommandType.HEAL:// 回復の処理
+
+
+                // 処理が終わったら非アクティブ状態にする
+                Deactivate();
+                break;
+        }
 
     }
 
@@ -43,30 +63,15 @@ public partial class Command : MonoBehaviour
         return isActive;
     }
 
-    // 衝突時
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // タグがPunchかどうか
-        if (collision.gameObject.CompareTag("Punch"))
-        {
-            // コマンドに攻撃が当たった時の処理を呼び出す
-            CommandMgr.Instance.AttackHit(this.gameObject);
-        }
-        // エフェクト再生
-        CommandEffectOnCollisionEnter(collision);
-    }
-
     // アクティブ状態にする
     public void Activate()
     {
         isActive = true;
-        meshRenderer.material = materialActive;
     }
 
     // 非アクティブ状態にする
     public void Deactivate()
     {
         isActive = false;
-        meshRenderer.material = materialStandard;
     }
 }
