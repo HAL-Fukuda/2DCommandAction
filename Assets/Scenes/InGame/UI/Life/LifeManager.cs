@@ -10,7 +10,7 @@ public class LifeManager : MonoBehaviour
 
     // 被ダメージ
     // 引数の値の文だけHPが減る
-    void GetDamage(int value)
+    public void GetDamage(int value)
     {
         for (int i = 0; i < value; i++)
         {
@@ -28,7 +28,7 @@ public class LifeManager : MonoBehaviour
 
     // 回復
     // 引数の値の数だけHPが増える
-    void GetHeel(int value)
+    public void GetHeal(int value)
     {
         for (int i = 0; i < value; i++)
         {
@@ -53,7 +53,7 @@ public class LifeManager : MonoBehaviour
 
         else if (Input.GetMouseButtonDown(1))
         {
-            GetHeel(3);
+            GetHeal(3);
         }
     }
 }
