@@ -23,7 +23,6 @@ public partial class GameMgr : MonoBehaviour
         }
     }
 
-
     // 変数定義-------------------------
 
     public bool battle = true; // 戦闘中かどうか
@@ -40,55 +39,63 @@ public partial class GameMgr : MonoBehaviour
     public eBattleState? previousState; // 直前のバトルステート
 
     private GameObject selectedCommand; // 選択されたコマンド
+    private bool isCommandSelected = false; // コマンドが選択されているか
 
+    public GameObject player; // プレイヤーオブジェクト
     public GameObject enemy; // 敵のオブジェクト
     // プロトタイプ版では敵を直接指定するが、今後変更する必要がある。
 
-    private bool runningCoroutine;
-
     public MessageWindow messageWindow;
-    private string Message = "";
 
     // 関数定義-------------------------
 
     // Start is called before the first frame update
     void Start()
     {
+        ActiveTimeBattleInitialize();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (battle)
         {
             // 戦闘更新処理
-            BattleUpdate();
+            ActiveTimeBattleUpdate();
+            if(battle == false)
+            {
+                FinalizeBattle();
+            }
         }
     }
 
     // 敵をセットする
-    public void SetEnemy(GameObject enemy)
+    public void StoreEnemy(GameObject enemy)
     {
         this.enemy = enemy;
     }
 
-    // 選択されたコマンドをセットする
-    public void SetCommand(GameObject command)
+    // 選択されたコマンドを格納する
+    public void StoreCommand(GameObject command)
     {
-        this.selectedCommand = command;
+        // アクションバーが100％のときだけコマンドを受け付ける
+        if (playerActionBar.GetComponent<ActionBarControl>().IsReady())
+        {
+            isCommandSelected = true;
+            this.selectedCommand = command;
+        }
+    }
+
+    // 選択されたコマンドをnullにする
+    public void UnstoreCommand()
+    {
+        isCommandSelected = false;
+        selectedCommand = null;
     }
 
     // バトルを開始するための初期化
     public void InitializeBattle()
     {
-        // 変数の初期化
-        battle = true;
-        battleState = eBattleState.COMMAND_SELECT;
-        previousState = null;
-        selectedCommand = null;
-        CommandMgr.Instance.DeactivateALL();
-        runningCoroutine = false; 
-
         // ウィンドウを表示する
         // 敵を配置する
         // BGMの再生
@@ -99,132 +106,6 @@ public partial class GameMgr : MonoBehaviour
     {
         // ウィンドウを閉じる
         // BGMを停止する
-    }
-
-    private void BattleUpdate()
-    {
-        // バトルステートに応じた処理
-        switch (battleState)
-        {
-            case eBattleState.COMMAND_SELECT: // コマンド選択
-                Debug.Log("コマンド選択");
-                Message = "コマンド選択";
-                if (selectedCommand != null && selectedCommand.GetComponent<Command>().IsActive())
-                {
-                    // コマンドが選択されていたら少し待ってプレイヤーの行動へ
-                    if (runningCoroutine != true)
-                    {
-                        StartCoroutine(ToPlayerAction(2));
-                    }
-                }
-                break;
-
-            case eBattleState.PLAYER: // プレイヤーの行動
-                Debug.Log("プレイヤーの行動");
-                Message = "プレイヤーの行動";
-                if (selectedCommand != null)
-                {
-                    // 選択されたコマンドに応じた処理
-                    switch (selectedCommand.GetComponent<Command>().commandType)
-                    {
-                        case Command.eCommandType.ATTACK: // たたかう
-                            Debug.Log("ATTACK");
-                            Message = "ATTACK";
-                            // 敵が地面に降りてくる
-                            enemy.GetComponent<moveEnemy>().WindowOut();
-
-                            // 一定時間後にウィンドウに戻る
-                            StartCoroutine(EnemyToWindow(2));
-                            break;
-                        case Command.eCommandType.ITEM: // アイテム
-                            Debug.Log("ITEM");
-                            Message = "ITEM";
-                            // 敵の行動へ
-                            battleState = eBattleState.ENEMY;
-                            break;
-                    }
-                }
-                else
-                {
-                    Debug.Log("selectedCommandがnull");
-                }
-                break;
-
-            case eBattleState.ENEMY: // 敵の行動
-                Debug.Log("敵の行動");
-                Message = "敵の行動";
-                if (enemy != null)
-                {
-                    // 流星群
-                    enemy.GetComponent<EnemyAttack>().MeteorAttack();
-
-                    // 一定時間後にコマンドを表示してコマンドセレクトへ
-                    if (runningCoroutine != true)
-                    {
-                        StartCoroutine(ToCommandSelect(5));
-                    }
-                }
-                break;
-            case eBattleState.DEBUG:// デバッグ
-                break;
-        }
-    }
-
-    // 仮プレイヤーの行動へ移行
-    private IEnumerator ToPlayerAction(float delay)
-    {
-        runningCoroutine = true;
-
-        // 一定時間待機
-        yield return new WaitForSeconds(delay);
-
-        // プレイヤーの行動へ移行する
-        battleState = eBattleState.PLAYER;
-        CommandMgr.Instance.HideCommand();
-        Debug.Log("プレイヤーの行動へ");
-
-        // コルーチンが完了したことを示すために null を返す
-        runningCoroutine = false;
-        yield return null;
-    }
-
-    // 仮コマンドセレクトへ移行
-    private IEnumerator ToCommandSelect(float delay)
-    {
-        runningCoroutine = true;
-
-        yield return new WaitForSeconds(delay);
-
-        // コマンドをリセットする
-        CommandMgr.Instance.ShowCommand();
-        selectedCommand = null;
-        CommandMgr.Instance.DeactivateALL();
-
-        battleState = eBattleState.COMMAND_SELECT;
-
-        Debug.Log("コマンドセレクトへ");
-
-        // コルーチンが完了したことを示すために null を返す
-        runningCoroutine = false;
-        yield return null;
-    }
-
-    // 一定時間待機してから敵がウィンドウに移動する
-    private IEnumerator EnemyToWindow(float delay)
-    {
-        runningCoroutine = true;
-
-        // 一定時間待機
-        yield return new WaitForSeconds(delay);
-        // ウィンドウへ移動
-        enemy.GetComponent<moveEnemy>().WindowIn();
-
-        // 敵の行動へ
-        battleState = eBattleState.ENEMY;
-
-        // コルーチンが完了したことを示すために null を返す
-        runningCoroutine = false;
-        yield return null;
     }
 
     // メッセージを取得する

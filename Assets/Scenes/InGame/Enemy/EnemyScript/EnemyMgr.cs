@@ -15,8 +15,6 @@ public class EnemyMgr : MonoBehaviour
     public GameObject skelton;
 
 
-    public bool isAction; // s“®’†‚©‚Ç‚¤‚©
-
     void EnemyMgrInitialize()
     {
 
@@ -25,18 +23,5 @@ public class EnemyMgr : MonoBehaviour
     void EnemyMgrUpdate()
     {
 
-    }
-
-    public void Action()
-    {
-        isAction = true;
-
-        // UŒ‚ŠJn
-
-        // UŒ‚ˆ—
-
-        // UŒ‚I—¹
-
-        isAction = false;
     }
 }

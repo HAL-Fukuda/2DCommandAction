@@ -22,7 +22,7 @@ public partial class EnemyAttack : MonoBehaviour //クラス名統一
 
             obj.transform.DOMoveY(
                 -30f, //移動量
-                meteorAttackSettings.duration // 演出時間
+                meteorAttackSettings.life // 演出時間
             ).OnComplete(() =>
             {
                 Destroy(obj);
