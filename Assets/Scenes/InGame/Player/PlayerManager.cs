@@ -152,6 +152,7 @@ public class PlayerManager : MonoBehaviour
     //攻撃の処理
     void Attack()
     {
+        animator.SetBool("ChargingNow", false);
         animator.SetTrigger("isAttack");
         //Debug.Log("攻撃");
         //エネミーに
