@@ -13,6 +13,7 @@ public partial class Command : MonoBehaviour
     private GameObject _healSEInstance;
 
     public GameObject life;
+    public string healMessage = "";
     
 
     void HealCommandInitialize()
@@ -37,11 +38,17 @@ public partial class Command : MonoBehaviour
         //PlayerのHPを回復する処理
         life.GetComponent<LifeManager>().GetHeal(healVal);
         //メッセージを表示する処理
+        HealMessage();
     }
 
-    public void HealSoundPlay()
+    void HealSoundPlay()
     {
         _healSEInstance = Instantiate(healSE);
         _healSEInstance.transform.position = PlayerObj.transform.position;
+    }
+
+    void HealMessage()
+    {
+        healMessage = "Healing";
     }
 }
