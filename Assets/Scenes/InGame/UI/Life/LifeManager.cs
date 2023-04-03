@@ -8,20 +8,36 @@ public class LifeManager : MonoBehaviour
     public int lifePoint = 5;
     public int maxlifePoint = 5;
 
+    bool invincibility = false;
+
+
+    public void InvincibilityOn()
+    {
+        invincibility = true;
+    }
+
+    public void InvincibilityOff()
+    {
+        invincibility = false;
+    }
+
     // 被ダメージ
     // 引数の値の文だけHPが減る
     public void GetDamage(int value)
     {
-        for (int i = 0; i < value; i++)
+        if (invincibility == false)
         {
-            if (lifePoint > 0)
+            for (int i = 0; i < value; i++)
             {
-                lifeArray[lifePoint - 1].SetActive(false);
-                lifePoint--;
-            }
-            else
-            {
-                break;
+                if (lifePoint > 0)
+                {
+                    lifeArray[lifePoint - 1].SetActive(false);
+                    lifePoint--;
+                }
+                else
+                {
+                    break;
+                }
             }
         }
     }
