@@ -19,8 +19,6 @@ public class EnemyGetDamage : MonoBehaviour
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
     {
-
-
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         material = renderer.material;
         originalColor = material.color;
@@ -28,6 +26,8 @@ public class EnemyGetDamage : MonoBehaviour
 
     public void GetDamage()
     {
+        GetDamageInitialize();
+
         // 攻撃された時の位置を取得する
         originalPosition = transform.position;
 

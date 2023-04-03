@@ -35,20 +35,20 @@ public partial class Command : MonoBehaviour
         switch (commandType)
         {
             case eCommandType.ATTACK:// 攻撃の処理    
-
+                SlashEffectPlay();
 
                 // 処理が終わったら非アクティブ状態にする
                 Deactivate();
 
                 break;
             case eCommandType.DEFENCE:// 防御の処理    
-
+                ShealdAction();
 
                 // 処理が終わったら非アクティブ状態にする
                 Deactivate();
                 break;
             case eCommandType.HEAL:// 回復の処理
-
+                HealEffectPlay();
 
                 // 処理が終わったら非アクティブ状態にする
                 Deactivate();

@@ -22,7 +22,7 @@ public partial class CommandMgr : MonoBehaviour
 
     }
 
-    void CommandDropUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {

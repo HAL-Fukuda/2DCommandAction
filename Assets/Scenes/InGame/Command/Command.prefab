@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4695493758490338325}
   - component: {fileID: 4332996818335900895}
   - component: {fileID: 3168636353867371420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Command
-  m_TagString: Untagged
+  m_TagString: Command
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &4332996818335900895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,29 +145,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83463e1d9517e2a409b7d49ccb8baa5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialStandard: {fileID: 2100000, guid: 73e975a40ca37f446a6a3a774ddf44e0, type: 2}
-  materialActive: {fileID: 2100000, guid: e6d9a06459f8b2b498403d73a69fcaa0, type: 2}
+  SlashingEffect: {fileID: 8048166940290265275, guid: 427698de993f1474e8316b7407ae1679,
+    type: 3}
+  SlashingSE: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
+    type: 3}
+  attackMessage: "\u6575\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u305F\uFF01"
   commandType: 0
   isActive: 0
   EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,
     type: 3}
   SoundPrefab: {fileID: 1645102665934355776, guid: 067888f0952cad74182f77980d0b6559,
     type: 3}
-  rendererComponent: {fileID: 0}
-  targetPosition: {x: 1, y: 0, z: 0}
-  objectScale: {x: 1, y: 1, z: 1}
-  ease: 1
-  duration: 1
-  scaleTimer: 1
-  jumpPower: 1
-  numJump: 1
-  colorTimer: 1
-  alpha: 1
-  alphaTimer: 1
-  CommandMoveStat: 0
-  CommandRotateStat: 0
-  CommandScaleStat: 0
-  CommandJumpStat: 0
-  CommandPathStat: 0
-  CommandColorStat: 0
-  CommandFadeStat: 0
+  commandHP: 2
+  shield: {fileID: 6715556842858644572, guid: 923fd89968c90ae44a874601c63dfead, type: 3}
+  defenceMessage: "\u30B7\u30FC\u30EB\u30C9\u3092\u5C55\u958B\uFF01"
+  healEffect: {fileID: 1901016804877901321, guid: 1c5b78cb3b91bc542a4365b7438156ee,
+    type: 3}
+  healSE: {fileID: 63900776704298715, guid: f2d54f572d4401140a9de44dcc6f0aaa, type: 3}
+  healVal: 3
+  healMessage: "\u4F53\u529B\u304C\u56DE\u5FA9\u3057\u305F\uFF01"

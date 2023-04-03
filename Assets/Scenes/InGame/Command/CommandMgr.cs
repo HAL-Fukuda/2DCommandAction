@@ -29,10 +29,7 @@ public partial class CommandMgr : MonoBehaviour
     // 攻撃が当たったときのコマンド選択処理
     public void AttackHit(GameObject selectedCommand)
     {
-        // GameMgrに選択されたコマンドを渡す
-        GameMgr.Instance.StoreCommand(selectedCommand);
-
-        // エフェクト再生（エフェクトはこっちで呼びたい）
+        selectedCommand.GetComponent<Command>().CommandHit();
     }
 }
 

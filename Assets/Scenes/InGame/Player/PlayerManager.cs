@@ -8,15 +8,15 @@ public class PlayerManager : MonoBehaviour
     public float moveSpeed;          //移動速度
     public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
-    public bool isDoubleJump;
-    public bool isHaveCommand = false;
+    private bool isDoubleJump;
+    private bool isHaveCommand = false;
 
     public Transform attackPoint;
     public float attackRadius;
     public LayerMask enemyLayer;
     public LayerMask commandLayer;
 
-    public float Chargeingcount = 0.0f;
+    private float Chargeingcount = 0.0f;
 
     public bool isGround;         //接地判定
 
@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     private int direction;              //向きを判定する
     private float overhead = 2.0f;      //コマンドを配置する位置
     private float ThrowPower = 4.0f;    //投げる力
-    public GameObject commandObject;
+    private GameObject commandObject;
 
     // Start is called before the first frame update
     void Start()
@@ -126,7 +126,7 @@ public class PlayerManager : MonoBehaviour
     //接地判定
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Platform")
+        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command")
         {
             isGround = true;
         }

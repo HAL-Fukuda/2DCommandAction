@@ -5,26 +5,31 @@ using DG.Tweening;  //DOTweenを使うのに必要
 
 public partial class Command : MonoBehaviour
 {
-    [SerializeField] Renderer rendererComponent;  //RendererComponentを取得
-    [SerializeField] Vector3  targetPosition = new Vector3(1, 0, 0); //移動先の座標
-    [SerializeField] Vector3  objectScale = new Vector3(1, 1, 1);  //変化後のサイズ
-    [SerializeField] Ease     ease = Ease.Linear;  //始点と終点のつなぎ方
+    Renderer rendererComponent;  //RendererComponentを取得
+    Vector3  targetPosition = new Vector3(1, 0, 0); //移動先の座標
+    Vector3  objectScale = new Vector3(1, 1, 1);  //変化後のサイズ
+    Ease     ease = Ease.Linear;  //始点と終点のつなぎ方
 
-    [SerializeField] float duration = 1;    //移動に掛ける時間
-    [SerializeField] float scaleTimer = 1;  //拡大・縮小までの時間
-    [SerializeField] float jumpPower = 1;   //バウンドの高さ
-    [SerializeField] int   numJump = 1;     //バウンドの回数
-    [SerializeField] float colorTimer = 1;  //色が変わるまでの時間
-    [SerializeField] float alpha = 1;       //フェード後のアルファ値 
-    [SerializeField] float alphaTimer = 1;  //フェードに掛ける時間
+    float duration = 1;    //移動に掛ける時間
+    float scaleTimer = 1;  //拡大・縮小までの時間
+    float jumpPower = 1;   //バウンドの高さ
+    int   numJump = 1;     //バウンドの回数
+    float colorTimer = 1;  //色が変わるまでの時間
+    float alpha = 1;       //フェード後のアルファ値 
+    float alphaTimer = 1;  //フェードに掛ける時間
 
-    [SerializeField] bool CommandMoveStat = true;    //DOMoveを使うときtrue
-    [SerializeField] bool CommandRotateStat = true;  //DORotateを使うときtrue
-    [SerializeField] bool CommandScaleStat = true;   //DOScaleを使うときtrue
-    [SerializeField] bool CommandJumpStat = true;    //DOJumpを使うときtrue
-    [SerializeField] bool CommandPathStat = true;    //DOPathを使うときtrue
-    [SerializeField] bool CommandColorStat = true;   //DOColorを使うときtrue
-    [SerializeField] bool CommandFadeStat = true;    //DOFadeを使うときtrue
+    public enum eCommandStat
+    {
+        Move,
+        Rotate,
+        Scale,
+        Jump,
+        Path,
+        Color,
+        Fade
+    }
+
+    private eCommandStat commandStat;
 
     Vector3[] path =
     {
@@ -36,40 +41,31 @@ public partial class Command : MonoBehaviour
 
     void CommandOperatorInitialize()
     {
-        if (CommandMoveStat)
+        switch (commandStat) 
         {
-            CommandMove();
-            //Debug.Log(CommandMoveStat);
-        }
-        else if (CommandRotateStat)
-        {
-            CommandRotate();
-            //Debug.Log(CommandRotateStat);
-        }
-        else if (CommandScaleStat)
-        {
-            CommandScale();
-            //Debug.Log(CommandScaleStat);
-        }
-        else if (CommandJumpStat)
-        {
-            CommandJump();
-            //Debug.Log(CommandJumpStat);
-        }
-        else if (CommandPathStat)
-        {
-            CommandPath();
-            //Debug.Log(CommandPathStat);
-        }
-        else if (CommandColorStat)
-        {
-            CommandColor();
-            //Debug.Log(CommandColorStat);
-        }
-        else if (CommandFadeStat)
-        {
-            CommandFade();
-            //Debug.Log(CommandFadeStat);
+            case eCommandStat.Move:
+                CommandMove();
+                break;
+            case eCommandStat.Rotate:
+                CommandRotate();
+                break;
+            case eCommandStat.Scale:
+                CommandScale();
+                break;
+            case eCommandStat.Jump:
+                CommandJump();
+                break;
+            case eCommandStat.Path:
+                CommandPath();
+                break;
+            case eCommandStat.Color:
+                CommandColor();
+                break;
+            case eCommandStat.Fade:
+                CommandFade();
+                break;
+            default:
+                break;
         }
     }
 

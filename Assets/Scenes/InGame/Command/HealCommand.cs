@@ -4,21 +4,22 @@ using UnityEngine;
 
 public partial class Command : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem healEffect;  //ヒールのPrefab
-    [SerializeField] private GameObject healSE;          //ヒールのSE
-    [SerializeField] private GameObject PlayerObj;          //プレイヤーの位置
-    [SerializeField] private int healVal;                   //回復量
+    [SerializeField] private ParticleSystem healEffect; //ヒールのPrefab
+    [SerializeField] private GameObject healSE;         //ヒールのSE
+    [SerializeField] private int healVal;               //回復量
 
+    private GameObject PlayerObj; //プレイヤーの位置
     private ParticleSystem _healInstance;
     private GameObject _healSEInstance;
 
-    public GameObject life;
+    private GameObject life;
     public string healMessage = "";
     
 
     void HealCommandInitialize()
     {
-        
+        PlayerObj = GameObject.Find("Player");
+        life = GameObject.Find("Life");
     }
 
     void HealCommandUpdate()
@@ -28,6 +29,8 @@ public partial class Command : MonoBehaviour
 
     public void HealEffectPlay()
     {
+        HealCommandInitialize();
+
         //エフェクトのインスタンスを生成
         _healInstance = Instantiate(healEffect);
         //エフェクトの発生位置をプレイヤーの位置にする
@@ -38,17 +41,12 @@ public partial class Command : MonoBehaviour
         //PlayerのHPを回復する処理
         life.GetComponent<LifeManager>().GetHeal(healVal);
         //メッセージを表示する処理
-        HealMessage();
+        MessageWindow.Instance.SetDebugMessage(healMessage);
     }
 
     void HealSoundPlay()
     {
         _healSEInstance = Instantiate(healSE);
         _healSEInstance.transform.position = PlayerObj.transform.position;
-    }
-
-    void HealMessage()
-    {
-        healMessage = "Healing";
     }
 }

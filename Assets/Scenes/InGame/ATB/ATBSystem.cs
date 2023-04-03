@@ -30,10 +30,16 @@ public partial class GameMgr : MonoBehaviour
         switch (battleState)
         {
             case eBattleState.COMMAND_SELECT: // 待機中
-
                 // アクションバーを更新する
                 playerActionBar.gameObject.GetComponent<ActionBarControl>().ActionBarUpdate();
                 enemyActionBar.gameObject.GetComponent<ActionBarControl>().ActionBarUpdate();
+
+                // アクションバーが１００％になったらテキストを表示する
+                if (playerActionBar.GetComponent<ActionBarControl>().IsReady())
+                {
+                    string text = "コマンドを選択してください";
+                    MessageWindow.Instance.SetDebugMessage(text);
+                }
 
                 // 行動が選択されたらバトルステートを変える
                 if (playerActionBar.GetComponent<ActionBarControl>().IsReady() &&
@@ -44,6 +50,9 @@ public partial class GameMgr : MonoBehaviour
                 if (enemyActionBar.GetComponent<ActionBarControl>().IsReady() &&
                     battleState == eBattleState.COMMAND_SELECT)
                 {
+                    string text = "敵の攻撃！";
+                    MessageWindow.Instance.SetDebugMessage(text);
+
                     battleState = eBattleState.ENEMY;
                 }
                 break;
@@ -72,7 +81,7 @@ public partial class GameMgr : MonoBehaviour
                 enemyActionBar.GetComponent<ActionBarControl>().SetEmpty();
 
                 // 敵の行動
-                //EnemyUpdate();
+                enemy.GetComponent<EnemyAttack>().MeteorAttack();
 
                 // 時間が経ったら敵の行動終了
                 if (enemyTimer <= 0.0f)
