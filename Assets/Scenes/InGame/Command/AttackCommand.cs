@@ -10,7 +10,9 @@ public partial class Command : MonoBehaviour
 
     private ParticleSystem _slashInstance;
     private GameObject _slashSEInstance;
+
     public GameObject enemy;
+    public string attackMessage = "";
 
     void AttackCommandInitialize()
     {
@@ -22,7 +24,7 @@ public partial class Command : MonoBehaviour
 
     }
 
-    void SlashEffectPlay()
+    public void SlashEffectPlay()
     {
         //エフェクトのインスタンスを生成
         _slashInstance = Instantiate(SlashingEffect);
@@ -34,6 +36,7 @@ public partial class Command : MonoBehaviour
         //Enemyにダメージを与える
         enemy.GetComponent<EnemyGetDamage>().GetDamage();
         //メッセージを表示
+        AttackMessage();
     }
 
     //斬撃のSEを再生
@@ -41,5 +44,10 @@ public partial class Command : MonoBehaviour
     {
         _slashSEInstance = Instantiate(SlashingSE);
         _slashSEInstance.transform.position = TargetObj.transform.position;
+    }
+
+    void AttackMessage()
+    {
+        attackMessage = "Slash!";
     }
 }
