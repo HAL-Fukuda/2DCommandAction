@@ -104,13 +104,18 @@ public class PlayerManager : MonoBehaviour
             isDoubleJump = false;
             rb.AddForce(new Vector3(0, upForce, 0));
         }
-        else
+        else if (Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false)
+            if (rb.velocity.y < 0) // 下降中に二段目のジャンプを行う場合
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0); // 落下速度をリセットする
+                rb.AddForce(new Vector3(0, upForce * 1.5f, 0)); // 上方向に大きな力を加える
+            }
+            else // 上昇中に二段目のジャンプを行う場合
             {
                 rb.AddForce(new Vector3(0, upForce, 0));
-                isDoubleJump = true;
             }
+            isDoubleJump = true;
         }
 
         animator.SetFloat("Speed", Mathf.Abs(x));
