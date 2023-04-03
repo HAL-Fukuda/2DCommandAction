@@ -47,20 +47,4 @@ public class MessageWindow : MonoBehaviour
         // GameMgrのcaseが変わった時にテキストをクリアする
         debugText.text = "";
     }
-
-    // メッセージを取得する
-    public string GetDebugMessage()
-    {
-        string message = "";
-
-        // 直前のバトルステートと比較
-        if (previousState != battleState)
-        {
-            messageWindow.ClearText(); // MessageWindowのテキストをクリアする
-            message = battleState.ToString(); // ステートが変更された時のみ表示
-            previousState = battleState;
-        }
-
-        return message;
-    }
 }
