@@ -5,16 +5,26 @@ using UnityEngine;
 public partial class Command : MonoBehaviour
 {
     public GameObject shield;
+    private GameObject shieldInstance;
+    private GameObject player;
 
     bool shealdOnFlg = false;
 
-    public string message = "";
+    public string defenceMessage = "";
     
-    // LifeManagerアタッチしてね
-    public GameObject lifeManager;
+    //// LifeManagerアタッチしてね
+    private GameObject lifeManager;
 
-    void ShealdAction()
+    private void ShieldInitialize()
     {
+        lifeManager = GameObject.Find("Life");
+        player = GameObject.Find("Player");
+    }
+
+    public void ShealdAction()
+    {
+        ShieldInitialize();
+
         if (shealdOnFlg == false)
         {
             ShealdActive();
@@ -26,28 +36,35 @@ public partial class Command : MonoBehaviour
     {
         if (shealdOnFlg == false)
         {
-            shealdOnFlg = true;
-            shield.SetActive(true);     // シールド展開
 
-            message = "シールド展開しました";     // コマンド選択時のメッセージ
+            Debug.Log("debug");
+
+            shealdOnFlg = true;
+            //shield.SetActive(true);     // シールド展開
+            shieldInstance = Instantiate(shield);
+
+            MessageWindow.Instance.SetDebugMessage(defenceMessage);
+
             lifeManager.GetComponent<LifeManager>().InvincibilityOn(); // 無敵on
         }
     }
 
     void ShealdNotActive()
     {
-        shield.SetActive(false);
+        //shield.SetActive(false);
+        Destroy(shieldInstance);
+
         shealdOnFlg = false;
 
         lifeManager.GetComponent<LifeManager>().InvincibilityOff();    // 無敵off
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            ShealdAction();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyUp(KeyCode.B))
+    //    {
+    //        ShealdAction();
+    //    }
+    //}
 
 }

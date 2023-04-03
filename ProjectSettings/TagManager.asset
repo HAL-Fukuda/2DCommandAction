@@ -12,6 +12,7 @@ TagManager:
   - Punch
   - Platform
   - AttackPoint
+  - Command
   layers:
   - Default
   - TransparentFX

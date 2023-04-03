@@ -5,8 +5,27 @@ using UnityEngine.UI;
 
 public class MessageWindow : MonoBehaviour
 {
+    // コンストラクタを private にすることで、クラスの外部からのインスタンス生成を防ぐ（シングルトンパターン）
+    private MessageWindow() { }
+
+    // このクラスのインスタンス（他スクリプトから参照するときはこのインスタンスを介して行う）
+    private static MessageWindow instance = null;
+
+    public static MessageWindow Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<MessageWindow>(); // この処理重いかも。
+            }
+            return instance;
+        }
+    }
+
     public Text debugText;
     public string message = "";
+    private string oldMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -17,34 +36,32 @@ public class MessageWindow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        // GameMgrのデバッグメッセージを取得する
-        message = GetDebugMessage();
-        if (!string.IsNullOrEmpty(message))
-        {
-            // デバッグメッセージを改行してテキストに追加する
-            debugText.text += message + "\n";
-        }
+        DrawMessage();
     }
 
-    // メッセージを取得する
-    public string GetDebugMessage()
+    // メッセージをセットする
+    public void SetDebugMessage(string text)
     {
-        message = "";
-
-        //下の行で別スクリプトのmessageを呼び出す
-        //debugText.text = onoff.message;
-
-        // MessageWindowのテキストをクリアする
-        //messageWindow.ClearText(); 
-
-        return message;
+        message = text;
     }
 
     public void ClearText()
     {
         // GameMgrのcaseが変わった時にテキストをクリアする
         debugText.text = "";
+    }
+
+    private void DrawMessage()
+    {
+        if (!string.IsNullOrEmpty(message) && message != oldMessage)
+        {
+            // テキストをクリア
+            ClearText();
+            // デバッグメッセージを改行してテキストに追加する
+            debugText.text += message + "\n";
+            oldMessage = message;
+        }
     }
 }

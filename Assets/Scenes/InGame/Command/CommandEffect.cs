@@ -23,34 +23,38 @@ public partial class Command : MonoBehaviour
        
     }
 
-    //Playerタグが付いたオブジェクトが一定回数当たったらコマンドを消す
-    private void CommandEffectOnCollisionEnter(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("HIT");
-            commandHP -= 1;  //コマンドのHP減少
-            Debug.Log(commandHP);
+    ////Playerタグが付いたオブジェクトが一定回数当たったらコマンドを消す
+    //private void CommandEffectOnCollisionEnter(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        Debug.Log("HIT");
+    //        commandHP -= 1;  //コマンドのHP減少
+    //        Debug.Log(commandHP);
 
-            if (commandHP <= 0)
-            {
-                EffectPlay();  //Effect再生
-                Destroy(gameObject);  //コマンドを削除
-            }
+    //        if (commandHP <= 0)
+    //        {
+    //            EffectPlay();  //Effect再生
+    //            Destroy(gameObject);  //コマンドを削除
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     //コマンドにHPを持たせる
-    void CommandHit()  
+    public void CommandHit()  
     {
         commandHP -= 1;  //コマンドのHP減少
         //Debug.Log(commandHP);
 
         if (commandHP <= 0)
         {
-            EffectPlay();  //Effect再生
-            Destroy(gameObject);  //コマンドを削除
+            // GameMgrにコマンドを渡す
+            GameMgr.Instance.StoreCommand(gameObject);
+
+            EffectPlay();   //Effect再生
+            SoundPlay();    //SE再生
+            gameObject.SetActive(false);  //コマンドを削除
         }
     }
 
@@ -63,9 +67,6 @@ public partial class Command : MonoBehaviour
         _effectInstance.transform.position = this.transform.position;
         //Effectを再生
         _effectInstance.Play();
-
-        //SEを再生
-        SoundPlay();
     }
 
     //SE再生
