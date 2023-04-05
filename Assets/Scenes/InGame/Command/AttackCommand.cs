@@ -11,6 +11,7 @@ public partial class Command : MonoBehaviour
     private GameObject _slashSEInstance;
 
     private GameObject enemy;
+
     public string attackMessage = "";
 
     void AttackCommandInitialize()
@@ -23,15 +24,12 @@ public partial class Command : MonoBehaviour
 
     }
 
-    public void SlashEffectPlay()
+    public void AttackCommand()
     {
         // エネミーのオブジェクト取得
         enemy = GameObject.Find("Enemy");
 
-        //エフェクトのインスタンスを生成
-        _slashInstance = Instantiate(SlashingEffect);
-        //エフェクトの発生位置を敵の位置にする
-        _slashInstance.transform.position = enemy.transform.position;
+        SlashEffectPlay();
 
         SlashSoundPlay();
 
@@ -40,7 +38,14 @@ public partial class Command : MonoBehaviour
 
         //メッセージを表示
         MessageWindow.Instance.SetDebugMessage(attackMessage);
+    }
 
+    void SlashEffectPlay()
+    {
+        //エフェクトのインスタンスを生成
+        _slashInstance = Instantiate(SlashingEffect);
+        //エフェクトの発生位置を敵の位置にする
+        _slashInstance.transform.position = enemy.transform.position;
     }
 
     //斬撃のSEを再生
