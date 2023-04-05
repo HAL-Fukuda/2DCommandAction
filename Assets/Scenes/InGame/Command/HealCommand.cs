@@ -24,17 +24,14 @@ public partial class Command : MonoBehaviour
 
     void HealCommandUpdate()
     {
-
+        
     }
 
-    public void HealEffectPlay()
+    public void HealCommand()
     {
         HealCommandInitialize();
 
-        //エフェクトのインスタンスを生成
-        _healInstance = Instantiate(healEffect);
-        //エフェクトの発生位置をプレイヤーの位置にする
-        _healInstance.transform.position = PlayerObj.transform.position;
+        HealEffectPlay();
 
         HealSoundPlay();
 
@@ -42,6 +39,14 @@ public partial class Command : MonoBehaviour
         life.GetComponent<LifeManager>().GetHeal(healVal);
         //メッセージを表示する処理
         MessageWindow.Instance.SetDebugMessage(healMessage);
+    }
+
+    void HealEffectPlay()
+    {
+        //エフェクトのインスタンスを生成
+        _healInstance = Instantiate(healEffect);
+        //エフェクトの発生位置をプレイヤーの位置にする
+        _healInstance.transform.position = PlayerObj.transform.position;
     }
 
     void HealSoundPlay()

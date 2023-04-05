@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5176292877499080214}
   - component: {fileID: 8099458119368389886}
+  - component: {fileID: 873649464590169104}
   m_Layer: 0
   m_Name: HealSE
   m_TagString: Untagged
@@ -43,7 +44,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 22dc7e63a83f14d43adae504579910b1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
@@ -128,3 +129,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &873649464590169104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63900776704298715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67f2700da65b0847bb059f381da9279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
