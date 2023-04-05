@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4332996818335900895}
   - component: {fileID: 3168636353867371420}
   m_Layer: 7
-  m_Name: Command
+  m_Name: HealCommand
   m_TagString: Command
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

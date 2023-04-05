@@ -4,10 +4,15 @@ using UnityEngine;
 
 public partial class CommandMgr : MonoBehaviour
 {
-    [SerializeField] private GameObject createPrefab;  //生成するPreFab
+    [SerializeField] private GameObject attackPrefab;  //生成するPreFab
+    [SerializeField] private GameObject healPrefab;  //生成するPreFab
+    [SerializeField] private GameObject defencePrefab;  //生成するPreFab
     [SerializeField] private Transform rangeA;         //生成する範囲A
     [SerializeField] private Transform rangeB;         //生成する範囲B
     [SerializeField] private int num;                  //生成する個数
+
+    private float randomPosX, randomPosY, randomPosZ;
+    private int number;
 
     public enum DropMode
     {
@@ -50,13 +55,22 @@ public partial class CommandMgr : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            //ランダムな座標を作成
-            float x = Random.Range(rangeA.position.x, rangeB.position.x);
-            float y = Random.Range(rangeA.position.y, rangeB.position.y);
-            float z = Random.Range(rangeA.position.z, rangeB.position.z);
+            number = Random.Range(0, 10);
 
-            //PreFabを生成
-            Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+            CreateRandomPos();
+
+            if (number >= 0 && number <= 7)
+            {
+                CreateAttackCommand();
+            }
+            else if (number == 8)
+            {
+                CreateHealCommand();
+            }
+            else if (number == 9)
+            {
+                CreateDefenceCommand();
+            }
 
             //待ち時間
             yield return new WaitForSeconds(0.5f);
@@ -67,13 +81,44 @@ public partial class CommandMgr : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            //ランダムな座標を作成
-            float x = Random.Range(rangeA.position.x, rangeB.position.x);
-            float y = Random.Range(rangeA.position.y, rangeB.position.y);
-            float z = Random.Range(rangeA.position.z, rangeB.position.z);
+            number = Random.Range(0, 10);
 
-            //PreFabを生成
-            Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation);
+            CreateRandomPos();
+
+            if (0 <= number && number <= 7)
+            {
+                CreateAttackCommand();
+            }
+            else if (number == 8)
+            {
+                CreateHealCommand();
+            }
+            else if (number == 9)
+            {
+                CreateDefenceCommand();
+            }
         }
+    }
+
+    void CreateRandomPos()
+    {
+        randomPosX = Random.Range(rangeA.position.x, rangeB.position.x);
+        randomPosY = Random.Range(rangeA.position.y, rangeB.position.y);
+        randomPosZ = Random.Range(rangeA.position.z, rangeB.position.z);
+    }
+
+    void CreateAttackCommand()
+    {
+        Instantiate(attackPrefab, new Vector3(randomPosX, randomPosY, randomPosZ), attackPrefab.transform.rotation);
+    }
+
+    void CreateHealCommand()
+    {
+        Instantiate(healPrefab, new Vector3(randomPosX, randomPosY, randomPosZ), healPrefab.transform.rotation);
+    }
+
+    void CreateDefenceCommand()
+    {
+        Instantiate(defencePrefab, new Vector3(randomPosX, randomPosY, randomPosZ), defencePrefab.transform.rotation);
     }
 }
