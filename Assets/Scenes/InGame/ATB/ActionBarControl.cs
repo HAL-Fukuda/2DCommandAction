@@ -9,6 +9,36 @@ public class ActionBarControl : MonoBehaviour
     public float speed = 0.1f; // 増加スピード
     private bool isReady = false; // 100%かどうか
 
+    public bool isFollowTarget;
+    public Transform target;
+    public Vector3 localPosition = new Vector3(0, 0, 0);
+
+    private RectTransform uiElement;
+    private RectTransform canvasRectTransform;
+
+    void Start()
+    {
+        if (isFollowTarget)
+        {
+            canvasRectTransform = this.transform.Find("Canvas") as RectTransform;
+            uiElement = canvasRectTransform.transform.Find("Slider") as RectTransform;
+        }
+    }
+
+    // 追従処理
+    void FixedUpdate()
+    {
+        if(isFollowTarget)
+        {
+            Vector3 worldPos = target.position + localPosition; // 追従する位置を指定
+            Vector2 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+            Vector2 canvasPos;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, screenPos, null, out canvasPos);
+
+            uiElement.anchoredPosition = canvasPos;
+        }
+    }
+
     // 初期化処理（バトル開始時に呼び出す）
     public void ActionBarInitialize()
     {
@@ -44,4 +74,5 @@ public class ActionBarControl : MonoBehaviour
     {
         return isReady;
     }
+
 }
