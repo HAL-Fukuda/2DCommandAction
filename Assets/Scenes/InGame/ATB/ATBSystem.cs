@@ -53,6 +53,10 @@ public partial class GameMgr : MonoBehaviour
                     string text = "敵の攻撃！";
                     MessageWindow.Instance.SetDebugMessage(text);
 
+                    // 初期化処理
+                    enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
+
+                    // エネミーのターン
                     battleState = eBattleState.ENEMY;
                 }
                 break;
@@ -81,7 +85,10 @@ public partial class GameMgr : MonoBehaviour
                 enemyActionBar.GetComponent<ActionBarControl>().SetEmpty();
 
                 // 敵の行動
-                enemy.GetComponent<EnemyAttack>().MeteorAttack();
+                if (enemy.GetComponent<EnemyAttack>().IsReady())
+                {
+                    enemy.GetComponent<Enemy>().Attack();
+                }
 
                 // 時間が経ったら敵の行動終了
                 if (enemyTimer <= 0.0f)

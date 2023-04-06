@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGetDamage : MonoBehaviour
+public partial class Enemy : MonoBehaviour
 {
     private Material material; // マテリアル
     private Color originalColor; // 元の色
-
-    public float ColorDuration = 0.1f; // 赤くなる時間
-
     private Vector3 originalPosition; // 振動前の座標
 
+    public float ColorDuration = 0.1f; // 赤くなる時間
     public float shakeIntensity = 0.1f; // 揺れの強さ
     public float shakeDuration = 0.2f; // 揺れる時間
-
-    private int hp = 3; // HPの初期値
 
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
