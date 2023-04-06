@@ -156,11 +156,11 @@ public class PlayerManager : MonoBehaviour
         animator.SetTrigger("isAttack");
         //Debug.Log("攻撃");
         //エネミーに
-        Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
-        foreach (Collider2D hitEnemy in hitEnemys)
-        {
-            hitEnemy.GetComponent<EnemyGetDamage>().GetDamage();
-        }
+        //Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
+        //foreach (Collider2D hitEnemy in hitEnemys)
+        //{
+        //    hitEnemy.GetComponent<Enemy>().GetDamage();
+        //}
         //コマンドに
         Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);
         foreach (Collider2D hitCommand in hitCommands)

@@ -5,23 +5,6 @@ using DG.Tweening;
 
 public partial class EnemyAttack : MonoBehaviour
 {
-    [System.Serializable]
-    public struct AttackSettings
-    {
-        public GameObject prefab;
-        public float spawnInterval;
-        public float life;
-        [SerializeField][Header("‚¢‚¶‚ç‚È‚¢‚Å")] public float timer;
-
-        public AttackSettings(GameObject prefab, float spawnInterval, float life)
-        {
-            this.prefab = prefab;
-            this.spawnInterval = spawnInterval;
-            this.life = life;
-            this.timer = 0f;
-        }
-    }
-
     public AttackSettings sidewaysAttackSettings;
 
     public void SidewaysAttack()

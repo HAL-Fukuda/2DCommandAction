@@ -2,28 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public partial class Enemy : MonoBehaviour
 {
     int hp;
     int speed;
 
+    EnemyAttack attackScript;
+
+    void Start()
+    {
+        EnemyInitialize();
+        GetDamageInitialize();
+    }
+
     void EnemyInitialize()
     {
-
+        attackScript = GetComponent<EnemyAttack>();
     }
 
-    void EnemyUpdate()
+    public virtual void Attack()
     {
-
-    }
-
-    void Attack()
-    {
-
-    }
-
-    void GetDamage()
-    {
-
+        attackScript.MeteorAttack();
     }
 }
