@@ -7,9 +7,13 @@ public partial class Command : MonoBehaviour
     Rigidbody2D rb2d;
     [SerializeField] private ParticleSystem EffectPrefab;  //EffectのPrefabを設定
     [SerializeField] private GameObject     SoundPrefab;   //SoundのPrefabを設定
+    [SerializeField] private ParticleSystem hitEffectPrefab;
+    [SerializeField] private GameObject     hitSEPrefab;
 
     private ParticleSystem _effectInstance;
     private GameObject _soundInstance;
+    private ParticleSystem _hitEffectInstance;
+    private GameObject _hitSEInstance;
 
     public int commandHP;  //コマンドのHP
    
@@ -45,7 +49,9 @@ public partial class Command : MonoBehaviour
     public void CommandHit()  
     {
         commandHP -= 1;  //コマンドのHP減少
-        //Debug.Log(commandHP);
+
+        HitEffectPlay();
+        HitSEPlay();
 
         if (commandHP <= 0)
         {
@@ -58,7 +64,7 @@ public partial class Command : MonoBehaviour
         }
     }
 
-    //エフェクト再生
+    //コマンドが壊れた時のエフェクト再生
     void EffectPlay()  
     {
         //ParticleSystemのインスタンスを生成
@@ -69,7 +75,15 @@ public partial class Command : MonoBehaviour
         _effectInstance.Play();
     }
 
-    //SE再生
+    //コマンドに攻撃したときのエフェクトを再生
+    void HitEffectPlay()
+    {
+        _hitEffectInstance = Instantiate(hitEffectPrefab);
+        _hitEffectInstance.transform.position = this.transform.position;
+        _hitEffectInstance.Play();
+    }
+
+    //コマンドが壊れた時のSE再生
     void SoundPlay()  
     {
         //Soundのインスタンスを生成
@@ -77,5 +91,12 @@ public partial class Command : MonoBehaviour
         //Soundの発生位置をコマンドの位置にする
         _soundInstance.transform.position = this.transform.position;
         //Soundは発生と同時に鳴るようにしている
+    }
+
+    //コマンドに攻撃した時のSE再生
+    void HitSEPlay()
+    {
+        _hitSEInstance = Instantiate(hitSEPrefab);
+        _hitSEInstance.transform.position = this.transform.position;
     }
 }
