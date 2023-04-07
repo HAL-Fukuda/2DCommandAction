@@ -25,11 +25,9 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
 
     public void EnemyAttackInitialize()
     {
+        isReady = false;
         // ここで攻撃の前兆の処理
-        
-
-        // すべての処理が終わったら準備完了にする
-        isReady = true;
+        StartShake();
     }
 
     void EnemyAttackUpdate()
@@ -41,5 +39,10 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
     public bool IsReady()
     {
         return isReady;
+    }
+
+    public void IsReadyOn()
+    {
+        isReady = true;
     }
 }

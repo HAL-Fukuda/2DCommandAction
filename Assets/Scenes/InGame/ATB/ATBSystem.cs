@@ -5,6 +5,8 @@ using UnityEngine;
 public partial class GameMgr : MonoBehaviour
 {
     private float enemyTimer; // エネミー用タイマー
+    private bool EnemyInitialize = false;   // パワーで解決用フラグ
+
     public const float enemyActionTime = 5.0f;
 
     private GameObject playerActionBar;
@@ -43,7 +45,7 @@ public partial class GameMgr : MonoBehaviour
 
                 // 行動が選択されたらバトルステートを変える
                 if (playerActionBar.GetComponent<ActionBarControl>().IsReady() &&
-                    isCommandSelected == true)
+                    isCommandSelected == true && EnemyInitialize == false)
                 {
                     battleState = eBattleState.PLAYER;
                 }
@@ -54,10 +56,18 @@ public partial class GameMgr : MonoBehaviour
                     MessageWindow.Instance.SetDebugMessage(text);
 
                     // 初期化処理
-                    enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
+                    if (EnemyInitialize == false) 
+                    {
+                        EnemyInitialize = true;
+                        enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
+                    }
 
                     // エネミーのターン
-                    battleState = eBattleState.ENEMY;
+                    if (enemy.GetComponent<EnemyAttack>().IsReady())
+                    {
+                        EnemyInitialize = false;
+                        battleState = eBattleState.ENEMY;
+                    }
                 }
                 break;
 
@@ -85,11 +95,8 @@ public partial class GameMgr : MonoBehaviour
                 enemyActionBar.GetComponent<ActionBarControl>().SetEmpty();
 
                 // 敵の行動
-                if (enemy.GetComponent<EnemyAttack>().IsReady())
-                {
-                    enemy.GetComponent<Enemy>().Attack();
-                }
-
+                enemy.GetComponent<Enemy>().Attack();
+                
                 // 時間が経ったら敵の行動終了
                 if (enemyTimer <= 0.0f)
                 {
