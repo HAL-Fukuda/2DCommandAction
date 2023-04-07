@@ -13,6 +13,7 @@ TagManager:
   - Platform
   - AttackPoint
   - Command
+  - DeadZone
   layers:
   - Default
   - TransparentFX
