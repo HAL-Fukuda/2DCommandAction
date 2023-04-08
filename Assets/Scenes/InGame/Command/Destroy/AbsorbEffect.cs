@@ -34,7 +34,7 @@ public class AbsorbEffect : MonoBehaviour
             SlashSEPlay();
 
             //Enemyにダメージを与える
-            enemy.GetComponent<EnemyGetDamage>().GetDamage();
+            enemy.GetComponent<Enemy>().GetDamage();
             //メッセージを表示
             MessageWindow.Instance.SetDebugMessage(attackMessage);
         }
