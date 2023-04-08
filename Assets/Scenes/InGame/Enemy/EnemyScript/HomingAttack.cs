@@ -14,7 +14,7 @@ public partial class EnemyAttack : MonoBehaviour
         {
             Vector2 spawnPosition = Random.insideUnitCircle * 10f; // 敵の出現位置をランダムに決定
             GameObject enemy = Instantiate(homingPrefab, transform.position, Quaternion.identity); // 敵を生成
-            enemy.GetComponent<EnemyAttack>().SetTarget(player); // 生成された敵がプレイヤーを追いかけるように設定
+            //enemy.GetComponent<EnemyAttack>().SetTarget(player); // 生成された敵がプレイヤーを追いかけるように設定
         }
     }
     //-----------------------------------
