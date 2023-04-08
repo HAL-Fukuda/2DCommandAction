@@ -862,9 +862,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d913e97760879646831fe04b86b8ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 0}
-  healPrefab: {fileID: 0}
-  defencePrefab: {fileID: 0}
+  attackPrefab: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
+    type: 3}
+  healPrefab: {fileID: 7335506221992566931, guid: 97402ee95168ad44b8e201f1bbe4f937,
+    type: 3}
+  defencePrefab: {fileID: 7335506221992566931, guid: 6198a016f8c24e742a3551a815db0baa,
+    type: 3}
   rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
   rangeB: {fileID: 5771637033348842335, guid: e5bd1e084e243944980f281248612782, type: 3}
   num: 4
