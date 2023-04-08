@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlashEffect : MonoBehaviour
+public class HitEffect : MonoBehaviour
 {
-    private ParticleSystem slashParticle;
-    
+    private ParticleSystem hitParticle;
+   
     void Start()
     {
-        slashParticle = this.GetComponent<ParticleSystem>();
+        hitParticle = this.GetComponent<ParticleSystem>();
     }
 
+    
     void FixedUpdate()
     {
-        if (slashParticle.isStopped)
+        if (hitParticle.isStopped)
         {
             Destroy(this.gameObject);
         }
