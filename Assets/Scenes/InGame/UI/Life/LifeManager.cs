@@ -10,6 +10,7 @@ public class LifeManager : MonoBehaviour
 
     bool invincibility = false;
 
+    public GameObject deadEffect; // 死亡エフェクト
 
     public void InvincibilityOn()
     {
@@ -34,8 +35,10 @@ public class LifeManager : MonoBehaviour
                     lifeArray[lifePoint - 1].SetActive(false);
                     lifePoint--;
                 }
-                else
+                if(lifePoint <= 0)
                 {
+                    // 死亡エフェクト生成
+                    Instantiate(deadEffect);
                     break;
                 }
             }
@@ -57,19 +60,6 @@ public class LifeManager : MonoBehaviour
             {
                 break;
             }
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GetDamage(2);
-        }
-
-        else if (Input.GetMouseButtonDown(1))
-        {
-            GetHeal(3);
         }
     }
 }
