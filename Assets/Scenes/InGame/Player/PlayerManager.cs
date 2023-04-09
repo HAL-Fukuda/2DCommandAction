@@ -40,6 +40,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        JumpAnimation();
         Movement();
         HoldThrowUpdate();
     }
@@ -47,9 +48,7 @@ public class PlayerManager : MonoBehaviour
     //ˆÚ“®‚Ìˆ—
     void Movement()
     {
-
         float x = Input.GetAxisRaw("Horizontal");       //‰¡•ûŒü
-
 
         //‰EŒü‚«
         if (x > 0)
@@ -140,12 +139,24 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    void JumpAnimation()
+    {
+        if (isGround == false)
+        {
+            animator.SetBool("JumpNow", true);
+        }
+        else if(isGround == true)
+        {
+            animator.SetBool("JumpNow", false);
+        }
+    }
+
     //—­‚ß’†
     void Chargeing()
     {
-        //Debug.Log("—­‚ß’†");
         animator.SetBool("ChargingNow", true);
         Chargeingcount += 0.1f;
+        //Debug.Log("—­‚ß’†");
         //Debug.Log(Chargeingcount);
     }
 
