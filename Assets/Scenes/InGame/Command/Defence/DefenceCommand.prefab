@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed90a638be43af346938d9214063b2ed, type: 2}
+  - {fileID: 2100000, guid: 30566d6bc8d02484ba700f6559ea274b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,7 +149,8 @@ MonoBehaviour:
     type: 3}
   SlashingSE: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
-  attackMessage: "\u6575\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u305F\uFF01"
+  attackEffectPrefab: {fileID: 0}
+  attackSEPrefab: {fileID: 0}
   commandType: 1
   isActive: 0
   EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,
