@@ -14,7 +14,7 @@ public partial class Command : MonoBehaviour
     private GameObject _soundInstance;
     private ParticleSystem _hitEffectInstance;
     private GameObject _hitSEInstance;
-
+    
     public int commandHP;  //コマンドのHP
    
     void CommandEffectInitialize()
@@ -60,7 +60,9 @@ public partial class Command : MonoBehaviour
 
             EffectPlay();   //Effect再生
             SoundPlay();    //SE再生
-            gameObject.SetActive(false);  //コマンドを削除
+
+            Destroy(this.gameObject);
+            //gameObject.SetActive(false);  //コマンドを削除
         }
     }
 
@@ -99,4 +101,5 @@ public partial class Command : MonoBehaviour
         _hitSEInstance = Instantiate(hitSEPrefab);
         _hitSEInstance.transform.position = this.transform.position;
     }
+    
 }
