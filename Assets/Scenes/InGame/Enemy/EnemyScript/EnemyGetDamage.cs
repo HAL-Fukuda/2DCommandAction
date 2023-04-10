@@ -42,6 +42,28 @@ public partial class Enemy : MonoBehaviour
         StartCoroutine(ShakeCoroutine());
     }
 
+    public void GetBigDamage()
+    {
+        GetDamageInitialize();
+
+        // UŒ‚‚³‚ê‚½‚ÌˆÊ’u‚ğæ“¾‚·‚é
+        originalPosition = transform.position;
+
+        // HP‚ğ1Œ¸‚ç‚·
+        hp -= 2;
+
+        // HP‚ª0‚É‚È‚Á‚½‚çíœ‚·‚é
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        // ”•bŒãŒ³‚ÌF‚É–ß‚·
+        StartCoroutine(ChangeAndResetColor(ColorDuration));
+        // U“®‚³‚¹‚é
+        StartCoroutine(ShakeCoroutine());
+    }
+
     private IEnumerator ChangeAndResetColor(float delay)
     {
         // ÔF‚É‚·‚é
