@@ -41,6 +41,16 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         JumpAnimation();
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            DamegeAnimation();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            DieAnimation();
+        }
+
         Movement();
         HoldThrowUpdate();
     }
@@ -139,6 +149,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    //ジャンプのアニメーション
     void JumpAnimation()
     {
         if (isGround == false)
@@ -149,6 +160,18 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetBool("JumpNow", false);
         }
+    }
+
+    //ダメージを受けたときのアニメーション
+    void DamegeAnimation()
+    {
+        animator.SetTrigger("isDamege");
+    }
+
+    //ゲームオーバーのアニメーション
+    void DieAnimation()
+    {
+        animator.SetTrigger("isDie");
     }
 
     //溜め中
