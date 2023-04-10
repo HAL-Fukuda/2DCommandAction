@@ -7,6 +7,7 @@ public partial class CommandMgr : MonoBehaviour
     [SerializeField] private GameObject attackPrefab;  //¶¬‚·‚éPreFab
     [SerializeField] private GameObject healPrefab;  //¶¬‚·‚éPreFab
     [SerializeField] private GameObject defencePrefab;  //¶¬‚·‚éPreFab
+    [SerializeField] private GameObject BigPrefab;  //¶¬‚·‚éPreFab
     [SerializeField] private Transform rangeA;         //¶¬‚·‚é”ÍˆÍA
     [SerializeField] private Transform rangeB;         //¶¬‚·‚é”ÍˆÍB
     [SerializeField] private int num;                  //¶¬‚·‚éŒÂ”
@@ -55,7 +56,7 @@ public partial class CommandMgr : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            number = Random.Range(0, 10);
+            number = Random.Range(0, 11);
 
             CreateRandomPos();
 
@@ -71,6 +72,10 @@ public partial class CommandMgr : MonoBehaviour
             {
                 CreateDefenceCommand();
             }
+            else if (number == 10)
+            {
+                CreateBigCommand();
+            }
 
             //‘Ò‚¿ŠÔ
             yield return new WaitForSeconds(0.5f);
@@ -81,7 +86,7 @@ public partial class CommandMgr : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            number = Random.Range(0, 10);
+            number = Random.Range(0, 11);
 
             CreateRandomPos();
 
@@ -96,6 +101,10 @@ public partial class CommandMgr : MonoBehaviour
             else if (number == 9)
             {
                 CreateDefenceCommand();
+            }
+            else if (number == 10)
+            {
+                CreateBigCommand();
             }
         }
     }
@@ -120,5 +129,10 @@ public partial class CommandMgr : MonoBehaviour
     void CreateDefenceCommand()
     {
         Instantiate(defencePrefab, new Vector3(randomPosX, randomPosY, randomPosZ), defencePrefab.transform.rotation);
+    }
+
+    void CreateBigCommand()
+    {
+        Instantiate(BigPrefab, new Vector3(randomPosX, randomPosY, randomPosZ), BigPrefab.transform.rotation);
     }
 }
