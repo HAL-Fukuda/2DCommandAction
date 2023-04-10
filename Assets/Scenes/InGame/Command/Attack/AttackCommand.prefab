@@ -98,11 +98,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 660c530470d791b46b5185ece3c2fb9a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -152,7 +152,6 @@ MonoBehaviour:
   attackEffectPrefab: {fileID: 8855256153686624580, guid: 37bdc08a414bd6c4cb8607bc4a1b9555,
     type: 3}
   attackSEPrefab: {fileID: 0}
-  attackMessage: "\u6575\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u305F\uFF01"
   commandType: 0
   isActive: 0
   EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,

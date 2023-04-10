@@ -80,14 +80,14 @@ public partial class EnemyAttack : MonoBehaviour
 
 
     // Start is called before the first frame update
-    
+
 
     // Update is called once per frame
     //void Update()
     //{
     //    if (Input.GetKeyUp(KeyCode.B))
     //    {
-    //        SatelliteBeam(); 
+    //        SatelliteBeam();
     //    }
     //}
 }
