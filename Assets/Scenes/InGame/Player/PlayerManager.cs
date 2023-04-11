@@ -85,12 +85,12 @@ public class PlayerManager : MonoBehaviour
         }
 
         //ため中
-        if (Input.GetKey(KeyCode.Return) && isGround)
+        if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//追加
         {
             Chargeing();
         }
         //ため攻撃
-        if (Input.GetKeyUp(KeyCode.Return))
+        if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//追加
         {
 
             if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
@@ -108,12 +108,12 @@ public class PlayerManager : MonoBehaviour
         }
 
         //ジャンプ
-        if (Input.GetKeyDown(KeyCode.Space) && isGround)
+        if ((Input.GetKeyDown(KeyCode.Space) && isGround) || (Input.GetButtonDown("A")) && isGround)//追加
         {
             isDoubleJump = false;
             rb.AddForce(new Vector3(0, upForce, 0));
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false)
+        else if ((Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false) || (Input.GetButtonDown("A")) && isDoubleJump == false)//追加
         {
             if (rb.velocity.y < 0) // 下降中に二段目のジャンプを行う場合
             {
@@ -156,7 +156,7 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetBool("JumpNow", true);
         }
-        else if(isGround == true)
+        else if (isGround == true)
         {
             animator.SetBool("JumpNow", false);
         }
@@ -214,14 +214,14 @@ public class PlayerManager : MonoBehaviour
 
     void HoldThrowUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.U)&& !isHaveCommand)
+        if ((Input.GetKeyDown(KeyCode.U) && !isHaveCommand) || (Input.GetButtonUp("X")) && !isHaveCommand)//追加
         {
             Hold();
         }
         if (isHaveCommand)
         {
             commandObject.transform.position = transform.position + new Vector3(0, overhead, 0);
-            if (Input.GetKeyDown(KeyCode.L))
+            if ((Input.GetKeyDown(KeyCode.L)) || (Input.GetButtonDown("X")))//追加
             {
                 Throw();
             }
