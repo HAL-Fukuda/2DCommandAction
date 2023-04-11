@@ -9,7 +9,7 @@ public class PlatformManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetAxis("Vertical") != 0f)//’Ç‰Á
         {
             Through();  // SƒL[‚ğ‰Ÿ‚µ‚Ä°‚ğ‚·‚è”²‚¯‚é
         }
