@@ -201,6 +201,15 @@ public class PlayerManager : MonoBehaviour
         {
             CommandMgr.Instance.AttackHit(hitCommand.gameObject);
         }
+
+        // 空中で動きを少し止める
+        if (isGround == false)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY
+                | RigidbodyConstraints2D.FreezePositionX
+                | RigidbodyConstraints2D.FreezeRotation;
+            Invoke("FreezePosition2D", 0.3f);
+        }
     }
 
     void HoldThrowUpdate()
@@ -259,5 +268,15 @@ public class PlayerManager : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+    }
+
+    // 空中停止の終了処理
+    private void FreezePosition2D()
+    {
+        //rb.simulated = true;
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        rb.velocity = new Vector2(rb.velocity.x, 0); // 落下速度をリセットする
     }
 }
