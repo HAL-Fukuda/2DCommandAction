@@ -6,6 +6,7 @@ using DG.Tweening;
 public partial class EnemyAttack : MonoBehaviour //クラス名統一
 {
     public AttackSettings meteorAttackSettings;
+   
 
     public void MeteorAttack()
     {
@@ -25,6 +26,7 @@ public partial class EnemyAttack : MonoBehaviour //クラス名統一
                 meteorAttackSettings.life // 演出時間
             ).OnComplete(() =>
             {
+               
                 Destroy(obj);
             });
         }

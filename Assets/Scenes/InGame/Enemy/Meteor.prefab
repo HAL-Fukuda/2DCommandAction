@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86689fa404c5f32458db924e7d55d6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifemanager: {fileID: 2003935794672161303, guid: 1d235e22d2cf8bd449a7f5c9ce76c236,
+  explosionPrefab: {fileID: 9001425366629130539, guid: e973b13c335a5b241b3775b8fe06636e,
     type: 3}
+  se: {fileID: 8300000, guid: 685bd5aa5a2ef64459ca51ab323536c4, type: 3}

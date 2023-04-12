@@ -5,6 +5,9 @@ using UnityEngine;
 public class MeteorCollider : MonoBehaviour
 {
     private LifeManager lifeManager;
+    // 例えばこんな感じ
+    [SerializeField] private ParticleSystem explosionPrefab; // パーティクルシステムのプレハブ
+    public AudioClip se;
 
     private void Start()
     {
@@ -19,9 +22,21 @@ public class MeteorCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             Debug.Log("dwkodkw");
             lifeManager.GetDamage(1);
             Destroy(gameObject);
+            // パーティクルシステムの再生
+            ParticleSystem explosion = Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(se, transform.position);
+        }
+
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+
+            Destroy(gameObject);
+            ParticleSystem explosion = Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(se, transform.position);
         }
     }
 }
