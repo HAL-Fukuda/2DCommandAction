@@ -47,30 +47,40 @@ public partial class EnemyAttack : MonoBehaviour
 
 
         rgd.AddForce(SVAPosition * 10.0f);  // プレイヤーの位置に力をかける
+
+        // point1から見たpoint2の相対座標を計算
+        Vector3 relativePos = EnemyPos - SVAPosition;
+
+        // atan2関数を用いて角度を計算
+        float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
+
+
+
+        SVAobj.transform.DORotate(new Vector3(0, 0, angle), 0, RotateMode.WorldAxisAdd);
     }
 
 
     // Update is called once per frame
-    
-    
+
+
     // Update二個あるってエラーでる
-    // 後で治す
+    // Updateを書く場所を変えるかもしれない
 
-    //void Update()
-    //{
-    //    //if (Input.GetKeyUp(KeyCode.B))
-    //    //{
-    //    //    SideVanishAttack();
-    //    //}
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            SideVanishAttack();
+        }
 
-    //    if (rgd != null)
-    //    {
-    //        // 速度の上限設定
-    //        if (rgd.velocity.magnitude > SVAspeed)
-    //        {
-    //            rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
-    //        }
-    //    }
-    //}
-    
+        if (rgd != null)
+        {
+            // 速度の上限設定
+            if (rgd.velocity.magnitude > SVAspeed)
+            {
+                rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
+            }
+        }
+    }
+
 }

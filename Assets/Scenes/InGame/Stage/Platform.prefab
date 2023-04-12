@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2510386058298804987}
   - component: {fileID: 2510386058298804986}
   - component: {fileID: 2510386058298804991}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3063
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
