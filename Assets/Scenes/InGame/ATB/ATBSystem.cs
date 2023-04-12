@@ -82,7 +82,7 @@ public partial class GameMgr : MonoBehaviour
                 // コマンドの処理が終了したらバトルステートを変える
                 if (!selectedCommand.GetComponent<Command>().IsActive())
                 {
-                    UnstoreCommand(); // 選択されたコマンドの情報を無くす
+                    DeleteCommand(); // 選択されたコマンドの情報を無くす
                     battleState = eBattleState.COMMAND_SELECT;
                 }
                 break;

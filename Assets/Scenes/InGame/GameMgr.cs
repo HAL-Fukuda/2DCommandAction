@@ -60,7 +60,7 @@ public partial class GameMgr : MonoBehaviour
         {
             // 戦闘更新処理
             ActiveTimeBattleUpdate();
-            if(battle == false)
+            if (battle == false)
             {
                 FinalizeBattle();
             }
@@ -68,27 +68,51 @@ public partial class GameMgr : MonoBehaviour
     }
 
     // 敵をセットする
-    public void StoreEnemy(GameObject enemy)
+    public void SetEnemy(GameObject enemy)
     {
         this.enemy = enemy;
     }
 
-    // 選択されたコマンドを格納する
-    public void StoreCommand(GameObject command)
+    // 敵を削除する
+    public void DeleteEnemy()
     {
-        // アクションバーが100％のときだけコマンドを受け付ける
-        if (playerActionBar.GetComponent<ActionBarControl>().IsReady())
+        Destroy(this.enemy);
+    }
+
+    // 選択されたコマンドを格納する
+    public void SetCommand(GameObject command)
+    {
+        if (isCommandSelected) // すでにコマンドが選択されているとき
+        {
+            // 選択されているコマンドを削除
+            DeleteCommand();
+        }
+
+        if(battleState == eBattleState.COMMAND_SELECT)
         {
             isCommandSelected = true;
-            this.selectedCommand = command;
+
+            // コマンドをコピー
+            selectedCommand = command;
+        }
+        else
+        {
+            Destroy(command);
         }
     }
 
-    // 選択されたコマンドをnullにする
-    public void UnstoreCommand()
+    // 選択されたコマンドを削除する
+    public void DeleteCommand()
     {
         isCommandSelected = false;
-        selectedCommand = null;
+
+        Destroy(selectedCommand);
+    }
+
+    // コマンドが選択されているか
+    public bool IsCommandSelected()
+    {
+        return isCommandSelected;
     }
 
     // バトルを開始するための初期化

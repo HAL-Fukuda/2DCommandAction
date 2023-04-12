@@ -55,14 +55,14 @@ public partial class Command : MonoBehaviour
 
         if (commandHP <= 0)
         {
-            // GameMgrにコマンドを渡す
-            GameMgr.Instance.StoreCommand(gameObject);
-
             EffectPlay();   //Effect再生
             SoundPlay();    //SE再生
 
-            Destroy(this.gameObject);
-            //gameObject.SetActive(false);  //コマンドを削除
+            this.gameObject.SetActive(false);
+
+            GameMgr.Instance.SetCommand(this.gameObject);
+
+            //Destroy(this.gameObject); // コマンドを削除
         }
     }
 
