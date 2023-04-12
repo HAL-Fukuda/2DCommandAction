@@ -84,27 +84,31 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
-        //‚½‚ß’†
-        if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//’Ç‰Á
+        // ƒRƒ}ƒ“ƒh‚ğ‚Á‚Ä‚¢‚é‚ÍUŒ‚‚Å‚«‚È‚¢
+        if (isHaveCommand == false)
         {
-            Chargeing();
-        }
-        //‚½‚ßUŒ‚
-        if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//’Ç‰Á
-        {
-
-            if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
+            //‚½‚ß’†
+            if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//’Ç‰Á
             {
-                Debug.Log("UŒ‚Fˆê’iŠK");
-                Attack();
+                Chargeing();
             }
-            else if (Chargeingcount >= 400.0f)
+            //‚½‚ßUŒ‚
+            if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//’Ç‰Á
             {
-                Debug.Log("UŒ‚F“ñ’iŠK");
-                Attack();
-            }
 
-            Chargeingcount = 0.0f;
+                if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
+                {
+                    Debug.Log("UŒ‚Fˆê’iŠK");
+                    Attack();
+                }
+                else if (Chargeingcount >= 400.0f)
+                {
+                    Debug.Log("UŒ‚F“ñ’iŠK");
+                    Attack();
+                }
+
+                Chargeingcount = 0.0f;
+            }
         }
 
         //ƒWƒƒƒ“ƒv
