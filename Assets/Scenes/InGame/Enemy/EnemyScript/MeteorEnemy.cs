@@ -6,7 +6,7 @@ using DG.Tweening;
 public partial class EnemyAttack : MonoBehaviour //クラス名統一
 {
     public AttackSettings meteorAttackSettings;
-    public GameObject explosionPrefab; // パーティクルシステムのプレハブ
+   
 
     public void MeteorAttack()
     {
@@ -26,10 +26,8 @@ public partial class EnemyAttack : MonoBehaviour //クラス名統一
                 meteorAttackSettings.life // 演出時間
             ).OnComplete(() =>
             {
-                // パーティクルシステムの再生
-                GameObject explosion = Instantiate(explosionPrefab, obj.transform.position, Quaternion.identity);
+               
                 Destroy(obj);
-                Destroy(explosion, 3f); // 3秒後にパーティクルシステムを削除する
             });
         }
     }
