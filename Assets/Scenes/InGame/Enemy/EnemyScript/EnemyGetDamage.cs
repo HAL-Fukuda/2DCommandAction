@@ -12,12 +12,26 @@ public partial class Enemy : MonoBehaviour
     public float shakeIntensity = 0.1f; // 揺れの強さ
     public float shakeDuration = 0.2f; // 揺れる時間
 
+    float fadeSpeed = 0.01f;  //透明度が変わるスピード
+    float red, green, blue, alfa;  //Materialの色
+
+    public bool isFadeOut = false;  //フェードアウト状態の管理
+    public bool isFadeIn = false;   //フェードイン状態の管理
+
+    public Renderer fadeMaterial;  //Materialにアクセスするための容器
+
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
     {
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         material = renderer.material;
         originalColor = material.color;
+
+        fadeMaterial = GetComponent<Renderer>();
+        red = fadeMaterial.material.color.r;
+        green = fadeMaterial.material.color.g;
+        blue = fadeMaterial.material.color.b;
+        alfa = fadeMaterial.material.color.a;
     }
 
     public void GetDamage()
@@ -33,7 +47,12 @@ public partial class Enemy : MonoBehaviour
         // HPが0になったら削除する
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            isFadeOut = true;
+
+            if (isFadeOut)
+            {
+                StartFadeOut();
+            }
         }
 
         // 数秒後元の色に戻す
@@ -55,7 +74,12 @@ public partial class Enemy : MonoBehaviour
         // HPが0になったら削除する
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            isFadeOut = true;
+
+            if (isFadeOut)
+            {
+                StartFadeOut();
+            }
         }
 
         // 数秒後元の色に戻す
@@ -101,5 +125,24 @@ public partial class Enemy : MonoBehaviour
 
         // 元の位置に戻す
         transform.position = originalPosition;
+    }
+
+    public void StartFadeOut()
+    {
+        alfa -= fadeSpeed;
+        SetAlfa();
+
+        if (alfa <= 0)
+        {
+            isFadeOut = false;
+            fadeMaterial.enabled = false;
+
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void SetAlfa()
+    {
+        fadeMaterial.material.color = new Color(red, green, blue, alfa);
     }
 }

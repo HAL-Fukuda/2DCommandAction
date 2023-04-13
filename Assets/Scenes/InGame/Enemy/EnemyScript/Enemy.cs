@@ -9,7 +9,21 @@ public partial class Enemy : MonoBehaviour
 
     EnemyAttack attackScript;
 
-    void Start()
+    public enum eEnemyType
+    {
+        Demon,
+        Dragon,
+        Goblin,
+        Skelton,
+        Slime,
+        Soldier,
+        Wolf,
+        WolfMan,
+        Zombie
+    }
+    public eEnemyType enemyType;
+
+    public void Start()
     {
         EnemyInitialize();
         GetDamageInitialize();
