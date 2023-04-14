@@ -539,7 +539,8 @@ MonoBehaviour:
   - {fileID: 4451820381057264515}
   lifePoint: 5
   maxlifePoint: 5
-  deadEffect: {fileID: 0}
+  deadEffect: {fileID: 6215938414977157897, guid: e1dc10d2aae5f7344b9911c391590592,
+    type: 3}
 --- !u!1 &6140353482121447787
 GameObject:
   m_ObjectHideFlags: 0
