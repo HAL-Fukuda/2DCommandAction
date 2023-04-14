@@ -15,7 +15,7 @@ public partial class EnemyAttack : MonoBehaviour
     private GameObject SVAobj;
 
 
-    void GetPlayerPosition()
+    void GetPlayerPositionToSVA()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
         Transform myObjectTransform = player1.GetComponent<Transform>();
@@ -38,7 +38,7 @@ public partial class EnemyAttack : MonoBehaviour
 
     void SideVanishAttack()
     {
-        GetPlayerPosition();
+        GetPlayerPositionToSVA();
         GetEnemyPosition();
 
         spawnPos = new Vector3(EnemyPos.x, EnemyPos.y, 0.0f);
@@ -55,8 +55,7 @@ public partial class EnemyAttack : MonoBehaviour
         float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
 
 
-
-        SVAobj.transform.DORotate(new Vector3(0, 0, angle), 0, RotateMode.WorldAxisAdd);
+        SVAobj.transform.DORotate(new Vector3(0, 0, angle), 0, RotateMode.WorldAxisAdd);    // 攻撃エフェクトの向きの処理
     }
 
 
@@ -66,21 +65,21 @@ public partial class EnemyAttack : MonoBehaviour
     // Update二個あるってエラーでる
     // Updateを書く場所を変えるかもしれない
 
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            SideVanishAttack();
-        }
+    //void Update()
+    //{
+    //    if (Input.GetKeyUp(KeyCode.B))
+    //    {
+    //        SideVanishAttack();
+    //    }
 
-        if (rgd != null)
-        {
-            // 速度の上限設定
-            if (rgd.velocity.magnitude > SVAspeed)
-            {
-                rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
-            }
-        }
-    }
+    //    if (rgd != null)
+    //    {
+    //        // 速度の上限設定
+    //        if (rgd.velocity.magnitude > SVAspeed)
+    //        {
+    //            rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
+    //        }
+    //    }
+    //}
 
 }
