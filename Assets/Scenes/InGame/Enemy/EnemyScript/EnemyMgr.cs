@@ -6,7 +6,7 @@ using UnityEngine;
 // エネミーの生成などの管理はすべてここで行う
 //----------------------------------------------
 
-public class EnemyMgr : MonoBehaviour
+public partial class EnemyMgr : MonoBehaviour
 {
     public GameObject dragon;
     public GameObject slime;
@@ -14,14 +14,13 @@ public class EnemyMgr : MonoBehaviour
     public GameObject zombie;
     public GameObject skelton;
 
-
     void EnemyMgrInitialize()
     {
-
+        
     }
 
     void EnemyMgrUpdate()
     {
-
+        
     }
 }
