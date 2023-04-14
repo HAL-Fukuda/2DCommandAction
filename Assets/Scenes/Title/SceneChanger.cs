@@ -11,4 +11,9 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("StageSelect");
     }
+
+    public void ButtonExit()
+    {
+        Application.Quit();
+    }
 }
