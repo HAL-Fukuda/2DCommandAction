@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 553801934041815194}
   - component: {fileID: -5363587489935295664}
   - component: {fileID: 6823881610889403276}
+  - component: {fileID: 849495972589746504}
   m_Layer: 0
   m_Name: conveyor
   m_TagString: Platform
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eee851e180f4c1e4eaa8b0f56f1ce08a, type: 2}
+  - {fileID: 2100000, guid: 40554150d056d6546b484c220ab2ac0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,3 +126,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direction: 0
+--- !u!114 &849495972589746504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868934805911993325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45186d6637881114394a113af7dea414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material1: {fileID: 2100000, guid: 40554150d056d6546b484c220ab2ac0c, type: 2}
+  material2: {fileID: 2100000, guid: 66b2e4a12de18004490c7972a808180c, type: 2}
+  switchTime: 0.1
