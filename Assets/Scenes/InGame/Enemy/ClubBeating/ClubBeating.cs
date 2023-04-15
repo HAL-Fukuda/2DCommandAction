@@ -19,7 +19,7 @@ public partial class EnemyAttack : MonoBehaviour
         CBPosition = myObjectTransform.position;
         CBPosition.y = 6.0f;
         CBPosition.z = 0.0f;
-        Debug.Log(CBPosition);
+        //Debug.Log(CBPosition);
     }
 
     void CBobjDestroy()
@@ -57,11 +57,11 @@ public partial class EnemyAttack : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetKeyUp(KeyCode.B))
-        //{
-        //    ClubBeating();
-        //}
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyUp(KeyCode.B))
+    //    {
+    //        ClubBeating();
+    //    }
+    //}
 }
