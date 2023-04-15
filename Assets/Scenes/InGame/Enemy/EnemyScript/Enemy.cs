@@ -37,6 +37,6 @@ public partial class Enemy : MonoBehaviour
     public virtual void Attack()
     {
         attackScript.MeteorAttack();
-        //attackScript.EnemysAttack();  //“G‚²‚Æ‚ÌUŒ‚‘I‘ğ—pŠÖ”
+        //attackScript.EnemysAttack();  //æ•µã”ã¨ã®æ”»æ’ƒé¸æŠç”¨é–¢æ•°
     }
 }
