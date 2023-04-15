@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3149903282961528394}
   - component: {fileID: 3149903282961528393}
   - component: {fileID: 3149903282961528392}
-  - component: {fileID: -1493335991188902466}
+  - component: {fileID: -8674974824610009183}
   - component: {fileID: -5128815410852538657}
   m_Layer: 0
-  m_Name: Club
+  m_Name: ClubSwing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,13 +128,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &-1493335991188902466
+--- !u!114 &-8674974824610009183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3149903282961528407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 619faa31d51735c4d8b22600ba4a94c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 49dc07177c2fd2e4b9deeda211352bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeatingSound: {fileID: 8300000, guid: 969084ae368aefc43b19b75e9f9113be, type: 3}
+  HittingSound: {fileID: 8300000, guid: 99251637718bf914591819daf2b61645, type: 3}
+  SwingSound: {fileID: 8300000, guid: 72741350c94d2af4282023dbdcf111ff, type: 3}
 --- !u!82 &-5128815410852538657
 AudioSource:
   m_ObjectHideFlags: 0

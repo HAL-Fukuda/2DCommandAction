@@ -37,6 +37,6 @@ public partial class Enemy : MonoBehaviour
     public virtual void Attack()
     {
         attackScript.MeteorAttack();
-        attackScript.SidewaysAttack();
+        //attackScript.EnemysAttack();  //敵ごとの攻撃選択用関数
     }
 }
