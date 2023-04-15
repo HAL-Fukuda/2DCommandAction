@@ -45,4 +45,48 @@ public partial class EnemyAttack : MonoBehaviour //partial C++ÇÃÉNÉâÉX
     {
         isReady = true;
     }
+
+    public void EnemysAttack()
+    {
+        //Debug.Log("EnemysAttack");
+
+        string name = EnemyMgr.instance.enemyName;
+
+        //Debug.Log(name);
+
+        switch (name)
+        {
+            case "Demon(Clone)":
+                //DemonÇÃçUåÇèàóù
+                //Debug.Log("DemonAttack");
+                break;
+            case "Dragon(Clone)":
+                //
+                break;
+            case "Goblin(Clone)":
+                //
+                break;
+            case "Skeleton(Clone)":
+                //
+                break;
+            case "Slime(Clone)":
+                //
+                break;
+            case "Soldier(Clone)":
+                //
+                break;
+            case "Wolf(Clone)":
+                //
+                break;
+            case "WolfMan(Clone)":
+                //
+                break;
+            case "Zombie(Clone)":
+                //
+                break;
+            case "Enemy":
+                //Debug.Log("EnemyAttack");
+                break;
+        }
+    }
 }

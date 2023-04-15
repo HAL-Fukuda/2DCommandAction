@@ -14,26 +14,20 @@ public partial class EnemyMgr : MonoBehaviour
     [SerializeField] private GameObject wolfmanPrefab;
     [SerializeField] private GameObject zombiePrefab;
 
-    private int num;
-
-    // Start is called before the first frame update
-    void Start()
+    public int num;
+    
+    void EnemySpawnInitialize()
+    {
+        
+    }
+    
+    void EnemySpawnUpdate()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            EnemySpawn();
-        }
-    }
-
     void EnemySpawn()
     {
-        num = 1;
         //num = Random.Range(0, 9);
 
         if (num == 0)

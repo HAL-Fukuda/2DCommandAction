@@ -8,19 +8,21 @@ using UnityEngine;
 
 public partial class EnemyMgr : MonoBehaviour
 {
-    public GameObject dragon;
-    public GameObject slime;
-    public GameObject goblin;
-    public GameObject zombie;
-    public GameObject skelton;
 
     void EnemyMgrInitialize()
     {
         
     }
 
-    void EnemyMgrUpdate()
+    void Update()
     {
-        
+        GetEnemyTypeInitialize();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            EnemySpawn();
+
+            //GetEnemyTypeInitialize();
+        }
     }
 }
