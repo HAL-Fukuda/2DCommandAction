@@ -1,9 +1,15 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PlayerManager : MonoBehaviour
 {
+
+    [SerializeField] GameObject slash;
+    [SerializeField] GameObject Bigslash;
+
     //インスペクターで設定する
     public float moveSpeed;          //移動速度
     public int AvoidanceForce;     //回避速度
@@ -49,6 +55,10 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             DieAnimation();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            specialattack();
         }
 
         Movement();
@@ -265,6 +275,41 @@ public class PlayerManager : MonoBehaviour
             rigidbody.velocity = velocity;     //ベクトルを代入
             isHaveCommand = false;
         }
+    }
+
+    void specialattack()
+    {
+        this.transform.DOMove(new Vector3(-3.689993f, -2.374583f, 0f), 1.5f);
+        transform.localScale = new Vector3(-2, 2, 1);
+        StartCoroutine("SPChargingNow");
+        Invoke(nameof(Slash), 2.0f);
+        Invoke(nameof(Slash), 3.0f);
+        Invoke(nameof(Slash), 4.0f);
+        Invoke(nameof(BigSlash), 5.5f);
+    }
+
+    void Slash()
+    {
+        animator.SetTrigger("isSPAttack");
+        //プレイヤーの座標を取得
+        Vector2 position = transform.position;
+        //プレイヤーとかぶらなくする
+        position.x += 1;
+        position.y += 1;
+        Instantiate(slash, position, transform.rotation);
+    }
+
+    void BigSlash()
+    {
+        animator.SetTrigger("isSPAttack");
+        Instantiate(Bigslash, transform.position, transform.rotation);
+    }
+
+    IEnumerator SPChargingNow()
+    {
+        animator.SetBool("SPChargingNow", true);
+        yield return new WaitForSeconds(5.5f);
+        animator.SetBool("SPChargingNow", false);
     }
 
     //当たり判定のとこを赤い円で描く
