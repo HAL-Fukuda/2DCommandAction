@@ -47,6 +47,8 @@ public partial class Enemy : MonoBehaviour
         // HP‚ª0‚É‚È‚Á‚½‚çíœ‚·‚é
         if (hp <= 0)
         {
+            GameMgr.Instance.DeleteEnemy();
+
             isFadeOut = true;
 
             if (isFadeOut)
@@ -74,6 +76,8 @@ public partial class Enemy : MonoBehaviour
         // HP‚ª0‚É‚È‚Á‚½‚çíœ‚·‚é
         if (hp <= 0)
         {
+            GameMgr.Instance.DeleteEnemy();
+
             isFadeOut = true;
 
             if (isFadeOut)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class STAGE_CLEAR : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class STAGE_CLEAR : MonoBehaviour
                     {
                         // オブジェクト削除
                         Destroy(gameObject);
+                        // ステージセレクト画面へ
+                        SceneManager.LoadScene("StageSelect");
                     });
                 });
             });

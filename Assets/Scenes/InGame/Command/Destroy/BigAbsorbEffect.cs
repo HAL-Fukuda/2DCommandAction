@@ -17,7 +17,7 @@ public class BigAbsorbEffect : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.Find("Enemy").transform;
+        target = GameObject.FindWithTag("Enemy").transform;
     }
 
     void FixedUpdate()
@@ -48,14 +48,14 @@ public class BigAbsorbEffect : MonoBehaviour
 
     void SlashEffectPlay()
     {
-        enemy = GameObject.Find("Enemy");
+        enemy = GameObject.FindWithTag("Enemy");
         _slashEffectInstance = Instantiate(slashEffectPrefab);
         _slashEffectInstance.transform.position = enemy.transform.position;
     }
 
     void SlashSEPlay()
     {
-        enemy = GameObject.Find("Enemy");
+        enemy = GameObject.FindWithTag("Enemy");
         _slashSEInstance = Instantiate(slashSEPrefab);
         _slashSEInstance.transform.position = enemy.transform.position;
     }

@@ -14,6 +14,7 @@ TagManager:
   - AttackPoint
   - Command
   - DeadZone
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,7 @@ public partial class EnemyMgr : MonoBehaviour
     [SerializeField] private GameObject zombiePrefab;
 
     public int num;
+    private GameObject enemy; // 今生成されているエネミー
     
     void EnemySpawnInitialize()
     {
@@ -26,7 +27,7 @@ public partial class EnemyMgr : MonoBehaviour
         
     }
 
-    void EnemySpawn()
+    public void EnemySpawn()
     {
         //num = Random.Range(0, 9);
 
@@ -70,34 +71,34 @@ public partial class EnemyMgr : MonoBehaviour
 
     void DemonSpawn()
     {
-        Instantiate(demonPrefab, new Vector3(0,4,0), demonPrefab.transform.rotation);
+        enemy = Instantiate(demonPrefab, new Vector3(0,4,0), demonPrefab.transform.rotation);
     }
     void DragonSpawn()
     {
-        Instantiate(dragonPrefab, new Vector3(0, 4, 0), dragonPrefab.transform.rotation);
+        enemy = Instantiate(dragonPrefab, new Vector3(0, 4, 0), dragonPrefab.transform.rotation);
     }
     void GoblinSpawn()
     {
-        Instantiate(goblinPrefab, new Vector3(0, 4, 0), goblinPrefab.transform.rotation);
+        enemy = Instantiate(goblinPrefab, new Vector3(0, 4, 0), goblinPrefab.transform.rotation);
     }
     void SkeltonSpawn()
     {
-        Instantiate(skeletonPrefab, new Vector3(0, 4, 0), skeletonPrefab.transform.rotation);
+        enemy = Instantiate(skeletonPrefab, new Vector3(0, 4, 0), skeletonPrefab.transform.rotation);
     }
     void SlimeSpawn()
     {
-        Instantiate(slimePrefab, new Vector3(0, 4, 0), slimePrefab.transform.rotation);
+        enemy = Instantiate(slimePrefab, new Vector3(0, 4, 0), slimePrefab.transform.rotation);
     }
     void WolfSpawn()
     {
-        Instantiate(wolfPrefab, new Vector3(0, 4, 0), wolfPrefab.transform.rotation);
+        enemy = Instantiate(wolfPrefab, new Vector3(0, 4, 0), wolfPrefab.transform.rotation);
     }
     void WolfManSpawn()
     {
-        Instantiate(wolfmanPrefab, new Vector3(0, 4, 0), wolfmanPrefab.transform.rotation);
+        enemy = Instantiate(wolfmanPrefab, new Vector3(0, 4, 0), wolfmanPrefab.transform.rotation);
     }
     void ZombieSpawn()
     {
-        Instantiate(zombiePrefab, new Vector3(0, 4, 0), zombiePrefab.transform.rotation);
+        enemy = Instantiate(zombiePrefab, new Vector3(0, 4, 0), zombiePrefab.transform.rotation);
     }
 }

@@ -33,6 +33,7 @@ public partial class GameMgr : MonoBehaviour
         COMMAND_SELECT,
         PLAYER,
         ENEMY,
+        NEXT_FLOOR,
         DEBUG,
     }
     public eBattleState battleState; // 現在のバトルステート
@@ -43,13 +44,20 @@ public partial class GameMgr : MonoBehaviour
 
     public GameObject player; // プレイヤーオブジェクト
     public GameObject enemy; // 敵のオブジェクト
-    // プロトタイプ版では敵を直接指定するが、今後変更する必要がある。
+
+    private bool killedEnemy = false; // 敵を倒したかどうか
+    private int killCount = 0; // 敵を倒した数
+
+    private bool stageClear = false;
+    public GameObject stageClearEffectPrefab; // ステージクリア演出
 
     // 関数定義-------------------------
 
     // Start is called before the first frame update
     void Start()
     {
+        stageClear = false;
+        SpawnEnemy();
         ActiveTimeBattleInitialize();
     }
 
@@ -67,16 +75,38 @@ public partial class GameMgr : MonoBehaviour
         }
     }
 
-    // 敵をセットする
-    public void SetEnemy(GameObject enemy)
+    private void StageClear()
     {
-        this.enemy = enemy;
+        battle = false;
+        Instantiate(stageClearEffectPrefab);
+    }
+
+    // 敵を生成する
+    public void SpawnEnemy()
+    {
+        // エネミーを生成
+        EnemyMgr script = GetComponent<EnemyMgr>();
+        script.EnemySpawn();
+        // エネミーのオブジェクトを取得
+        enemy = script.GetEnemyData();
+        // アクションバーを取得
+        Transform transform = enemy.transform.Find("ActionBar");
+        enemyActionBar = transform.gameObject;
+        // フラグをリセット
+        killedEnemy = false;
     }
 
     // 敵を削除する
     public void DeleteEnemy()
-    {
-        Destroy(this.enemy);
+    {   
+        killedEnemy = true;
+        killCount++;
+
+        // ３体倒したらステージクリア
+        if(killCount >= 3)
+        {
+            stageClear = true;
+        }
     }
 
     // 選択されたコマンドを格納する
@@ -88,7 +118,7 @@ public partial class GameMgr : MonoBehaviour
             DeleteCommand();
         }
 
-        if(battleState == eBattleState.COMMAND_SELECT)
+        if (battleState == eBattleState.COMMAND_SELECT)
         {
             isCommandSelected = true;
 
