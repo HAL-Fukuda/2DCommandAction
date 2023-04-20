@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/StageSelect.unity
-    guid: b48adef03bb91fe47934968b04e9dcb3
+    guid: 23d7edf7959897c4682bf042779394df
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InGame/GameOver/GameOver.unity
     guid: 0aca8fee5707ee146a3d75d3c5fa529c
+  - enabled: 1
+    path: Assets/Scenes/World_1/1-1.unity
+    guid: 9b376411544c9664aa546a4247de5b32
+  - enabled: 1
+    path: Assets/Scenes/World_2/2-1.unity
+    guid: 9d260efa1ca0a384a8a17ec90591a80b
   m_configObjects: {}
