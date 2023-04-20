@@ -127,8 +127,8 @@ MonoBehaviour:
   meteorAttackSettings:
     prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
       type: 3}
-    spawnInterval: 0
-    life: 0
+    spawnInterval: 1
+    life: 1
     timer: 0
   sidewaysAttackSettings:
     prefab: {fileID: 0}
