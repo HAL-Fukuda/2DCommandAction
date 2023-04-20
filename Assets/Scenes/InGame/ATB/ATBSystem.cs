@@ -18,16 +18,19 @@ public partial class GameMgr : MonoBehaviour
         battleState = eBattleState.COMMAND_SELECT; // バトルステート
         enemyTimer = enemyActionTime; // エネミー用タイマー
 
-        // プレイヤーとエネミーのバーを取得
+        // プレイヤーのアクションバーを取得
         Transform transform = player.transform.Find("ActionBar");
         playerActionBar = transform.gameObject;
-        transform = enemy.transform.Find("ActionBar");
-        enemyActionBar = transform.gameObject;
     }
 
     // ATB風のシステムを使った戦闘処理
     public void ActiveTimeBattleUpdate()
     {
+        if (killedEnemy) // 敵が死んでいたら
+        {
+            battleState = eBattleState.NEXT_FLOOR;
+        }
+
         // バトルステートに応じた処理
         switch (battleState)
         {
@@ -56,7 +59,7 @@ public partial class GameMgr : MonoBehaviour
                     MessageWindow.Instance.SetDebugMessage(text);
 
                     // 初期化処理
-                    if (EnemyInitialize == false) 
+                    if (EnemyInitialize == false)
                     {
                         EnemyInitialize = true;
                         enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
@@ -83,6 +86,7 @@ public partial class GameMgr : MonoBehaviour
                 if (!selectedCommand.GetComponent<Command>().IsActive())
                 {
                     DeleteCommand(); // 選択されたコマンドの情報を無くす
+
                     battleState = eBattleState.COMMAND_SELECT;
                 }
                 break;
@@ -96,13 +100,28 @@ public partial class GameMgr : MonoBehaviour
 
                 // 敵の行動
                 enemy.GetComponent<Enemy>().Attack();
-                
+
                 // 時間が経ったら敵の行動終了
                 if (enemyTimer <= 0.0f)
                 {
                     enemyTimer = enemyActionTime;
                     battleState = eBattleState.COMMAND_SELECT;
                 }
+                break;
+            case eBattleState.NEXT_FLOOR:
+
+                // クリアしたかどうか
+                if (stageClear)
+                {
+                    StageClear(); // クリア
+                }
+                else
+                {
+                    SpawnEnemy(); // エネミーを生成する
+                    battleState = eBattleState.COMMAND_SELECT; // コマンドセレクトへ
+                }
+                break;
+            default:
                 break;
         }
     }

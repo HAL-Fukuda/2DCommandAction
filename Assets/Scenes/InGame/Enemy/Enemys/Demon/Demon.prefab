@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8408801377496496994}
   m_Layer: 0
   m_Name: Demon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,8 +113,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorAttackSettings:
+  ClubBeatingSettings:
     prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ClubSwingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  SwingSpeedSeconds: 0
+  meteorAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
     spawnInterval: 0
     life: 0
     timer: 0
@@ -146,6 +158,16 @@ MonoBehaviour:
     timer: 0
   Enemy: {fileID: 0}
   SVAspeed: 0
+  WBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!114 &8408801377496496994
 MonoBehaviour:
   m_ObjectHideFlags: 0
