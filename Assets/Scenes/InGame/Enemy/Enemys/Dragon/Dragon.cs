@@ -13,6 +13,10 @@ public class Dragon : Enemy
     // Update is called once per frame
     void Update()
     {
+        if (isFadeIn)
+        {
+            base.FadeIn();
+        }
         if (isFadeOut)
         {
             base.StartFadeOut();

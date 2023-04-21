@@ -140,6 +140,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  nailAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   player1: {fileID: 0}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
@@ -185,7 +190,7 @@ MonoBehaviour:
   shakeIntensity: 0.1
   shakeDuration: 0.2
   isFadeOut: 0
-  isFadeIn: 0
+  isFadeIn: 1
   fadeMaterial: {fileID: 0}
 --- !u!1001 &4926703174781965227
 PrefabInstance:
