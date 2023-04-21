@@ -14,7 +14,7 @@ public partial class EnemyMgr : MonoBehaviour
     [SerializeField] private GameObject wolfmanPrefab;
     [SerializeField] private GameObject zombiePrefab;
 
-    public int num;
+    //public int num;
     private GameObject enemy; // 今生成されているエネミー
     
     void EnemySpawnInitialize()
@@ -27,46 +27,82 @@ public partial class EnemyMgr : MonoBehaviour
         
     }
 
-    public void EnemySpawn()
-    {
-        //num = Random.Range(0, 9);
+    //public void EnemySpawn()
+    //{
+    //    //num = Random.Range(0, 9);
 
-        if (num == 0)
+    //    if (num == 0)
+    //    {
+    //        DemonSpawn();
+    //    }
+    //    else if (num == 1)
+    //    {
+    //        DragonSpawn();
+    //    }
+    //    else if (num == 2)
+    //    {
+    //        GoblinSpawn();
+    //    }
+    //    else if (num == 3)
+    //    {
+    //        SkeltonSpawn();
+    //    }
+    //    else if (num == 4)
+    //    {
+    //        SlimeSpawn();
+    //    }
+    //    else if (num == 5)
+    //    {
+    //        WolfSpawn();
+    //    }
+    //    else if (num == 6)
+    //    {
+    //        SkeltonSpawn();
+    //    }
+    //    else if (num == 7)
+    //    {
+    //        WolfManSpawn();
+    //    }
+    //    else if (num == 8)
+    //    {
+    //        ZombieSpawn();
+    //    }
+
+    //}
+
+    public Enemy.eEnemyType SpawnEnemy(Enemy.eEnemyType enemyType)
+    {
+        switch (enemyType)
         {
-            DemonSpawn();
+            case Enemy.eEnemyType.Demon:
+                DemonSpawn();
+                break;
+            case Enemy.eEnemyType.Dragon:
+                DragonSpawn();
+                break;
+            case Enemy.eEnemyType.Goblin:
+                GoblinSpawn();
+                break;
+            case Enemy.eEnemyType.Skeleton:
+                SkeltonSpawn();
+                break;
+            case Enemy.eEnemyType.Slime:
+                SlimeSpawn();
+                break;
+            case Enemy.eEnemyType.Soldier:
+                Debug.Log("外出中");
+                break;
+            case Enemy.eEnemyType.Wolf:
+                WolfSpawn();
+                break;
+            case Enemy.eEnemyType.WolfMan:
+                WolfManSpawn();
+                break;
+            case Enemy.eEnemyType.Zombie:
+                ZombieSpawn();
+                break;
         }
-        else if (num == 1)
-        {
-            DragonSpawn();
-        }
-        else if (num == 2)
-        {
-            GoblinSpawn();
-        }
-        else if (num == 3)
-        {
-            SkeltonSpawn();
-        }
-        else if (num == 4)
-        {
-            SlimeSpawn();
-        }
-        else if (num == 5)
-        {
-            WolfSpawn();
-        }
-        else if (num == 6)
-        {
-            SkeltonSpawn();
-        }
-        else if (num == 7)
-        {
-            WolfManSpawn();
-        }
-        else if (num == 8)
-        {
-            ZombieSpawn();
-        }
+        return enemyType;
     }
 
     void DemonSpawn()

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 185055271593908457}
   m_Layer: 0
   m_Name: Dragon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClubBeatingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ClubSwingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  SwingSpeedSeconds: 0
   meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -165,6 +176,16 @@ MonoBehaviour:
     timer: 0
   Enemy: {fileID: 0}
   SVAspeed: 0
+  WBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!1001 &4499165046778052910
 PrefabInstance:
   m_ObjectHideFlags: 0
