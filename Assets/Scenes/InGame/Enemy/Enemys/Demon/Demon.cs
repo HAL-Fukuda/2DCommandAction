@@ -12,14 +12,19 @@ public class Demon : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.K))
+        //    if (Input.GetKey(KeyCode.K))
+        //    {
+        //        isFadeOut = true;
+        //    }
+        //    if (isFadeOut)
+        //    {
+        //        base.StartFadeOut();
+        //        //Debug.Log("Fade");
+        //    }
+
+        if (isFadeIn)
         {
-            isFadeOut = true;
-        }
-        if (isFadeOut)
-        {
-            base.StartFadeOut();
-            //Debug.Log("Fade");
+            base.StartFadeIn();
         }
     }
 }

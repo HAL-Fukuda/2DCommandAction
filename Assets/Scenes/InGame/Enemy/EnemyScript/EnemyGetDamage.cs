@@ -47,9 +47,11 @@ public partial class Enemy : MonoBehaviour
         // HP‚ª0‚É‚È‚Á‚½‚çíœ‚·‚é
         if (hp <= 0)
         {
+            Debug.Log("FadeOut");
             GameMgr.Instance.DeleteEnemy();
 
             isFadeOut = true;
+            Debug.Log(isFadeOut);
 
             if (isFadeOut)
             {
@@ -141,8 +143,19 @@ public partial class Enemy : MonoBehaviour
             isFadeOut = false;
             fadeMaterial.enabled = false;
 
-            Debug.Log(alfa);
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void StartFadeIn()
+    {
+        fadeMaterial.enabled = true;
+        alfa += fadeSpeed;
+        SetAlfa();
+
+        if (alfa >= 1)
+        {
+            isFadeIn = false;
         }
     }
 

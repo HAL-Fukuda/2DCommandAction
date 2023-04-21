@@ -13,9 +13,9 @@ public class Zombie : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (isFadeOut)
+        if (isFadeIn)
         {
-            base.StartFadeOut();
+            base.StartFadeIn();
         }
     }
 }

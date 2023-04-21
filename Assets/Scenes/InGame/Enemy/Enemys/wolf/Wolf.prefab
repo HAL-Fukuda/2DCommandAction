@@ -118,7 +118,7 @@ MonoBehaviour:
   shakeIntensity: 0.1
   shakeDuration: 0.2
   isFadeOut: 0
-  isFadeIn: 0
+  isFadeIn: 1
   fadeMaterial: {fileID: 0}
 --- !u!114 &3047792664948732118
 MonoBehaviour:
@@ -132,6 +132,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClubBeatingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ClubSwingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  SwingSpeedSeconds: 0
   meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -165,6 +176,16 @@ MonoBehaviour:
     timer: 0
   Enemy: {fileID: 0}
   SVAspeed: 0
+  WBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!1001 &4634745579978895105
 PrefabInstance:
   m_ObjectHideFlags: 0
