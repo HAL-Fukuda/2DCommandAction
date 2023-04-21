@@ -23,8 +23,8 @@ public class MessageONOFF : MonoBehaviour
                 quad.SetActive(false);
                 MessageStat = false;
             }
-            Debug.Log(quad.activeSelf);
-            Debug.Log(MessageStat);
+            //Debug.Log(quad.activeSelf);
+            //Debug.Log(MessageStat);
         }
     }
 

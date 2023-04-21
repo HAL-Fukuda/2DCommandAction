@@ -14,7 +14,7 @@ public partial class Enemy : MonoBehaviour
         Demon,
         Dragon,
         Goblin,
-        Skelton,
+        Skeleton,
         Slime,
         Soldier,
         Wolf,
