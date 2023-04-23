@@ -11,15 +11,21 @@ public partial class Enemy : MonoBehaviour
 
     public enum eEnemyType
     {
-        Demon,
-        Dragon,
-        Goblin,
-        Skeleton,
+        Demon,Demon1,Demon2,
+        Dragon,Dragon1,Dragon2,
+        Goblin,GoblinSoldier, GoblinArcher, GoblinKing,
+        Golem1,Golem2,
+        Skeleton, Skeleton1, Skeleton2,
         Slime,
         Soldier,
         Wolf,
         WolfMan,
-        Zombie
+        Zombie,
+        Fennel,
+        Lizard,
+        Troll1,Troll2,
+        Machine1,Machine2,
+        Genbu,Suzaku,Seiryu,Byako
     }
     public eEnemyType enemyType;
 
