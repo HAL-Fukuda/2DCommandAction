@@ -72,6 +72,7 @@ public partial class EnemyMgr : MonoBehaviour
 
     public Enemy.eEnemyType SpawnEnemy(Enemy.eEnemyType enemyType)
     {
+        Debug.Log("spawn");
         switch (enemyType)
         {
             case Enemy.eEnemyType.Demon:

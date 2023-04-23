@@ -43,7 +43,7 @@ public partial class GameMgr : MonoBehaviour
     private bool isCommandSelected = false; // コマンドが選択されているか
 
     public GameObject player; // プレイヤーオブジェクト
-    public GameObject enemy; // 敵のオブジェクト
+    private GameObject enemy; // 敵のオブジェクト
 
     private bool killedEnemy = false; // 敵を倒したかどうか
     private int killCount = 0; // 敵を倒した数
@@ -52,7 +52,7 @@ public partial class GameMgr : MonoBehaviour
     public GameObject stageClearEffectPrefab; // ステージクリア演出
 
     [SerializeField]
-    public Enemy.eEnemyType[] ene;
+    public Enemy.eEnemyType[] enemyList;
 
     // 関数定義-------------------------
 
@@ -89,7 +89,7 @@ public partial class GameMgr : MonoBehaviour
     {
         // エネミーを生成
         EnemyMgr script = GetComponent<EnemyMgr>();
-        script.SpawnEnemy(ene[0]);
+        script.SpawnEnemy(enemyList[killCount]);
         // エネミーのオブジェクトを取得
         enemy = script.GetEnemyData();
         // アクションバーを取得

@@ -153,8 +153,7 @@ public partial class Enemy : MonoBehaviour
             isFadeOut = false;
             fadeMaterial.enabled = false;
 
-            Debug.Log(alfa);
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
