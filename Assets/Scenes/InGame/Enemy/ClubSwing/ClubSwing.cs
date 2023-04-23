@@ -12,9 +12,9 @@ public partial class EnemyAttack : MonoBehaviour
     public float SwingSpeedSeconds;
 
     private GameObject CSobj;
-
     private GameObject csCollision;
 
+    private bool CSflg = true;
 
     void GetPlayerPositionToCS()
     {
@@ -60,25 +60,35 @@ public partial class EnemyAttack : MonoBehaviour
         Destroy(CSobj);
     }
 
-    void ClubSwing()
+    void CSflgTrue()
     {
-        GetPlayerPositionToCS();
-        spawnPos = new Vector3(CSPosition.x, CSPosition.y, 0.0f);
-        CSobj = Instantiate(ClubSwingSettings.prefab, spawnPos, Quaternion.identity);
-        CSrgd = CSobj.GetComponent<Rigidbody2D>();
+        CSflg = true;
+    }
 
-        csCollision = GameObject.Find("ClubSwing(Clone)");
+    public void ClubSwing()
+    {
+        if (CBflg)
+        {
+            GetPlayerPositionToCS();
+            spawnPos = new Vector3(CSPosition.x, CSPosition.y, 0.0f);
+            CSobj = Instantiate(ClubSwingSettings.prefab, spawnPos, Quaternion.identity);
+            CSrgd = CSobj.GetComponent<Rigidbody2D>();
 
-        CSobj.transform.DOPath(
-    path: new Vector3[] {        new Vector3(CSPosition.x + 0.3f, CSPosition.y + 2, 0),
+            csCollision = GameObject.Find("ClubSwing(Clone)");
+
+            CSobj.transform.DOPath(
+        path: new Vector3[] {        new Vector3(CSPosition.x + 0.3f, CSPosition.y + 2, 0),
                                  new Vector3(CSPosition.x - 0.3f, CSPosition.y + 2, 0),
                                  new Vector3(CSPosition.x + 0.3f, CSPosition.y - 2, 0),
                                  new Vector3(CSPosition.x - 0.3f, CSPosition.y - 2, 0),
                                  new Vector3(CSPosition.x, CSPosition.y, 0)}, //移動するポイント
-    duration: 3f, //移動時間
-    pathType: PathType.CatmullRom //移動するパスの種類
-    ).OnComplete(CSobjSwing);
+        duration: 3f, //移動時間
+        pathType: PathType.CatmullRom //移動するパスの種類
+        ).OnComplete(CSobjSwing);
 
+            CSflg = false;
+            Invoke("CSflgTrue", ClubSwingSettings.spawnInterval);
+        }
         //Invoke("CSobjDestroy", 3.5f);   // 数秒後にオブジェクトを消す
     }
 

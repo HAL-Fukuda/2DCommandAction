@@ -11,6 +11,9 @@ public partial class EnemyAttack : MonoBehaviour
 
     private GameObject CBobj;
 
+    private bool CBflg = true;
+    
+
     void GetPlayerPositionToCB()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
@@ -27,6 +30,11 @@ public partial class EnemyAttack : MonoBehaviour
         Destroy(CBobj);
     }
 
+    void CBflgTrue()
+    {
+        CBflg = true;
+    }
+
     void CBobjBeating()
     {
         CBrgd.AddForce(new Vector3(0.0f, -1.0f, 0.0f) * 1000.0f);  // 下方向に力をかける
@@ -34,25 +42,36 @@ public partial class EnemyAttack : MonoBehaviour
 
     public void ClubBeating()
     {
-        GetPlayerPositionToCB();
+        //ClubBeatingSettings.timer += Time.deltaTime;
 
-        spawnPos = new Vector3(CBPosition.x, CBPosition.y, 0.0f);
-        CBobj = Instantiate(ClubBeatingSettings.prefab, spawnPos, Quaternion.identity);
-        CBrgd = CBobj.GetComponent<Rigidbody2D>();
+        //if (ClubBeatingSettings.timer >= ClubBeatingSettings.spawnInterval)
+        if(CBflg)
+        {
+            ClubBeatingSettings.timer = 0f;
 
-        // 
-        CBobj.transform.DOPath(
-    path:        new Vector3[] { new Vector3(CBPosition.x + 2, CBPosition.y + 0.3f, 0),
+            GetPlayerPositionToCB();
+
+            spawnPos = new Vector3(CBPosition.x, CBPosition.y, 0.0f);
+            CBobj = Instantiate(ClubBeatingSettings.prefab, spawnPos, Quaternion.identity);
+            CBrgd = CBobj.GetComponent<Rigidbody2D>();
+
+            // 
+            CBobj.transform.DOPath(
+        path: new Vector3[] { new Vector3(CBPosition.x + 2, CBPosition.y + 0.3f, 0),
                                  new Vector3(CBPosition.x + 2, CBPosition.y - 0.3f, 0),
                                  new Vector3(CBPosition.x - 2, CBPosition.y + 0.3f, 0),
                                  new Vector3(CBPosition.x - 2, CBPosition.y - 0.3f, 0),
                                  new Vector3(CBPosition.x, CBPosition.y, 0)}, //移動するポイント
-    duration:    3f, //移動時間
-    pathType:    PathType.CatmullRom //移動するパスの種類
-    ).OnComplete(CBobjBeating);
+        duration: 3f, //移動時間
+        pathType: PathType.CatmullRom //移動するパスの種類
+        ).OnComplete(CBobjBeating);
 
 
-        Invoke("CBobjDestroy", 3.5f);   // 数秒後にオブジェクトを消す
+            Invoke("CBobjDestroy", 3.5f);   // 数秒後にオブジェクトを消す
+
+            CBflg = false;
+            Invoke("CBflgTrue", ClubBeatingSettings.spawnInterval);
+        }
     }
 
 

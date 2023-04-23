@@ -14,6 +14,8 @@ public partial class EnemyAttack : MonoBehaviour
 
     private GameObject SVAobj;
 
+    private bool SVAflg = true;
+
 
     void GetPlayerPositionToSVA()
     {
@@ -34,28 +36,39 @@ public partial class EnemyAttack : MonoBehaviour
         EnemyPos = enemyObjectTransform.position;
     }
 
-
-
-    void SideVanishAttack()
+    void SVAflgTrue()
     {
-        GetPlayerPositionToSVA();
-        GetEnemyPosition();
+        SVAflg = true;
+    }
 
-        spawnPos = new Vector3(EnemyPos.x, EnemyPos.y, 0.0f);
-        SVAobj = Instantiate(SideVanishAttackSettings.prefab, spawnPos, Quaternion.identity);
-        rgd = SVAobj.GetComponent<Rigidbody2D>();
+    public void SideVanishAttack()
+    {
+        if (SVAflg)
+        {
+
+            GetPlayerPositionToSVA();
+            GetEnemyPosition();
+
+            spawnPos = new Vector3(EnemyPos.x, EnemyPos.y, 0.0f);
+            SVAobj = Instantiate(SideVanishAttackSettings.prefab, spawnPos, Quaternion.identity);
+            rgd = SVAobj.GetComponent<Rigidbody2D>();
 
 
-        rgd.AddForce(SVAPosition * 10.0f);  // プレイヤーの位置に力をかける
+            rgd.AddForce(SVAPosition * 10.0f);  // プレイヤーの位置に力をかける
 
-        // point1から見たpoint2の相対座標を計算
-        Vector3 relativePos = EnemyPos - SVAPosition;
+            // point1から見たpoint2の相対座標を計算
+            Vector3 relativePos = EnemyPos - SVAPosition;
 
-        // atan2関数を用いて角度を計算
-        float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
+            // atan2関数を用いて角度を計算
+            float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
 
 
-        SVAobj.transform.DORotate(new Vector3(0, 0, angle), 0, RotateMode.WorldAxisAdd);    // 攻撃エフェクトの向きの処理
+            SVAobj.transform.DORotate(new Vector3(0, 0, angle), 0, RotateMode.WorldAxisAdd);    // 攻撃エフェクトの向きの処理
+
+            SVAflg = false;
+            Invoke("SVAflgTrue", SideVanishAttackSettings.spawnInterval);
+        }
+
     }
 
 
