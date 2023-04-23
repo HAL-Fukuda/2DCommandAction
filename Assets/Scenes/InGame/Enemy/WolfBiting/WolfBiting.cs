@@ -16,6 +16,8 @@ public partial class EnemyAttack : MonoBehaviour
 
     private WBCollision wbCollision;
 
+    private bool WBflg = true;
+
     void GetPlayerPositionToWB()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
@@ -52,19 +54,30 @@ public partial class EnemyAttack : MonoBehaviour
         Destroy(WBobjUnder);
     }
 
+    void WBflgTrue()
+    {
+        WBflg = true;
+    }
+
     public void WolfBiting()
     {
-        GetPlayerPositionToWB();
 
-        spawnPos = new Vector3(WBUpperPosition.x, WBUpperPosition.y, 0.0f);
-        WBobjUpper = Instantiate(WBUpperSettings.prefab, spawnPos, Quaternion.identity);
+        if (WBflg)
+        {
 
-        spawnPos = new Vector3(WBUnderPosition.x, WBUnderPosition.y, 0.0f);
-        WBobjUnder = Instantiate(WBUnderSettings.prefab, spawnPos, Quaternion.identity);
+            GetPlayerPositionToWB();
 
+            spawnPos = new Vector3(WBUpperPosition.x, WBUpperPosition.y, 0.0f);
+            WBobjUpper = Instantiate(WBUpperSettings.prefab, spawnPos, Quaternion.identity);
 
+            spawnPos = new Vector3(WBUnderPosition.x, WBUnderPosition.y, 0.0f);
+            WBobjUnder = Instantiate(WBUnderSettings.prefab, spawnPos, Quaternion.identity);
 
-        Invoke("BitingTooth", 1.0f);
+            Invoke("BitingTooth", 1.0f);
+
+            WBflg = false;
+            Invoke("WBflgTrue", WBUpperSettings.spawnInterval + WBUnderSettings.spawnInterval);
+        }
     }
 
 

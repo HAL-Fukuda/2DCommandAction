@@ -32,6 +32,8 @@ public partial class EnemyAttack : MonoBehaviour
     private Vector3 objectPosition;
     private Vector3 spawnPos;
 
+    private bool SBflg = true;
+
     void GetPlayerPositionX()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
@@ -42,6 +44,7 @@ public partial class EnemyAttack : MonoBehaviour
 
     void premonition()
     {
+
         // プレイヤーの位置に予兆発生
         spawnPos = new Vector3(objectPosition.x, 0f, 0f);
         GameObject obj = Instantiate(BeamComingAttackSettings.prefab, spawnPos, Quaternion.identity);
@@ -69,12 +72,21 @@ public partial class EnemyAttack : MonoBehaviour
             });
     }
 
-    void SatelliteBeam()
+    void SBflgTrue()
     {
-        GetPlayerPositionX();
+        SBflg = true;
+    }
 
-        premonition();
+    public void SatelliteBeam()
+    {
+        if (SBflg)
+        {
+            GetPlayerPositionX();
+            premonition();
 
+            SBflg = false;
+            Invoke("SBflgTrue", BeamComingAttackSettings.spawnInterval + SatelliteAttackSettings.spawnInterval);
+        }
         //Debug.Log(objectPosition);
     }
 
