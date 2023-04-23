@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4265264062535433641, guid: 17fc464d2a875174f88d5d8c6108f955,
+        type: 3}
+      propertyPath: enemyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5146405506448139778, guid: 17fc464d2a875174f88d5d8c6108f955,
         type: 3}
       propertyPath: m_Name
@@ -263,6 +268,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154224578773194980, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
+        type: 3}
+      propertyPath: slash
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 154224578773194980, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
+        type: 3}
+      propertyPath: Bigslash
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 154224578773194991, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
         type: 3}
@@ -898,6 +913,7 @@ MonoBehaviour:
   enemy: {fileID: 456965304}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
+  ene: 
 --- !u!114 &1573626335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,7 +943,6 @@ MonoBehaviour:
     type: 3}
   zombiePrefab: {fileID: 6092103796768438021, guid: 1bd7a8bf21c78b045ba8e8827b299e55,
     type: 3}
-  num: 0
   enemyName: 
 --- !u!1001 &1657352935
 PrefabInstance:
