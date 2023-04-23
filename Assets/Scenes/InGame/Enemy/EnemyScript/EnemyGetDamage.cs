@@ -16,7 +16,7 @@ public partial class Enemy : MonoBehaviour
     float red, green, blue, alfa;  //Materialの色
 
     public bool isFadeOut = false;  //フェードアウト状態の管理
-    public bool isFadeIn = false;   //フェードイン状態の管理
+    public bool isFadeIn = true;   //フェードイン状態の管理
 
     public Renderer fadeMaterial;  //Materialにアクセスするための容器
 
@@ -129,6 +129,18 @@ public partial class Enemy : MonoBehaviour
 
         // 元の位置に戻す
         transform.position = originalPosition;
+    }
+
+    public void FadeIn()
+    {
+        fadeMaterial.enabled = true;
+        alfa += fadeSpeed;
+        SetAlfa();
+
+        if (alfa >= 1)
+        {
+            isFadeIn = false;
+        }
     }
 
     public void StartFadeOut()

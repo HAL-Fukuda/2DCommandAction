@@ -118,7 +118,7 @@ MonoBehaviour:
   shakeIntensity: 0.1
   shakeDuration: 0.2
   isFadeOut: 0
-  isFadeIn: 0
+  isFadeIn: 1
   fadeMaterial: {fileID: 0}
 --- !u!114 &185055271593908457
 MonoBehaviour:
@@ -154,6 +154,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   homingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
