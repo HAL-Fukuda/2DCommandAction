@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     private float Chargeingcount = 0.0f;
 
     public bool isGround;         //接地判定
+    public bool isMove;
 
     Rigidbody2D rb;
     Animator animator;
@@ -39,6 +40,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         direction = 0;
+        isMove = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -48,10 +50,17 @@ public class PlayerManager : MonoBehaviour
     {
         JumpAnimation();
 
-        if (Input.GetKeyDown(KeyCode.N))
+        if (isMove)
         {
-            DamegeAnimation();
+            Movement();
+            HoldThrowUpdate();
         }
+
+
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    DamegeAnimation();
+        //}
         if (Input.GetKeyDown(KeyCode.M))
         {
             DieAnimation();
@@ -60,9 +69,6 @@ public class PlayerManager : MonoBehaviour
         {
             specialattack();
         }
-
-        Movement();
-        HoldThrowUpdate();
     }
 
     //移動の処理
@@ -185,6 +191,7 @@ public class PlayerManager : MonoBehaviour
     //ゲームオーバーのアニメーション
     void DieAnimation()
     {
+        isMove = false;
         animator.SetTrigger("isDie");
     }
 
@@ -308,8 +315,10 @@ public class PlayerManager : MonoBehaviour
     IEnumerator SPChargingNow()
     {
         animator.SetBool("SPChargingNow", true);
+        isMove = false;
         yield return new WaitForSeconds(5.5f);
         animator.SetBool("SPChargingNow", false);
+        isMove = true;
     }
 
     //当たり判定のとこを赤い円で描く
