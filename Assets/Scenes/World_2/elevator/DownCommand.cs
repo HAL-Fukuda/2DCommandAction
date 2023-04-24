@@ -3,34 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class DownCommand : MonoBehaviour
+public partial class Command : MonoBehaviour
 {
-    public float movedistance = 1.0f;
-    public float moveDuration = 1f; // 移動にかかる時間
-
-    private bool touched = false; // オブジェクトに触れたかどうか
-    private Transform elevator; // 動くオブジェクト
-
-    void Start()
+    public void DownInitialize()
     {
         // シーン内の"elevator"オブジェクトを検索する
         elevator = GameObject.Find("elevator").transform;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void DownUpdate()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            touched = true;
-        }
-    }
-
-    void Update()
-    {
-        if (touched)
-        {
-            elevator.DOMoveY(elevator.position.y - movedistance, moveDuration);
-            touched = false; // 1回だけ移動するようにフラグをオフにする
-        }
+        DownInitialize();
+        elevator.DOMoveY(elevator.position.y - movedistance, moveDuration);
     }
 }

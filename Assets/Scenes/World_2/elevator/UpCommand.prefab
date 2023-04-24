@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7960351686097479737}
   - component: {fileID: -2587485540815197350}
   - component: {fileID: 6292298562729873125}
-  - component: {fileID: -2613661799739026355}
+  - component: {fileID: 425546711381840041}
   m_Layer: 7
   m_Name: UpCommand
   m_TagString: Command
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-2613661799739026355
+--- !u!114 &425546711381840041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,8 +142,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2308530398822077217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b18d702ef3c974cb1a5c83ceb9060f, type: 3}
+  m_Script: {fileID: 11500000, guid: 83463e1d9517e2a409b7d49ccb8baa5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movedistance: 2
-  moveDuration: 1
+  SlashingEffect: {fileID: 0}
+  SlashingSE: {fileID: 0}
+  attackEffectPrefab: {fileID: 0}
+  attackSEPrefab: {fileID: 0}
+  commandType: 0
+  isActive: 0
+  EffectPrefab: {fileID: 0}
+  SoundPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 0}
+  hitSEPrefab: {fileID: 0}
+  commandHP: 0
+  shield: {fileID: 0}
+  defenceMessage: 
+  healEffect: {fileID: 0}
+  healSE: {fileID: 0}
+  healVal: 0
+  healMessage: 
