@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameMgr;
 
 public partial class CommandMgr : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public partial class CommandMgr : MonoBehaviour
     private float randomPosX, randomPosY, randomPosZ;
     private int number;
 
+    public float dropInterval = 10.0f; // コマンドが落ちてくる間隔
+    private float dropTimer;
+
     public enum DropMode
     {
         ModeRapid,
@@ -23,9 +27,20 @@ public partial class CommandMgr : MonoBehaviour
 
     public DropMode dropMode;  //プルダウン用
 
-    void CommandDropInitialize()
+    public void CommandDropInitialize()
     {
+        dropTimer = 0.0f; // タイマーリセット
+    }
+    public void CommandDropUpdate()
+    {
+        dropTimer += Time.deltaTime;
 
+        // 一定時間毎にコマンドが落ちてくる
+        if (dropTimer >= dropInterval)
+        {
+            DropAll();
+            dropTimer = 0.0f;
+        }
     }
 
     void Update()
@@ -82,7 +97,7 @@ public partial class CommandMgr : MonoBehaviour
         }
     }
 
-    void DropAll()
+    public void DropAll()
     {
         for (int i = 0; i < num; i++)
         {
