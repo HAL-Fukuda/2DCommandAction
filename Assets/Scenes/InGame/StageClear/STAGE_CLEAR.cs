@@ -37,7 +37,7 @@ public class STAGE_CLEAR : MonoBehaviour
                         // オブジェクト削除
                         Destroy(gameObject);
                         // ステージセレクト画面へ
-                        SceneManager.LoadScene("StageSelect");
+                        SceneManager.LoadScene("StageClear");
                     });
                 });
             });
