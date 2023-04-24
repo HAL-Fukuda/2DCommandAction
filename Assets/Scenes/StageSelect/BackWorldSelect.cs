@@ -24,7 +24,7 @@ public class BackWorldSelect : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.X))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
             BackWorldSelecting();
         }
