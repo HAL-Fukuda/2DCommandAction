@@ -42,6 +42,11 @@ public class ScrollWorld : MonoBehaviour
             worldObject[NowC].transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
     }
 
+    public void WorldSelecting()
+    {
+        // ステージセレクト
+    }
+
 
     // Start is called before the first frame update
     void Start()
