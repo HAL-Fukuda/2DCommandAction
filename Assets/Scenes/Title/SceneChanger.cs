@@ -6,10 +6,12 @@ using UnityEngine;
 public class SceneChanger : MonoBehaviour
 {
     public string sceneName = "StageSelect";
+    public float fadetime;
 
     public void GameStart()
     {
-        SceneManager.LoadScene("StageSelect");
+        FadeManager.Instance.LoadScene("StageSelect", fadetime);
+        //SceneManager.LoadScene("StageSelect");
     }
 
     public void ButtonExit()
