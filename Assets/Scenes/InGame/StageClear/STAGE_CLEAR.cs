@@ -9,6 +9,7 @@ public class STAGE_CLEAR : MonoBehaviour
     [SerializeField] private GameObject prefab_FINISH;
     [SerializeField] private GameObject prefab_STAGECLEAR;
 
+    public float fadetime;
     public float dropSpeed = 1.0f;
     public Vector2 drawPosition;
 
@@ -37,7 +38,8 @@ public class STAGE_CLEAR : MonoBehaviour
                         // オブジェクト削除
                         Destroy(gameObject);
                         // ステージセレクト画面へ
-                        SceneManager.LoadScene("StageClear");
+                        FadeManager.Instance.LoadScene("StageClear", fadetime);
+                        //SceneManager.LoadScene("StageClear");
                     });
                 });
             });

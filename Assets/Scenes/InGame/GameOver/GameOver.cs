@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public float fadetime;
     public GameObject corsor;
 
     private enum eMenuCommand
@@ -30,7 +31,8 @@ public class GameOver : MonoBehaviour
                     break;
                 case eMenuCommand.STAGESELECT:
                     // ステージセレクト画面へ
-                    SceneManager.LoadScene("StageSelect");
+                    FadeManager.Instance.LoadScene("StageSelect", fadetime);
+                    //SceneManager.LoadScene("StageSelect");
                     break;
             }
         }
