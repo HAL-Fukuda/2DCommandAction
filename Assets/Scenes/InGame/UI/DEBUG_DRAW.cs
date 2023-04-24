@@ -15,6 +15,7 @@ public class DEBUG_DRAW : MonoBehaviour
             scale.y = localScale.y;
         }
 
+#if UNITY_EDITOR
         Handles.color = Color.red;
         Vector3[] corners = new Vector3[4];
         corners[0] = transform.position + new Vector3(-scale.x / 2, -scale.y / 2, 0f);
@@ -22,5 +23,6 @@ public class DEBUG_DRAW : MonoBehaviour
         corners[2] = transform.position + new Vector3(scale.x / 2, scale.y / 2, 0f);
         corners[3] = transform.position + new Vector3(scale.x / 2, -scale.y / 2, 0f);
         Handles.DrawSolidRectangleWithOutline(corners, new Color(1f, 0f, 0f, 0.1f), Color.red);
+#endif
     }
 }
