@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-
+using UnityEngine.SceneManagement;
 
 public class ScrollWorld : MonoBehaviour
 {
@@ -87,6 +87,11 @@ public class ScrollWorld : MonoBehaviour
                 moveCenter();
                 moveRight();
             }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
         }
     }
 }
