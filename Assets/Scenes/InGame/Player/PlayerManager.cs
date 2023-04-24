@@ -163,7 +163,7 @@ public class PlayerManager : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.name == "Platform")
+        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command")
         {
             isGround = false;
         }
