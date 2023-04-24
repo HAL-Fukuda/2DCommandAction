@@ -54,6 +54,9 @@ public partial class GameMgr : MonoBehaviour
     [SerializeField]
     public Enemy.eEnemyType[] enemyList;
 
+    // スクリプト定義
+    private CommandMgr commandMgr;
+
     // 関数定義-------------------------
 
     // Start is called before the first frame update
@@ -62,6 +65,11 @@ public partial class GameMgr : MonoBehaviour
         stageClear = false;
         SpawnEnemy();
         ActiveTimeBattleInitialize();
+        // コマンド落下
+        commandMgr =GetComponent<CommandMgr>();
+        commandMgr.DropAll();
+
+        commandMgr.CommandDropInitialize();
     }
 
     // Update is called once per frame
@@ -71,6 +79,8 @@ public partial class GameMgr : MonoBehaviour
         {
             // 戦闘更新処理
             ActiveTimeBattleUpdate();
+            // コマンドの更新処理
+            commandMgr.CommandDropUpdate();
             if (battle == false)
             {
                 FinalizeBattle();

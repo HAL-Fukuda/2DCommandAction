@@ -21,6 +21,8 @@ public partial class GameMgr : MonoBehaviour
         // プレイヤーのアクションバーを取得
         Transform transform = player.transform.Find("ActionBar");
         playerActionBar = transform.gameObject;
+
+        battle = true;
     }
 
     // ATB風のシステムを使った戦闘処理
