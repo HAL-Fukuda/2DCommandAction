@@ -17,6 +17,8 @@ public class ScrollWorld : MonoBehaviour
     private int NowR;
     private int NowC;
 
+    private bool IsScroll = false;
+
     private GameObject[] worldObject = new GameObject[5];
 
     public void moveLeft()
@@ -39,12 +41,18 @@ public class ScrollWorld : MonoBehaviour
 
     public void moveCenter()
     {
-            worldObject[NowC].transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f);
+            worldObject[NowC].transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f)
+            .OnComplete(IsScrollFalse);
     }
 
-    public void WorldSelecting()
+    public void IsScrollFalse()
     {
-        // ステージセレクト
+        IsScroll = false;
+    }
+
+    public bool IsScrollWhich()
+    {
+        return IsScroll;
     }
 
 
@@ -68,10 +76,9 @@ public class ScrollWorld : MonoBehaviour
         
         if (Input.GetKeyUp(KeyCode.A))    // 左キー代わり
         {
-            if (NowC > 0) 
+            if (NowC > 0 && IsScroll == false)  
             {
-                
-                //endMove = true;
+                IsScroll = true;
                 NowL -= 1;
                 NowC -= 1;
                 NowR -= 1;
@@ -83,20 +90,24 @@ public class ScrollWorld : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.D))  // 右キー代わり
         {
-            if (NowC < 4)
+            if (NowC < 4 && IsScroll == false)
             {
+                IsScroll = true;
                 NowL += 1;
                 NowC += 1;
                 NowR += 1;
                 moveLeft();
                 moveCenter();
-                moveRight();
+                moveRight();   
             }
         }
 
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Title");
+            if (IsScroll == false)
+            {
+                SceneManager.LoadScene("Title");
+            }
         }
     }
 }

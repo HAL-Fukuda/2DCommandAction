@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4809748144646688816}
   - component: {fileID: 7475922493254139287}
   - component: {fileID: 4395523902814772531}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AbsorbEffect4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 5103496726685295672}
   - component: {fileID: 5437237695948076813}
   - component: {fileID: 3337001190206458611}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AbsorbEffect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 8025137788420506006}
   - component: {fileID: 6332384282017588602}
   - component: {fileID: 2992355595838184920}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AbsorbEffect3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14447,7 +14447,7 @@ GameObject:
   - component: {fileID: 1522008777168506654}
   - component: {fileID: 7628682533908147726}
   - component: {fileID: 8517837164093374754}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AbsorbEffect5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19261,7 +19261,7 @@ GameObject:
   - component: {fileID: 749282761748474639}
   - component: {fileID: 3876555096865057322}
   - component: {fileID: -2262419814517261531}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AbsorbEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24011,6 +24011,7 @@ MonoBehaviour:
   slashSEPrefab: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
   speed: 5
+  attackMessage: 
 --- !u!199 &3876555096865057322
 ParticleSystemRenderer:
   serializedVersion: 6
