@@ -5,6 +5,7 @@ using UnityEngine;
 public class CorsorController : MonoBehaviour
 {
     private static Vector3[] children;
+    private float beforeAxis;
 
     private int index = 0;
     private int maxIndex;
@@ -33,15 +34,19 @@ public class CorsorController : MonoBehaviour
 
     void Update()
     {
+        float Axis = Input.GetAxisRaw("Vertical");
+
         // ƒL[‚ª‰Ÿ‚³‚ê‚é‚ÆŸ‚ÌÀ•W‚ÉˆÚ“®
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || (Axis < 0 && beforeAxis == 0.0f))
         {
             NextIndex();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || (Axis > 0 && beforeAxis == 0.0f))
         {
             BackIndex();
         }
+
+        beforeAxis = Axis;
     }
 
     void NextIndex()
