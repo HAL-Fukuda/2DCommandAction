@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || (Input.GetButtonDown("A")))
         {
             int idx = corsor.GetComponent<CorsorController>().GetIndex();
             menuIdx = (eMenuCommand)idx;
