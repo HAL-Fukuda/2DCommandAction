@@ -902,6 +902,7 @@ MonoBehaviour:
   rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
   rangeB: {fileID: 5771637033348842335, guid: e5bd1e084e243944980f281248612782, type: 3}
   num: 4
+  dropInterval: 10
   dropMode: 1
 --- !u!114 &1573626334
 MonoBehaviour:
@@ -920,7 +921,7 @@ MonoBehaviour:
   player: {fileID: 1799209941}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
-  enemyList: 
+  enemyList: 020000000200000002000000
 --- !u!114 &1573626335
 MonoBehaviour:
   m_ObjectHideFlags: 0
