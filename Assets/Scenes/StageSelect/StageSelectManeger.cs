@@ -10,11 +10,13 @@ public class StageSelectManeger : MonoBehaviour
     //public GameObject WorldCanvas;
     //public GameObject StageCanvas;
     //public GameObject FirstSelect;
+    public float fadetime;
 
     public void StageSelect(string stage)
     {
         // ステージ名入力
-        SceneManager.LoadScene(stage);
+        FadeManager.Instance.LoadScene(stage, fadetime);
+        //SceneManager.LoadScene(stage);
     }
 
     //public void BackWorldSelecting()
