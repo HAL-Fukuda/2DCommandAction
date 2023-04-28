@@ -20,10 +20,10 @@ public class Demon : Enemy
         {
             isFadeOut = true;
         }
-        if (isFadeOut)
-        {
-            base.StartFadeOut();
-            //Debug.Log("Fade");
-        }
+        //if (isFadeOut)
+        //{
+        //    base.StartFadeOut();
+        //    //Debug.Log("Fade");
+        //}
     }
 }

@@ -34,6 +34,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
     {
         //MeteorAttack();
         SidewaysAttack();
+        //EnemysAttack();  //ÅI‚±‚ê‚¾‚¯‚É‚·‚é
     }
 
     public bool IsReady()
@@ -46,47 +47,21 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
         isReady = true;
     }
 
-    public void EnemysAttack()
-    {
-        //Debug.Log("EnemysAttack");
+    //public Enemy.eEnemyType EnemysAttack(Enemy.eEnemyType enemyType)
+    //{
+    //    //Debug.Log("EnemysAttack");
+    //    //GameObject attackEnemy;  //UŒ‚‚µ‚Ä‚¢‚é“G
 
-        string name = EnemyMgr.instance.enemyName;
+    //    //attackEnemy = GameObject.FindWithTag("Enemy");
+    //    //string name = attackEnemy.EnemyType;
 
-        //Debug.Log(name);
+    //    //Debug.Log(enemyType);
 
-        switch (name)
-        {
-            case "Demon(Clone)":
-                //Demon‚ÌUŒ‚ˆ—
-                //Debug.Log("DemonAttack");
-                break;
-            case "Dragon(Clone)":
-                //
-                break;
-            case "Goblin(Clone)":
-                //
-                break;
-            case "Skeleton(Clone)":
-                //
-                break;
-            case "Slime(Clone)":
-                //
-                break;
-            case "Soldier(Clone)":
-                //
-                break;
-            case "Wolf(Clone)":
-                //
-                break;
-            case "WolfMan(Clone)":
-                //
-                break;
-            case "Zombie(Clone)":
-                //
-                break;
-            case "Enemy":
-                //Debug.Log("EnemyAttack");
-                break;
-        }
-    }
+    //    switch (enemyType)
+    //    {
+    //        case Enemy.eEnemyType.Demon:
+    //            //Demon‚ÌUŒ‚ˆ—
+    //            break;
+    //    }
+    //}
 }

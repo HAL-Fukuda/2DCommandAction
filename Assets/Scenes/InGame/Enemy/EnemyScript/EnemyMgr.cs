@@ -9,6 +9,7 @@ using UnityEngine;
 public partial class EnemyMgr : MonoBehaviour
 {
     //public Enemy.eEnemyType enemyType;
+    //public static EnemyMgr instance;
 
     void EnemyMgrInitialize()
     {

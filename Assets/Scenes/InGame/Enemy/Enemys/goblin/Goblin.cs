@@ -17,9 +17,9 @@ public class Goblin : Enemy
         {
             base.FadeIn();
         }
-        if (isFadeOut)
-        {
-            base.StartFadeOut();
-        }
+        //if (isFadeOut)
+        //{
+        //    base.StartFadeOut();
+        //}
     }
 }

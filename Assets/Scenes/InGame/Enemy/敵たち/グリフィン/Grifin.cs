@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Grifin : Enemy
 {
-    // Start is called before the first frame update
     void Start()
     {
         base.Start();
+        base.EnemySoundPlay();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (isFadeIn)
         {
             base.FadeIn();
         }
+    }
+
+    public override void Attack()
+    {
+        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
+        base.EnemySoundPlay();
     }
 }

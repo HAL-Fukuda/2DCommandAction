@@ -51,9 +51,6 @@ public partial class GameMgr : MonoBehaviour
     private bool stageClear = false;
     public GameObject stageClearEffectPrefab; // ステージクリア演出
 
-    [SerializeField]
-    public Enemy.eEnemyType[] enemyList;
-
     // スクリプト定義
     private CommandMgr commandMgr;
 
@@ -99,7 +96,7 @@ public partial class GameMgr : MonoBehaviour
     {
         // エネミーを生成
         EnemyMgr script = GetComponent<EnemyMgr>();
-        script.SpawnEnemy(enemyList[killCount]);
+        script.SpawnEnemy(killCount);
         // エネミーのオブジェクトを取得
         enemy = script.GetEnemyData();
         // アクションバーを取得
