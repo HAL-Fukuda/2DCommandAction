@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class conveyor : MonoBehaviour
+public class Conveyor : MonoBehaviour
 {
     public float speed = 1.0f;
 
@@ -13,7 +13,7 @@ public class conveyor : MonoBehaviour
     private Renderer objectRenderer;
     private float timer = 0f;
     private bool isMaterial1 = true;
-    private bool ONOFFconveyor;
+    public bool ONOFFconveyor;
 
     public enum eDirection
     {
@@ -53,19 +53,22 @@ public class conveyor : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
+        if (ONOFFconveyor)
         {
-            Transform objTransform = collision.gameObject.transform;
-
-            // オブジェクトを移動させる
-            switch (direction)
+            if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
             {
-                case eDirection.Left:
-                    objTransform.position += Vector3.left * speed / 10;
-                    break;
-                case eDirection.Right:
-                    objTransform.position += Vector3.right * speed / 10;
-                    break;
+                Transform objTransform = collision.gameObject.transform;
+
+                // オブジェクトを移動させる
+                switch (direction)
+                {
+                    case eDirection.Left:
+                        objTransform.position += Vector3.left * speed / 10;
+                        break;
+                    case eDirection.Right:
+                        objTransform.position += Vector3.right * speed / 10;
+                        break;
+                }
             }
         }
     }
