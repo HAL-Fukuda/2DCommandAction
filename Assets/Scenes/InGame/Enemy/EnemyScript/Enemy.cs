@@ -4,7 +4,7 @@ using UnityEngine;
 
 public partial class Enemy : MonoBehaviour
 {
-    int hp;
+    int hp = 2;
     int speed;
 
     public AudioClip enemySound;  //敵の音声

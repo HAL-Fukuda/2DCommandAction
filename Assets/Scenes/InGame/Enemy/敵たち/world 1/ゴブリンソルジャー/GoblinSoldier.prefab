@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce78ffb52655b834684b7d76f9a704ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySound: {fileID: 0}
   enemyType: 2
   ColorDuration: 0.1
   shakeIntensity: 0.1
@@ -207,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ActionBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: speed
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
