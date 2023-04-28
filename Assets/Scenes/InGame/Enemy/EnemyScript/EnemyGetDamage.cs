@@ -51,10 +51,10 @@ public partial class Enemy : MonoBehaviour
 
             isFadeOut = true;
 
-            if (isFadeOut)
-            {
-                StartFadeOut();
-            }
+            //if (isFadeOut)
+            //{
+            //    StartFadeOut();
+            //}
         }
 
         // êîïbå„å≥ÇÃêFÇ…ñﬂÇ∑
@@ -82,7 +82,7 @@ public partial class Enemy : MonoBehaviour
 
             if (isFadeOut)
             {
-                StartFadeOut();
+                FadeOut();
             }
         }
 
@@ -143,16 +143,16 @@ public partial class Enemy : MonoBehaviour
         }
     }
 
-    public void StartFadeOut()
+    public void FadeOut()
     {
         alfa -= fadeSpeed;
         SetAlfa();
-
+        
         if (alfa <= 0)
         {
             isFadeOut = false;
             fadeMaterial.enabled = false;
-
+            
             Destroy(this.gameObject);
         }
     }

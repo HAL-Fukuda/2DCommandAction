@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6208858994414188564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1207442691257959433}
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f65f1d69bda7484e8d4e342073bd4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySound: {fileID: 0}
   enemyType: 1
   ColorDuration: 0.1
   shakeIntensity: 0.1
