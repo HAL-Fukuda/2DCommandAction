@@ -7,7 +7,7 @@ public class Grifin : Enemy
     void Start()
     {
         base.Start();
-        base.EnemySoundPlay();
+        //base.EnemySoundPlay();
     }
     
     void Update()
@@ -16,11 +16,15 @@ public class Grifin : Enemy
         {
             base.FadeIn();
         }
+        if (isFadeOut)
+        {
+            base.FadeOut();
+        }
     }
 
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        base.EnemySoundPlay();
+        //base.EnemySoundPlay();
     }
 }
