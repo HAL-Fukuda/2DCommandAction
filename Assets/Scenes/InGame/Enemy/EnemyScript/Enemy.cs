@@ -9,7 +9,7 @@ public partial class Enemy : MonoBehaviour
 
     public AudioClip enemySound;  //敵の音声
 
-    EnemyAttack attackScript;
+    public EnemyAttack attackScript;
 
     public enum eEnemyType
     {

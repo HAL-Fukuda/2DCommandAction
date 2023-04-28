@@ -7,7 +7,7 @@ public class NormalGoblin : Enemy
     void Start()
     {
         base.Start();
-        base.EnemySoundPlay();
+        //base.EnemySoundPlay();
     }
 
     void Update()
@@ -25,6 +25,7 @@ public class NormalGoblin : Enemy
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        base.EnemySoundPlay();
+        attackScript.ClubBeating();
+        //base.EnemySoundPlay();
     }
 }

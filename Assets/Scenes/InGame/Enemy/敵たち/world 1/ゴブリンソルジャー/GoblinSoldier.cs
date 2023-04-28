@@ -7,7 +7,7 @@ public class GoblinSoldier : Enemy
     void Start()
     {
         base.Start();
-        base.EnemySoundPlay();
+        //base.EnemySoundPlay();
     }
 
     void Update()
@@ -25,6 +25,7 @@ public class GoblinSoldier : Enemy
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        base.EnemySoundPlay();
+        attackScript.SideVanishAttack();
+        //base.EnemySoundPlay();
     }
 }
