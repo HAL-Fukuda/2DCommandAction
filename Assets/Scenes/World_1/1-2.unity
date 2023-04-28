@@ -904,7 +904,7 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
+  m_InputActionsPerSecond: 9999
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1573626330
@@ -958,7 +958,7 @@ MonoBehaviour:
   BigPrefab: {fileID: 0}
   rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
   rangeB: {fileID: 5771637033348842335, guid: e5bd1e084e243944980f281248612782, type: 3}
-  num: 4
+  num: 3
   dropInterval: 10
   dropMode: 1
 --- !u!114 &1573626334
