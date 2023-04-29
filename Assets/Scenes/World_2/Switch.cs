@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 public class Switch : MonoBehaviour
 {
-    public float movedistance = 1.0f;
-    public float moveDuration = 1f; // 移動にかかる時間
-    private Transform elevator; // 動くオブジェクト
-    private Transform conveyor;
+    public Conveyor conveyorScript;
+    public Elevator elevatorScript;
 
-    void Start()
+    void OnCollisionStay2D(Collision2D collision)
     {
-        elevator = GameObject.FindWithTag("elevator").transform;
-        conveyor = GameObject.FindWithTag("conveyor").transform;
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
+        {
+            elevatorScript.isPaused = true;
+            conveyorScript.ONOFFconveyor = false;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
+        {
+            elevatorScript.isPaused = false;
+            conveyorScript.ONOFFconveyor = true;
+        }
     }
 }
