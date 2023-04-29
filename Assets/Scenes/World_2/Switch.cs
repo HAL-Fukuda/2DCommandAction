@@ -4,24 +4,38 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public Conveyor conveyorScript;
-    public Elevator elevatorScript;
+    public conveyor[] conveyorScripts;
+    public elevator[] elevatorScripts;
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Command"))
         {
-            elevatorScript.isPaused = true;
-            conveyorScript.ONOFFconveyor = false;
+            foreach (var elevatorScript in elevatorScripts)
+            {
+                elevatorScript.isPaused = true;
+            }
+
+            foreach (var conveyorScript in conveyorScripts)
+            {
+                conveyorScript.ONOFFconveyor = false;
+            }
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Command")
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Command"))
         {
-            elevatorScript.isPaused = false;
-            conveyorScript.ONOFFconveyor = true;
+            foreach (var elevatorScript in elevatorScripts)
+            {
+                elevatorScript.isPaused = false;
+            }
+
+            foreach (var conveyorScript in conveyorScripts)
+            {
+                conveyorScript.ONOFFconveyor = true;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Conveyor : MonoBehaviour
+public class conveyor : MonoBehaviour
 {
     public float speed = 1.0f;
 
