@@ -149,7 +149,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 0}
+  player1: {fileID: 154224578773194991, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7, type: 3}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -161,12 +161,13 @@ MonoBehaviour:
     life: 0
     timer: 0
   SideVanishAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 3840599167954665942, guid: 3062f81f5fbe0aa47b89d72d3ccab7db,
+      type: 3}
+    spawnInterval: 0.5
+    life: 10
     timer: 0
-  Enemy: {fileID: 0}
-  SVAspeed: 0
+  Enemy: {fileID: 3608703221701105913}
+  SVAspeed: 10
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -190,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySound: {fileID: 0}
+  attackScript: {fileID: 0}
   enemyType: 2
   ColorDuration: 0.1
   shakeIntensity: 0.1

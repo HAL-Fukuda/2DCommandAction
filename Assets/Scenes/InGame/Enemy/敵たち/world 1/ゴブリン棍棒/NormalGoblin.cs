@@ -24,8 +24,22 @@ public class NormalGoblin : Enemy
 
     public override void Attack()
     {
+        //attackNum = Random.Range(0, 2);
+
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        attackScript.ClubBeating();
+        attackScript.ClubSwing();
         //base.EnemySoundPlay();
+
+        //switch (attackNum)
+        //{
+        //    case 0:
+        //        attackScript.ClubBeating();
+        //        //base.EnemySoundPlay();
+        //        break;
+        //    case 1:
+        //        attackScript.ClubSwing();
+        //        //base.EnemySoundPlay();
+        //        break;
+        //}
     }
 }

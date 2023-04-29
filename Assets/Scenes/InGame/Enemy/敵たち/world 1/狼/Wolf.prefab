@@ -130,9 +130,10 @@ MonoBehaviour:
     timer: 0
   SwingSpeedSeconds: 0
   meteorAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    life: 10
     timer: 0
   sidewaysAttackSettings:
     prefab: {fileID: 0}
@@ -189,7 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ef6c9d01776d94ba6b264c59b19a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 2
+  speed: 0
+  attackNum: 0
   enemySound: {fileID: 0}
+  attackScript: {fileID: 0}
   enemyType: 27
   ColorDuration: 0.1
   shakeIntensity: 0.1

@@ -114,9 +114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BindAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 8877550433052321562, guid: 102debf178bbbf4489197dfddb5a3a74,
+      type: 3}
+    spawnInterval: 1
+    life: 10
     timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
@@ -189,7 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151894281b40e2645978f0dc304f96b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 2
+  speed: 0
+  attackNum: 0
   enemySound: {fileID: 0}
+  attackScript: {fileID: 0}
   enemyType: 10
   ColorDuration: 0.1
   shakeIntensity: 0.1

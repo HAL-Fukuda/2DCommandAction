@@ -25,7 +25,8 @@ public class Wolf1 : Enemy
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        attackScript.WolfBiting();
+        attackScript.MeteorAttack();
+        //attackScript.WolfBiting();
         //base.EnemySoundPlay();
     }
 }

@@ -25,7 +25,7 @@ public class GoblinArcher : Enemy
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-
+        attackScript.MeteorAttack();
         //base.EnemySoundPlay();
     }
 }

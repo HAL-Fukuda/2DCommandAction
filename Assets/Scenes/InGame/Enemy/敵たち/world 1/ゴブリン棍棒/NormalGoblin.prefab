@@ -119,14 +119,16 @@ MonoBehaviour:
     life: 0
     timer: 0
   ClubBeatingSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 3149903282961528407, guid: f46411cba5d28154d95a0363896373bc,
+      type: 3}
+    spawnInterval: 0.5
+    life: 10
     timer: 0
   ClubSwingSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 3149903282961528407, guid: 126907c84367983418c61356fc7a00ec,
+      type: 3}
+    spawnInterval: 1
+    life: 0.5
     timer: 0
   SwingSpeedSeconds: 0
   meteorAttackSettings:
@@ -149,7 +151,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 0}
+  player1: {fileID: 154224578773194991, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7, type: 3}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -189,7 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7583316ea79c094484a5515088ddbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 2
+  speed: 0
+  attackNum: 0
   enemySound: {fileID: 0}
+  attackScript: {fileID: 0}
   enemyType: 3
   ColorDuration: 0.1
   shakeIntensity: 0.1

@@ -25,6 +25,7 @@ public class Grifin : Enemy
     public override void Attack()
     {
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
+        attackScript.MeteorAttack();
         //base.EnemySoundPlay();
     }
 }
