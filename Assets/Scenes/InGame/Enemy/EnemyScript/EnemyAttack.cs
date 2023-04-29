@@ -47,6 +47,20 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
         isReady = true;
     }
 
+    void Update()
+    {
+        
+        // SideVanishAttackに使うやつ
+        if (rgd != null)
+        {
+            // 速度の上限設定
+            if (rgd.velocity.magnitude > SVAspeed)
+            {
+                rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
+            }
+        }
+    }
+
     //public Enemy.eEnemyType EnemysAttack(Enemy.eEnemyType enemyType)
     //{
     //    //Debug.Log("EnemysAttack");
