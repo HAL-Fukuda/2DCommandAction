@@ -4,8 +4,9 @@ using UnityEngine;
 
 public partial class Enemy : MonoBehaviour
 {
-    int hp = 2;
-    int speed;
+    public int hp = 2;
+    public int speed;
+    public int attackNum;  //2種類以上の攻撃がある敵用
 
     public AudioClip enemySound;  //敵の音声
 
