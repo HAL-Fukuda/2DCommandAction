@@ -502,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 5882483134785221090, guid: c8c23772f37faa14492cdfaa4a858935,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.74
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 5882483134785221090, guid: c8c23772f37faa14492cdfaa4a858935,
         type: 3}
@@ -1112,8 +1112,8 @@ MonoBehaviour:
     type: 3}
   rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
   rangeB: {fileID: 5771637033348842335, guid: e5bd1e084e243944980f281248612782, type: 3}
-  num: 4
-  dropInterval: 10
+  num: 3
+  dropInterval: 9999
   dropMode: 1
 --- !u!114 &1573626334
 MonoBehaviour:
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   player: {fileID: 1799209941}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
-  enemyList: 
+  enemyList: 00000000
 --- !u!114 &1573626335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,6 +1163,37 @@ MonoBehaviour:
     type: 3}
   zombiePrefab: {fileID: 6092103796768438021, guid: 1bd7a8bf21c78b045ba8e8827b299e55,
     type: 3}
+  grifinPrefab: {fileID: 0}
+  goblinArcherPrefab: {fileID: 6092103796768438021, guid: c82ce813cda92b643a44d17348b87385,
+    type: 3}
+  goblinKingPrefab: {fileID: 0}
+  gobllinSoldierPrefab: {fileID: 0}
+  normalGoblinPrefab: {fileID: 0}
+  golem1Prefab: {fileID: 0}
+  golem2Prefab: {fileID: 0}
+  skeleton1Prefab: {fileID: 0}
+  skeleton2Prefab: {fileID: 0}
+  skeleton3Prefab: {fileID: 0}
+  spiderPrefab: {fileID: 0}
+  slime1Prefab: {fileID: 0}
+  slime2Prefab: {fileID: 0}
+  demon1Prefab: {fileID: 0}
+  demon2Prefab: {fileID: 0}
+  troll1Prefab: {fileID: 0}
+  troll2Prefab: {fileID: 0}
+  dragon1Prefab: {fileID: 0}
+  dragon2Prefab: {fileID: 0}
+  dragon3Prefab: {fileID: 0}
+  dragon4Prefab: {fileID: 0}
+  fennelPrefab: {fileID: 0}
+  lizardPrefab: {fileID: 0}
+  suzakuPrefab: {fileID: 0}
+  machine1Prefab: {fileID: 0}
+  machine2Prefab: {fileID: 0}
+  genbuPrefab: {fileID: 0}
+  byakoPrefab: {fileID: 0}
+  seiryuPrefab: {fileID: 0}
+  ogrePrefab: {fileID: 0}
   enemyName: 
 --- !u!1001 &1657352935
 PrefabInstance:
@@ -1273,7 +1304,7 @@ PrefabInstance:
     - target: {fileID: 5882483134785221090, guid: c8c23772f37faa14492cdfaa4a858935,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.74
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 5882483134785221090, guid: c8c23772f37faa14492cdfaa4a858935,
         type: 3}

@@ -123,6 +123,33 @@ public partial class CommandMgr : MonoBehaviour
             }
         }
     }
+    
+    public void DropAll(int num)
+    {
+        for (int i = 0; i < num; i++)
+        {
+            number = Random.Range(0, 11);
+
+            CreateRandomPos();
+
+            if (0 <= number && number <= 7)
+            {
+                CreateAttackCommand();
+            }
+            else if (number == 8)
+            {
+                CreateHealCommand();
+            }
+            else if (number == 9)
+            {
+                CreateDefenceCommand();
+            }
+            else if (number == 10)
+            {
+                CreateBigCommand();
+            }
+        }
+    }
 
     void CreateRandomPos()
     {

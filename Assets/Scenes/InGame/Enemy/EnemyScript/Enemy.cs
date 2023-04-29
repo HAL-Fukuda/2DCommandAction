@@ -4,10 +4,12 @@ using UnityEngine;
 
 public partial class Enemy : MonoBehaviour
 {
-    int hp;
+    int hp = 2;
     int speed;
 
-    EnemyAttack attackScript;
+    public AudioClip enemySound;  //敵の音声
+
+    public EnemyAttack attackScript;
 
     public enum eEnemyType
     {
@@ -48,5 +50,10 @@ public partial class Enemy : MonoBehaviour
     {
         attackScript.MeteorAttack();
         //attackScript.EnemysAttack();  //敵ごとの攻撃選択用関数
+    }
+
+    public void EnemySoundPlay()
+    {
+        GetComponent<AudioSource>().PlayOneShot(enemySound);
     }
 }

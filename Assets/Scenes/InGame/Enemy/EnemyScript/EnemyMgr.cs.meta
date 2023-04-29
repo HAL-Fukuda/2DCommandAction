@@ -16,11 +16,71 @@ MonoImporter:
       type: 3}
   - soldierPrefab: {fileID: 6092103796768438021, guid: 8d7bdb3d7e04925408e0041fba383586,
       type: 3}
-  - wolfPrefab: {fileID: 6092103796768438021, guid: 5a5db8c18bdc436458e2d2e9ccdb33d7,
+  - wolfPrefab: {fileID: 8490164476463646411, guid: c0c97794acc2ec24c8d5c2d7f373fd68,
       type: 3}
   - wolfmanPrefab: {fileID: 6092103796768438021, guid: 901ed09c5f880ef48bf658ce83fdbaa9,
       type: 3}
-  - zombiePrefab: {fileID: 6092103796768438021, guid: 1bd7a8bf21c78b045ba8e8827b299e55,
+  - zombiePrefab: {fileID: 2017299441320172548, guid: 9a20002837ca95d48a5c5984c06d4673,
+      type: 3}
+  - grifinPrefab: {fileID: 9191999516230062205, guid: 148a0082106d2b04d8ac55c9f88d581d,
+      type: 3}
+  - goblinArcherPrefab: {fileID: 7686932865013172893, guid: 74313f8f2784fbf4ab9bb3a400917b00,
+      type: 3}
+  - goblinKingPrefab: {fileID: 6208858994414188564, guid: 4220035b86249ed4c80c9946e53c217b,
+      type: 3}
+  - gobllinSoldierPrefab: {fileID: 3608703221701105913, guid: 80e8f38ed17d09145b78ddabde2cbe87,
+      type: 3}
+  - normalGoblinPrefab: {fileID: 7167637077539775022, guid: 744d28a7e13b63c4d9f97ebfd1eb1904,
+      type: 3}
+  - golem1Prefab: {fileID: 214973862868279058, guid: 64e0401cf3680df4a882dbf62d3a86d5,
+      type: 3}
+  - golem2Prefab: {fileID: 3071739110219143394, guid: a97e97ea6dd67ec4bbed70fbc755b056,
+      type: 3}
+  - skeleton1Prefab: {fileID: 8315120827389581156, guid: f196f1e22f4d77d4088cb3f63e7bf54b,
+      type: 3}
+  - skeleton2Prefab: {fileID: 5515590742071021241, guid: ab6a41536546f0a4e9c417d3cb32e562,
+      type: 3}
+  - skeleton3Prefab: {fileID: 4787956413379508388, guid: 8e4e02413af1a1448a4b8723bb3a520e,
+      type: 3}
+  - spiderPrefab: {fileID: 3758998466508274494, guid: 1242c0f1a3e04d24abec200379d30b42,
+      type: 3}
+  - slime1Prefab: {fileID: 4327583598819554976, guid: e8455f1377e2f17499c769aa71518597,
+      type: 3}
+  - slime2Prefab: {fileID: 606117176449643780, guid: 3aa2b26a7650d8f4eaa438d27f05ff44,
+      type: 3}
+  - demon1Prefab: {fileID: 246236382347605396, guid: 5e9d6eff330cad74b984a00b4614b2ae,
+      type: 3}
+  - demon2Prefab: {fileID: 7894892072014365877, guid: 77c7048d1db42fc4783adf0fc189c3d4,
+      type: 3}
+  - troll1Prefab: {fileID: 817182276551365451, guid: 6f86dbcfd5f32c54cad99e7a12a7a2b8,
+      type: 3}
+  - troll2Prefab: {fileID: 7811772932116853899, guid: b8159fd7658cdb8459017e9e07bf0dba,
+      type: 3}
+  - dragon1Prefab: {fileID: 2470498424691793860, guid: 7c323ec48bbbee14b8338ed81abf7927,
+      type: 3}
+  - dragon2Prefab: {fileID: 1382553022299050164, guid: 87a1b926fde514a438cdda4623495a97,
+      type: 3}
+  - dragon3Prefab: {fileID: 4585645825755894738, guid: ef3e7b1825f539442829e894e16de9af,
+      type: 3}
+  - dragon4Prefab: {fileID: 342111680949740860, guid: 1f9e1ea0184f7ef4a99a948051580c3a,
+      type: 3}
+  - fennelPrefab: {fileID: 3442649852029963482, guid: cc179911c43cf5746aa6fbd4f3fc0e97,
+      type: 3}
+  - lizardPrefab: {fileID: 8951550567412813520, guid: 67953a8be798e474fa8ecf1f33e7c69b,
+      type: 3}
+  - suzakuPrefab: {fileID: 7032355102492860656, guid: 69a1000868316794191940786caa1553,
+      type: 3}
+  - machine1Prefab: {fileID: 1893195690540459966, guid: 21d832307a4b4d3499883d77c676824e,
+      type: 3}
+  - machine2Prefab: {fileID: 480675052687633644, guid: 1cb1d693fcdd4ff4788474ae7f718e2b,
+      type: 3}
+  - genbuPrefab: {fileID: 7316928488487872296, guid: dd6df4a05bb433746ae3e6844153b1b3,
+      type: 3}
+  - byakoPrefab: {fileID: 7742081411841476883, guid: 794a5e125ef5a8b4b90bfa60afe9a062,
+      type: 3}
+  - seiryuPrefab: {fileID: 5365078852538624951, guid: b69d6ac6d3732e44a83069f451408cd5,
+      type: 3}
+  - ogrePrefab: {fileID: 4248896181115118781, guid: 8d5e168f964c7bf4bbccc612d23d54d2,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
