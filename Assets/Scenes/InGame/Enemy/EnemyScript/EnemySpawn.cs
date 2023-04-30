@@ -4,28 +4,18 @@ using UnityEngine;
 
 public partial class EnemyMgr : MonoBehaviour
 {
-    //3体だけ出す用(ステージごとに設定が必要)
+    //生成する敵を設定する箱(ステージごとに設定が必要)
     [SerializeField] private GameObject enemyObj1;
     [SerializeField] private GameObject enemyObj2;
     [SerializeField] private GameObject enemyObj3;
 
-    public int enemyNum;
+    public int enemyNum;  //何番目の敵を生成するかを指定する変数
 
-    private GameObject enemy; // 今生成されているエネミー
+    private GameObject enemy; // 生成するエネミー
     
-    void EnemySpawnInitialize()
+    public int SpawnEnemy(int enemyNum)  //敵を生成する
     {
-        
-    }
-    
-    void EnemySpawnUpdate()
-    {
-        
-    }
-
-    public int SpawnEnemy(int enemyNum)  //3体だけ出す用
-    {
-        switch (enemyNum)
+        switch (enemyNum)  //指定した番号の敵を生成する
         {
             case 0:
                 FirstEnemySpawn();
@@ -40,15 +30,17 @@ public partial class EnemyMgr : MonoBehaviour
 
         return enemyNum;
     }
-    void FirstEnemySpawn()
+
+    //敵生成の関数
+    void FirstEnemySpawn()  //一体目
     {
         enemy = Instantiate(enemyObj1, new Vector3(0, 4, 0), enemyObj1.transform.rotation);
     }
-    void SecondEnemySpawn()
+    void SecondEnemySpawn()  //二体目
     {
         enemy = Instantiate(enemyObj2, new Vector3(0, 4, 0), enemyObj2.transform.rotation);
     }
-    void ThirdEnemySpawn()
+    void ThirdEnemySpawn()  //三体目
     {
         enemy = Instantiate(enemyObj3, new Vector3(0, 4, 0), enemyObj3.transform.rotation);
     }
