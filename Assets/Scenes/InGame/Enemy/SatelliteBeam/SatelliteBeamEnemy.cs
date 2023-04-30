@@ -37,9 +37,11 @@ public partial class EnemyAttack : MonoBehaviour
     void GetPlayerPositionX()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = player1.GetComponent<Transform>();
+        //Transform myObjectTransform = player1.GetComponent<Transform>();
 
-        objectPosition = myObjectTransform.position;
+        GameObject PlayerObject = GameObject.Find("Player");
+
+        objectPosition = PlayerObject.transform.position;
     }
 
     void premonition()

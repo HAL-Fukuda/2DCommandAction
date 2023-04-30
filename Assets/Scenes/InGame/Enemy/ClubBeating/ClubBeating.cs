@@ -17,9 +17,11 @@ public partial class EnemyAttack : MonoBehaviour
     void GetPlayerPositionToCB()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = player1.GetComponent<Transform>();
+        //Transform myObjectTransform = player1.GetComponent<Transform>();
 
-        CBPosition = myObjectTransform.position;
+        GameObject PlayerObject = GameObject.Find("Player");
+
+        CBPosition = PlayerObject.transform.position;
         CBPosition.y = 6.0f;
         CBPosition.z = 0.0f;
         //Debug.Log(CBPosition);

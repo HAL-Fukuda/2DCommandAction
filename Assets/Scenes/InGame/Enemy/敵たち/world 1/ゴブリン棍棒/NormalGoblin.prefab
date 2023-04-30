@@ -121,16 +121,16 @@ MonoBehaviour:
   ClubBeatingSettings:
     prefab: {fileID: 3149903282961528407, guid: f46411cba5d28154d95a0363896373bc,
       type: 3}
-    spawnInterval: 0.5
+    spawnInterval: 5
     life: 10
     timer: 0
   ClubSwingSettings:
     prefab: {fileID: 3149903282961528407, guid: 126907c84367983418c61356fc7a00ec,
       type: 3}
-    spawnInterval: 1
-    life: 0.5
+    spawnInterval: 5
+    life: 5
     timer: 0
-  SwingSpeedSeconds: 0
+  SwingSpeedSeconds: 1
   meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -169,6 +169,12 @@ MonoBehaviour:
     timer: 0
   Enemy: {fileID: 0}
   SVAspeed: 0
+  SlashingSwordSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemySS: {fileID: 0}
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
