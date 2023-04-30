@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyEffect : MonoBehaviour
 {
     ParticleSystem particle;
+
     // Start is called before the first frame update
     void Start()
     {
