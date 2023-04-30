@@ -58,7 +58,7 @@ public partial class Command : MonoBehaviour
             EffectPlay();   //EffectÄ¶
             SoundPlay();    //SEÄ¶
 
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
 
             GameMgr.Instance.SetCommand(this.gameObject);
 

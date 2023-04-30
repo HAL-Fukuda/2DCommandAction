@@ -17,7 +17,7 @@ public partial class Command : MonoBehaviour
 
     public eCommandType commandType;
 
-    public bool isActive = false; // アクティブかどうか
+    public bool isActive = false; // 実行中かどうか
 
 
     // 関数定義-------------------------
@@ -54,7 +54,6 @@ public partial class Command : MonoBehaviour
                 Deactivate();
                 break;
         }
-
     }
 
     // アクティブ状態を取得する
