@@ -16,9 +16,11 @@ public partial class EnemyAttack : MonoBehaviour
     void GetPositionToSS()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = EnemySS.GetComponent<Transform>();
+        //Transform myObjectTransform = EnemySS.GetComponent<Transform>();
 
-        SSPosition = myObjectTransform.position;
+        GameObject EnemyObject = GameObject.Find("GoblinSoldier(Clone)");
+
+        SSPosition = EnemyObject.transform.position;
 
         //SSPosition.x = 0.0f;
         //SSPosition.y = 3.5f;

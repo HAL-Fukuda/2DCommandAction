@@ -20,9 +20,11 @@ public partial class EnemyAttack : MonoBehaviour
     void GetPlayerPositionToSVA()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = player1.GetComponent<Transform>();
+        //Transform myObjectTransform = player1.GetComponent<Transform>();
 
-        SVAPosition = myObjectTransform.position;
+        GameObject PlayerObject = GameObject.Find("Player");
+
+        SVAPosition = PlayerObject.transform.position;
         SVAPosition.y -= 3.5f;
         SVAPosition.z = 0.0f;
         //Debug.Log(SVAPosition);
@@ -31,9 +33,11 @@ public partial class EnemyAttack : MonoBehaviour
     void GetEnemyPosition()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform enemyObjectTransform = Enemy.GetComponent<Transform>();
+        //Transform enemyObjectTransform = Enemy.GetComponent<Transform>();
 
-        EnemyPos = enemyObjectTransform.position;
+        GameObject EnemyObject = GameObject.Find("GoblinSoldier(Clone)");
+
+        EnemyPos = EnemyObject.transform.position;
     }
 
     void SVAflgTrue()

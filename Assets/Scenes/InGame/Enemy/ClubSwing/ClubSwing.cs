@@ -18,11 +18,16 @@ public partial class EnemyAttack : MonoBehaviour
 
     void GetPlayerPositionToCS()
     {
+        GameObject PlayerObject = GameObject.Find("Player");
+
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = player1.GetComponent<Transform>();
+        //Transform myObjectTransform = player1.GetComponent<Transform>();
 
         // 攻撃判定のスポーン位置設定
-        CSPosition = myObjectTransform.position;
+        CSPosition = PlayerObject.transform.position;
+
+        //Debug.Log(CSPosition);
+
 
         if (CSPosition.x < 0)
         {
@@ -67,7 +72,7 @@ public partial class EnemyAttack : MonoBehaviour
 
     public void ClubSwing()
     {
-        if (CBflg)
+        if (CSflg)
         {
             GetPlayerPositionToCS();
             spawnPos = new Vector3(CSPosition.x, CSPosition.y, 0.0f);
@@ -88,6 +93,7 @@ public partial class EnemyAttack : MonoBehaviour
 
             CSflg = false;
             Invoke("CSflgTrue", ClubSwingSettings.spawnInterval);
+            //Invoke("CSflgTrue", 5.0f);
         }
         //Invoke("CSobjDestroy", 3.5f);   // 数秒後にオブジェクトを消す
     }
