@@ -12,13 +12,20 @@ public partial class Enemy : MonoBehaviour
     public float shakeIntensity = 0.1f; // 揺れの強さ
     public float shakeDuration = 0.2f; // 揺れる時間
 
-    float fadeSpeed = 0.01f;  //透明度が変わるスピード
+    [SerializeField][Header("フェードイン、アウト用")]
+    float fadeInSpeed = 0.01f;    //フェードインスピード
+    float fadeOutSpeed = 0.001f;  //フェードアウトスピード
     float red, green, blue, alfa;  //Materialの色
-
+    public Renderer fadeMaterial;  //Materialにアクセスするための容器
     public bool isFadeOut = false;  //フェードアウト状態の管理
     public bool isFadeIn = true;   //フェードイン状態の管理
 
-    public Renderer fadeMaterial;  //Materialにアクセスするための容器
+    [SerializeField][Header("死亡時エフェクト用")]
+    public bool killFlag = false;  //死亡時エフェクト用
+    [SerializeField] private GameObject destroyEffectPrefab;
+    [SerializeField] private GameObject rangeAPrefab;
+    [SerializeField] private GameObject rangeBPrefab;
+    private float spawnTime;
 
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
@@ -50,11 +57,7 @@ public partial class Enemy : MonoBehaviour
             GameMgr.Instance.DeleteEnemy();
 
             isFadeOut = true;
-
-            //if (isFadeOut)
-            //{
-            //    StartFadeOut();
-            //}
+            killFlag = true;
         }
 
         // 数秒後元の色に戻す
@@ -79,11 +82,7 @@ public partial class Enemy : MonoBehaviour
             GameMgr.Instance.DeleteEnemy();
 
             isFadeOut = true;
-
-            if (isFadeOut)
-            {
-                FadeOut();
-            }
+            killFlag = true;
         }
 
         // 数秒後元の色に戻す
@@ -134,7 +133,7 @@ public partial class Enemy : MonoBehaviour
     public void FadeIn()
     {
         fadeMaterial.enabled = true;
-        alfa += fadeSpeed;
+        alfa += fadeInSpeed;
         SetAlfa();
 
         if (alfa >= 1)
@@ -145,14 +144,14 @@ public partial class Enemy : MonoBehaviour
 
     public void FadeOut()
     {
-        alfa -= fadeSpeed;
+        alfa -= fadeOutSpeed;
         SetAlfa();
         
         if (alfa <= 0)
         {
             isFadeOut = false;
             fadeMaterial.enabled = false;
-            
+            killFlag = false;
             Destroy(this.gameObject);
         }
     }
@@ -160,5 +159,20 @@ public partial class Enemy : MonoBehaviour
     public void SetAlfa()
     {
         fadeMaterial.material.color = new Color(red, green, blue, alfa);
+    }
+
+    public void DestroyEffectSpawn()
+    {
+        spawnTime = spawnTime + Time.deltaTime;
+
+        if (spawnTime > 0.1f)
+        {
+            float x = Random.Range(rangeAPrefab.transform.position.x, rangeBPrefab.transform.position.x);
+            float y = Random.Range(rangeAPrefab.transform.position.y, rangeBPrefab.transform.position.y);
+            float z = Random.Range(rangeAPrefab.transform.position.z, rangeBPrefab.transform.position.z);
+
+            Instantiate(destroyEffectPrefab, new Vector3(x, y, z), destroyEffectPrefab.transform.rotation);
+            spawnTime = 0f;
+        }
     }
 }

@@ -20,6 +20,10 @@ public class Wolf1 : Enemy
         {
             base.FadeOut();
         }
+        if (killFlag)
+        {
+            base.DestroyEffectSpawn();
+        }
     }
 
     public override void Attack()
