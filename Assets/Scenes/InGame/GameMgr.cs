@@ -52,6 +52,7 @@ public partial class GameMgr : MonoBehaviour
     public GameObject stageClearEffectPrefab; // ステージクリア演出
     
     public int battleNum;  //バトル数を設定する変数(各ステージで設定する)
+    public bool deathFlag = false;  //敵が消えているかどうか
 
     // スクリプト定義
     private CommandMgr commandMgr;
@@ -113,7 +114,6 @@ public partial class GameMgr : MonoBehaviour
     {   
         killedEnemy = true;
         killCount++;
-
         // ３体倒したらステージクリア
         if(killCount == battleNum)
         {
@@ -170,5 +170,10 @@ public partial class GameMgr : MonoBehaviour
     {
         // ウィンドウを閉じる
         // BGMを停止する
+    }
+
+    public void DeathFlagChenge()
+    {
+        deathFlag = true;
     }
 }

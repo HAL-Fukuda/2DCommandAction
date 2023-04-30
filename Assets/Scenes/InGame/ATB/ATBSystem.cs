@@ -28,7 +28,7 @@ public partial class GameMgr : MonoBehaviour
     // ATB風のシステムを使った戦闘処理
     public void ActiveTimeBattleUpdate()
     {
-        if (killedEnemy) // 敵が死んでいたら
+        if (deathFlag) // 敵が死んでいたら
         {
             battleState = eBattleState.NEXT_FLOOR;
         }
@@ -123,6 +123,7 @@ public partial class GameMgr : MonoBehaviour
                 else
                 {
                     SpawnEnemy(); // エネミーを生成する
+                    deathFlag = false;
                     battleState = eBattleState.COMMAND_SELECT; // コマンドセレクトへ
                 }
                 break;

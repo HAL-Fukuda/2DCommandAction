@@ -135,7 +135,7 @@ public partial class Enemy : MonoBehaviour
         fadeMaterial.enabled = true;
         alfa += fadeInSpeed;
         SetAlfa();
-
+        
         if (alfa >= 1)
         {
             isFadeIn = false;
@@ -152,6 +152,8 @@ public partial class Enemy : MonoBehaviour
             isFadeOut = false;
             fadeMaterial.enabled = false;
             killFlag = false;
+            GameMgr.Instance.DeathFlagChenge();
+
             Destroy(this.gameObject);
         }
     }
