@@ -20,6 +20,10 @@ public class NormalGoblin : Enemy
         {
             base.FadeOut();
         }
+        if (killFlag)
+        {
+            base.DestroyEffectSpawn();
+        }
     }
 
     public override void Attack()

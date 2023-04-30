@@ -168,6 +168,12 @@ MonoBehaviour:
     timer: 0
   Enemy: {fileID: 0}
   SVAspeed: 0
+  SlashingSwordSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemySS: {fileID: 0}
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -199,9 +205,17 @@ MonoBehaviour:
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2
+  fadeInSpeed: 0.01
+  fadeMaterial: {fileID: 0}
   isFadeOut: 0
   isFadeIn: 1
-  fadeMaterial: {fileID: 0}
+  killFlag: 0
+  destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
+    type: 3}
+  rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
+    type: 3}
+  rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
+    type: 3}
 --- !u!1001 &498547608297105477
 PrefabInstance:
   m_ObjectHideFlags: 0
