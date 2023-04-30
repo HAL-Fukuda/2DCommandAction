@@ -10,8 +10,11 @@ public partial class CommandMgr : MonoBehaviour
     [SerializeField] private GameObject defencePrefab;  //生成するPreFab
     [SerializeField] private GameObject BigPrefab;  //生成するPreFab
     [SerializeField] private Transform rangeA;         //生成する範囲A
-    [SerializeField] private Transform rangeB;         //生成する範囲B
     [SerializeField] private int num;                  //生成する個数
+
+    [SerializeField] private Vector3 positionA;  // 生成する固定位置A
+    [SerializeField] private Vector3 positionB;  // 生成する固定位置B
+    [SerializeField] private Vector3 positionC;  // 生成する固定位置C
 
     private float randomPosX, randomPosY, randomPosZ;
     private int number;
@@ -55,11 +58,10 @@ public partial class CommandMgr : MonoBehaviour
 
                 case DropMode.ModeAll:     //一気に
                     DropAll();
+                    //DropAtFixedPositions();
                     break;
             }
         }
-       
-
     }
 
     void DropRapid()
@@ -153,9 +155,15 @@ public partial class CommandMgr : MonoBehaviour
 
     void CreateRandomPos()
     {
-        randomPosX = Random.Range(rangeA.position.x, rangeB.position.x);
-        randomPosY = Random.Range(rangeA.position.y, rangeB.position.y);
-        randomPosZ = Random.Range(rangeA.position.z, rangeB.position.z);
+        //rangeAのScaleの範囲からランダムに
+        float rangeSize = rangeA.localScale.x;
+        float halfRangeSize = rangeSize / 2.0f;
+        float leftBoundary = rangeA.position.x - halfRangeSize;
+        float rightBoundary = rangeA.position.x + halfRangeSize;
+
+        randomPosX = Random.Range(leftBoundary, rightBoundary);
+        randomPosY = rangeA.position.y;
+        randomPosZ = rangeA.position.z;
     }
 
     void CreateAttackCommand()
@@ -177,4 +185,44 @@ public partial class CommandMgr : MonoBehaviour
     {
         Instantiate(BigPrefab, new Vector3(randomPosX, randomPosY, randomPosZ), BigPrefab.transform.rotation);
     }
+
+    public void DropAtFixedPositions()//指定した位置にコマンドを降らせる(現状三つ)
+    {
+        for (int i = 0; i < num; i++)
+        {
+            int number = Random.Range(0, 11);
+
+            Vector3 position = Vector3.zero;
+            switch (i % 3) // 3つの固定位置を循環する
+            {
+                case 0:
+                    position = positionA;
+                    break;
+                case 1:
+                    position = positionB;
+                    break;
+                case 2:
+                    position = positionC;
+                    break;
+            }
+
+            if (0 <= number && number <= 7)
+            {
+                Instantiate(attackPrefab, position, attackPrefab.transform.rotation);
+            }
+            else if (number == 8)
+            {
+                Instantiate(healPrefab, position, healPrefab.transform.rotation);
+            }
+            else if (number == 9)
+            {
+                Instantiate(defencePrefab, position, defencePrefab.transform.rotation);
+            }
+            else if (number == 10)
+            {
+                Instantiate(BigPrefab, position, BigPrefab.transform.rotation);
+            }
+        }
+    }
+
 }
