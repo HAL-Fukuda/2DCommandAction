@@ -5,7 +5,7 @@ using UnityEngine;
 public partial class GameMgr : MonoBehaviour
 {
     private float enemyTimer; // エネミー用タイマー
-    private bool EnemyInitialize = false;   // パワーで解決用フラグ
+    private bool enemyInitializeStart = false;   // 敵の攻撃の初期化が始まっているかどうか
 
     public const float enemyActionTime = 5.0f;
 
@@ -50,29 +50,18 @@ public partial class GameMgr : MonoBehaviour
 
                 // 行動が選択されたらバトルステートを変える
                 if (playerActionBar.GetComponent<ActionBarControl>().IsReady() &&
-                    isCommandSelected == true && EnemyInitialize == false)
+                    isCommandSelected == true)
                 {
                     battleState = eBattleState.PLAYER;
                 }
+                // アクションバーが１００％になったら敵の攻撃
                 if (enemyActionBar.GetComponent<ActionBarControl>().IsReady() &&
                     battleState == eBattleState.COMMAND_SELECT)
                 {
                     string text = "敵の攻撃！";
                     MessageWindow.Instance.SetDebugMessage(text);
 
-                    // 初期化処理
-                    if (EnemyInitialize == false)
-                    {
-                        EnemyInitialize = true;
-                        enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
-                    }
-
-                    // エネミーのターン
-                    if (enemy.GetComponent<EnemyAttack>().IsReady())
-                    {
-                        EnemyInitialize = false;
-                        battleState = eBattleState.ENEMY;
-                    }
+                    battleState = eBattleState.ENEMY;
                 }
                 break;
 
@@ -95,19 +84,33 @@ public partial class GameMgr : MonoBehaviour
 
             case eBattleState.ENEMY: // エネミー
 
-                enemyTimer -= Time.deltaTime;
-
-                // アクションバーを0％にセット
-                enemyActionBar.GetComponent<ActionBarControl>().SetEmpty();
-
-                // 敵の行動
-                enemy.GetComponent<Enemy>().Attack();
-
-                // 時間が経ったら敵の行動終了
-                if (enemyTimer <= 0.0f)
+                // 初期化処理
+                if (enemyInitializeStart == false)
                 {
-                    enemyTimer = enemyActionTime;
-                    battleState = eBattleState.COMMAND_SELECT;
+                    enemyInitializeStart = true;
+                    enemy.GetComponent<EnemyAttack>().EnemyAttackInitialize();
+                }
+
+                // 敵の攻撃の初期化処理が終わっているか
+                if (enemy.GetComponent<EnemyAttack>().IsReady())
+                {
+                    // タイマーを減らす
+                    enemyTimer -= Time.deltaTime;
+
+                    // アクションバーを0％にセット
+                    enemyActionBar.GetComponent<ActionBarControl>().SetEmpty();
+
+                    // 敵の行動
+                    enemy.GetComponent<Enemy>().Attack();
+                    
+                    // 時間が経ったら敵の行動終了
+                    if (enemyTimer <= 0.0f)
+                    {
+                        enemy.GetComponent<EnemyAttack>().EnemyAttackFinalize(); // 攻撃が終わったら終了処理を呼ぶ
+                        enemyInitializeStart = false;
+                        enemyTimer = enemyActionTime;
+                        battleState = eBattleState.COMMAND_SELECT;
+                    }
                 }
                 break;
             case eBattleState.NEXT_FLOOR:

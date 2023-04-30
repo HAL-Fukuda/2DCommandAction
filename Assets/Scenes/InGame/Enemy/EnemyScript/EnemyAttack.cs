@@ -30,6 +30,13 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
         StartShake();
     }
 
+    // 終了処理
+    // 攻撃が終わったら呼び出す
+    public void EnemyAttackFinalize()
+    {
+        isReady = false;
+    }
+
     void EnemyAttackUpdate()
     {
         //MeteorAttack();
