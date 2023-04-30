@@ -50,6 +50,8 @@ public partial class GameMgr : MonoBehaviour
 
     private bool stageClear = false;
     public GameObject stageClearEffectPrefab; // ステージクリア演出
+    
+    public int battleNum;  //バトル数を設定する変数(各ステージで設定する)
 
     // スクリプト定義
     private CommandMgr commandMgr;
@@ -113,7 +115,7 @@ public partial class GameMgr : MonoBehaviour
         killCount++;
 
         // ３体倒したらステージクリア
-        if(killCount >= 3)
+        if(killCount == battleNum)
         {
             stageClear = true;
         }
