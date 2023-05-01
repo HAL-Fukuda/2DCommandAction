@@ -66,6 +66,11 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
                 rgd.velocity = rgd.velocity.normalized * SVAspeed;  // Å‘å‘¬“x‚ğİ‚¯‚é
             }
         }
+
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            //ZombieBiting();
+        }
     }
 
     //public Enemy.eEnemyType EnemysAttack(Enemy.eEnemyType enemyType)

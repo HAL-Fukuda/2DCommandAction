@@ -21,20 +21,20 @@ public partial class EnemyAttack : MonoBehaviour
     void GetPlayerPositionToWB()
     {
         // ゲームオブジェクトのTransformコンポーネントを取得する
-        Transform myObjectTransform = player1.GetComponent<Transform>();
+        //Transform myObjectTransform = player1.GetComponent<Transform>();
 
-
+        GameObject PlayerObject = GameObject.Find("Player");
 
         // 攻撃判定のスポーン位置設定
-        WBUpperPosition = myObjectTransform.position;
+        WBUpperPosition = PlayerObject.transform.position;
         WBUpperPosition.y += 3.0f;
         WBUpperPosition.z = 0.0f;
 
-        WBUnderPosition = myObjectTransform.position;
+        WBUnderPosition = PlayerObject.transform.position;
         WBUnderPosition.y -= 2.0f;
         WBUnderPosition.z = 0.0f;
 
-        Debug.Log(WBUpperPosition);
+        //Debug.Log(WBUpperPosition);
     }
 
     void BitingTooth()
@@ -42,14 +42,15 @@ public partial class EnemyAttack : MonoBehaviour
         WBobjUpper.transform.DOMove(new Vector3(WBUpperPosition.x, WBUpperPosition.y - 2, 0), 0.2f);
         WBobjUnder.transform.DOMove(new Vector3(WBUnderPosition.x, WBUnderPosition.y + 2, 0), 0.2f);
 
-        wbCollision.GetComponent<WBCollision>().ToggleCollider(true);
+        // 当たり判定回りの調整用、今後不満がなければこのまま消す
+        //wbCollision.GetComponent<WBCollision>().ToggleCollider(true);
 
         Invoke("WBobjDestroy", 0.5f);
     }
 
     void WBobjDestroy()
     {
-        wbCollision.GetComponent<WBCollision>().ToggleCollider(false);
+        //wbCollision.GetComponent<WBCollision>().ToggleCollider(false);
         Destroy(WBobjUpper);
         Destroy(WBobjUnder);
     }
