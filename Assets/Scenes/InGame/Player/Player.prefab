@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 154224578773194978}
   - component: {fileID: 4613512486804412518}
   - component: {fileID: 154224578773194980}
+  - component: {fileID: 4792207753972879193}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -268,6 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2a62b13dc5b074c92b3e6551e37465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slash: {fileID: 0}
+  Bigslash: {fileID: 0}
   moveSpeed: 6
   AvoidanceForce: 0
   upForce: 250
@@ -280,7 +283,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isGround: 0
+  isMove: 0
   length: 0.6
+--- !u!114 &4792207753972879193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154224578773194991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cb53d829e3319448da67d570a4e31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityScale: 1
+  reducedGravityScale: 0.5
 --- !u!1 &154224578952292958
 GameObject:
   m_ObjectHideFlags: 0

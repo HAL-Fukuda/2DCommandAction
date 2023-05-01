@@ -15,6 +15,7 @@ TagManager:
   - Command
   - DeadZone
   - Enemy
+  - Gravity
   layers:
   - Default
   - TransparentFX
