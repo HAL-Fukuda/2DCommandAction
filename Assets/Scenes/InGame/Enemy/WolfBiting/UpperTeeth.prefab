@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8928915856386039212}
   m_Layer: 0
   m_Name: UpperTeeth
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
