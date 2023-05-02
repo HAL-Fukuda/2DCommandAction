@@ -67,9 +67,19 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             }
         }
 
+        // SpiderNeedleに使うやつ
+        if (SNrgd != null)
+        {
+            // 速度の上限設定
+            if (SNrgd.velocity.magnitude > SNspeed)
+            {
+                SNrgd.velocity = SNrgd.velocity.normalized * SNspeed;  // 最大速度を設ける
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.B))
         {
-            //ZombieBiting();
+            SpiderNeedle();
         }
     }
 
