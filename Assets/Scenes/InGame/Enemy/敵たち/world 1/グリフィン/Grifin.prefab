@@ -140,6 +140,17 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  featherAttackSettings:
+    feather1: {fileID: 337433356995143802, guid: d98e934d5031d974fb3afd3b6c76776c,
+      type: 3}
+    feather2: {fileID: 4205385223104121084, guid: a61002351184b7e48b3acde4a4b3a5c9,
+      type: 3}
+    feather3: {fileID: 1813615429753112981, guid: b4039f229707c504c9513459c9bb9d25,
+      type: 3}
+    spawnInterval: 0.5
+    maxSpawnValue: 5
+    spawnValue: 0
+    timer: 0
   homingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -180,6 +191,16 @@ MonoBehaviour:
     life: 0
     timer: 0
   WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUnderSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
