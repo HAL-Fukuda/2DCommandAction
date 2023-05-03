@@ -130,7 +130,8 @@ public partial class GameMgr : MonoBehaviour
             DeleteCommand();
         }
 
-        if (battleState == eBattleState.COMMAND_SELECT)
+        if (battleState == eBattleState.COMMAND_SELECT && // コマンドセレクトの時
+            playerActionBar.GetComponent<ActionBarControl>().IsReady()) // アクションバーが１００％の時
         {
             isCommandSelected = true;
 

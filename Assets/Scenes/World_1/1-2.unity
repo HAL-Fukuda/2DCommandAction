@@ -980,7 +980,7 @@ MonoBehaviour:
   player: {fileID: 1799209941}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
-  battleNum: 0
+  battleNum: 3
   deathFlag: 0
 --- !u!114 &1573626335
 MonoBehaviour:
