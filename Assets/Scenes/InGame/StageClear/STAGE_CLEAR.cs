@@ -37,9 +37,11 @@ public class STAGE_CLEAR : MonoBehaviour
                     {
                         // オブジェクト削除
                         Destroy(gameObject);
-                        // ステージセレクト画面へ
+                        // 現在のシーン番号をPlayerPrefsに保存
+                        int currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
+                        PlayerPrefs.SetInt("preSceneIdx", currentSceneIdx);
+                        // ステージクリア画面へ
                         FadeManager.Instance.LoadScene("StageClear", fadetime);
-                        //SceneManager.LoadScene("StageClear");
                     });
                 });
             });
