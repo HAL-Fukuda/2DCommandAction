@@ -332,6 +332,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9d58dbfb8f846f58b62a48334a0058, type: 3}
+--- !u!1 &1600053699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6222859180542498863, guid: 5e627239240045642b0a43d7033dbb7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1979513970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600053705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600053699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f07fe841ce39364284f5d17147b94fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadetime: 1
+  corsor: {fileID: 2138072251}
 --- !u!1 &1962032442
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,5 +583,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageClearTimeline
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4571800402753343977, guid: 5e627239240045642b0a43d7033dbb7d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e627239240045642b0a43d7033dbb7d, type: 3}
+--- !u!1 &2138072251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7824841173844742422, guid: 5e627239240045642b0a43d7033dbb7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1979513970}
+  m_PrefabAsset: {fileID: 0}

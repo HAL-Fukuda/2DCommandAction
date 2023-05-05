@@ -22,6 +22,10 @@ public class DEAD_EFFECT : MonoBehaviour
             // エフェクトが終わってたらシーン遷移
             if(deadEffect.time >= deadEffect.duration)
             {
+                // 現在のシーン番号をPlayerPrefsに保存
+                int currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
+                PlayerPrefs.SetInt("preSceneIdx", currentSceneIdx);
+                // GameOverシーンへ
                 SceneManager.LoadScene("GameOver");
             }
             else

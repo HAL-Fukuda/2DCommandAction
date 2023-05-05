@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class StageClear : MonoBehaviour
 {
     public float fadetime;
     public GameObject corsor;
 
     private enum eMenuCommand
     {
-        CONTINUE = 0,
+        NEXTSTAGE = 0,
         STAGESELECT = 1,
     }
 
@@ -25,14 +25,15 @@ public class GameOver : MonoBehaviour
 
             switch (menuIdx)
             {
-                case eMenuCommand.CONTINUE:
-                    // 同じステージを再開
-                    SceneManager.LoadScene(PlayerPrefs.GetInt("preSceneIdx"));
+                case eMenuCommand.NEXTSTAGE:
+                    // 次のステージへ
+                    int sceneIdx = PlayerPrefs.GetInt("preSceneIdx");
+                    sceneIdx++;
+                    SceneManager.LoadScene(sceneIdx);
                     break;
                 case eMenuCommand.STAGESELECT:
                     // ステージセレクト画面へ
                     FadeManager.Instance.LoadScene("StageSelect", fadetime);
-                    //SceneManager.LoadScene("StageSelect");
                     break;
             }
         }
