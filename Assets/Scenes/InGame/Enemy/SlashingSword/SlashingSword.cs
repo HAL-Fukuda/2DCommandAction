@@ -25,7 +25,7 @@ public partial class EnemyAttack : MonoBehaviour
         //SSPosition.x = 0.0f;
         //SSPosition.y = 3.5f;
         SSPosition.z = 0.0f;
-        Debug.Log(SSPosition);
+        //Debug.Log(SSPosition);
     }
 
     void SSobjDestroy()
