@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SatelliteBeamCollider : MonoBehaviour
+public class IACollider : MonoBehaviour
 {
     private LifeManager lifeManager;
 
@@ -24,5 +24,4 @@ public class SatelliteBeamCollider : MonoBehaviour
             //Debug.Log("“ü‚Á‚½");
         }
     }
-
 }
