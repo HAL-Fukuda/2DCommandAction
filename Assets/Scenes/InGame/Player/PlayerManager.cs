@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
     private bool isDoubleJump;
+    private bool notJump = false;
     private bool isHaveCommand = false;
 
     public Transform attackPoint;
@@ -36,6 +37,9 @@ public class PlayerManager : MonoBehaviour
     private float ThrowPower = 4.0f;    //投げる力
     private GameObject commandObject;
 
+    // 以前に触れたオブジェクトのタグを保存するキー
+    private const string previousTagKey = "PreviousTag";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +59,7 @@ public class PlayerManager : MonoBehaviour
             Movement();
             HoldThrowUpdate();
         }
-
+        CantJump();
 
         //if (Input.GetKeyDown(KeyCode.N))
         //{
@@ -155,7 +159,7 @@ public class PlayerManager : MonoBehaviour
     //接地判定
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command")
+        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command" || other.gameObject.tag == "Swamp")
         {
             isGround = true;
         }
@@ -163,9 +167,43 @@ public class PlayerManager : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command")
+        if (other.gameObject.tag == "Platform" || other.gameObject.tag == "Command" || other.gameObject.tag == "Swamp")
         {
             isGround = false;
+        }
+    }
+
+    // プレイヤーがオブジェクトに触れたときに呼び出される関数
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // 以前に触れたオブジェクトのタグを保存する
+        PlayerPrefs.SetString(previousTagKey, other.tag);
+    }
+
+    // 特定のオブジェクトに触れたときに呼び出される関数
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // 以前に触れたオブジェクトのタグを読み込む
+        string previousTag = PlayerPrefs.GetString(previousTagKey);
+
+        // 特定のオブジェクトであれば、地面に接触している場合に限り、他のオブジェクトに触れるまで処理を行わない
+        if (collision.gameObject.CompareTag("Swamp") && previousTag == "Swamp" && isGround)
+        {
+            // 何もしない
+            notJump = true;
+            return;
+        }
+
+        // 以前に触れたオブジェクトのタグを削除する
+        PlayerPrefs.DeleteKey(previousTagKey);
+        notJump = false;
+    }
+
+    void CantJump()
+    {
+        if (notJump)
+        {
+            isDoubleJump = true;
         }
     }
 
