@@ -45,6 +45,10 @@ public partial class Enemy : MonoBehaviour
     {
         GetDamageInitialize();
 
+        // ƒJƒƒ‰‚ğ—h‚ç‚·
+        CameraEffect cameraScript = GameObject.Find("Main Camera").GetComponent<CameraEffect>();
+        cameraScript.ShakeCamera(0.2f, 0.2f);
+
         // UŒ‚‚³‚ê‚½‚ÌˆÊ’u‚ğæ“¾‚·‚é
         originalPosition = transform.position;
 
@@ -69,6 +73,10 @@ public partial class Enemy : MonoBehaviour
     public void GetBigDamage()
     {
         GetDamageInitialize();
+
+        // ƒJƒƒ‰‚ğ—h‚ç‚·
+        CameraEffect cameraScript = GameObject.Find("Main Camera").GetComponent<CameraEffect>();
+        cameraScript.ShakeCamera(0.2f, 0.2f);
 
         // UŒ‚‚³‚ê‚½‚ÌˆÊ’u‚ğæ“¾‚·‚é
         originalPosition = transform.position;
