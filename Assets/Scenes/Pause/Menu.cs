@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button stageselectButton;
 
+    public Pause pauseScript;
     //public PlayerManager playerManager;
 
     void Start()
@@ -17,9 +18,10 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("pause")))
         {
             Pause();
+            pauseScript.InitializePause();
         }
     }
 
