@@ -20,13 +20,16 @@ public partial class Enemy : MonoBehaviour
     public bool isFadeOut = false;  //フェードアウト状態の管理
     public bool isFadeIn = true;   //フェードイン状態の管理
 
-    [SerializeField][Header("死亡時エフェクト用")]
+    [SerializeField][Header("エフェクト用")]
     public bool killFlag = false;  //死亡時エフェクト用
-    [SerializeField] private GameObject destroyEffectPrefab;
-    [SerializeField] private GameObject rangeAPrefab;
-    [SerializeField] private GameObject rangeBPrefab;
-    private float spawnTime;
-
+    public bool hitFlag = false;  //ヒットエフェクト用
+    [SerializeField] private GameObject hitEffectPrefab;  //ヒットエフェクト用
+    [SerializeField] private GameObject destroyEffectPrefab;  //死亡時エフェクト用
+    [SerializeField] private GameObject rangeAPrefab;  //エフェクト生成範囲A
+    [SerializeField] private GameObject rangeBPrefab;  //エフェクト生成範囲B
+    public float hitTime;  //ヒットエフェクトを生成する時間
+    private float spawnTime;  //エフェクト用
+    
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
     {
@@ -51,6 +54,8 @@ public partial class Enemy : MonoBehaviour
 
         // 攻撃された時の位置を取得する
         originalPosition = transform.position;
+
+        hitFlag = true;
 
         // HPを1減らす
         hp--;
@@ -80,6 +85,8 @@ public partial class Enemy : MonoBehaviour
 
         // 攻撃された時の位置を取得する
         originalPosition = transform.position;
+
+        hitFlag = true;
 
         // HPを1減らす
         hp -= 2;
@@ -182,6 +189,21 @@ public partial class Enemy : MonoBehaviour
             float z = Random.Range(rangeAPrefab.transform.position.z, rangeBPrefab.transform.position.z);
 
             Instantiate(destroyEffectPrefab, new Vector3(x, y, z), destroyEffectPrefab.transform.rotation);
+            spawnTime = 0f;
+        }
+    }
+
+    public void GetDamegeEffectSpawn()
+    {
+        spawnTime = spawnTime + Time.deltaTime;
+        //Debug.Log("Hit");
+        if (spawnTime > 0.1f)
+        {
+            float x = Random.Range(rangeAPrefab.transform.position.x, rangeBPrefab.transform.position.x);
+            float y = Random.Range(rangeAPrefab.transform.position.y, rangeBPrefab.transform.position.y);
+            float z = Random.Range(rangeAPrefab.transform.position.z, rangeBPrefab.transform.position.z);
+
+            Instantiate(hitEffectPrefab, new Vector3(x, y, z), hitEffectPrefab.transform.rotation);
             spawnTime = 0f;
         }
     }
