@@ -121,13 +121,13 @@ MonoBehaviour:
   ClubBeatingSettings:
     prefab: {fileID: 3149903282961528407, guid: f46411cba5d28154d95a0363896373bc,
       type: 3}
-    spawnInterval: 5
+    spawnInterval: 10
     life: 10
     timer: 0
   ClubSwingSettings:
     prefab: {fileID: 3149903282961528407, guid: 126907c84367983418c61356fc7a00ec,
       type: 3}
-    spawnInterval: 5
+    spawnInterval: 10
     life: 5
     timer: 0
   SwingSpeedSeconds: 1
@@ -140,6 +140,14 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  featherAttackSettings:
+    feather1: {fileID: 0}
+    feather2: {fileID: 0}
+    feather3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
   homingAttackSettings:
     prefab: {fileID: 0}
@@ -175,12 +183,27 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
   WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUnderSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -199,9 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
-  attackNum: 0
-  enemySound: {fileID: 0}
+  patternCnt: 0
+  attackMode: 1
+  patternSwitch: 1
   attackScript: {fileID: 0}
+  enemySound: {fileID: 0}
   enemyType: 3
   ColorDuration: 0.1
   shakeIntensity: 0.1
@@ -211,12 +236,16 @@ MonoBehaviour:
   isFadeOut: 0
   isFadeIn: 1
   killFlag: 0
+  hitFlag: 0
+  hitEffectPrefab: {fileID: 8588657063526206251, guid: 5bc608b64f6b9324a853fbe1c69a5882,
+    type: 3}
   destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
     type: 3}
   rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
     type: 3}
   rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
     type: 3}
+  hitTime: 0
 --- !u!1001 &6814270081047290377
 PrefabInstance:
   m_ObjectHideFlags: 0

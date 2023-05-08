@@ -24,26 +24,60 @@ public class NormalGoblin : Enemy
         {
             base.DestroyEffectSpawn();
         }
+        if (hitFlag)
+        {
+            hitTime = hitTime + Time.deltaTime;
+            Debug.Log(hitTime);
+
+            base.GetDamegeEffectSpawn();
+
+            if (hitTime > 10f)
+            {
+                hitFlag = false;
+                hitTime = 0f;
+            }
+        }
     }
 
     public override void Attack()
     {
-        //attackNum = Random.Range(0, 2);
-
         //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        attackScript.ClubSwing();
+        base.AttackMode();
         //base.EnemySoundPlay();
+    }
 
-        //switch (attackNum)
-        //{
-        //    case 0:
-        //        attackScript.ClubBeating();
-        //        //base.EnemySoundPlay();
-        //        break;
-        //    case 1:
-        //        attackScript.ClubSwing();
-        //        //base.EnemySoundPlay();
-        //        break;
-        //}
+    public override void PatternCnt()
+    {
+        Debug.Log("Cnt");
+        if (patternCnt <= 2)
+        {
+            attackScript.ClubSwing();  //UŒ‚‚ğŒÄ‚Ô
+            Debug.Log("ˆê‚Â–Ú‚ÌUŒ‚");
+            Debug.Log(patternCnt);
+        }
+        else if (patternCnt >= 3)
+        {
+            attackScript.ClubBeating();  //UŒ‚‚ğŒÄ‚Ô
+            Debug.Log("“ñ‚Â–Ú‚ÌUŒ‚");
+            patternCnt = 1;
+        }
+
+        patternCnt++;
+    }
+    
+    public override void PatternSwitch()  //UŒ‚‚·‚é‚½‚Ñ‚ÉUŒ‚‚ğØ‚è‘Ö‚¦‚é
+    {
+        Debug.Log(patternSwitch);
+
+        if (patternSwitch)
+        {
+            attackScript.ClubSwing();  //UŒ‚‚ğŒÄ‚Ô
+            patternSwitch = false;
+        }
+        else
+        {
+            attackScript.ClubBeating();  //UŒ‚‚ğŒÄ‚Ô
+            patternSwitch = true;
+        }
     }
 }
