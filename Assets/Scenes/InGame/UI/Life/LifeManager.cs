@@ -10,7 +10,23 @@ public class LifeManager : MonoBehaviour
 
     bool invincibility = false;
 
+    public float invincibilityTimer = 1.0f;
+
     public GameObject deadEffect; // 死亡エフェクト
+
+    void Update()
+    {
+        // 被ダメージ時一定時間無敵
+        if(invincibility == true && invincibilityTimer > 0.0f)
+        {
+            invincibilityTimer -= Time.deltaTime;
+
+            if(invincibilityTimer <= 0.0f)
+            {
+                InvincibilityOff();
+            }
+        }
+    }
 
     public void InvincibilityOn()
     {
@@ -22,12 +38,23 @@ public class LifeManager : MonoBehaviour
         invincibility = false;
     }
 
+    // 一定時間無敵にする
+    // 引数：無敵時間（秒）
+    public void InvincibilityWithTimer(float time)
+    {
+        invincibility = true;
+        invincibilityTimer = time;
+    }
+
     // 被ダメージ
     // 引数の値の文だけHPが減る
     public void GetDamage(int value)
     {
         if (invincibility == false)
         {
+            // 無敵をON
+            InvincibilityWithTimer(1.0f);
+
             for (int i = 0; i < value; i++)
             {
                 if (lifePoint > 0)
