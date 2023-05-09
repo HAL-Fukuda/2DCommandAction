@@ -33,7 +33,7 @@ public class DamageFloor : MonoBehaviour
             {
                 lifeManager.GetDamage(1);
                 timer = 0f;
-               // AudioSource.PlayClipAtPoint(se, transform.position);
+                //AudioSource.PlayClipAtPoint(se, transform.position);
             }
         }
         else
