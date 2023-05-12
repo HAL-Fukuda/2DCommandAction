@@ -1903,11 +1903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7143399202406112629}
+      objectReference: {fileID: 7143399202406112631}
     - target: {fileID: 7143399202194014044, guid: 7e444a89487e1464c9508f8ac700ad2c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: StageSelect
       objectReference: {fileID: 0}
     - target: {fileID: 7367984150370362474, guid: 7e444a89487e1464c9508f8ac700ad2c,
         type: 3}
@@ -1935,3 +1935,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 0
+--- !u!114 &7143399202406112631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7846156111246025937, guid: 7e444a89487e1464c9508f8ac700ad2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7143399202406112628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143399202406112629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c921675ac3f1a547a2ec6840f90e216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
