@@ -20,6 +20,8 @@ public class DeadZone : MonoBehaviour
         
         if(collision.gameObject.tag == "Command")
         {
+            // 1å¬ç~ÇÁÇ∑
+            CommandMgr.Instance.DropAll(1);
             Destroy(collision.gameObject);
         }
     }
