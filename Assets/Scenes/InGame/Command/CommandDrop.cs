@@ -19,6 +19,7 @@ public partial class CommandMgr : MonoBehaviour
     private float randomPosX, randomPosY, randomPosZ;
     private int number;
 
+    public bool autoDrop; // 一定時間ごとにコマンドが落ちてくるかどうか
     public float dropInterval = 10.0f; // コマンドが落ちてくる間隔
     private float dropTimer;
 
@@ -39,10 +40,13 @@ public partial class CommandMgr : MonoBehaviour
         dropTimer += Time.deltaTime;
 
         // 一定時間毎にコマンドが落ちてくる
-        if (dropTimer >= dropInterval)
+        if (autoDrop)
         {
-            DropAll();
-            dropTimer = 0.0f;
+            if (dropTimer >= dropInterval)
+            {
+                DropAll();
+                dropTimer = 0.0f;
+            }
         }
     }
 
