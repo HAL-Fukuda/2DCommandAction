@@ -105,7 +105,8 @@ public partial class GameMgr : MonoBehaviour
                     
                     // 時間が経ったら敵の行動終了
                     if (enemyTimer <= 0.0f)
-                    {
+                    {  
+                        enemy.GetComponent<Enemy>().NextAttackNum();
                         enemy.GetComponent<EnemyAttack>().EnemyAttackFinalize(); // 攻撃が終わったら終了処理を呼ぶ
                         enemyInitializeStart = false;
                         enemyTimer = enemyActionTime;

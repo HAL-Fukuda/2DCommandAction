@@ -9,34 +9,58 @@ public partial class Enemy : MonoBehaviour
     public int speed;
 
     [SerializeField][Header("攻撃用")]
-    //public int attackNum;  //2種類以上の攻撃がある敵用
-    public int patternCnt = 0;          //攻撃の回数によって攻撃を切り替える用
-    public bool attackMode = false;     //攻撃のパターンを切り替える用 
-    public bool patternSwitch = false;  //毎回攻撃が切り替わる用
+    //public int patternCnt = 0;          //攻撃の回数によって攻撃を切り替える用
+    //public int attackMode;     //攻撃のパターンを切り替える用 
+    //public bool patternSwitch = false;  //毎回攻撃が切り替わる用
+    public int attackNum;  //攻撃切り替え用
+    public bool initialized = false;  //ATBバーが溜まっているか
+    public Transform actionBar;     //アクションバー
     public EnemyAttack attackScript;
 
     public AudioClip enemySound;  //敵の音声
 
     public enum eEnemyType
     {
-        GoblinArcher,GoblinKing,GoblinSoldier,Goblin,
+        //ワールド１
+        Grifin,
+        GoblinArcher,GoblinSoldier,NormalGoblin,
+        Spider,
+        Slime,
+        Zombie,
+        Dragon,
+        Wolf,
+        //ワールド２
+        Android,
+        Drone,
+        //ワールド３
+        OctopusForm,HumanForm,
+        SpaceShip,
+        //ワールド４
+        Kamaitachi,Mandragora,Bakegasa,Tengu,Youko,Kappa,Saruoni,
+        Suzaku,Genbu,Byako,Seiryu,
+        //ワールド５
+        IceGolem,FireGolem,FrostDragon,FireDragon,MagmaSlime,Yeti,Virus,
+        Saramander,Skeleton,LizardMan,YukiOnna,
+        //
+        //GoblinArcher,GoblinSoldier,,
+        GoblinKing,Goblin,
         Golem1,Golem2,
         Skeleton1,Skeleton2,Skeleton3,
-        Spider,
+        //Spider,
         Slime1,Slime2,
-        Grifin,
-        Zombie,
+        //Grifin,
+        //Zombie,
         Demon1,Demon2,
         Troll1,Troll2,
         Dragon1,Dragon2,Dragon3,Dragon4,
         Fennel,
         Lizard,
-        Suzaku,
+        //Suzaku,
         Machine1,Machine2,
-        Wolf,
-        Genbu,
-        Byako,
-        Seiryu,
+        //Wolf,
+        //Genbu,
+        //Byako,
+        //Seiryu,
         Ogre
     }
     public eEnemyType enemyType;
@@ -50,7 +74,9 @@ public partial class Enemy : MonoBehaviour
     void EnemyInitialize()
     {
         attackScript = GetComponent<EnemyAttack>();
-        patternCnt = 1;
+        actionBar = transform.Find("ActionBar");
+        attackNum = 1;
+        //patternCnt = 1;
     }
 
     public virtual void Attack()
@@ -66,14 +92,18 @@ public partial class Enemy : MonoBehaviour
 
     public void AttackMode()
     {
-        if (attackMode)
-        {
-            PatternSwitch();
-        }
-        else
-        {
-            PatternCnt();
-        }
+        //switch (attackMode)
+        //{
+        //    case 1:
+        //        PatternSwitch();
+        //        break;
+        //    case 2:
+        //        PatternCnt();
+        //        break;
+        //    case 3:
+        //        PatternRandom();
+        //        break;
+        //}
     }
 
     //コピペ用
@@ -109,5 +139,30 @@ public partial class Enemy : MonoBehaviour
         //}
 
         //patternCnt++;
+    }
+
+    //コピペ用
+    public virtual void PatternRandom()  //ランダムで攻撃する
+    {
+        switch(attackNum)
+        {
+            case 0:
+                attackScript.MeteorAttack();  //攻撃を呼ぶ
+                break;
+            case 1:
+                attackScript.MeteorAttack();  //攻撃を呼ぶ
+                break;
+            case 2:
+                attackScript.MeteorAttack();  //攻撃を呼ぶ
+                break;
+            case 3:
+                attackScript.MeteorAttack();  //攻撃を呼ぶ
+                break;
+        }
+    }
+
+    public void NextAttackNum()
+    {
+        attackNum = Random.Range(0, 4);
     }
 }

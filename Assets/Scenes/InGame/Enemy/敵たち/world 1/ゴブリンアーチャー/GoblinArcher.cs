@@ -24,12 +24,38 @@ public class GoblinArcher : Enemy
         {
             base.DestroyEffectSpawn();
         }
+
+        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
+        {   
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        attackScript.MeteorAttack();
+        //Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                //”½Ë‹|
+                break;
+            case 1:
+                //”½Ë‹|
+                break;
+            case 2:
+                //˜A‘±‹|
+                break;
+            case 3:
+                //˜A‘±‹|
+                break;
+        }
     }
 }

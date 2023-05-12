@@ -139,17 +139,36 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  featherAttackSettings:
+    feather1: {fileID: 0}
+    feather2: {fileID: 0}
+    feather3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   homingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
+  InevitableAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  OmenAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemyIA: {fileID: 0}
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 154224578773194991, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7, type: 3}
+  player1: {fileID: 0}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -169,17 +188,33 @@ MonoBehaviour:
   Enemy: {fileID: 3608703221701105913}
   SVAspeed: 10
   SlashingSwordSettings:
+    prefab: {fileID: 8799646896719077757, guid: 6bee8ad450906e84496102f4e55fe13f,
+      type: 3}
+    spawnInterval: 3
+    life: 10
+    timer: 0
+  EnemySS: {fileID: 0}
+  SpiderNeedleSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  EnemySS: {fileID: 0}
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
   WBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ZBUnderSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -199,8 +234,10 @@ MonoBehaviour:
   hp: 2
   speed: 0
   attackNum: 0
-  enemySound: {fileID: 0}
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
+  enemySound: {fileID: 0}
   enemyType: 2
   ColorDuration: 0.1
   shakeIntensity: 0.1
@@ -210,12 +247,15 @@ MonoBehaviour:
   isFadeOut: 0
   isFadeIn: 1
   killFlag: 0
+  hitFlag: 0
+  hitEffectPrefab: {fileID: 0}
   destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
     type: 3}
   rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
     type: 3}
   rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
     type: 3}
+  hitTime: 0
 --- !u!1001 &6287033321830851314
 PrefabInstance:
   m_ObjectHideFlags: 0
