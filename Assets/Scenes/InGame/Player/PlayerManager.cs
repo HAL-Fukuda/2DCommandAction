@@ -87,7 +87,7 @@ public class PlayerManager : MonoBehaviour
             transform.localScale = new Vector3(-2, 2, 1);
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                Debug.Log("右回避");
+                //Debug.Log("右回避");
                 rb.AddForce(new Vector3(AvoidanceForce, 0, 0));
             }
         }
@@ -99,7 +99,7 @@ public class PlayerManager : MonoBehaviour
             //回避
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                Debug.Log("左回避");
+                //Debug.Log("左回避");
                 rb.AddForce(new Vector3(-AvoidanceForce, 0, 0));
             }
         }
@@ -118,12 +118,12 @@ public class PlayerManager : MonoBehaviour
 
                 if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
                 {
-                    Debug.Log("攻撃：一段階");
+                    //Debug.Log("攻撃：一段階");
                     Attack();
                 }
                 else if (Chargeingcount >= 400.0f)
                 {
-                    Debug.Log("攻撃：二段階");
+                    //Debug.Log("攻撃：二段階");
                     Attack();
                 }
 
@@ -221,16 +221,18 @@ public class PlayerManager : MonoBehaviour
     }
 
     //ダメージを受けたときのアニメーション
-    void DamegeAnimation()
+    public void DamegeAnimation()
     {
         animator.SetTrigger("isDamege");
+        //Debug.Log("ダメージを受けています");
     }
 
     //ゲームオーバーのアニメーション
-    void DieAnimation()
+    public void DieAnimation()
     {
         isMove = false;
         animator.SetTrigger("isDie");
+        //Debug.Log("死にました");
     }
 
     //溜め中
