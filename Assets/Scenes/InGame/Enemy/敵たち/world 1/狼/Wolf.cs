@@ -33,7 +33,7 @@ public class Wolf : Enemy
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
+        //Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
