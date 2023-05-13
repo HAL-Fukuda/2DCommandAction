@@ -27,7 +27,7 @@ public partial class EnemyAttack : MonoBehaviour
         //Transform myObjectTransform = EnemySS.GetComponent<Transform>();
 
         // Œã‚Å"“G‚Ì–¼‘O(Clone)"‚É•Ï‚¦‚é
-        GameObject EnemyObject = GameObject.Find("Enemy");
+        GameObject EnemyObject = GameObject.FindWithTag("Enemy");
 
         if (EnemyObject == null)
         {

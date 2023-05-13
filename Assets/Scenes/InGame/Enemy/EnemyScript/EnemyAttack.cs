@@ -67,6 +67,16 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             }
         }
 
+        // GrabbingAttackに使うやつ
+        if (GArgd != null)
+        {
+            // 速度の上限設定
+            if (GArgd.velocity.magnitude > GAspeed)
+            {
+                GArgd.velocity = GArgd.velocity.normalized * GAspeed;  // 最大速度を設ける
+            }
+        }
+
         // SpiderNeedleに使うやつ
         if (SNrgd != null)
         {
@@ -79,7 +89,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
 
         if (Input.GetKeyUp(KeyCode.B))
         {
-            InevitableAttack();
+            //GrabbingAttack();
         }
     }
 
