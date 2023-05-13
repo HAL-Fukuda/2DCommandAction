@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LifeManager : MonoBehaviour
 {
+    [SerializeField] PlayerManager playerManager;
+
+    private PlayerManager PlayerManagerScript;
+
     public GameObject[] lifeArray = new GameObject[5];
     public int lifePoint = 5;
     public int maxlifePoint = 5;
@@ -17,11 +21,11 @@ public class LifeManager : MonoBehaviour
     void Update()
     {
         // 被ダメージ時一定時間無敵
-        if(invincibility == true && invincibilityTimer > 0.0f)
+        if (invincibility == true && invincibilityTimer > 0.0f)
         {
             invincibilityTimer -= Time.deltaTime;
 
-            if(invincibilityTimer <= 0.0f)
+            if (invincibilityTimer <= 0.0f)
             {
                 InvincibilityOff();
             }
@@ -50,6 +54,8 @@ public class LifeManager : MonoBehaviour
     // 引数の値の文だけHPが減る
     public void GetDamage(int value)
     {
+        playerManager.DamegeAnimation();
+
         if (invincibility == false)
         {
             // 無敵をON
@@ -62,10 +68,11 @@ public class LifeManager : MonoBehaviour
                     lifeArray[lifePoint - 1].SetActive(false);
                     lifePoint--;
                 }
-                if(lifePoint <= 0)
+                if (lifePoint <= 0)
                 {
                     // 死亡エフェクト生成
                     Instantiate(deadEffect);
+                    playerManager.DieAnimation();
                     break;
                 }
             }
