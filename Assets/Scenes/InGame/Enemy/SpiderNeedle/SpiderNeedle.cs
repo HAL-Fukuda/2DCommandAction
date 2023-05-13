@@ -34,7 +34,7 @@ public partial class EnemyAttack : MonoBehaviour
         //Transform enemyObjectTransform = Enemy.GetComponent<Transform>();
 
         //GameObject EnemyObject = GameObject.Find("Spider(Clone)");
-        GameObject EnemyObject = GameObject.Find("Enemy");
+        GameObject EnemyObject = GameObject.FindWithTag("Enemy");
 
         EnemyPos = EnemyObject.transform.position;
     }

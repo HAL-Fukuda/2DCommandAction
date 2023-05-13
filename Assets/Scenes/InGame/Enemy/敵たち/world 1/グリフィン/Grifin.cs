@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Grifin : Enemy
 {
-    private Transform actionBar; // アクションバー
-    bool initialized = false;
-
     void Start()
     {
-        actionBar = transform.Find("ActionBar");
         base.Start();
         //base.EnemySoundPlay();
     }
@@ -39,9 +35,31 @@ public class Grifin : Enemy
 
     public override void Attack()
     {
-        //敵固有の攻撃を呼ぶ
-        attackScript.FeatherAttack();
+        Debug.Log(attackNum);
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                attackScript.FeatherAttack();
+                break;
+            case 1:
+                attackScript.FeatherAttack();
+                //掴みかかる
+                break;
+            case 2:
+                attackScript.FeatherAttack();
+                //不可避の攻撃
+                break;
+            case 3:
+                attackScript.FeatherAttack();
+                //未決定
+                break;
+        }
     }
 }

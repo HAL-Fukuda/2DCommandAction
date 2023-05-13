@@ -154,12 +154,23 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  InevitableAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  OmenAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemyIA: {fileID: 0}
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 154224578773194991, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7, type: 3}
+  player1: {fileID: 0}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -222,9 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
-  patternCnt: 0
-  attackMode: 1
-  patternSwitch: 1
+  attackNum: 0
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
   enemyType: 3

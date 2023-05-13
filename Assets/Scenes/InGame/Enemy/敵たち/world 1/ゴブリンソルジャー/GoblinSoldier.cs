@@ -24,12 +24,37 @@ public class GoblinSoldier : Enemy
         {
             base.DestroyEffectSpawn();
         }
+        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
+        {
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        attackScript.SideVanishAttack();
+        Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                attackScript.SlashingSword();
+                break;
+            case 1:
+                attackScript.SlashingSword();
+                break;
+            case 2:
+                attackScript.SideVanishAttack();
+                break;
+            case 3:
+                attackScript.SideVanishAttack();
+                break;
+        }
     }
 }
