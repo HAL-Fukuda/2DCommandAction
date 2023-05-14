@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: -2176141854623549345}
+  - component: {fileID: 2809021978348282273}
   m_Layer: 0
-  m_Name: Spaceship
+  m_Name: HumanFormSilver
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a465122049301f43a3b5181262b24a2, type: 2}
+  - {fileID: 2100000, guid: ff086e420f35379468c9426e9ac39a98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &-2176141854623549345
+--- !u!114 &2809021978348282273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad208c127b0e4d745b0351b68ccc1c76, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b7851425fe85454aa136c856c29bd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
@@ -242,7 +242,7 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 13
+  enemyType: 0
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2

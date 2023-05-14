@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spaceship : Enemy
+public class HumanFormBlack : Enemy
 {
 
     void Start()
