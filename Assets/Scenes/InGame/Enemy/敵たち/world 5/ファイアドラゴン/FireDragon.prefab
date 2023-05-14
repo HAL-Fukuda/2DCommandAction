@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: 8308499979067054693}
+  - component: {fileID: 2257724065674484740}
   m_Layer: 0
-  m_Name: IceGolem
+  m_Name: FireDragon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1fa8c8e9d35ccfc43b72d712988c13d7, type: 2}
+  - {fileID: 2100000, guid: 0862ee598c715734ea35f979f19ee703, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &8308499979067054693
+--- !u!114 &2257724065674484740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd05b7d9eea68c04792ea924506523fc, type: 3}
+  m_Script: {fileID: 11500000, guid: def2bb29b16bc0042afa4f3c7ed1c090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
