@@ -50,10 +50,13 @@ public class Wolf : Enemy
                 attackScript.WolfBiting();
                 break;
             case 2:
-                attackScript.NailAttack();
+                attackScript.WolfBiting();
                 break;
             case 3:
-                attackScript.NailAttack();
+                attackScript.WolfBiting();
+                break;
+            case 4:
+                attackScript.WolfBiting();
                 break;
         }
     }

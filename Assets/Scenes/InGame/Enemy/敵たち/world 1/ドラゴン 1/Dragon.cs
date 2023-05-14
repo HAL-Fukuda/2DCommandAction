@@ -59,7 +59,7 @@ public class Dragon : Enemy
                 //‚Â‚©‚İUŒ‚
                 break;
             case 4:
-                //
+                //attackScript.InevitableAttack();
                 break;
         }
     }

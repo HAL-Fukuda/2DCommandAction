@@ -60,6 +60,9 @@ public class Grifin : Enemy
                 attackScript.FeatherAttack();
                 //–¢Œˆ’è
                 break;
+            case 4:
+                attackScript.FeatherAttack();
+                break;
         }
     }
 }

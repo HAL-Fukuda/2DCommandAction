@@ -50,10 +50,13 @@ public class Zombie : Enemy
                 attackScript.ZombieBiting();
                 break;
             case 2:
-                attackScript.NailAttack();
+                attackScript.ZombieBiting();
                 break;
             case 3:
-                attackScript.NailAttack();
+                attackScript.ZombieBiting();
+                break;
+            case 4:
+                attackScript.ZombieBiting();
                 break;
         }
     }

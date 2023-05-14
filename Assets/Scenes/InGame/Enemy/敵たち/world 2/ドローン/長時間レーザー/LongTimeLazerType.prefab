@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: -5116041873757788745}
+  - component: {fileID: -6908310411760542474}
   m_Layer: 0
-  m_Name: Android
+  m_Name: LongTimeLazerType
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e53932b0e5a6b704a8b9da021a3012f1, type: 2}
+  - {fileID: 2100000, guid: 9e635b4f4d6bb0d449d7d897e044a2d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,6 +139,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  GrabbingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GAspeed: 0
   featherAttackSettings:
     feather1: {fileID: 0}
     feather2: {fileID: 0}
@@ -217,7 +223,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &-5116041873757788745
+--- !u!114 &-6908310411760542474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,17 +232,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12fce27e430aeb48ae643f7d1d1f656, type: 3}
+  m_Script: {fileID: 11500000, guid: 07e83648aa3642d4da354fd823d8d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 0
+  attackNum: 0
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 9
+  enemyType: 13
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2
@@ -247,9 +253,12 @@ MonoBehaviour:
   killFlag: 0
   hitFlag: 0
   hitEffectPrefab: {fileID: 0}
-  destroyEffectPrefab: {fileID: 0}
-  rangeAPrefab: {fileID: 0}
-  rangeBPrefab: {fileID: 0}
+  destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
+    type: 3}
+  rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
+    type: 3}
+  rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
+    type: 3}
   hitTime: 0
 --- !u!1001 &8486418092448577296
 PrefabInstance:

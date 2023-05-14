@@ -55,6 +55,9 @@ public class NormalGoblin : Enemy
             case 3:
                 attackScript.ClubSwing();
                 break;
+            case 4:
+
+                break;
         }
     }
 }
