@@ -34,30 +34,8 @@ public class Zombie : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.ZombieBiting();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.ZombieBiting();
-                break;
-            case 1:
-                attackScript.ZombieBiting();
-                break;
-            case 2:
-                attackScript.ZombieBiting();
-                break;
-            case 3:
-                attackScript.ZombieBiting();
-                break;
-            case 4:
-                attackScript.ZombieBiting();
-                break;
-        }
     }
 }

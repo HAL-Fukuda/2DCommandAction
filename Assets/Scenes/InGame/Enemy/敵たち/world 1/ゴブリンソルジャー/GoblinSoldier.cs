@@ -34,30 +34,8 @@ public class GoblinSoldier : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.SlashingSword();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.SlashingSword();
-                break;
-            case 1:
-                attackScript.SlashingSword();
-                break;
-            case 2:
-                attackScript.SlashingSword();
-                break;
-            case 3:
-                attackScript.SlashingSword();
-                break;
-            case 4:
-                attackScript.SlashingSword();
-                break;
-        }
     }
 }

@@ -33,7 +33,7 @@ public class Dragon : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -47,20 +47,15 @@ public class Dragon : Enemy
                 attackScript.MeteorAttack();
                 break;
             case 1:
-                attackScript.MeteorAttack();
-                //attackScript.SideVanishAttack();
+                attackScript.InevitableAttack();
                 break;
             case 2:
-                attackScript.MeteorAttack();
-                //attackScript.NailAttack();
-                break;
-            case 3:
-                attackScript.MeteorAttack();
-                //Ç¬Ç©Ç›çUåÇ
-                break;
-            case 4:
-                //attackScript.InevitableAttack();
+                attackScript.NailAttack();
                 break;
         }
+    }
+    public override void NextAttackNum()
+    {
+        attackNum = Random.Range(0, 3);
     }
 }

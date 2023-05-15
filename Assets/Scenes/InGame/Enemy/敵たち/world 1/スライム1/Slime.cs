@@ -34,30 +34,8 @@ public class Slime: Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.BindAttack();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.BindAttack();
-                break;
-            case 1:
-                attackScript.BindAttack();
-                break;
-            case 2:
-                attackScript.BindAttack();
-                break;
-            case 3:
-                attackScript.BindAttack();
-                break;
-            case 4:
-                attackScript.BindAttack();
-                break;
-        }
     }
 }
