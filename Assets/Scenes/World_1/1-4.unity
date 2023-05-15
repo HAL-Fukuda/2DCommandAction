@@ -212,6 +212,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7, type: 3}
+--- !u!114 &118747725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 154224578773194980, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
+    type: 3}
+  m_PrefabInstance: {fileID: 118747724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799209941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2a62b13dc5b074c92b3e6551e37465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &282816770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1157,6 +1169,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2003935794672161303, guid: 1d235e22d2cf8bd449a7f5c9ce76c236,
+        type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 118747725}
     - target: {fileID: 4845383194391129713, guid: 1d235e22d2cf8bd449a7f5c9ce76c236,
         type: 3}
       propertyPath: m_Name
@@ -1266,6 +1283,7 @@ MonoBehaviour:
   positionA: {x: 0, y: 0, z: 0}
   positionB: {x: 0, y: 0, z: 0}
   positionC: {x: 0, y: 0, z: 0}
+  autoDrop: 0
   dropInterval: 9999
   dropMode: 1
 --- !u!114 &1573626334
