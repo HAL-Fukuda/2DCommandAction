@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4676547163145465790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: -0.56, z: -0.060981806}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: eaf820eaebcba664abd7a4870d9db271, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   spawnSE: {fileID: 8300000, guid: 25b6fb093e2d6934fa98e243a88d828a, type: 3}
   explosionPrefab: {fileID: 2306163709613892010, guid: d0a698fb62548774690fe5a58abd47af,
     type: 3}
-  speed: 0
+  speed: 1.5
 --- !u!61 &4676547163145465786
 BoxCollider2D:
   m_ObjectHideFlags: 0
