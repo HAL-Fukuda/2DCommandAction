@@ -50,10 +50,13 @@ public class GoblinSoldier : Enemy
                 attackScript.SlashingSword();
                 break;
             case 2:
-                attackScript.SideVanishAttack();
+                attackScript.SlashingSword();
                 break;
             case 3:
-                attackScript.SideVanishAttack();
+                attackScript.SlashingSword();
+                break;
+            case 4:
+                attackScript.SlashingSword();
                 break;
         }
     }

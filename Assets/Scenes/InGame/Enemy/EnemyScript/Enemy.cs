@@ -22,46 +22,35 @@ public partial class Enemy : MonoBehaviour
     public enum eEnemyType
     {
         //ワールド１
-        Grifin,
-        GoblinArcher,GoblinSoldier,NormalGoblin,
-        Spider,
-        Slime,
-        Zombie,
-        Dragon,
-        Wolf,
+        Slime, Wolf, NormalGoblin,    //1-1
+        GoblinArcher, GoblinSoldier,  //1-2
+        Grifin,                       //1-3
+        Spider, Zombie,               //1-4
+        Dragon,                       //1-5
         //ワールド２
-        Android,
-        Drone,
+        LazerMachineGunType, BulletsMachineGunType, MissileType,                         //2-1
+        LazerIrradiationType, LongTimeLazerType, ExplosionMissileType,                   //2-2
+        Robot,                                                                           //2-3
+        MiniExplosionMissileType,  LongTimeTrackingMissileType, LongTimeMachineGunType,  //2-4
+        BossRobot,                                                                       //2-5
         //ワールド３
-        OctopusForm,HumanForm,
-        SpaceShip,
+        HumanFormWhite, OctopusFormBlue, HumanFormGray,  //3-1
+        OctopusFormYellow, HumanFormSilver,              //3-2
+        HumanFormGold,                                   //3-3
+        OctopusFormRed, HumanFormBlack,                  //3-4
+        SpaceShip,                                       //3-5
         //ワールド４
-        Kamaitachi,Mandragora,Bakegasa,Tengu,Youko,Kappa,Saruoni,
-        Suzaku,Genbu,Byako,Seiryu,
+        Bakegasa, Mandragora, Kappa,  //4-1
+        Kamaitachi, Saruoni, Genbu,   //4-2
+        Seiryu,                       //4-3
+        Youko, Tengu, Suzaku,         //4-4
+        Byako,                        //4-5
         //ワールド５
-        IceGolem,FireGolem,FrostDragon,FireDragon,MagmaSlime,Yeti,Virus,
-        Saramander,Skeleton,LizardMan,YukiOnna,
-        //
-        //GoblinArcher,GoblinSoldier,,
-        GoblinKing,Goblin,
-        Golem1,Golem2,
-        Skeleton1,Skeleton2,Skeleton3,
-        //Spider,
-        Slime1,Slime2,
-        //Grifin,
-        //Zombie,
-        Demon1,Demon2,
-        Troll1,Troll2,
-        Dragon1,Dragon2,Dragon3,Dragon4,
-        Fennel,
-        Lizard,
-        //Suzaku,
-        Machine1,Machine2,
-        //Wolf,
-        //Genbu,
-        //Byako,
-        //Seiryu,
-        Ogre
+        MagmaSlime, Skeleton, LizardMan,      //5-1
+        Yeti, MagmaGolem, IceGolem,           //5-2
+        YukiOnna,                             //5-3
+        FireDragon, FrostDragon, Saramander,  //5-4
+        Virus                                 //5-5 
     }
     public eEnemyType enemyType;
 
@@ -163,6 +152,6 @@ public partial class Enemy : MonoBehaviour
 
     public void NextAttackNum()
     {
-        attackNum = Random.Range(0, 4);
+        attackNum = Random.Range(0, 5);
     }
 }

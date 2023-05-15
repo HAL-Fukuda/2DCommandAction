@@ -140,6 +140,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  GrabbingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GAspeed: 0
   featherAttackSettings:
     feather1: {fileID: 337433356995143802, guid: d98e934d5031d974fb3afd3b6c76776c,
       type: 3}
@@ -235,12 +241,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 0
+  attackNum: 0
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 0
+  enemyType: 5
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2

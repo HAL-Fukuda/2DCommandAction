@@ -44,10 +44,10 @@ public class Slime: Enemy
         switch (attackNum)
         {
             case 0:
-                attackScript.SpiderNeedle();
+                attackScript.BindAttack();
                 break;
             case 1:
-                attackScript.SpiderNeedle();
+                attackScript.BindAttack();
                 break;
             case 2:
                 attackScript.BindAttack();
@@ -55,7 +55,9 @@ public class Slime: Enemy
             case 3:
                 attackScript.BindAttack();
                 break;
-                //Debug.Log("êßçÏíÜ");
+            case 4:
+                attackScript.BindAttack();
+                break;
         }
     }
 }

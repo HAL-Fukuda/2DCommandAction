@@ -44,15 +44,18 @@ public class Spider : Enemy
         switch (attackNum)
         {
             case 0:
-                attackScript.BindAttack();
+                attackScript.SpiderNeedle();
                 break;
             case 1:
-                attackScript.BindAttack();
+                attackScript.SpiderNeedle();
                 break;
             case 2:
                 attackScript.SpiderNeedle();
                 break;
             case 3:
+                attackScript.SpiderNeedle();
+                break;
+            case 4:
                 attackScript.SpiderNeedle();
                 break;
         }

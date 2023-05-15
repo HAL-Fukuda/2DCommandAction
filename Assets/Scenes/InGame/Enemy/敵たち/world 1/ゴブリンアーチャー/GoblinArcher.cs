@@ -45,16 +45,19 @@ public class GoblinArcher : Enemy
         switch (attackNum)
         {
             case 0:
-                //”½ŽË‹|
+                //
                 break;
             case 1:
-                //”½ŽË‹|
+                
                 break;
             case 2:
-                //˜A‘±‹|
+                
                 break;
             case 3:
-                //˜A‘±‹|
+                
+                break;
+            case 4:
+
                 break;
         }
     }
