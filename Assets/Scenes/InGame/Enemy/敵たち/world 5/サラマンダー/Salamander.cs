@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagmaGolem : Enemy
+public class Salamander : Enemy
 {
     void Start()
     {
