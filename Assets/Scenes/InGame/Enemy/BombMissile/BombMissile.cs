@@ -13,7 +13,7 @@ public class BombMissile : MonoBehaviour
     public AudioClip windSE;
     public AudioClip spawnSE;
     public GameObject explosionPrefab; // 爆発エフェクトのプレハブ
-    Tweener tweener;
+    private Tweener tweener;
     public float speed;
 
     // Start is called before the first frame update
@@ -37,10 +37,15 @@ public class BombMissile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isFired == false) // 発射したかどうか
+        timer += Time.deltaTime;
+
+        if(timer>= 0.5f)
         {
-            isFired = true;
-            Fire();
+            if (isFired == false) // 発射したかどうか
+            {
+                isFired = true;
+                Fire();
+            }
         }
     }
 
@@ -65,7 +70,7 @@ public class BombMissile : MonoBehaviour
         // トランスフォームを取得
         Transform objectTransform = this.transform;
         // ローカルX軸に向かって１秒で10f移動
-        tweener = this.transform.DOLocalMove(objectTransform.right * 10f, 1.25f).SetRelative(true).OnComplete(() =>
+        tweener = this.transform.DOLocalMove(objectTransform.right * 10f, speed).SetRelative(true).OnComplete(() =>
         {
             // 移動後に1秒でMaterialのアルファを0にする
             tweener = spriteRenderer.material.DOFade(0.0f, 1.0f).OnComplete(() =>
@@ -96,8 +101,8 @@ public class BombMissile : MonoBehaviour
                 spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
                 spriteRenderer.color = spriteColor;
 
-                // 1秒後にオブジェクトを削除する
-                Invoke("DestroyObject", 1f);
+                // オブジェクトを削除する
+                Invoke("DestroyObject", 0.2f);
             }
         }
     }

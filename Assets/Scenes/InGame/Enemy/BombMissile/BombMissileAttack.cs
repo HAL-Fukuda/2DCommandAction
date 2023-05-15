@@ -4,7 +4,8 @@ using UnityEngine;
 
 public partial class EnemyAttack : MonoBehaviour
 {
-    public struct BombAttackSettings
+    [System.Serializable]
+    public struct BombMissileAttackSettings
     {
         public GameObject prefab;
         public float spawnInterval;
@@ -14,7 +15,7 @@ public partial class EnemyAttack : MonoBehaviour
         public int spawnValue;
         public float timer;
 
-        public BombAttackSettings(GameObject prefab, float spawnInterval, int maxSpawnValue)
+        public BombMissileAttackSettings(GameObject prefab, float spawnInterval, int maxSpawnValue)
         {
             this.prefab = prefab;
             this.spawnInterval = spawnInterval;
@@ -24,28 +25,30 @@ public partial class EnemyAttack : MonoBehaviour
         }
     }
 
-    BombAttackSettings bombAttackSettings;
+    public BombMissileAttackSettings bombMissileAttackSettings;
+
     public void BombMissileInitialize()
     {
-        bombAttackSettings.spawnValue = 0;
+        bombMissileAttackSettings.spawnValue = 0;
     }
 
     public void BombMissileAttack()
     {
         // タイマー更新
-        bombAttackSettings.timer += Time.deltaTime;
+        bombMissileAttackSettings.timer += Time.deltaTime;
 
         // 一定時間ごとに生成
-        if (bombAttackSettings.timer >= bombAttackSettings.spawnInterval &&
-            bombAttackSettings.spawnValue < bombAttackSettings.maxSpawnValue) // 最大生成数に達していないか
+        if (bombMissileAttackSettings.timer >= bombMissileAttackSettings.spawnInterval &&
+            bombMissileAttackSettings.spawnValue < bombMissileAttackSettings.maxSpawnValue) // 最大生成数に達していないか
         {
-            bombAttackSettings.timer = 0f;
-            bombAttackSettings.spawnValue++;
+            bombMissileAttackSettings.timer = 0f;
+            bombMissileAttackSettings.spawnValue++;
 
             // エネミーの位置に生成
             Transform enemyTransform = GameObject.FindWithTag("Enemy").transform;
             Vector3 spawnPos = enemyTransform.position;
-            Instantiate(bombAttackSettings.prefab, spawnPos, Quaternion.identity);
+            spawnPos.z += 1;
+            Instantiate(bombMissileAttackSettings.prefab, spawnPos, Quaternion.identity);
         }
     }
 }
