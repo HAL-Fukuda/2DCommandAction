@@ -9,9 +9,9 @@ public partial class Enemy : MonoBehaviour
     public int speed;
 
     [SerializeField][Header("攻撃用")]
-    //public int patternCnt = 0;          //攻撃の回数によって攻撃を切り替える用
-    //public int attackMode;     //攻撃のパターンを切り替える用 
-    //public bool patternSwitch = false;  //毎回攻撃が切り替わる用
+    public int patternCnt = 0;          //攻撃の回数によって攻撃を切り替える用
+    public int attackMode;     //攻撃のパターンを切り替える用 
+    public bool patternSwitch = true;  //毎回攻撃が切り替わる用
     public int attackNum;  //攻撃切り替え用
     public bool initialized = false;  //ATBバーが溜まっているか
     public Transform actionBar;     //アクションバー
@@ -98,16 +98,17 @@ public partial class Enemy : MonoBehaviour
     //コピペ用
     public virtual void PatternSwitch()  //攻撃するたびに攻撃を切り替える
     {
-        //if (patternSwitch)
-        //{
-        //    attackScript.MeteorAttack();  //攻撃を呼ぶ
-        //    patternSwitch = false;
-        //    //Debug.Log(patternSwitch);
-        //}
-        //else
-        //{
-        //    attackScript.MeteorAttack();  //攻撃を呼ぶ
-        //}
+        if (patternSwitch)
+        {
+            attackScript.MeteorAttack();  //攻撃を呼ぶ
+            patternSwitch = false;
+            //Debug.Log(patternSwitch);
+        }
+        else
+        {
+            attackScript.MeteorAttack();  //攻撃を呼ぶ
+            patternSwitch = true;
+        }
     }
 
     //コピペ用
@@ -150,7 +151,7 @@ public partial class Enemy : MonoBehaviour
         }
     }
 
-    public void NextAttackNum()
+    public virtual void NextAttackNum()
     {
         attackNum = Random.Range(0, 5);
     }
