@@ -122,7 +122,7 @@ MonoBehaviour:
     prefab: {fileID: 3149903282961528407, guid: f46411cba5d28154d95a0363896373bc,
       type: 3}
     spawnInterval: 10
-    life: 10
+    life: 5
     timer: 0
   ClubSwingSettings:
     prefab: {fileID: 3149903282961528407, guid: 126907c84367983418c61356fc7a00ec,
@@ -131,16 +131,6 @@ MonoBehaviour:
     life: 5
     timer: 0
   SwingSpeedSeconds: 1
-  meteorAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -171,6 +161,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  meteorAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -183,6 +178,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   SatelliteAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -239,6 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}

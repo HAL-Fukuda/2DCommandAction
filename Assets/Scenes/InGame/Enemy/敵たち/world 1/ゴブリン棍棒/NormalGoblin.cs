@@ -47,17 +47,22 @@ public class NormalGoblin : Enemy
                 attackScript.ClubBeating();
                 break;
             case 1:
-                attackScript.ClubBeating();
-                break;
-            case 2:
                 attackScript.ClubSwing();
                 break;
-            case 3:
-                attackScript.ClubSwing();
-                break;
-            case 4:
+        }
+    }
 
-                break;
+    public override void NextAttackNum()
+    {
+        if (patternSwitch)
+        {
+            attackNum = 0;
+            patternSwitch = false;
+        }
+        else
+        {
+            attackNum = 1;
+            patternSwitch = true;
         }
     }
 }
