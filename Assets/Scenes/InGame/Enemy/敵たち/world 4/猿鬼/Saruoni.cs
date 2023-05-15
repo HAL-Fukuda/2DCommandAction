@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Saruoni : Enemy
+public class SaruOni : Enemy
 {
-
     void Start()
     {
         base.Start();
+        //base.EnemySoundPlay();
     }
-    
+
     void Update()
     {
         if (isFadeIn)
@@ -24,12 +24,40 @@ public class Saruoni : Enemy
         {
             base.DestroyEffectSpawn();
         }
+        // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&Å@initialized == false)
+        {
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //ìGå≈óLÇÃçUåÇÇåƒÇ‘
-        //attackScript.FeatherAttack();
+        //Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                
+                break;
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+
+                break;
+        }
     }
 }

@@ -7,7 +7,7 @@ public class Seiryu : Enemy
     void Start()
     {
         base.Start();
-        base.EnemySoundPlay();
+        //base.EnemySoundPlay();
     }
 
     void Update()
@@ -20,11 +20,44 @@ public class Seiryu : Enemy
         {
             base.FadeOut();
         }
+        if (killFlag)
+        {
+            base.DestroyEffectSpawn();
+        }
+        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
+        {
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        base.EnemySoundPlay();
+        //Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
+        //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                
+                break;
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+
+                break;
+        }
     }
 }

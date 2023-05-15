@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Kamaitachi : Enemy
 {
-
     void Start()
     {
         base.Start();
+        //base.EnemySoundPlay();
     }
-    
+
     void Update()
     {
         if (isFadeIn)
@@ -24,12 +24,40 @@ public class Kamaitachi : Enemy
         {
             base.DestroyEffectSpawn();
         }
+        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
+        {
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        //attackScript.FeatherAttack();
+        //Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                
+                break;
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+
+                break;
+        }
     }
 }
