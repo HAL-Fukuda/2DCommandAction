@@ -80,28 +80,4 @@ public partial class EnemyAttack : MonoBehaviour
 
     }
 
-
-    // Update is called once per frame
-
-
-    // Update二個あるってエラーでる
-    // Updateを書く場所を変えるかもしれない
-
-    //void Update()
-    //{
-    //    if (Input.GetKeyUp(KeyCode.B))
-    //    {
-    //        SideVanishAttack();
-    //    }
-
-    //    if (rgd != null)
-    //    {
-    //        // 速度の上限設定
-    //        if (rgd.velocity.magnitude > SVAspeed)
-    //        {
-    //            rgd.velocity = rgd.velocity.normalized * SVAspeed;  // 最大速度を設ける
-    //        }
-    //    }
-    //}
-
 }
