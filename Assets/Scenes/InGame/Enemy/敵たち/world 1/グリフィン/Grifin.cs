@@ -49,20 +49,13 @@ public class Grifin : Enemy
                 attackScript.FeatherAttack();
                 break;
             case 1:
-                attackScript.FeatherAttack();
-                //’Í‚İ‚©‚©‚é
-                break;
-            case 2:
-                attackScript.FeatherAttack();
-                //•s‰Â”ğ‚ÌUŒ‚
-                break;
-            case 3:
-                attackScript.FeatherAttack();
-                //–¢Œˆ’è
-                break;
-            case 4:
-                attackScript.FeatherAttack();
+                attackScript.GrabbingAttack();
                 break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = Random.Range(0, 2);
     }
 }

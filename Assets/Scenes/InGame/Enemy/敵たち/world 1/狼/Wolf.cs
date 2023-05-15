@@ -34,30 +34,8 @@ public class Wolf : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.WolfBiting();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.WolfBiting();
-                break;
-            case 1:
-                attackScript.WolfBiting();
-                break;
-            case 2:
-                attackScript.WolfBiting();
-                break;
-            case 3:
-                attackScript.WolfBiting();
-                break;
-            case 4:
-                attackScript.WolfBiting();
-                break;
-        }
     }
 }
