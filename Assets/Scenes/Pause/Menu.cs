@@ -23,12 +23,12 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("pause"))) && (pauseNow == false))
+        if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetButtonDown("pause"))) && (pauseNow == false))
         {
             Pause();
             pauseScript.InitializePause();
         }
-        else if ((Input.GetButtonDown("pause")) && (pauseNow == true))
+        else if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetButtonDown("pause")) && (pauseNow == true)))
         {
             Resume();
         }
