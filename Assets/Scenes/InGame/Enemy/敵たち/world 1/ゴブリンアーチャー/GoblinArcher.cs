@@ -26,8 +26,10 @@ public class GoblinArcher : Enemy
         }
 
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
-        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
-        {   
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&
+            initialized == false)
+        {
+            attackScript.BowAttackInitialize(); // ã|ñÓçUåÇÇÃèâä˙âªèàóù
             initialized = true;
         }
     }
@@ -45,19 +47,19 @@ public class GoblinArcher : Enemy
         switch (attackNum)
         {
             case 0:
-                //
+                attackScript.BowAttack();
                 break;
             case 1:
-                
+                attackScript.BowAttack();
                 break;
             case 2:
-                
+                attackScript.BowAttack();
                 break;
             case 3:
-                
+                attackScript.BowAttack();
                 break;
             case 4:
-
+                attackScript.BowAttack();
                 break;
         }
     }
