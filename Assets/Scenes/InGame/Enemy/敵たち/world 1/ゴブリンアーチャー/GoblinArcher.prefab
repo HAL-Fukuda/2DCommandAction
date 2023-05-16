@@ -118,6 +118,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 161020442181941216, guid: f0a656df0590eeb4eac3d05fd0586b19, type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 5
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -129,17 +135,6 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
-    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
-      type: 3}
-    spawnInterval: 0.5
-    life: 10
-    timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -170,6 +165,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  meteorAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    life: 10
+    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -182,6 +183,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   SatelliteAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -199,6 +205,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SpiderNeedleSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -238,6 +249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
