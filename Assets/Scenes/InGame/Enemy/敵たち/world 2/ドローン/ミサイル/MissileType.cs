@@ -35,32 +35,8 @@ public class MissileType : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.BombMissileAttack();
         initialized = false;
         //base.EnemySoundPlay();
-
-        attackScript.BombMissileAttack();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                //É~ÉTÉCÉã
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }
