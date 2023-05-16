@@ -118,6 +118,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  bombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -129,16 +135,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
+  GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
+  GAspeed: 0
   featherAttackSettings:
     feather1: {fileID: 0}
     feather2: {fileID: 0}
@@ -148,6 +150,27 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   homingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  icicleAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  InevitableAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  OmenAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemyIA: {fileID: 0}
+  meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -168,6 +191,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  sidewaysAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SideVanishAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -181,7 +209,18 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 5092462027848227468, guid: c6afe12e26d30df4c9da7fac19020e9b,
+      type: 3}
+    spawnInterval: 1
+    life: 10
+    timer: 0
   SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -206,6 +245,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  MagmaStickySettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!114 &3463928899220528140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,9 +264,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
-  enemySound: {fileID: 0}
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
+  enemySound: {fileID: 0}
   enemyType: 0
   ColorDuration: 0.1
   shakeIntensity: 0.1
@@ -232,9 +281,12 @@ MonoBehaviour:
   isFadeOut: 0
   isFadeIn: 1
   killFlag: 0
+  hitFlag: 0
+  hitEffectPrefab: {fileID: 0}
   destroyEffectPrefab: {fileID: 0}
   rangeAPrefab: {fileID: 0}
   rangeBPrefab: {fileID: 0}
+  hitTime: 0
 --- !u!1001 &8486418092448577296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,6 +298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ActionBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -306,6 +363,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}
