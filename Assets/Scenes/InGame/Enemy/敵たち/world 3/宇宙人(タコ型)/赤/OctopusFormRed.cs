@@ -35,30 +35,8 @@ public class OctopusFormRed : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        //タコ型（赤）の攻撃
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }

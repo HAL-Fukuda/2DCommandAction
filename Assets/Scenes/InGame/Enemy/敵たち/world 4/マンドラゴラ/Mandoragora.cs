@@ -33,31 +33,8 @@ public class Mandoragora : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        PatternRandom();
+        //ƒ}ƒ“ƒhƒ‰ƒSƒ‰‚ÌUŒ‚
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }

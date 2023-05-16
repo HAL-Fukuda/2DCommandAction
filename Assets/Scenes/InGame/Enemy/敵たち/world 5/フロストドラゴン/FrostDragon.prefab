@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5870116295634957448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935680216168669282}
@@ -120,6 +120,12 @@ MonoBehaviour:
     timer: 0
   bombMissileAttackSettings:
     prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
     spawnInterval: 0
     maxSpawnValue: 0
     spawnValue: 0
@@ -272,7 +278,7 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 0
+  enemyType: 48
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2

@@ -125,6 +125,12 @@ MonoBehaviour:
     maxSpawnValue: 2
     spawnValue: 0
     timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -370,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}

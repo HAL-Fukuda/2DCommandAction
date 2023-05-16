@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: 3463928899220528140}
   m_Layer: 0
   m_Name: EnemyFormat 1
   m_TagString: Enemy
@@ -65,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4db8280d137d86c49b0fe414ee62179d, type: 2}
+  - {fileID: 2100000, guid: 8741bdedfdc972049ba789a3f88ea29a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +117,18 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  bombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -129,16 +140,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
+  GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
+  GAspeed: 0
   featherAttackSettings:
     feather1: {fileID: 0}
     feather2: {fileID: 0}
@@ -148,6 +155,27 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   homingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  icicleAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  InevitableAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  OmenAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemyIA: {fileID: 0}
+  meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -168,6 +196,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  sidewaysAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SideVanishAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -181,7 +214,17 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -206,35 +249,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &3463928899220528140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77fcb44bff779d4883b0a3c5bb95603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 2
-  speed: 0
-  attackNum: 0
-  enemySound: {fileID: 0}
-  attackScript: {fileID: 0}
-  enemyType: 0
-  ColorDuration: 0.1
-  shakeIntensity: 0.1
-  shakeDuration: 0.2
-  fadeInSpeed: 0.01
-  fadeMaterial: {fileID: 0}
-  isFadeOut: 0
-  isFadeIn: 1
-  killFlag: 0
-  destroyEffectPrefab: {fileID: 0}
-  rangeAPrefab: {fileID: 0}
-  rangeBPrefab: {fileID: 0}
+  MagmaStickySettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!1001 &8486418092448577296
 PrefabInstance:
   m_ObjectHideFlags: 0

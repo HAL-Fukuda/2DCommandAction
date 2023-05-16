@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Robot : Enemy
 {
-    //private GameObject enemyTag;
-
     void Start()
     {
         base.Start();
@@ -35,7 +33,7 @@ public class Robot : Enemy
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
+        //Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -59,11 +57,7 @@ public class Robot : Enemy
 
     public override void NextAttackNum()
     {
-        //enemyTag = GameObject.Find("Robot(Clone)");
-        //if (enemyTag.gameObject.CompareTag("Enemy"))
-        //{
-        //    Debug.Log("Enemy‚¾‚æ");
-        //}
-        attackNum = Random.Range(0, 3);
+        attackNum = 1;
+        //attackNum = Random.Range(0, 3);
     }
 }

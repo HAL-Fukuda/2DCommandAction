@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: 3463928899220528140}
+  - component: {fileID: 3463887998451858246}
   m_Layer: 0
   m_Name: Yeti
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5870116295634957448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935680216168669282}
@@ -120,6 +120,12 @@ MonoBehaviour:
     timer: 0
   bombMissileAttackSettings:
     prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
     spawnInterval: 0
     maxSpawnValue: 0
     spawnValue: 0
@@ -250,7 +256,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &3463928899220528140
+--- !u!114 &3463887998451858246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77fcb44bff779d4883b0a3c5bb95603, type: 3}
+  m_Script: {fileID: 11500000, guid: e43863b45d0a98b469b8ad7e6e145f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
@@ -272,7 +278,7 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 0
+  enemyType: 43
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2
@@ -283,9 +289,12 @@ MonoBehaviour:
   killFlag: 0
   hitFlag: 0
   hitEffectPrefab: {fileID: 0}
-  destroyEffectPrefab: {fileID: 0}
-  rangeAPrefab: {fileID: 0}
-  rangeBPrefab: {fileID: 0}
+  destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
+    type: 3}
+  rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
+    type: 3}
+  rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
+    type: 3}
   hitTime: 0
 --- !u!1001 &8486418092448577296
 PrefabInstance:

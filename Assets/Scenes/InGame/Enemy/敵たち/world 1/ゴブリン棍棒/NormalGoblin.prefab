@@ -118,6 +118,18 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  bombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 3149903282961528407, guid: f46411cba5d28154d95a0363896373bc,
       type: 3}
@@ -146,6 +158,11 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   homingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  icicleAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -200,7 +217,17 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -221,6 +248,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   ZBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  MagmaStickySettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -257,8 +289,7 @@ MonoBehaviour:
   isFadeIn: 1
   killFlag: 0
   hitFlag: 0
-  hitEffectPrefab: {fileID: 8588657063526206251, guid: 5bc608b64f6b9324a853fbe1c69a5882,
-    type: 3}
+  hitEffectPrefab: {fileID: 0}
   destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
     type: 3}
   rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,

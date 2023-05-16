@@ -25,7 +25,7 @@ public class SaruOni : Enemy
             base.DestroyEffectSpawn();
         }
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
-        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&Å@initialized == false)
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             initialized = true;
         }
@@ -33,31 +33,8 @@ public class SaruOni : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        PatternRandom();
+        //âéãSÇÃçUåÇ
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }

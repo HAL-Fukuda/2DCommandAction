@@ -24,12 +24,39 @@ public class EnemyFormat : Enemy
         {
             base.DestroyEffectSpawn();
         }
+        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
+        {
+            initialized = true;
+        }
     }
 
     public override void Attack()
     {
-        //“GŒÅ—L‚ÌUŒ‚‚ğŒÄ‚Ô
-        //attackScript.FeatherAttack();
+        //Debug.Log(attackNum);
+        PatternRandom();
+        initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        switch (attackNum)
+        {
+            case 0:
+                attackScript.MeteorAttack();
+                break;
+            case 1:
+                attackScript.InevitableAttack();
+                break;
+            case 2:
+                attackScript.NailAttack();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = Random.Range(0, 3);
     }
 }

@@ -33,7 +33,6 @@ public class MagmaSlime : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
         attackScript.MagmaSticky();
         initialized = false;
         //base.EnemySoundPlay();

@@ -49,15 +49,12 @@ public class Yukionna : Enemy
             case 1:
                 
                 break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-                
-                break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }
