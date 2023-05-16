@@ -11,6 +11,7 @@ public class AbsorbEffect : MonoBehaviour
     private GameObject enemy;
     private ParticleSystem _slashEffectInstance;
     private GameObject _slashSEInstance;
+    private Vector3 targetPos;
 
     public float speed = 5.0f;
     public string attackMessage = "";
@@ -18,11 +19,11 @@ public class AbsorbEffect : MonoBehaviour
     void Start()
     {
         target = GameObject.FindWithTag("Enemy").transform;
+        targetPos = target.transform.position;
     }
 
     void FixedUpdate()
     {
-        Vector3 targetPos = target.transform.position;
         Vector3 absorbPos = this.transform.position;
 
         AbsorbMove();
