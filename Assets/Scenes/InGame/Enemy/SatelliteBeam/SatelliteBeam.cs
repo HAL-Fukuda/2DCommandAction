@@ -23,7 +23,7 @@ public partial class EnemyAttack : MonoBehaviour
     //}
 
     // プレイヤーオブジェクトを参照する
-    public GameObject player1;  // プレイヤーの位置取得用
+    //public GameObject player1;  // プレイヤーの位置取得用
 
     public AttackSettings BeamComingAttackSettings;
     public AttackSettings SatelliteAttackSettings;
@@ -42,6 +42,8 @@ public partial class EnemyAttack : MonoBehaviour
         GameObject PlayerObject = GameObject.Find("Player");
 
         objectPosition = PlayerObject.transform.position;
+
+        Debug.Log("ポジション取得");
     }
 
     void premonition()
@@ -52,7 +54,7 @@ public partial class EnemyAttack : MonoBehaviour
         GameObject obj = Instantiate(BeamComingAttackSettings.prefab, spawnPos, Quaternion.identity);
         obj.transform.DOMoveY(
                 0, //移動量
-                BeamComingAttackSettings.life // 演出時間
+                2.5f // 演出時間
             ).OnComplete(() =>
             {
                 Destroy(obj);
@@ -67,7 +69,7 @@ public partial class EnemyAttack : MonoBehaviour
         GameObject obj1 = Instantiate(SatelliteAttackSettings.prefab, spawnPos, Quaternion.identity);
         obj1.transform.DOMoveY(
                 0, //移動量
-                SatelliteAttackSettings.life // 演出時間
+                2.5f // 演出時間
             ).OnComplete(() =>
             {
                 Destroy(obj1);
@@ -77,6 +79,7 @@ public partial class EnemyAttack : MonoBehaviour
     void SBflgTrue()
     {
         SBflg = true;
+        Debug.Log("フラグがトゥルー");
     }
 
     public void SatelliteBeam()
