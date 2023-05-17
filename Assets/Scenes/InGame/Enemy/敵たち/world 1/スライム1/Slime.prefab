@@ -119,12 +119,6 @@ MonoBehaviour:
     spawnInterval: 3
     life: 10
     timer: 0
-  bombMissileAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
-    spawnValue: 0
-    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -136,6 +130,16 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  meteorAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  sidewaysAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -155,11 +159,6 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
-  icicleAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   InevitableAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -171,11 +170,6 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
-  meteorAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -188,11 +182,6 @@ MonoBehaviour:
     life: 0
     timer: 0
   SatelliteAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
-  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -210,21 +199,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
-  snowballAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   SpiderNeedleSettings:
     prefab: {fileID: 3840599167954665942, guid: b98a4b08e0531ae40a9bf0e80a5c1f92,
       type: 3}
     spawnInterval: 3
     life: 10
-    timer: 0
-  TongueLickingSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
     timer: 0
   WBUpperSettings:
     prefab: {fileID: 0}
@@ -246,11 +225,6 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
-  MagmaStickySettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
 --- !u!114 &-1795005771442181709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,9 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
@@ -284,12 +255,9 @@ MonoBehaviour:
   killFlag: 0
   hitFlag: 0
   hitEffectPrefab: {fileID: 0}
-  destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
-    type: 3}
-  rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
-    type: 3}
-  rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
-    type: 3}
+  destroyEffectPrefab: {fileID: 0}
+  rangeAPrefab: {fileID: 0}
+  rangeBPrefab: {fileID: 0}
   hitTime: 0
 --- !u!1001 &370224613902801883
 PrefabInstance:
