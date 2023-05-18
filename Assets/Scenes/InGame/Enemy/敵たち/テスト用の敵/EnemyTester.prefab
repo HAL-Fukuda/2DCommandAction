@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5870116295634957448
+--- !u!1 &4765618039742058581
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4260215939807481441}
-  - component: {fileID: 4144087434502147036}
-  - component: {fileID: 8856705461754135051}
-  - component: {fileID: 9169267101376693257}
-  - component: {fileID: -3758229872225376430}
-  - component: {fileID: 3463928899220528140}
+  - component: {fileID: 6818849376774655605}
+  - component: {fileID: 790696090621174421}
+  - component: {fileID: 7200250091874826465}
+  - component: {fileID: 2231534329258217126}
+  - component: {fileID: 3004290132864550846}
+  - component: {fileID: 1350479213290230113}
   m_Layer: 0
-  m_Name: EnemyFormat 1
+  m_Name: EnemyTester
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4260215939807481441
+--- !u!4 &6818849376774655605
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3935680216168669282}
+  - {fileID: 6601929687306679927}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4144087434502147036
+--- !u!33 &790696090621174421
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8856705461754135051
+--- !u!23 &7200250091874826465
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4db8280d137d86c49b0fe414ee62179d, type: 2}
+  - {fileID: 2100000, guid: 4208bf6452e7e7041b3ab56760b4116c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9169267101376693257
+--- !u!64 &2231534329258217126
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -101,13 +101,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-3758229872225376430
+--- !u!114 &3004290132864550846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
@@ -117,6 +117,18 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  bombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 161020442181941216, guid: f0a656df0590eeb4eac3d05fd0586b19, type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 2
+    spawnValue: 0
     timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
@@ -129,16 +141,13 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+  GrabbingAttackSettings:
+    prefab: {fileID: 3840599167954665942, guid: b9064437149a3ce4783b7ad4d90b50ca,
+      type: 3}
+    spawnInterval: 10
+    life: 5
     timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
+  GAspeed: 0
   featherAttackSettings:
     feather1: {fileID: 0}
     feather2: {fileID: 0}
@@ -152,18 +161,45 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  icicleAttackSettings:
+    prefab: {fileID: 5165103472854745861, guid: 0505cc78c2000c74aaad4757fa594dbc,
+      type: 3}
+    spawnInterval: 1
+    life: 5
+    timer: 0
+  InevitableAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  OmenAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  EnemyIA: {fileID: 0}
+  meteorAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 0}
   BeamComingAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 3768647145940641464, guid: b9094498c126eab428379fa0764d75e5,
+      type: 3}
+    spawnInterval: 10
+    life: 5
     timer: 0
   SatelliteAttackSettings:
+    prefab: {fileID: 807691823844662687, guid: bc2524ee7655b7a459354bf0c29388e5, type: 3}
+    spawnInterval: 10
+    life: 5
+    timer: 0
+  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -181,7 +217,18 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 5092462027848227468, guid: c6afe12e26d30df4c9da7fac19020e9b,
+      type: 3}
+    spawnInterval: 1
+    life: 10
+    timer: 0
   SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -206,23 +253,33 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &3463928899220528140
+  MagmaStickySettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+--- !u!114 &1350479213290230113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 4765618039742058581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77fcb44bff779d4883b0a3c5bb95603, type: 3}
+  m_Script: {fileID: 11500000, guid: c225e1cab5fb0044288110265afe8722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
-  enemySound: {fileID: 0}
+  initialized: 0
+  actionBar: {fileID: 0}
   attackScript: {fileID: 0}
+  enemySound: {fileID: 0}
   enemyType: 0
   ColorDuration: 0.1
   shakeIntensity: 0.1
@@ -232,20 +289,31 @@ MonoBehaviour:
   isFadeOut: 0
   isFadeIn: 1
   killFlag: 0
-  destroyEffectPrefab: {fileID: 0}
-  rangeAPrefab: {fileID: 0}
-  rangeBPrefab: {fileID: 0}
---- !u!1001 &8486418092448577296
+  hitFlag: 0
+  hitEffectPrefab: {fileID: 0}
+  destroyEffectPrefab: {fileID: 3366736709380734331, guid: 5c274286f8c5f8e4596df45f1e5d1f6a,
+    type: 3}
+  rangeAPrefab: {fileID: 1869369487004384479, guid: 08e1b4b1a3af1bd48ad3da779c9c7610,
+    type: 3}
+  rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
+    type: 3}
+  hitTime: 0
+--- !u!1001 &1784916481500864773
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4260215939807481441}
+    m_TransformParent: {fileID: 6818849376774655605}
     m_Modifications:
     - target: {fileID: 2873273046063138621, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: m_Name
       value: ActionBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: speed
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -307,11 +375,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}
---- !u!4 &3935680216168669282 stripped
+--- !u!4 &6601929687306679927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
     type: 3}
-  m_PrefabInstance: {fileID: 8486418092448577296}
+  m_PrefabInstance: {fileID: 1784916481500864773}
   m_PrefabAsset: {fileID: 0}

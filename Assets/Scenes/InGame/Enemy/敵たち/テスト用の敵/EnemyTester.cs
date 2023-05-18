@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Byako : Enemy
+public class EnemyTester : Enemy
 {
     void Start()
     {
@@ -25,7 +25,7 @@ public class Byako : Enemy
             base.DestroyEffectSpawn();
         }
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
-        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             initialized = true;
         }
@@ -44,20 +44,26 @@ public class Byako : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.BowAttack();  //“ñ‰ñ–ÚˆÈ~–î‚ªo‚Ä‚±‚È‚¢
                 break;
             case 1:
                 
                 break;
             case 2:
-                
+                //attackScript.IcicleAttack();  //—v‰ü‘P
+                break;
+            case 3:
+                attackScript.GrabbingAttack();
+                break;
+            case 4:
+                //attackScript.SnowBallAttack();  //—v‰ü‘P
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
-        attackNum = Random.Range(0, 3);
+        attackNum = 3;
+        //attackNum = Random.Range(0, 2);
     }
 }
