@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 9001425366629130539, guid: cab6b9529f0ae1d4c9ecad9629c09042,
     type: 3}
-  se: {fileID: 0}
+  se: {fileID: 8300000, guid: a9bab48e2f04214469d24268fd4a5888, type: 3}
 --- !u!61 &7751225437145801421
 BoxCollider2D:
   m_ObjectHideFlags: 0
