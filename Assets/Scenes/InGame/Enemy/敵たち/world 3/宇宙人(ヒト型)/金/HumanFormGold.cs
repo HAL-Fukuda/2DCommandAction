@@ -45,20 +45,17 @@ public class HumanFormGold : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.MeteorAttack();
                 break;
             case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
+                attackScript.MeteorAttack();
                 break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }
