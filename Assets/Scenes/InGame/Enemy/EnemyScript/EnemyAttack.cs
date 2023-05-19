@@ -106,9 +106,19 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             }
         }
 
+        // FlameSplashに使うやつ
+        if (FSrgd != null)
+        {
+            // 速度の上限設定
+            if (FSrgd.velocity.magnitude > FSspeed)
+            {
+                FSrgd.velocity = FSrgd.velocity.normalized * FSspeed;  // 最大速度を設ける
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.B))
         {
-            RockThrowing();
+            FlameSplash();
         }
     }
 
