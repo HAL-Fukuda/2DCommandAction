@@ -6,7 +6,7 @@ public class CommandRandom : MonoBehaviour
 {
     public GameObject[] objectPrefabs; // 生成するオブジェクトのプレハブのリスト
     public Transform spawnPoint; // スポーンポイントのTransform
-    public int numberOfObjects = 5; // 生成するオブジェクトの数
+    public int numberOfObjects = 3; // 生成するオブジェクトの数
 
     private GameObject[] spawnedObjects; // 生成されたオブジェクトの配列
 
