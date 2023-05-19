@@ -13,7 +13,7 @@ public partial class EnemyAttack : MonoBehaviour
     private GameObject FOobj;
 
     private bool FOflg = true;
-    private int FOcount = 0;
+    private int FOcount = 1;
 
 
     void GetPlayerPositionToFO()
