@@ -141,6 +141,32 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  FlameSplashSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  floorburnSettings:
+    prefab: {fileID: 5571232403932331549, guid: 42eb34ecedfda1e40a9357505be2c11c,
+      type: 3}
+    spawnInterval: 5
+    life: 5
+    timer: 0
+  FoxOnibiSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -159,6 +185,12 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  HomingBombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
   icicleAttackSettings:
     prefab: {fileID: 0}
@@ -182,6 +214,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   nailAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  RockThrowingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
