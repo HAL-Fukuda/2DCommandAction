@@ -226,9 +226,10 @@ MonoBehaviour:
     life: 0
     timer: 0
   TongueLickingSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 3149903282961528407, guid: e7ac85cf4c2da0f44b898f82065cb805,
+      type: 3}
+    spawnInterval: 2
+    life: 10
     timer: 0
   WBUpperSettings:
     prefab: {fileID: 0}

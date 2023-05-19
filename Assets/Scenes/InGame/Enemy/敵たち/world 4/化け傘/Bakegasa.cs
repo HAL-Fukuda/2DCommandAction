@@ -33,7 +33,7 @@ public class Bakegasa : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.TongueLicking();
         initialized = false;
         //base.EnemySoundPlay();
     }
