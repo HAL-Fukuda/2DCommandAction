@@ -118,7 +118,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
 
         if (Input.GetKeyUp(KeyCode.B))
         {
-            FlameSplash();
+            ClubBeating();
         }
     }
 
