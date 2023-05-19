@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7448150160165005870}
   - component: {fileID: 8192658850419881680}
+  - component: {fileID: -1682311358668581013}
   m_Layer: 0
   m_Name: RandomRangeA
   m_TagString: Untagged
@@ -44,5 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889e39f15b7617d40b38c51674615e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: {x: 1, y: 1}
+  scale: {x: 20, y: 1}
   fitToObject: 1
+--- !u!114 &-1682311358668581013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448150160165005865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08efea04f1d55c548a0841feb0e138f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs: []
+  spawnPoint: {fileID: 7448150160165005870}
+  numberOfObjects: 3

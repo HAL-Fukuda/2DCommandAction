@@ -47,7 +47,7 @@ public class BossRobot : Enemy
                 attackScript.BombMissileAttack();
                 break;
             case 1:
-                //attackScript.SatelliteBeam();
+                attackScript.SatelliteBeam();
                 break;
             case 2:
                 //ÉåÅ[ÉUÅ[
@@ -57,6 +57,7 @@ public class BossRobot : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = Random.Range(0, 2);
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }
