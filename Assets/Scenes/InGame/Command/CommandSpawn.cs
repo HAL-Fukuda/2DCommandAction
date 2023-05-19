@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CommandSpawn : MonoBehaviour
 {
-    public GameObject objectPrefab; // 生成するオブジェクトのプレハブ
+    public GameObject[] objectPrefabs; // 生成するオブジェクトのプレハブの配列
     public Transform spawnPoint; // スポーンポイントのTransform
 
     private GameObject spawnedObject; // 生成されたオブジェクトの参照
@@ -16,8 +16,12 @@ public class CommandSpawn : MonoBehaviour
 
     private void SpawnObject()
     {
+        // ランダムにオブジェクトを選ぶ
+        int randomIndex = Random.Range(0, objectPrefabs.Length);
+        GameObject selectedPrefab = objectPrefabs[randomIndex];
+
         // スポーンポイントの位置にオブジェクトを生成
-        spawnedObject = Instantiate(objectPrefab, spawnPoint.position, Quaternion.identity);
+        spawnedObject = Instantiate(selectedPrefab, spawnPoint.position, Quaternion.identity);
     }
 
     private void Update()
