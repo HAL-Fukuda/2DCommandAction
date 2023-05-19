@@ -27,7 +27,7 @@ public class MissileType : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
-            attackScript.BombMissileInitialize();
+            attackScript.HomingBombMissileInitialize();
             initialized = true;
         }
     }
@@ -39,7 +39,7 @@ public class MissileType : Enemy
         initialized = false;
         //base.EnemySoundPlay();
 
-        attackScript.BombMissileAttack();
+        attackScript.HomingBombMissileAttack();
     }
 
     public override void PatternRandom()
