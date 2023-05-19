@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5870116295634957448
+--- !u!1 &8432866616673435997
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4260215939807481441}
-  - component: {fileID: 4144087434502147036}
-  - component: {fileID: 8856705461754135051}
-  - component: {fileID: 9169267101376693257}
-  - component: {fileID: -3758229872225376430}
-  - component: {fileID: 3526767968646100771}
+  - component: {fileID: 8043184764965212879}
+  - component: {fileID: 1380121841655012944}
+  - component: {fileID: 2349771966206688337}
+  - component: {fileID: 9118329511107291582}
+  - component: {fileID: 1793047720453288267}
+  - component: {fileID: -137401291765769892}
   m_Layer: 0
-  m_Name: Youko
+  m_Name: HomingMissileType
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4260215939807481441
+--- !u!4 &8043184764965212879
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3935680216168669282}
+  - {fileID: 8887252871461082270}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4144087434502147036
+--- !u!33 &1380121841655012944
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8856705461754135051
+--- !u!23 &2349771966206688337
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c4c7280559e5548946ef93d5e902bb, type: 2}
+  - {fileID: 2100000, guid: 2a94ac49614aa374781d5aaaadbefdb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9169267101376693257
+--- !u!64 &9118329511107291582
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -101,13 +101,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &-3758229872225376430
+--- !u!114 &1793047720453288267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
@@ -142,10 +142,9 @@ MonoBehaviour:
     timer: 0
   SwingSpeedSeconds: 0
   FoxOnibiSettings:
-    prefab: {fileID: 3840599167954665942, guid: 91caadc705d06cc4d90fda2933a83d08,
-      type: 3}
-    spawnInterval: 5
-    life: 10
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
     timer: 0
   GBUpperSettings:
     prefab: {fileID: 0}
@@ -177,9 +176,10 @@ MonoBehaviour:
     life: 0
     timer: 0
   HomingBombMissileAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
+    prefab: {fileID: 4676547163145465790, guid: b4c9bc260dd3bdd4a82f7a3b4f94bb6e,
+      type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 2
     spawnValue: 0
     timer: 0
   icicleAttackSettings:
@@ -199,10 +199,9 @@ MonoBehaviour:
     timer: 0
   EnemyIA: {fileID: 0}
   meteorAttackSettings:
-    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
-      type: 3}
-    spawnInterval: 1
-    life: 4
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
     timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
@@ -277,16 +276,16 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
---- !u!114 &3526767968646100771
+--- !u!114 &-137401291765769892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5870116295634957448}
+  m_GameObject: {fileID: 8432866616673435997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a017295af7cbaf48aa990e5d85877e8, type: 3}
+  m_Script: {fileID: 11500000, guid: e1d2441dee7175f4ea3f0ea17979f584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
@@ -299,7 +298,7 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 36
+  enemyType: 11
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2
@@ -317,12 +316,12 @@ MonoBehaviour:
   rangeBPrefab: {fileID: 7094915299452191169, guid: d39beaff7763f8246a35f672f95b6563,
     type: 3}
   hitTime: 0
---- !u!1001 &8486418092448577296
+--- !u!1001 &4039259792326149100
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4260215939807481441}
+    m_TransformParent: {fileID: 8043184764965212879}
     m_Modifications:
     - target: {fileID: 2873273046063138621, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -411,9 +410,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}
---- !u!4 &3935680216168669282 stripped
+--- !u!4 &8887252871461082270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
     type: 3}
-  m_PrefabInstance: {fileID: 8486418092448577296}
+  m_PrefabInstance: {fileID: 4039259792326149100}
   m_PrefabAsset: {fileID: 0}

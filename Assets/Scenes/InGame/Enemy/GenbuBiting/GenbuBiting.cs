@@ -76,7 +76,7 @@ public partial class EnemyAttack : MonoBehaviour
 
             Invoke("GBitingTooth", 0.2f);
 
-            WBflg = false;
+            GBflg = false;
             Invoke("GBflgTrue", GBUpperSettings.spawnInterval + GBUnderSettings.spawnInterval);
         }
     }

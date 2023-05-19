@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Genbu : Enemy
+public class HomingMissileType : Enemy
 {
     void Start()
     {
@@ -24,16 +24,19 @@ public class Genbu : Enemy
         {
             base.DestroyEffectSpawn();
         }
+
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
-        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&
+            initialized == false)
         {
+            attackScript.HomingBombMissileInitialize(); // ‰H”ò‚Î‚µUŒ‚‚Ì‰Šú‰»ˆ—
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        attackScript.GenbuBiting();
+        attackScript.HomingBombMissileAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

@@ -33,7 +33,7 @@ public class Youko : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.FoxOnibi();
         initialized = false;
         //base.EnemySoundPlay();
     }
