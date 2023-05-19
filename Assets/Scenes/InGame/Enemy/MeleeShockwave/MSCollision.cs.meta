@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a5f34276447b15c42be52d6c68795e98
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Shockwave: {fileID: 2192113383556504810, guid: f1df3fb7dc89b2b4ebdbb705767cea18,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
