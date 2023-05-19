@@ -129,23 +129,13 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
-    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+  GrabbingAttackSettings:
+    prefab: {fileID: 3840599167954665942, guid: b9064437149a3ce4783b7ad4d90b50ca,
       type: 3}
-    spawnInterval: 0.5
+    spawnInterval: 5
     life: 10
     timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
-  GrabbingAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
-  GAspeed: 0
+  GAspeed: 10
   featherAttackSettings:
     feather1: {fileID: 337433356995143802, guid: d98e934d5031d974fb3afd3b6c76776c,
       type: 3}
@@ -173,6 +163,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  meteorAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    life: 10
+    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -185,6 +181,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   SatelliteAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -241,6 +242,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}

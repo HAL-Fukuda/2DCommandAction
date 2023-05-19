@@ -65,11 +65,6 @@ public partial class GameMgr : MonoBehaviour
         stageClear = false;
         SpawnEnemy();
         ActiveTimeBattleInitialize();
-        // コマンド落下
-        commandMgr =GetComponent<CommandMgr>();
-        commandMgr.DropAll();
-
-        commandMgr.CommandDropInitialize();
     }
 
     // Update is called once per frame
@@ -79,8 +74,6 @@ public partial class GameMgr : MonoBehaviour
         {
             // 戦闘更新処理
             ActiveTimeBattleUpdate();
-            // コマンドの更新処理
-            commandMgr.CommandDropUpdate();
             if (battle == false)
             {
                 FinalizeBattle();

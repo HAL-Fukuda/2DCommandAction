@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Robot : Enemy
 {
+    //private GameObject enemyTag;
+
     void Start()
     {
         base.Start();
@@ -33,7 +35,7 @@ public class Robot : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -44,20 +46,24 @@ public class Robot : Enemy
         switch (attackNum)
         {
             case 0:
-                //単発射撃(レーザー)
+                //サテライトキャノン
                 break;
             case 1:
-                //連射(レーザー)
+                attackScript.BombMissileAttack();
                 break;
             case 2:
-                //照射(レーザー)
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
+                //レーザー
                 break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        //enemyTag = GameObject.Find("Robot(Clone)");
+        //if (enemyTag.gameObject.CompareTag("Enemy"))
+        //{
+        //    Debug.Log("Enemyだよ");
+        //}
+        attackNum = Random.Range(0, 3);
     }
 }

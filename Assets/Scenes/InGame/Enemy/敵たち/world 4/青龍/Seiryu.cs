@@ -33,7 +33,7 @@ public class Seiryu : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -49,15 +49,11 @@ public class Seiryu : Enemy
             case 1:
                 
                 break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = Random.Range(0, 2);
     }
 }

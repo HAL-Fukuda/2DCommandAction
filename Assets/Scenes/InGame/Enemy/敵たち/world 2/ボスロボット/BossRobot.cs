@@ -33,7 +33,7 @@ public class BossRobot : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -44,20 +44,20 @@ public class BossRobot : Enemy
         switch (attackNum)
         {
             case 0:
-                //サテライトキャノン
+                attackScript.BombMissileAttack();
                 break;
             case 1:
-                //ミサイル
+                attackScript.SatelliteBeam();
                 break;
             case 2:
                 //レーザー
                 break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }

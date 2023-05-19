@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5870116295634957448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935680216168669282}
@@ -118,6 +118,18 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  bombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -129,16 +141,6 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
-  meteorAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
-  sidewaysAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
-    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -158,6 +160,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  icicleAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   InevitableAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -169,18 +176,28 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  meteorAttackSettings:
+    prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
+      type: 3}
+    spawnInterval: 0.5
+    life: 4
+    timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 0}
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
   SatelliteAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -198,7 +215,17 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemySS: {fileID: 0}
+  snowballAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   SpiderNeedleSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -223,6 +250,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  MagmaStickySettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
 --- !u!114 &2809021978348282273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +269,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   speed: 0
+  patternCnt: 0
+  attackMode: 0
+  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
@@ -271,6 +306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ActionBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: speed
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -331,6 +371,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}

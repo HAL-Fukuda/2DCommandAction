@@ -64,7 +64,6 @@ public partial class Enemy : MonoBehaviour
     {
         attackScript = GetComponent<EnemyAttack>();
         actionBar = transform.Find("ActionBar");
-        attackNum = 1;
         //patternCnt = 1;
     }
 

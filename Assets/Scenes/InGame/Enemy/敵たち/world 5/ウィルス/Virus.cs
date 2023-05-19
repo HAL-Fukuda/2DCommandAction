@@ -44,7 +44,7 @@ public class Virus : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.InevitableAttack();
                 break;
             case 1:
                 
@@ -59,5 +59,11 @@ public class Virus : Enemy
                 
                 break;
         }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
+        //attackNum = Random.Range(0, 5);
     }
 }

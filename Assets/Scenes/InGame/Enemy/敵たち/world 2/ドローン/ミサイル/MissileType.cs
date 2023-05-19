@@ -24,7 +24,7 @@ public class MissileType : Enemy
         {
             base.DestroyEffectSpawn();
         }
-        // ゲージがたまったら
+        // ﾆ嘆ﾂーﾆ淡窶堋ｪ窶堋ｽ窶堙懌堙≫堋ｽ窶堙ｧ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             attackScript.HomingBombMissileInitialize();
@@ -35,32 +35,8 @@ public class MissileType : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.BombMissileAttack();
         initialized = false;
         //base.EnemySoundPlay();
-
-        attackScript.HomingBombMissileAttack();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                //ミサイル
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }

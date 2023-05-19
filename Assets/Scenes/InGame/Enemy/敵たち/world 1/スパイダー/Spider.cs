@@ -34,30 +34,8 @@ public class Spider : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.SpiderNeedle();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.SpiderNeedle();
-                break;
-            case 1:
-                attackScript.SpiderNeedle();
-                break;
-            case 2:
-                attackScript.SpiderNeedle();
-                break;
-            case 3:
-                attackScript.SpiderNeedle();
-                break;
-            case 4:
-                attackScript.SpiderNeedle();
-                break;
-        }
     }
 }
