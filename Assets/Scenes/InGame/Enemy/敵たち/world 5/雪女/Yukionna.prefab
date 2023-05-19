@@ -113,6 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arareAttackSettings:
+    ararePrefab: {fileID: 3829845260550867917, guid: 0c5fdcaf946a9e84da474a22818f6952,
+      type: 3}
   BindAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -141,6 +144,21 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  FoxOnibiSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -159,6 +177,12 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  HomingBombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
   icicleAttackSettings:
     prefab: {fileID: 0}
