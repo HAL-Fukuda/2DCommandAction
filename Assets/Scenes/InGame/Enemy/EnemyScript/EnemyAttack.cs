@@ -96,9 +96,19 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             }
         }
 
+        // RockThrowingに使うやつ
+        if (RTrgd != null)
+        {
+            // 速度の上限設定
+            if (RTrgd.velocity.magnitude > RTspeed)
+            {
+                RTrgd.velocity = RTrgd.velocity.normalized * RTspeed;  // 最大速度を設ける
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.B))
         {
-            FoxOnibi();
+            RockThrowing();
         }
     }
 
