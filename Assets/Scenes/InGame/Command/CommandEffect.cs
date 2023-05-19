@@ -62,9 +62,6 @@ public partial class Command : MonoBehaviour
 
             GameMgr.Instance.SetCommand(this.gameObject);
 
-            // 1ŒÂ~‚ç‚·
-            CommandMgr.Instance.DropAll(1);
-
             //Destroy(this.gameObject); // ƒRƒ}ƒ“ƒh‚ğíœ
         }
     }
