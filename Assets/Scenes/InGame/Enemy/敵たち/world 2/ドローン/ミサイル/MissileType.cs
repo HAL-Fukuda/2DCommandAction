@@ -24,10 +24,10 @@ public class MissileType : Enemy
         {
             base.DestroyEffectSpawn();
         }
-        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        // Æ’QÂ[Æ’Wâ€šÂªâ€šÂ½â€šÃœâ€šÃâ€šÂ½â€šÃ§
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
-            attackScript.BombMissileInitialize();
+            attackScript.HomingBombMissileInitialize();
             initialized = true;
         }
     }
