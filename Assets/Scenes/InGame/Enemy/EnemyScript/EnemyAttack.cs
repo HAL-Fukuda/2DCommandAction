@@ -86,10 +86,19 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
                 SNrgd.velocity = SNrgd.velocity.normalized * SNspeed;  // 最大速度を設ける
             }
         }
+        // FoxOnibiに使うやつ
+        if (FOrgd != null)
+        {
+            // 速度の上限設定
+            if (FOrgd.velocity.magnitude > FOspeed)
+            {
+                FOrgd.velocity = FOrgd.velocity.normalized * FOspeed;  // 最大速度を設ける
+            }
+        }
 
         if (Input.GetKeyUp(KeyCode.B))
         {
-            //SatelliteBeam();
+            FoxOnibi();
         }
     }
 
