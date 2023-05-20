@@ -34,7 +34,7 @@ public class Kamaitachi : Enemy
     public override void Attack()
     {
         //UŒ‚‚ğŒÄ‚Ô
-        attackScript.SatelliteBeam();
+        //attackScript.SatelliteBeam();
         initialized = false;
         //base.EnemySoundPlay();
     }

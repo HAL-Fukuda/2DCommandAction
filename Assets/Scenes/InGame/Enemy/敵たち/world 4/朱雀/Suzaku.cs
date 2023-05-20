@@ -33,7 +33,7 @@ public class Suzaku : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.PofflamesAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

@@ -73,7 +73,7 @@ public partial class EnemyAttack : MonoBehaviour
             if (FOcount < 5)
             {
                 Invoke("FOflgTrue", 0.3f);
-                Debug.Log(FOcount);
+                //Debug.Log(FOcount);
             }
             else
             {
