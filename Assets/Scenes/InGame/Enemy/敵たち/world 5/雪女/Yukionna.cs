@@ -55,7 +55,7 @@ public class Yukionna : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 0;
-        attackNum = Random.Range(0, 2);
+        attackNum = 0;
+        //attackNum = Random.Range(0, 2);
     }
 }
