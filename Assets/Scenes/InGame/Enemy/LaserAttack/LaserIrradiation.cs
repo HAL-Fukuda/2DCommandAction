@@ -5,13 +5,13 @@ using DG.Tweening;
 
 public partial class EnemyAttack : MonoBehaviour
 {
+    [System.Serializable]
     public struct LaserIrradiationSettings
     {
         public GameObject LaserPoint;
         public float spawnInterval;
         public int maxSpawnValue;
-        [SerializeField]
-        [Header("いじらないで")]
+        [SerializeField][Header("いじらないで")]
         public int spawnValue;
         public float timer;
 
@@ -27,6 +27,11 @@ public partial class EnemyAttack : MonoBehaviour
     
     public LaserIrradiationSettings laserirradiationSettings;
 
+    public void LaserIrradiationInitialize()
+    {
+        laserirradiationSettings.spawnValue = 0;
+    }
+
     // レーザー照射
     public void LaserIrradiation()
     {
@@ -34,8 +39,7 @@ public partial class EnemyAttack : MonoBehaviour
         laserirradiationSettings.timer += Time.deltaTime;
 
         // 一定時間ごとに生成
-        if (laserirradiationSettings.timer >= laserirradiationSettings.spawnInterval &&
-            laserirradiationSettings.spawnValue < laserirradiationSettings.maxSpawnValue) // 最大生成数に達していないか
+        if (laserirradiationSettings.spawnValue < laserirradiationSettings.maxSpawnValue) // 最大生成数に達していないか
         {
             laserirradiationSettings.timer = 0f;
             laserirradiationSettings.spawnValue++;
@@ -43,17 +47,9 @@ public partial class EnemyAttack : MonoBehaviour
             // エネミーの頭上辺りに生成
             Vector3 spawnPos = new Vector3(0f, 7f, 0f);
 
-            switch (Random.Range(0, 3))
-            {
-                case 0:
-                    Instantiate(laserirradiationSettings.LaserPoint, spawnPos, Quaternion.identity);
-                    break;
-            }
+            Instantiate(laserirradiationSettings.LaserPoint, spawnPos, Quaternion.identity);
         }
     }
 
-    public void LaserIrradiationInitialize()
-    {
-        laserirradiationSettings.spawnValue = 0;
-    }
+   
 }

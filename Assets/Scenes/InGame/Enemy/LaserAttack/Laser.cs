@@ -6,13 +6,23 @@ public class Laser : MonoBehaviour
 {
     [SerializeField] LaserPoint laserPoint;
     public AudioClip FireSE;
-    
 
-    public void ObjectOn()
+    private LifeManager lifeManager;
+
+    void Start()
     {
         // SE再生
         AudioSource.PlayClipAtPoint(FireSE, transform.position);
 
+        // LifeManagerスクリプトがアタッチされているオブジェクトを取得する
+        GameObject lifeManagerObject = GameObject.Find("Life");
+
+        // LifeManagerコンポーネントを取得する
+        lifeManager = lifeManagerObject.GetComponent<LifeManager>();
+    }
+
+    public void ObjectOn()
+    {
         gameObject.SetActive(true);
     }
 
@@ -25,7 +35,7 @@ public class Laser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("当たっている");
+            lifeManager.GetDamage(1);
         }
     }
 }

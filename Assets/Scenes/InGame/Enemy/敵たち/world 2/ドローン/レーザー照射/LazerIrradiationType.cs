@@ -35,19 +35,19 @@ public class LazerIrradiationType : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.LaserIrradiation();
         initialized = false;
         //base.EnemySoundPlay();
     }
 
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                //レーザー照射
-                attackScript.LaserIrradiationInitialize();
-                break;
-        }
-    }
+    //public override void PatternRandom()
+    //{
+    //    switch (attackNum)
+    //    {
+    //        case 0:
+    //            //レーザー照射
+    //            attackScript.LaserIrradiation();
+    //            break;
+    //    }
+    //}
 }
