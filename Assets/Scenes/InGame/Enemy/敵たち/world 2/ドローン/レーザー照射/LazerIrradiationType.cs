@@ -27,6 +27,7 @@ public class LazerIrradiationType : Enemy
         // ゲージがたまったら
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
@@ -45,18 +46,7 @@ public class LazerIrradiationType : Enemy
         {
             case 0:
                 //レーザー照射
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
+                attackScript.LaserIrradiationInitialize();
                 break;
         }
     }
