@@ -34,7 +34,7 @@ public class HumanFormGold : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -45,17 +45,17 @@ public class HumanFormGold : Enemy
         switch (attackNum)
         {
             case 0:
-                attackScript.MeteorAttack();
+                attackScript.ClubBeating();
                 break;
             case 1:
-                attackScript.MeteorAttack();
+                attackScript.SatelliteBeam();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 1;
-        //attackNum = Random.Range(0, 2);
+        //attackNum = 1;
+        attackNum = Random.Range(0, 2);
     }
 }

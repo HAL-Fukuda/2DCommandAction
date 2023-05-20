@@ -34,7 +34,7 @@ public class Spaceship : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -45,20 +45,20 @@ public class Spaceship : Enemy
         switch (attackNum)
         {
             case 0:
-                attackScript.MeteorAttack();
+                attackScript.InevitableAttack();
                 break;
             case 1:
-                attackScript.MeteorAttack();
+                attackScript.SatelliteBeam();
                 break;
             case 2:
-                attackScript.MeteorAttack();
+                attackScript.HomingBombMissileAttack();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 1;
+        attackNum = 2;
         //attackNum = Random.Range(0, 3);
     }
 }
