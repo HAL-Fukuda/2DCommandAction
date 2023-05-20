@@ -33,7 +33,7 @@ public class EnemyTester : Enemy
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
+        //Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -44,26 +44,27 @@ public class EnemyTester : Enemy
         switch (attackNum)
         {
             case 0:
-                attackScript.BowAttack();  //“ñ‰ñ–ÚˆÈ~–î‚ªo‚Ä‚±‚È‚¢
+                //“®ìŠm”F‚µ‚½‚¢UŒ‚‚ğ‚±‚±‚ÅŒÄ‚ñ‚Å
+
                 break;
             case 1:
                 
                 break;
             case 2:
-                //attackScript.IcicleAttack();  //—v‰ü‘P
+                //attackScript.BowAttack();  //“ñ‰ñ–ÚˆÈ~–î‚ªo‚Ä‚±‚È‚¢
                 break;
             case 3:
-                attackScript.GrabbingAttack();
+                
                 break;
             case 4:
-                //attackScript.SnowBallAttack();  //—v‰ü‘P
+                
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 3;
-        //attackNum = Random.Range(0, 2);
+        attackNum = 0;  //o‚µ‚½‚¢UŒ‚‚Ì”Ô†‚ğw’è
+        //attackNum = Random.Range(0, 2);  //UŒ‚‚ğƒ‰ƒ“ƒ_ƒ€‚Å‘I‘ğ‚·‚é
     }
 }
