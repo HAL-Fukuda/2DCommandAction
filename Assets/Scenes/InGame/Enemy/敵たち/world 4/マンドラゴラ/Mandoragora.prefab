@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arareAttackSettings:
+    ararePrefab: {fileID: 0}
   BindAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -141,6 +143,31 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  FlameSplashSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  floorburnSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  FoxOnibiSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -160,6 +187,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  HomingBombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   icicleAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -176,6 +209,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  laserirradiationSettings:
+    LaserPoint: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   meteorAttackSettings:
     prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
       type: 3}
@@ -183,6 +222,16 @@ MonoBehaviour:
     life: 1
     timer: 0
   nailAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  pofflamesSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  RockThrowingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
@@ -197,6 +246,11 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  shoutAttackSettings:
+    prefab: {fileID: 7000525861792586069, guid: a31e362b9bfd549428e59f6a55c62c1f,
+      type: 3}
+    maxSpawnValue: 2
+    spawnValue: 0
   sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
