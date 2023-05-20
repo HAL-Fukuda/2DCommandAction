@@ -27,6 +27,7 @@ public class Kamaitachi : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
         {
+            attackScript.KamaitachiAttackInitialize();
             initialized = true;
         }
     }
@@ -34,7 +35,7 @@ public class Kamaitachi : Enemy
     public override void Attack()
     {
         //UŒ‚‚ğŒÄ‚Ô
-        attackScript.SatelliteBeam();
+        attackScript.KamaitachiAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }
