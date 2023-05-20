@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour
     public float upForce;            //ƒWƒƒƒ“ƒv—Í
     private bool isDoubleJump;
     private bool notJump = false;
-    private bool isHaveCommand = false;
+    public bool isHaveCommand = false;
 
     public Transform attackPoint;
     public float attackRadius;
@@ -311,7 +311,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    void Throw()
+    public void Throw()
     {
         if (commandObject != null)
         {
