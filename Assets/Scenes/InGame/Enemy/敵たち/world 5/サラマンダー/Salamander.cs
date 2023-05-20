@@ -33,7 +33,7 @@ public class Salamander : Enemy
 
     public override void Attack()
     {
-        //attackScript.MeteorAttack();
+        attackScript.FloorburnAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }
