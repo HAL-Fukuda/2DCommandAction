@@ -27,13 +27,14 @@ public class Yukionna : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.ArareAttackInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
+        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -44,7 +45,7 @@ public class Yukionna : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.ArareAttack();
                 break;
             case 1:
                 
@@ -54,7 +55,7 @@ public class Yukionna : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
+        //attackNum = 0;
         attackNum = Random.Range(0, 2);
     }
 }
