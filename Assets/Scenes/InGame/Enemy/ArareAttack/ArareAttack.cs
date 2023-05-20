@@ -12,6 +12,7 @@ public partial class EnemyAttack : MonoBehaviour
     public ArareAttackSettings arareAttackSettings;
 
     private GameObject enemyObj;
+    private Vector3 enemyPos;
     private ParticleSystem _arareObjInstance;
     private bool arareCheck = false;
 
@@ -19,6 +20,7 @@ public partial class EnemyAttack : MonoBehaviour
     {
         arareCheck = true;
         enemyObj = GameObject.FindWithTag("Enemy");
+        enemyPos = enemyObj.transform.position;
         //Debug.Log(arareCheck);
     }
 
@@ -34,7 +36,7 @@ public partial class EnemyAttack : MonoBehaviour
 
     void ArareSpawn()
     {
-        _arareObjInstance = Instantiate(arareAttackSettings.ararePrefab);
-        _arareObjInstance.transform.position = enemyObj.transform.position;
+        _arareObjInstance = Instantiate(arareAttackSettings.ararePrefab, enemyPos,Quaternion.identity);
+        Debug.Log("Spawn");
     }
 }

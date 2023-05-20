@@ -9,6 +9,7 @@ public class Arare : MonoBehaviour
     private ParticleSystem particle;
     private LifeManager lifeManager;
     private bool onceHit;
+    private float timer;
     
 
     void Start()
@@ -26,8 +27,15 @@ public class Arare : MonoBehaviour
     
     void Update()
     {
-        ForcusTarget();
+        timer += Time.deltaTime;
 
+        //生成後2.0秒までターゲットの方向に合わせる
+        if (timer <= 2.0f)
+        {
+            ForcusTarget();
+        }
+
+        //再生が終わったら削除
         if (particle.isStopped)
         {
             Destroy(this.gameObject);
@@ -56,6 +64,14 @@ public class Arare : MonoBehaviour
                 lifeManager.GetDamage(1);
                 onceHit = true;
             }
+        }
+    }
+
+    void ParticlePlay()
+    {
+        if (particle)
+        {
+            particle.Play();
         }
     }
 }
