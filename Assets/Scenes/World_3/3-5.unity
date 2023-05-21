@@ -289,8 +289,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8455324649673131177, guid: 416e3075b16be9541ab843c3882a4529,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455324649673131177, guid: 416e3075b16be9541ab843c3882a4529,
+        type: 3}
+      propertyPath: distance
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416e3075b16be9541ab843c3882a4529, type: 3}
+--- !u!1 &167698939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6128646470184510965, guid: 789019f83c7a3044195ae9ba20b1e847,
+    type: 3}
+  m_PrefabInstance: {fileID: 384232995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &167698940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167698939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19559adb179e1e4a84265f270e2359f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 6
+  moveDuration: 5
+  moveEase: 1
 --- !u!1 &300865801
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,17 +435,17 @@ PrefabInstance:
     - target: {fileID: 155062717125087573, guid: 789019f83c7a3044195ae9ba20b1e847,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 27.793879
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 155062717125087573, guid: 789019f83c7a3044195ae9ba20b1e847,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 12.683001
+      value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 155062717125087573, guid: 789019f83c7a3044195ae9ba20b1e847,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155062717125087573, guid: 789019f83c7a3044195ae9ba20b1e847,
         type: 3}
