@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053285332df2e034286fe8ce33f32050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arareAttackSettings:
+    ararePrefab: {fileID: 0}
   BindAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -123,6 +125,17 @@ MonoBehaviour:
       type: 3}
     spawnInterval: 1
     maxSpawnValue: 2
+    spawnValue: 0
+    timer: 0
+  BoneThrowSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  bowAttackSettings:
+    arrow: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
     spawnValue: 0
     timer: 0
   ClubBeatingSettings:
@@ -136,6 +149,37 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  FirePunchSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  PunchIsFire: 0
+  FlameSplashSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  floorburnSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  FoxOnibiSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUpperSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  GBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   GrabbingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -151,9 +195,17 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   homingAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 4676547163145465790, guid: b4c9bc260dd3bdd4a82f7a3b4f94bb6e,
+      type: 3}
+    spawnInterval: 1
+    life: 5
+    timer: 0
+  HomingBombMissileAttackSettings:
+    prefab: {fileID: 4676547163145465790, guid: b4c9bc260dd3bdd4a82f7a3b4f94bb6e,
+      type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 1
+    spawnValue: 0
     timer: 0
   icicleAttackSettings:
     prefab: {fileID: 0}
@@ -171,6 +223,15 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  kamaitachiAttackSettings:
+    kamaitachiSpawnPos: {fileID: 0}
+    kamaitachiComing: {fileID: 0}
+  laserirradiationSettings:
+    LaserPoint: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   meteorAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -181,7 +242,16 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
-  player1: {fileID: 0}
+  pofflamesSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  RockThrowingSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   BeamComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -192,6 +262,10 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  shoutAttackSettings:
+    prefab: {fileID: 0}
+    maxSpawnValue: 0
+    spawnValue: 0
   sidewaysAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -241,6 +315,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   ZBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  KnockAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0

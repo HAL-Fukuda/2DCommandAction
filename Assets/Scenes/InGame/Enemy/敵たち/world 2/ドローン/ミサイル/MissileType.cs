@@ -35,7 +35,7 @@ public class MissileType : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
-        attackScript.BombMissileAttack();
+        attackScript.HomingBombMissileAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

@@ -45,7 +45,7 @@ public class HomingBombMissile : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // 0.5f秒経ったら発射
+        // 0.5f秒経ったらホーミング開始
         if (timer >= 3.0f) 
         {
             HomingUpdate();
@@ -118,11 +118,15 @@ public class HomingBombMissile : MonoBehaviour
         spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
         spriteRenderer.color = spriteColor;
 
+        // 当たり判定を消す
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.enabled = false;
+
         // オブジェクトを削除する
-        Invoke("DestroyObject", 0.2f);
+        Invoke("DestroyObject", 1.5f);
     }
 
-    // 1秒後にオブジェクトを削除する関数
+    // オブジェクトを削除する関数
     void DestroyObject()
     {
         Destroy(this.gameObject);
