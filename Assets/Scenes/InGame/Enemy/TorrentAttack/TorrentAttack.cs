@@ -5,15 +5,15 @@ using DG.Tweening;
 
 public partial class EnemyAttack : MonoBehaviour
 {
-    public AttackSettings WatergunSettings;
-    public AudioClip soundClip; // 音声ファイル
-    private bool hasExecuted = false;
+    public AttackSettings TorrentSettings;
+    public AudioClip TRsound; // 音声ファイル
+    private bool TRflag = false;
 
-    public void WaterGunAttack()
+    public void TorrentAttack()
     {
-        if (!hasExecuted)
+        if (!TRflag)
         {
-            hasExecuted = true;
+            TRflag = true;
 
             // ランダムな方向を決定する
             bool moveRight = Random.value < 0.5f; // 50%の確率で右方向に移動する
@@ -26,20 +26,20 @@ public partial class EnemyAttack : MonoBehaviour
             float moveAmount = moveRight ? 40f : -40f; // 右から生成された場合は-40f、左から生成された場合は40f
             Vector3 targetPos = new Vector3(spawnPos.x + moveAmount, spawnPos.y, spawnPos.z);
 
-            GameObject obj = Instantiate(WatergunSettings.prefab, spawnPos, Quaternion.identity);
+            GameObject obj = Instantiate(TorrentSettings.prefab, spawnPos, Quaternion.identity);
 
             // AudioSourceコンポーネントを追加して音を再生する
             AudioSource audioSource = obj.AddComponent<AudioSource>();
-            audioSource.clip = soundClip;
+            audioSource.clip = TRsound;
             audioSource.Play();
 
             obj.transform.DOMove(
                 targetPos, // 目標位置
-                WatergunSettings.life // 演出時間
+                TorrentSettings.life // 演出時間
             ).OnComplete(() =>
             {
                 Destroy(obj);
-                hasExecuted = false; // 再度実行するためにフラグをリセット
+                TRflag = false; // 再度実行するためにフラグをリセット
             });
         }
     }

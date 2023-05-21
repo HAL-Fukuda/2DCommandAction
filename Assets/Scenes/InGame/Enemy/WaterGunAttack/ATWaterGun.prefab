@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5120344257037329602}
   - component: {fileID: 1510233120897835943}
   m_Layer: 0
-  m_Name: WaterGun
+  m_Name: ATWaterGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
