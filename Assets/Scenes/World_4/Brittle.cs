@@ -33,14 +33,14 @@ public class Brittle : MonoBehaviour
             }
         }
 
-        //if (collision.gameObject.CompareTag("EnemyAttack")) // EnemyAttackのプレハブに当たると
-        //{
-        //    currentHealth--; // HPを減らす
+        if (collision.gameObject.CompareTag("EnemyAttack")) // EnemyAttackのプレハブに当たると
+        {
+            currentHealth--; // HPを減らす
 
-        //    if (currentHealth <= 0)
-        //    {
-        //        Destroy(gameObject); // HPが0以下になったらオブジェクトを破壊する
-        //    }
-        //}
+            if (currentHealth <= 0)
+            {
+                Destroy(gameObject); // HPが0以下になったらオブジェクトを破壊する
+            }
+        }
     }
 }
