@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3840599167954665936}
   - component: {fileID: 1915687469659643378}
   - component: {fileID: 8541536019415611631}
-  - component: {fileID: 6165770878197295861}
   - component: {fileID: 7778720487498400661}
+  - component: {fileID: -6308944404700451786}
   m_Layer: 10
-  m_Name: SpiderNeedle
+  m_Name: BoneThrow
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3840599167954665942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5307e2793c55f24f90c01b6d66877b7, type: 2}
+  - {fileID: 2100000, guid: ac5fa60f2b4e9d6459309cb185c4bda4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.5}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &8541536019415611631
 Rigidbody2D:
@@ -134,18 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6165770878197295861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840599167954665942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7455c54d6d7ff845a05d9883b2d1d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &7778720487498400661
 AudioSource:
   m_ObjectHideFlags: 0
@@ -242,3 +230,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6308944404700451786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840599167954665942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc60c8a7b232b7045b06a8ebec839df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -116,9 +116,19 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             }
         }
 
+        // BoneThrowに使うやつ
+        if (BTrgd != null)
+        {
+            // 速度の上限設定
+            if (BTrgd.velocity.magnitude > BTspeed)
+            {
+                BTrgd.velocity = BTrgd.velocity.normalized * BTspeed;  // 最大速度を設ける
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.B))
         {
-            ClubBeating();
+            BoneThrow();
         }
     }
 
