@@ -27,13 +27,14 @@ public class Mandoragora : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() &&Å@initialized == false)
         {
+            attackScript.ShoutAttackInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.ShoutAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }
