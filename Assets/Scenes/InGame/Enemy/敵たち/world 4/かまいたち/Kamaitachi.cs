@@ -24,17 +24,18 @@ public class Kamaitachi : Enemy
         {
             base.DestroyEffectSpawn();
         }
-        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
-        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&@initialized == false)
+        // ã‚²ãƒ¼ã‚¸ãŒãŸã¾ã£ãŸã‚‰
+        if (actionBar.GetComponent<ActionBarControl>().IsReady() &&ã€€initialized == false)
         {
+            attackScript.KamaitachiAttackInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        //attackScript.SatelliteBeam();
+        //æ”»æ’ƒã‚’å‘¼ã¶
+        attackScript.KamaitachiAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }
