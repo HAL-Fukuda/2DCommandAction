@@ -27,15 +27,14 @@ public class MissileType : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
-            attackScript.HomingBombMissileInitialize();
+            attackScript.BombMissileInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        attackScript.HomingBombMissileAttack();
+        attackScript.BombMissileAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

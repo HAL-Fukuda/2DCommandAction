@@ -34,7 +34,6 @@ public class HumanFormWhite : Enemy
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
         attackScript.ClubBeating();
         initialized = false;
         //base.EnemySoundPlay();

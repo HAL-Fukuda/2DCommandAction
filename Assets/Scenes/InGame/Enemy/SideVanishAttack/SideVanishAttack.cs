@@ -35,7 +35,7 @@ public partial class EnemyAttack : MonoBehaviour
         // ゲームオブジェクトのTransformコンポーネントを取得する
         //Transform enemyObjectTransform = Enemy.GetComponent<Transform>();
 
-        GameObject EnemyObject = GameObject.Find("GoblinSoldier(Clone)");
+        GameObject EnemyObject = GameObject.FindWithTag("Enemy");
 
         EnemyPos = EnemyObject.transform.position;
     }

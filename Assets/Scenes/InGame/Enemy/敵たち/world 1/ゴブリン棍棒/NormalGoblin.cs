@@ -33,36 +33,8 @@ public class NormalGoblin : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.ClubBeating();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.ClubBeating();
-                break;
-            case 1:
-                attackScript.ClubSwing();
-                break;
-        }
-    }
-
-    public override void NextAttackNum()
-    {
-        if (patternSwitch)
-        {
-            attackNum = 0;
-            patternSwitch = false;
-        }
-        else
-        {
-            attackNum = 1;
-            patternSwitch = true;
-        }
     }
 }

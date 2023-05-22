@@ -28,14 +28,14 @@ public class HumanFormGray : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        attackScript.MeteorAttack();
+        attackScript.LaserIrradiation();
         initialized = false;
         //base.EnemySoundPlay();
     }

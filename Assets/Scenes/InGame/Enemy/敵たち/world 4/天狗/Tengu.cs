@@ -33,7 +33,7 @@ public class Tengu : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.KnockAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

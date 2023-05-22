@@ -36,31 +36,8 @@ public class GoblinArcher : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.BowAttack();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                attackScript.BowAttack();
-                break;
-            case 1:
-                attackScript.BowAttack();
-                break;
-            case 2:
-                attackScript.BowAttack();
-                break;
-            case 3:
-                attackScript.BowAttack();
-                break;
-            case 4:
-                attackScript.BowAttack();
-                break;
-        }
     }
 }

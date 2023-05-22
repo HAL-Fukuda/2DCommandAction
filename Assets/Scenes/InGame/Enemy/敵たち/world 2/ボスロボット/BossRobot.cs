@@ -27,13 +27,14 @@ public class BossRobot : Enemy
         // ゲージがたまったら
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.BombMissileInitialize();
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -50,14 +51,14 @@ public class BossRobot : Enemy
                 attackScript.SatelliteBeam();
                 break;
             case 2:
-                //レーザー
+                attackScript.LaserIrradiation();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 1;
-        //attackNum = Random.Range(0, 2);
+        //attackNum = 2;
+        attackNum = Random.Range(0, 2);
     }
 }
