@@ -33,7 +33,6 @@ public class GoblinSoldier : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
         attackScript.SlashingSword();
         initialized = false;
         //base.EnemySoundPlay();

@@ -27,6 +27,7 @@ public class Byako : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() &&Å@initialized == false)
         {
+            attackScript.ThunderboltAttackInitialize();
             initialized = true;
         }
     }
@@ -44,20 +45,20 @@ public class Byako : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.ThunderboltAttack();
                 break;
             case 1:
-                
+                attackScript.ClawAttackRight();
                 break;
             case 2:
-                
+                attackScript.ClawAttackLeft();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
-        attackNum = Random.Range(0, 3);
+        attackNum = 2;
+        //attackNum = Random.Range(0, 3);
     }
 }

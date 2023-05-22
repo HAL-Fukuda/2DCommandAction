@@ -33,7 +33,6 @@ public class Dragon : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();

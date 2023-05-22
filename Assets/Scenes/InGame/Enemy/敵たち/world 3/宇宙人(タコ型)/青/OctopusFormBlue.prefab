@@ -137,6 +137,18 @@ MonoBehaviour:
     maxSpawnValue: 0
     spawnValue: 0
     timer: 0
+  bulletsMachineGunAttackSettings:
+    focusPoint: {fileID: 0}
+  ClawComingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ClawAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -164,6 +176,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  floorburnSound: {fileID: 0}
   FoxOnibiSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -231,9 +244,10 @@ MonoBehaviour:
     kamaitachiSpawnPos: {fileID: 0}
     kamaitachiComing: {fileID: 0}
   laserirradiationSettings:
-    LaserPoint: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
+    LaserPoint: {fileID: 7327005206046550582, guid: edb9e5d8821a0134a8263932cefd4b45,
+      type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 1
     spawnValue: 0
     timer: 0
   longlaserirradiationSettings:
@@ -363,6 +377,14 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  iceThornSettings:
+    icethorn1: {fileID: 0}
+    icethorn2: {fileID: 0}
+    icethorn3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
 --- !u!114 &-130478068452507214
 MonoBehaviour:

@@ -28,14 +28,14 @@ public class OctopusFormYellow : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.HomingenergyInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        attackScript.MeteorAttack();
+        attackScript.HomingenergyAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

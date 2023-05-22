@@ -137,6 +137,18 @@ MonoBehaviour:
     maxSpawnValue: 0
     spawnValue: 0
     timer: 0
+  bulletsMachineGunAttackSettings:
+    focusPoint: {fileID: 0}
+  ClawComingAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  ClawAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   ClubBeatingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -164,6 +176,7 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  floorburnSound: {fileID: 0}
   FoxOnibiSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -199,6 +212,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   HomingBombMissileAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  HomingenergyAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     maxSpawnValue: 0
@@ -298,6 +317,12 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  thunderboltAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -309,11 +334,17 @@ MonoBehaviour:
     life: 0
     timer: 0
   TRsound: {fileID: 0}
+  wofwaterSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  WOWsound: {fileID: 0}
   WatergunSettings:
     prefab: {fileID: 7760160720586859607, guid: 159fbae13db408e4884f7f1fd3bcb509,
       type: 3}
-    spawnInterval: 5
-    life: 5
+    spawnInterval: 3
+    life: 8
     timer: 0
   soundClip: {fileID: 8300000, guid: f585bfa9c9ffa2e42a4ec4e559330a19, type: 3}
   WBUpperSettings:
@@ -345,6 +376,14 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  iceThornSettings:
+    icethorn1: {fileID: 0}
+    icethorn2: {fileID: 0}
+    icethorn3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
 --- !u!114 &6265313138276556397
 MonoBehaviour:

@@ -35,7 +35,6 @@ public class Grifin : Enemy
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -56,7 +55,7 @@ public class Grifin : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = 1;
-        //attackNum = Random.Range(0, 2);
+        //attackNum = 1;
+        attackNum = Random.Range(0, 2);
     }
 }

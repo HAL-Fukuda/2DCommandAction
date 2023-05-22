@@ -46,14 +46,14 @@ public class Seiryu : Enemy
                 attackScript.TorrentAttack();
                 break;
             case 1:
-                
+                attackScript.WofwaterAttack();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 0;
-        attackNum = Random.Range(0, 2);
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }
