@@ -33,7 +33,7 @@ public class Kappa : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.WaterGunAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

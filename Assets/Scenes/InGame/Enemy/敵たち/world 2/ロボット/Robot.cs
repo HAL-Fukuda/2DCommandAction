@@ -29,13 +29,14 @@ public class Robot : Enemy
         // ゲージがたまったら
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.BombMissileInitialize();
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -46,24 +47,17 @@ public class Robot : Enemy
         switch (attackNum)
         {
             case 0:
-                //サテライトキャノン
+                attackScript.LaserIrradiation();
                 break;
             case 1:
                 attackScript.BombMissileAttack();
-                break;
-            case 2:
-                //レーザー
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        //enemyTag = GameObject.Find("Robot(Clone)");
-        //if (enemyTag.gameObject.CompareTag("Enemy"))
-        //{
-        //    Debug.Log("Enemyだよ");
-        //}
-        attackNum = Random.Range(0, 3);
+        attackNum = 1;
+        //attackNum = Random.Range(0, 2);
     }
 }

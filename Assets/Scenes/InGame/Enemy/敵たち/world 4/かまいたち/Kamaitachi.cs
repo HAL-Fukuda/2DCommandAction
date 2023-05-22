@@ -34,7 +34,6 @@ public class Kamaitachi : Enemy
 
     public override void Attack()
     {
-        //攻撃を呼ぶ
         attackScript.KamaitachiAttack();
         initialized = false;
         //base.EnemySoundPlay();

@@ -28,13 +28,13 @@ public class Spaceship : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.HomingBombMissileInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -58,7 +58,7 @@ public class Spaceship : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = 2;
-        //attackNum = Random.Range(0, 3);
+        //attackNum = 2;
+        attackNum = Random.Range(0, 3);
     }
 }

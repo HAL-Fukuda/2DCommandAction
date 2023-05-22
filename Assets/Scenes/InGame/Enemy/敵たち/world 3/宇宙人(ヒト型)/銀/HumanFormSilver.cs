@@ -28,14 +28,14 @@ public class HumanFormSilver : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.LongLaserIrradiationInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        attackScript.MeteorAttack();
+        attackScript.LongLaserIrradiation();
         initialized = false;
         //base.EnemySoundPlay();
     }

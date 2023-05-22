@@ -33,7 +33,7 @@ public class LizardMan : Enemy
 
     public override void Attack()
     {
-        //attackScript.MeteorAttack();
+        attackScript.SideVanishAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

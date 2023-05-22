@@ -33,7 +33,6 @@ public class Seiryu : Enemy
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -44,7 +43,7 @@ public class Seiryu : Enemy
         switch (attackNum)
         {
             case 0:
-                
+                attackScript.TorrentAttack();
                 break;
             case 1:
                 
@@ -54,6 +53,7 @@ public class Seiryu : Enemy
 
     public override void NextAttackNum()
     {
+        attackNum = 0;
         attackNum = Random.Range(0, 2);
     }
 }
