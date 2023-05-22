@@ -27,6 +27,10 @@ public class Virus : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.SporeInitialize();
+            attackScript.HomingenergyInitialize();
+            attackScript.HomingBombMissileInitialize();
+            attackScript.ThunderboltAttackInitialize();
             initialized = true;
         }
     }
@@ -46,23 +50,23 @@ public class Virus : Enemy
                 attackScript.InevitableAttack();
                 break;
             case 1:
-                
+                attackScript.Spore();
                 break;
             case 2:
-                
+                attackScript.HomingBombMissileAttack();
                 break;
             case 3:
-                
+                attackScript.HomingenergyAttack();
                 break;
             case 4:
-                
+                attackScript.ThunderboltAttack();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 0;
+        attackNum = 4;
         //attackNum = Random.Range(0, 5);
     }
 }
