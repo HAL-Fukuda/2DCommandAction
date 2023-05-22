@@ -126,6 +126,11 @@ MonoBehaviour:
     maxSpawnValue: 0
     spawnValue: 0
     timer: 0
+  BoneThrowSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
   bowAttackSettings:
     arrow: {fileID: 0}
     spawnInterval: 0
@@ -143,6 +148,12 @@ MonoBehaviour:
     life: 0
     timer: 0
   SwingSpeedSeconds: 0
+  FirePunchSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  PunchIsFire: 0
   FlameSplashSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -209,7 +220,16 @@ MonoBehaviour:
     life: 0
     timer: 0
   EnemyIA: {fileID: 0}
+  kamaitachiAttackSettings:
+    kamaitachiSpawnPos: {fileID: 0}
+    kamaitachiComing: {fileID: 0}
   laserirradiationSettings:
+    LaserPoint: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
+  longlaserirradiationSettings:
     LaserPoint: {fileID: 0}
     spawnInterval: 0
     maxSpawnValue: 0
@@ -247,9 +267,9 @@ MonoBehaviour:
     life: 0
     timer: 0
   shoutAttackSettings:
-    prefab: {fileID: 7000525861792586069, guid: a31e362b9bfd549428e59f6a55c62c1f,
+    prefab: {fileID: 1433095640646849914, guid: d4f5cf523be3ab34cb46cb9bc42b853f,
       type: 3}
-    maxSpawnValue: 2
+    maxSpawnValue: 1
     spawnValue: 0
   sidewaysAttackSettings:
     prefab: {fileID: 0}
@@ -279,11 +299,35 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  thunderboltAttackSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   TongueLickingSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
     timer: 0
+  TorrentSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  TRsound: {fileID: 0}
+  wofwaterSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  WOWsound: {fileID: 0}
+  WatergunSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  soundClip: {fileID: 0}
   WBUpperSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -300,6 +344,11 @@ MonoBehaviour:
     life: 0
     timer: 0
   ZBUnderSettings:
+    prefab: {fileID: 0}
+    spawnInterval: 0
+    life: 0
+    timer: 0
+  KnockAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
