@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3149903282961528394}
   - component: {fileID: 3149903282961528392}
   - component: {fileID: -5128815410852538657}
-  - component: {fileID: -7817821483083286093}
   - component: {fileID: 1402000729190641807}
+  - component: {fileID: 3532706087815393062}
   m_Layer: 0
   m_Name: IcePunch
   m_TagString: EnemyAttack
@@ -204,19 +204,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-7817821483083286093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3149903282961528407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8561f25459b2df846b4b37a0338ffc6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HittingSound: {fileID: 8300000, guid: 043749a7aa42dc944ad44450153bd0fd, type: 3}
 --- !u!58 &1402000729190641807
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -233,3 +220,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &3532706087815393062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149903282961528407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3cbad242c8c6146bc9593b04195b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HittingSound: {fileID: 8300000, guid: 043749a7aa42dc944ad44450153bd0fd, type: 3}
