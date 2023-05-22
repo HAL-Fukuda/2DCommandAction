@@ -27,37 +27,15 @@ public class BulletsMachineGunType : Enemy
         // ÉQÅ[ÉWÇ™ÇΩÇ‹Ç¡ÇΩÇÁ
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.BulletsMachinGunInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        PatternRandom();
+        attackScript.BulletsMachineGun();
         initialized = false;
         //base.EnemySoundPlay();
-    }
-
-    public override void PatternRandom()
-    {
-        switch (attackNum)
-        {
-            case 0:
-                //é¿íeÉ}ÉVÉìÉKÉì
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-
-                break;
-        }
     }
 }
