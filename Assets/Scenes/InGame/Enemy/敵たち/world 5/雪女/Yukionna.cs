@@ -28,13 +28,13 @@ public class Yukionna : Enemy
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             attackScript.ArareAttackInitialize();
+            attackScript.IceThornInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        Debug.Log(attackNum);
         PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
@@ -48,14 +48,14 @@ public class Yukionna : Enemy
                 attackScript.ArareAttack();
                 break;
             case 1:
-                
+                attackScript.IceThorn();
                 break;
         }
     }
 
     public override void NextAttackNum()
     {
-        attackNum = 0;
+        attackNum = 1;
         //attackNum = Random.Range(0, 2);
     }
 }

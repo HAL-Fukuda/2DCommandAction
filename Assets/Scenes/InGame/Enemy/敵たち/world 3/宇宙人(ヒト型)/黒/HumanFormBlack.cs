@@ -28,14 +28,14 @@ public class HumanFormBlack : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
+            attackScript.BulletsMachineGunAttackInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        attackScript.MeteorAttack();
+        attackScript.BulletsMachineGunAttack();
         initialized = false;
         //base.EnemySoundPlay();
     }

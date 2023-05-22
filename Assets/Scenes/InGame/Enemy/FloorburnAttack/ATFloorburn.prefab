@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102fb26f2de35d142933805d480217f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeatingSound: {fileID: 0}
+  se: {fileID: 8300000, guid: 9ed1ba35dcf7d7e439d6b0d7c8b53e45, type: 3}
 --- !u!1001 &706058928358821907
 PrefabInstance:
   m_ObjectHideFlags: 0

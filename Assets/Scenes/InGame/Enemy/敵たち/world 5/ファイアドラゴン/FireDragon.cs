@@ -33,7 +33,7 @@ public class FireDragon : Enemy
 
     public override void Attack()
     {
-        //attackScript.MeteorAttack();
+        attackScript.FlameSplash();
         initialized = false;
         //base.EnemySoundPlay();
     }

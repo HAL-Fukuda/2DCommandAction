@@ -28,15 +28,14 @@ public class OctopusFormBlue : Enemy
         // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
-            attackScript.HomingenergyInitialize();
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
 
     public override void Attack()
     {
-        //UŒ‚‚ğŒÄ‚Ô
-        attackScript.HomingenergyAttack();
+        attackScript.LaserIrradiation();
         initialized = false;
         //base.EnemySoundPlay();
     }

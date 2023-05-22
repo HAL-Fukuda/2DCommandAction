@@ -33,7 +33,7 @@ public class Skeleton : Enemy
 
     public override void Attack()
     {
-        //attackScript.MeteorAttack();
+        attackScript.BoneThrow();
         initialized = false;
         //base.EnemySoundPlay();
     }

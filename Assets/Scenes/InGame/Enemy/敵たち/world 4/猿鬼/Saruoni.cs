@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaruOni : Enemy
+public class Saruoni : Enemy
 {
     void Start()
     {
@@ -33,7 +33,7 @@ public class SaruOni : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.RockThrowing();
         initialized = false;
         //base.EnemySoundPlay();
     }

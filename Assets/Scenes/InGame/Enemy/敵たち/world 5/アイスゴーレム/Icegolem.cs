@@ -33,7 +33,7 @@ public class Icegolem : Enemy
 
     public override void Attack()
     {
-        attackScript.MeteorAttack();
+        attackScript.FirePunch();
         initialized = false;
         //base.EnemySoundPlay();
     }
