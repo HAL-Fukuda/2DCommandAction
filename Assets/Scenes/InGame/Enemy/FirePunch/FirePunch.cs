@@ -50,7 +50,7 @@ public partial class EnemyAttack : MonoBehaviour
     {
         FPrgd.AddForce(new Vector3(0.0f, -1.0f, 0.0f) * 1000.0f);  // 下方向に力をかける
 
-        Invoke("FPobjDestroy", 0.5f);   // 数秒後にオブジェクトを消す
+        Invoke("FPobjDestroy", 1.5f);   // 数秒後にオブジェクトを消す
         Invoke("FPflgTrue", FirePunchSettings.spawnInterval);
     }
 
