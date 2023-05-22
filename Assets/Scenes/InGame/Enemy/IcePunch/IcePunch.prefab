@@ -232,4 +232,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3cbad242c8c6146bc9593b04195b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HittingSound: {fileID: 8300000, guid: 043749a7aa42dc944ad44450153bd0fd, type: 3}
+  HittingSound: {fileID: 8300000, guid: 9878b0135fb203a42a8b90c3ba166fb5, type: 3}
