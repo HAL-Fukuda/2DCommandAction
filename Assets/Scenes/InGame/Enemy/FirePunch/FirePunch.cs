@@ -16,6 +16,9 @@ public partial class EnemyAttack : MonoBehaviour
     public bool PunchIsFire;
     private float FPTweak = 0.0f;
 
+    private PlayerManager playerManager;
+
+
 
     void GetPlayerPositionToFP()
     {
@@ -28,6 +31,9 @@ public partial class EnemyAttack : MonoBehaviour
         FPPosition.y = 6.0f;
         FPPosition.z = 0.0f;
         //Debug.Log(FPPosition);
+
+        GameObject playerManagerObject = GameObject.Find("Player");
+        playerManager = playerManagerObject.GetComponent<PlayerManager>();
     }
 
     void FPobjDestroy()
@@ -46,6 +52,17 @@ public partial class EnemyAttack : MonoBehaviour
 
         Invoke("FPobjDestroy", 0.5f);   // 数秒後にオブジェクトを消す
         Invoke("FPflgTrue", FirePunchSettings.spawnInterval);
+    }
+
+    public void IceAge()
+    {
+        playerManager.moveSpeed /= 3f;
+        Invoke("NotIceAge", 3.0f);
+    }
+
+    public void NotIceAge()
+    {
+        playerManager.moveSpeed *= 3f;
     }
 
     public void FirePunch()
