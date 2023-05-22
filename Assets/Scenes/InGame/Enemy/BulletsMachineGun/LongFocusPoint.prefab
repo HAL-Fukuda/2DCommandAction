@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6589565253440715570}
   - component: {fileID: 6652322647488828997}
   m_Layer: 0
-  m_Name: FocusPoint
+  m_Name: LongFocusPoint
   m_TagString: ForcusPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd6f6ae4fee82843a865bbb2448fc73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsMachineGunObj: {fileID: 810282548335057964, guid: 060073d0b0cbff344a47f40b9f7cbba6,
+  bulletsMachineGunObj: {fileID: 810282548335057964, guid: c48c13111a9c971488ab0b28dd81e47b,
     type: 3}

@@ -19,7 +19,7 @@ public class BulletsMacineGun : MonoBehaviour
 
     void Start()
     {
-        forcusPointObj = GameObject.Find("FocusPoint(Clone)");
+        forcusPointObj = GameObject.FindWithTag("ForcusPoint");
         targetPos = forcusPointObj.transform;
 
         particle = GetComponent<ParticleSystem>();

@@ -41,7 +41,7 @@ public class FocusPoint : MonoBehaviour
             ForcusMove();
         }
 
-        if (forcusTimer >= 1f)
+        if (forcusTimer >= 2f)
         {
             if (onceShot)
             {
