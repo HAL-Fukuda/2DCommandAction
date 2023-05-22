@@ -21,20 +21,23 @@ public class Thunderbolt : MonoBehaviour
 
         if (timer > 0.1f) // 雷エフェクトを透明にする
         {
-            // 子オブジェクト取得
-            Transform thunder = transform.Find("thunder");
-            // スプライトレンダラー取得
-            SpriteRenderer spriteRenderer = thunder.GetComponent<SpriteRenderer>();
-            // 透明にする
-            Color spriteColor = spriteRenderer.color;
-            spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
-            spriteRenderer.color = spriteColor;
-
             if (oneceFlag == false)
             {
                 oneceFlag = true;
-                Vector3 spawn = transform.position + new Vector3(0, 2.25f, 0);
+
+                // 子要素を取得
+                Transform colliderObject = this.transform.Find("thunderCollider");
+                // 透明にする
+                SpriteRenderer spriteRenderer = colliderObject.GetComponent<SpriteRenderer>();
+                Color spriteColor = spriteRenderer.color;
+                spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
+                spriteRenderer.color = spriteColor;
+                // 当たり判定を消す
+                BoxCollider2D boxCollider = colliderObject.GetComponent<BoxCollider2D>();
+                boxCollider.enabled = false;
+
                 // 着弾エフェクト生成
+                Vector3 spawn = transform.position + new Vector3(0, 2.25f, 0);
                 Instantiate(explosion, spawn, Quaternion.identity);
             }
         }

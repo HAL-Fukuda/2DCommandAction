@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AttackCollider : MonoBehaviour
 {
-    private LifeManager lifeManager;
+    private static LifeManager lifeManager;
     public bool oneceHit; // １度しか当たらないように
     public int damage = 1; // ダメージ数
+    private bool oneceFlag = false;
 
     void Start()
     {
@@ -22,11 +23,15 @@ public class AttackCollider : MonoBehaviour
         // プレイヤーに当たったら
         if (other.gameObject.CompareTag("Player"))
         {
+            // 一度しか当たらないように
             if (oneceHit)
             {
-                // 当たり判定を消す
-                BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-                boxCollider.enabled = false;
+                if (oneceFlag)
+                {
+                    return;
+                }
+
+                oneceFlag = true;
             }
 
             // プレイヤーにダメージを与える

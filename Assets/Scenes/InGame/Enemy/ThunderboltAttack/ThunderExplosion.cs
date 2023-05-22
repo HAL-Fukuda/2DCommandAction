@@ -6,6 +6,7 @@ public class ThunderExplosion : MonoBehaviour
 {
     float timer;
     SpriteRenderer spriteRenderer;
+    bool oneceFlag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +22,23 @@ public class ThunderExplosion : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 0.3f)
+        if (timer > 0.3f)
         {
-            // 透明にする
-            Color spriteColor = spriteRenderer.color;
-            spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
-            spriteRenderer.color = spriteColor;
+            if (oneceFlag == false)
+            {
+                oneceFlag = true;
+                // 透明にする
+                Color spriteColor = spriteRenderer.color;
+                spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
+                spriteRenderer.color = spriteColor;
+
+                // 当たり判定を消す
+                BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+                boxCollider.enabled = false;
+            }
         }
 
-        if(timer > 5.0f)
+        if (timer > 5.0f)
         {
             Destroy(this.gameObject);
         }
