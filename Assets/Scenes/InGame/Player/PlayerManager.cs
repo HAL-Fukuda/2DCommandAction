@@ -12,9 +12,9 @@ public class PlayerManager : MonoBehaviour
 
     //インスペクターで設定する
     public float moveSpeed;          //移動速度
-    public int AvoidanceForce;     //回避速度
+    //public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
-    private bool isDoubleJump;
+    //private bool isDoubleJump;
     private bool notJump = false;
     public bool isHaveCommand = false;
 
@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
     public LayerMask enemyLayer;
     public LayerMask commandLayer;
 
-    private float Chargeingcount = 0.0f;
+    //private float Chargeingcount = 0.0f;
 
     public bool isGround;         //接地判定
     public bool isMove;
@@ -59,20 +59,16 @@ public class PlayerManager : MonoBehaviour
             Movement();
             HoldThrowUpdate();
         }
-        CantJump();
+        //CantJump();
 
         //if (Input.GetKeyDown(KeyCode.N))
         //{
         //    DamegeAnimation();
         //}
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            DieAnimation();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            specialattack();
-        }
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    DieAnimation();
+        //}
     }
 
     //移動の処理
@@ -85,71 +81,75 @@ public class PlayerManager : MonoBehaviour
         {
             direction = 1;
             transform.localScale = new Vector3(-2, 2, 1);
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                //Debug.Log("右回避");
-                rb.AddForce(new Vector3(AvoidanceForce, 0, 0));
-            }
+            //if (Input.GetKeyDown(KeyCode.LeftShift))
+            //{
+            //    //Debug.Log("右回避");
+            //    rb.AddForce(new Vector3(AvoidanceForce, 0, 0));
+            //}
         }
         //左向き
         else if (x < 0)
         {
             direction = -1;
             transform.localScale = new Vector3(2, 2, 1);
-            //回避
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                //Debug.Log("左回避");
-                rb.AddForce(new Vector3(-AvoidanceForce, 0, 0));
-            }
+            ////回避
+            //if (Input.GetKeyDown(KeyCode.LeftShift))
+            //{
+            //    //Debug.Log("左回避");
+            //    rb.AddForce(new Vector3(-AvoidanceForce, 0, 0));
+            //}
         }
 
         // コマンドを持っている時は攻撃できない
         if (isHaveCommand == false)
         {
-            //ため中
-            if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//追加
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                Chargeing();
+                Attack();
             }
-            //ため攻撃
-            if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//追加
-            {
+            ////ため中
+            //if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//追加
+            //{
+            //    Chargeing();
+            //}
+            ////ため攻撃
+            //if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//追加
+            //{
 
-                if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
-                {
-                    //Debug.Log("攻撃：一段階");
-                    Attack();
-                }
-                else if (Chargeingcount >= 400.0f)
-                {
-                    //Debug.Log("攻撃：二段階");
-                    Attack();
-                }
+            //    if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
+            //    {
+            //        //Debug.Log("攻撃：一段階");
+            //        Attack();
+            //    }
+            //    else if (Chargeingcount >= 400.0f)
+            //    {
+            //        //Debug.Log("攻撃：二段階");
+            //        Attack();
+            //    }
 
-                Chargeingcount = 0.0f;
-            }
+            //    Chargeingcount = 0.0f;
+            //}
         }
 
         //ジャンプ
         if ((Input.GetKeyDown(KeyCode.Space) && isGround) || (Input.GetButtonDown("A")) && isGround)//追加
         {
-            isDoubleJump = false;
+            //isDoubleJump = false;
             rb.AddForce(new Vector3(0, upForce, 0));
         }
-        else if ((Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false) || (Input.GetButtonDown("A")) && isDoubleJump == false)//追加
-        {
-            if (rb.velocity.y < 0) // 下降中に二段目のジャンプを行う場合
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 0); // 落下速度をリセットする
-                rb.AddForce(new Vector3(0, upForce * 1.5f, 0)); // 上方向に大きな力を加える
-            }
-            else // 上昇中に二段目のジャンプを行う場合
-            {
-                rb.AddForce(new Vector3(0, upForce, 0));
-            }
-            isDoubleJump = true;
-        }
+        //else if ((Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false) || (Input.GetButtonDown("A")) && isDoubleJump == false)//追加
+        //{
+        //    if (rb.velocity.y < 0) // 下降中に二段目のジャンプを行う場合
+        //    {
+        //        rb.velocity = new Vector2(rb.velocity.x, 0); // 落下速度をリセットする
+        //        rb.AddForce(new Vector3(0, upForce * 1.5f, 0)); // 上方向に大きな力を加える
+        //    }
+        //    else // 上昇中に二段目のジャンプを行う場合
+        //    {
+        //        rb.AddForce(new Vector3(0, upForce, 0));
+        //    }
+        //    isDoubleJump = true;
+        //}
 
         animator.SetFloat("Speed", Mathf.Abs(x));
         rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
@@ -199,13 +199,13 @@ public class PlayerManager : MonoBehaviour
         notJump = false;
     }
 
-    void CantJump()
-    {
-        if (notJump)
-        {
-            isDoubleJump = true;
-        }
-    }
+    //void CantJump()
+    //{
+    //    if (notJump)
+    //    {
+    //        //isDoubleJump = true;
+    //    }
+    //}
 
     //ジャンプのアニメーション
     void JumpAnimation()
@@ -235,19 +235,19 @@ public class PlayerManager : MonoBehaviour
         //Debug.Log("死にました");
     }
 
-    //溜め中
-    void Chargeing()
-    {
-        animator.SetBool("ChargingNow", true);
-        Chargeingcount += 0.1f;
-        //Debug.Log("溜め中");
-        //Debug.Log(Chargeingcount);
-    }
+    ////溜め中
+    //void Chargeing()
+    //{
+    //    animator.SetBool("ChargingNow", true);
+    //    Chargeingcount += 0.1f;
+    //    //Debug.Log("溜め中");
+    //    //Debug.Log(Chargeingcount);
+    //}
 
     //攻撃の処理
     void Attack()
     {
-        animator.SetBool("ChargingNow", false);
+        //animator.SetBool("ChargingNow", false);
         animator.SetTrigger("isAttack");
         //Debug.Log("攻撃");
         //エネミーに
@@ -324,42 +324,42 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    void specialattack()
-    {
-        this.transform.DOMove(new Vector3(-3.689993f, -2.374583f, 0f), 1.5f);
-        transform.localScale = new Vector3(-2, 2, 1);
-        StartCoroutine("SPChargingNow");
-        Invoke(nameof(Slash), 2.0f);
-        Invoke(nameof(Slash), 3.0f);
-        Invoke(nameof(Slash), 4.0f);
-        Invoke(nameof(BigSlash), 5.5f);
-    }
+    //void specialattack()
+    //{
+    //    this.transform.DOMove(new Vector3(-3.689993f, -2.374583f, 0f), 1.5f);
+    //    transform.localScale = new Vector3(-2, 2, 1);
+    //    StartCoroutine("SPChargingNow");
+    //    Invoke(nameof(Slash), 2.0f);
+    //    Invoke(nameof(Slash), 3.0f);
+    //    Invoke(nameof(Slash), 4.0f);
+    //    Invoke(nameof(BigSlash), 5.5f);
+    //}
 
-    void Slash()
-    {
-        animator.SetTrigger("isSPAttack");
-        //プレイヤーの座標を取得
-        Vector2 position = transform.position;
-        //プレイヤーとかぶらなくする
-        position.x += 1;
-        position.y += 1;
-        Instantiate(slash, position, transform.rotation);
-    }
+    //void Slash()
+    //{
+    //    animator.SetTrigger("isSPAttack");
+    //    //プレイヤーの座標を取得
+    //    Vector2 position = transform.position;
+    //    //プレイヤーとかぶらなくする
+    //    position.x += 1;
+    //    position.y += 1;
+    //    Instantiate(slash, position, transform.rotation);
+    //}
 
-    void BigSlash()
-    {
-        animator.SetTrigger("isSPAttack");
-        Instantiate(Bigslash, transform.position, transform.rotation);
-    }
+    //void BigSlash()
+    //{
+    //    animator.SetTrigger("isSPAttack");
+    //    Instantiate(Bigslash, transform.position, transform.rotation);
+    //}
 
-    IEnumerator SPChargingNow()
-    {
-        animator.SetBool("SPChargingNow", true);
-        isMove = false;
-        yield return new WaitForSeconds(5.5f);
-        animator.SetBool("SPChargingNow", false);
-        isMove = true;
-    }
+    //IEnumerator SPChargingNow()
+    //{
+    //    animator.SetBool("SPChargingNow", true);
+    //    isMove = false;
+    //    yield return new WaitForSeconds(5.5f);
+    //    animator.SetBool("SPChargingNow", false);
+    //    isMove = true;
+    //}
 
     //当たり判定のとこを赤い円で描く
     private void OnDrawGizmosSelected()
