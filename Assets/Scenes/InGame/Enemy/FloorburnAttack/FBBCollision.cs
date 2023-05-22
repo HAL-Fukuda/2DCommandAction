@@ -36,8 +36,10 @@ public class FBBCollision : MonoBehaviour
         {
             lifeManager.GetDamage(1);
             //Debug.Log("1damage");
-            //AudioSource.PlayClipAtPoint(se, transform.position);
+            AudioSource.PlayClipAtPoint(se, transform.position);
         }
+       
+
     }
 
 }
