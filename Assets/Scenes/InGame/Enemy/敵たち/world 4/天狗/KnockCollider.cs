@@ -7,7 +7,7 @@ public class KnockCollider : MonoBehaviour
     private LifeManager lifeManager;
     private PlayerManager playerManager;
     public AudioClip BeatingSound;
-    //private AudioSource audioSource;
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -16,8 +16,8 @@ public class KnockCollider : MonoBehaviour
 
         GameObject playerManagerObject = GameObject.Find("Player");
         playerManager = playerManagerObject.GetComponent<PlayerManager>();
-        //Componentを取得
-        //audioSource = GetComponent<AudioSource>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,11 +30,11 @@ public class KnockCollider : MonoBehaviour
                 playerManager.Throw();
             }
             //Debug.Log("1damage");
-            //audioSource.PlayOneShot(BeatingSound);  // サウンドを鳴らす
+            audioSource.PlayOneShot(BeatingSound);  // サウンドを鳴らす
         }
         else
         {
-            //audioSource.PlayOneShot(BeatingSound);
+            audioSource.PlayOneShot(BeatingSound);
         }
 
     }

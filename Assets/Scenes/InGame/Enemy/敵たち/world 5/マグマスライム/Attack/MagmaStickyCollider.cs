@@ -13,6 +13,7 @@ public class MagmaStickyCollider : MonoBehaviour
     private bool isHit = false; // プレイヤーに当たったかどうかのフラグ
     private bool isGrounded = false; // 地面に当たったかどうかのフラグ
     private Vector3 direction; // プレイヤーの方向ベクトル
+    public AudioClip se;
 
     void Start()
     {
@@ -56,6 +57,7 @@ public class MagmaStickyCollider : MonoBehaviour
             // 地面にオブジェクトを生成し、当たった位置に置く
             GameObject obstacle = Instantiate(floorprefab, contactPoint, Quaternion.identity) as GameObject;
             //Destroy(obstacle, 5f); // 5秒後にオブジェクトを削除する
+            AudioSource.PlayClipAtPoint(se, transform.position);
         }
     }
 }

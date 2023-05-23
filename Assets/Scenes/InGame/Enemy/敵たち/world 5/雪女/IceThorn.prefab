@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d249c0037be274085ea502818fb945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windSE: {fileID: 0}
-  spawnSE: {fileID: 0}
+  CollSE: {fileID: 8300000, guid: f5658932815bda947b4847e8c49ce83f, type: 3}
+  SpawnSE: {fileID: 8300000, guid: f5658932815bda947b4847e8c49ce83f, type: 3}
