@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 807691823844662673}
   - component: {fileID: 383719838633993970}
   - component: {fileID: -1006531733998257208}
-  - component: {fileID: 1494378083047505}
+  - component: {fileID: -5496423844508503492}
   m_Layer: 0
-  m_Name: SatelliteBeam
+  m_Name: ClawAttack
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d7b0abd965cebf741a5f970f06e2769e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37246d5a890898c4d88309d46f40e19b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.283
   m_Pitch: 1
@@ -208,7 +208,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1494378083047505
+--- !u!114 &-5496423844508503492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,6 +217,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 807691823844662687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb949e11b39d18499df96e5cb68ce18, type: 3}
+  m_Script: {fileID: 11500000, guid: f7264a4d557afee45b1bc1c3a88e03f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
