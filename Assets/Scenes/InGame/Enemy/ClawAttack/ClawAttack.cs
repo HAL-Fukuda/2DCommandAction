@@ -21,7 +21,7 @@ public partial class EnemyAttack : MonoBehaviour
     void RightCA()
     {
 
-        CAPosition = new Vector3(6, 0, 0);
+        CAPosition = new Vector3(6, 2, 0);
 
         Debug.Log("ポジション取得");
     }
@@ -29,7 +29,7 @@ public partial class EnemyAttack : MonoBehaviour
     void LeftCA()
     {
 
-        CAPosition = new Vector3(-6, 0, 0);
+        CAPosition = new Vector3(-6, 2, 0);
 
         Debug.Log("ポジション取得");
     }
@@ -38,9 +38,9 @@ public partial class EnemyAttack : MonoBehaviour
     {
 
         // プレイヤーの位置に予兆発生
-        spawnPos = new Vector3(CAPosition.x, 0f, 0f);
+        spawnPos = new Vector3(CAPosition.x, CAPosition.y, 0f);
         GameObject obj = Instantiate(ClawComingAttackSettings.prefab, spawnPos, Quaternion.identity);
-        obj.transform.DOMoveY(
+        obj.transform.DOMoveZ(
                 0, //移動量
                 2.5f // 演出時間
             ).OnComplete(() =>
@@ -58,7 +58,7 @@ public partial class EnemyAttack : MonoBehaviour
         GameObject obj1 = Instantiate(ClawAttackSettings.prefab, spawnPos, Quaternion.identity);
         obj1.transform.DOMoveY(
                 0, //移動量
-                1.5f // 演出時間
+                1.0f // 演出時間
             ).OnComplete(() =>
             {
                 Destroy(obj1);
