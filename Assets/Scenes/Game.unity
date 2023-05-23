@@ -276,6 +276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 154224578773194980, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
         type: 3}
+      propertyPath: upForce
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 154224578773194980, guid: 3f9502fcf2f03724e96dcd8fdaf13ed7,
+        type: 3}
       propertyPath: Bigslash
       value: 
       objectReference: {fileID: 0}
@@ -894,22 +899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d913e97760879646831fe04b86b8ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 7335506221992566931, guid: 75d44c3d65e926146849d1fb999fe58b,
-    type: 3}
-  healPrefab: {fileID: 7335506221992566931, guid: 97402ee95168ad44b8e201f1bbe4f937,
-    type: 3}
-  defencePrefab: {fileID: 7335506221992566931, guid: 6198a016f8c24e742a3551a815db0baa,
-    type: 3}
-  BigPrefab: {fileID: 7335506221992566931, guid: 58dd79cd3b5c34944849f4a142345046,
-    type: 3}
-  rangeA: {fileID: 7448150160165005870, guid: 0c8431d2dff18cd46a030f2f4b4af2b5, type: 3}
-  num: 4
-  positionA: {x: 0, y: 0, z: 0}
-  positionB: {x: 0, y: 0, z: 0}
-  positionC: {x: 0, y: 0, z: 0}
-  autoDrop: 0
-  dropInterval: 10
-  dropMode: 1
 --- !u!114 &1573626334
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,8 +7,8 @@ using UnityEngine.Playables;
 public class PlayerManager : MonoBehaviour
 {
 
-    [SerializeField] GameObject slash;
-    [SerializeField] GameObject Bigslash;
+    //[SerializeField] GameObject slash;
+    //[SerializeField] GameObject Bigslash;
 
     //インスペクターで設定する
     public float moveSpeed;          //移動速度
