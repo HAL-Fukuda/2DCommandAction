@@ -31,12 +31,12 @@ public class StageSelectManeger : MonoBehaviour
     //    WorldCanvas = GameObject.Find("WorldSelectCanvas");
     //}
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyUp(KeyCode.X))
-    //    {
-    //        BackWorldSelecting();
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("StageSelect");
+        }
+    }
 
 }

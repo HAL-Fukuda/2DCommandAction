@@ -4,6 +4,8 @@ using UnityEngine;
 
 using UnityEngine.EventSystems;
 
+using UnityEngine.SceneManagement;
+
 public class WorldSelectManager : MonoBehaviour
 {
     private GameObject WorldCanvas;
@@ -12,6 +14,8 @@ public class WorldSelectManager : MonoBehaviour
 
     private ScrollWorld scrollWorld;
     private bool CanPush = false;
+
+    public float fadetime;
 
     //private GameObject eventSystem;
 
@@ -25,13 +29,20 @@ public class WorldSelectManager : MonoBehaviour
 
     // 戻るボタン作るならmanager作って
 
-    public void WorldSelecting()
+    public void WorldSelecting(string world)
     {
-        if (scrollWorld.IsScrollWhich() == false)
-        {
-            StageCanvas.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(FirstSelect);
-            WorldCanvas.SetActive(false);
-        }
+        // ワールド名入力
+        FadeManager.Instance.LoadScene(world, fadetime);
+        //SceneManager.LoadScene(world);
     }
+
+    //public void WorldSelecting()
+    //{
+    //    if (scrollWorld.IsScrollWhich() == false)
+    //    {
+    //        StageCanvas.SetActive(true);
+    //        EventSystem.current.SetSelectedGameObject(FirstSelect);
+    //        WorldCanvas.SetActive(false);
+    //    }
+    //}
 }

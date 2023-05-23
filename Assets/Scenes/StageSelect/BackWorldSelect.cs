@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class BackWorldSelect : MonoBehaviour
 {
-    public GameObject WorldCanvas;
-    public GameObject StageCanvas;
-    public GameObject FirstSelect;
+    //public GameObject WorldCanvas;
+    //public GameObject StageCanvas;
+    //public GameObject FirstSelect;
 
-    public void BackWorldSelecting()
-    {
-        WorldCanvas.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(FirstSelect);
-        StageCanvas.SetActive(false);
-    }
+    //public void BackWorldSelecting()
+    //{
+    //    WorldCanvas.SetActive(true);
+    //    EventSystem.current.SetSelectedGameObject(FirstSelect);
+    //    StageCanvas.SetActive(false);
+    //}
 
     //private void Start()
     //{
@@ -26,7 +27,7 @@ public class BackWorldSelect : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            BackWorldSelecting();
+            SceneManager.LoadScene("StageSelect");
         }
     }
 
