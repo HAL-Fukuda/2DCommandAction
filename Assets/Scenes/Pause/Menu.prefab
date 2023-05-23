@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 7300353591525820128}
   - component: {fileID: 7300353591525820129}
   - component: {fileID: 6314086518524439475}
-  - component: {fileID: 7300353591525820133}
   m_Layer: 5
   m_Name: StageSelect
   m_TagString: Untagged
@@ -292,18 +291,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6314086518524439475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7300353591525820143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3caf30c3c6515fb4cb2e02104a0eb378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7300353591525820133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -635,6 +622,7 @@ MonoBehaviour:
   resumeButton: {fileID: 7300353592080871952}
   stageselectButton: {fileID: 7300353591525820129}
   pauseScript: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &7300353592715680868
 GameObject:
   m_ObjectHideFlags: 0
