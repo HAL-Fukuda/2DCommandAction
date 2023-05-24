@@ -12,14 +12,14 @@ public class IceThornCollision : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private LifeManager lifeManager;
     private bool oneceHit; // １度しか当たらないように
-    public AudioClip windSE;
-    public AudioClip spawnSE;
+    public AudioClip CollSE;
+    public AudioClip SpawnSE;
 
     // Start is called before the first frame update
     void Start()
     {
         // SE再生
-        //AudioSource.PlayClipAtPoint(spawnSE, transform.position);
+        AudioSource.PlayClipAtPoint(SpawnSE, transform.position);
 
         // プレイヤーをターゲットにする
         GameObject player = GameObject.Find("Player");
@@ -80,7 +80,7 @@ public class IceThornCollision : MonoBehaviour
     void Fire()
     {
         // SE再生
-        //AudioSource.PlayClipAtPoint(windSE, transform.position);
+        AudioSource.PlayClipAtPoint(CollSE, transform.position);
         // 到達座標に向かって１秒で移動
         this.transform.DOMove(goalPosition, 1.0f).OnComplete(() =>
         {

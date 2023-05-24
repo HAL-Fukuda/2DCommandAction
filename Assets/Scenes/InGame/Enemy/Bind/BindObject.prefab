@@ -102,6 +102,7 @@ MonoBehaviour:
   damageDuration: 2
   floorprefab: {fileID: 7131191916148084128, guid: 9a8616d23ee394a478c49943c9ea2d71,
     type: 3}
+  se: {fileID: 8300000, guid: fa20b2851a1068b408673073dedac17d, type: 3}
 --- !u!61 &-2665079268418738462
 BoxCollider2D:
   m_ObjectHideFlags: 0

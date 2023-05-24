@@ -10,6 +10,7 @@ public class NailCollider : MonoBehaviour
     private Color objectColor;
     private bool isTransparent = true;
     public float destroyTime;
+    public AudioClip se;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class NailCollider : MonoBehaviour
             {
                 isTransparent = false;
                 collider.isTrigger = true;
+                AudioSource.PlayClipAtPoint(se, transform.position);
             }
         }
     }

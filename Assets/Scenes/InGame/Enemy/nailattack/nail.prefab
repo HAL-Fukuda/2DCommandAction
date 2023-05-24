@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 3
+  se: {fileID: 8300000, guid: 387f6be39a1df5745b76568105974001, type: 3}
 --- !u!61 &7559771040888018374
 BoxCollider2D:
   m_ObjectHideFlags: 0

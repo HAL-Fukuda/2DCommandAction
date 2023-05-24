@@ -149,3 +149,4 @@ MonoBehaviour:
   damageDuration: 2
   floorprefab: {fileID: 7131191916148084128, guid: 242bd8e5ce0c1de498e6c8d51b9cff26,
     type: 3}
+  se: {fileID: 8300000, guid: fa20b2851a1068b408673073dedac17d, type: 3}
