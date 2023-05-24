@@ -257,9 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b131b9a8ca7046818ae53a2904671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldCanvas: {fileID: 0}
-  StageCanvas: {fileID: 3504307531543973125}
-  FirstSelect: {fileID: 0}
 --- !u!1 &2889853284206046554
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +607,6 @@ GameObject:
   - component: {fileID: 3502847548165162167}
   - component: {fileID: 3502847548165162169}
   - component: {fileID: 4566029462901808954}
-  - component: {fileID: 6034523279730850798}
   m_Layer: 5
   m_Name: 1-5
   m_TagString: Untagged
@@ -753,19 +749,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &4566029462901808954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502847548165162171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c921675ac3f1a547a2ec6840f90e216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadetime: 0
---- !u!114 &6034523279730850798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1142,6 +1125,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b131b9a8ca7046818ae53a2904671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldCanvas: {fileID: 0}
-  StageCanvas: {fileID: 3504307531543973125}
-  FirstSelect: {fileID: 0}

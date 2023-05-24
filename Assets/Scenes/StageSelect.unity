@@ -651,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
-  fadetime: 0
+  fadetime: 1
 --- !u!1 &943254319
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
-  fadetime: 0
+  fadetime: 1
 --- !u!1 &1137579640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
-  fadetime: 0
+  fadetime: 1
 --- !u!1 &1289817552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
-  fadetime: 0
+  fadetime: 1
 --- !u!1 &1656219037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
-  fadetime: 0
+  fadetime: 1
 --- !u!1 &2018088185
 GameObject:
   m_ObjectHideFlags: 0
