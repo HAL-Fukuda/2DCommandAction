@@ -7,6 +7,7 @@ public class Stageselect : MonoBehaviour
 {
     public void ButtonClicked()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("StageSelect");
         Debug.Log("‚¨‚³‚ê‚Ü‚µ‚½");
     }
