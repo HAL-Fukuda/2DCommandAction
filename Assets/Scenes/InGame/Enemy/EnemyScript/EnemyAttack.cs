@@ -21,7 +21,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++‚ÌƒNƒ‰ƒX
         }
     }
 
-    private bool isReady = false;
+    private static bool isReady = false;
 
     public void EnemyAttackInitialize()
     {
