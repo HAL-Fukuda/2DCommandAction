@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 
 public class PlayerManager : MonoBehaviour
 {
-
+    public AudioClip HitDamageSE;
     //[SerializeField] GameObject slash;
     //[SerializeField] GameObject Bigslash;
 
@@ -223,6 +223,8 @@ public class PlayerManager : MonoBehaviour
     //ダメージを受けたときのアニメーション
     public void DamegeAnimation()
     {
+        // SE再生
+        AudioSource.PlayClipAtPoint(HitDamageSE, transform.position);
         animator.SetTrigger("isDamege");
         //Debug.Log("ダメージを受けています");
     }
