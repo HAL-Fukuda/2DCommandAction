@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2a62b13dc5b074c92b3e6551e37465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitDamageSE: {fileID: 8300000, guid: 8a2cb8d099183bc4dbed18789d671cec, type: 3}
   moveSpeed: 6
   upForce: 350
   isHaveCommand: 0
