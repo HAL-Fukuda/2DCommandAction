@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public partial class EnemyAttack : MonoBehaviour
 {
-    private Tweener shakeTweener;
+    private static Tweener shakeTweener;
     private Vector3 initPosition;
 
     private void Start()
