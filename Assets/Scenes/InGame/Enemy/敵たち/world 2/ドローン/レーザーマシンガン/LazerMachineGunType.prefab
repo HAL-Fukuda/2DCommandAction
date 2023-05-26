@@ -138,7 +138,7 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   bulletsMachineGunAttackSettings:
-    focusPoint: {fileID: 6075148368909072132, guid: 6adff325c0fd6fc43ba44d30cb755b2b,
+    focusPoint: {fileID: 6075148368909072132, guid: c8daf7195f68b4542875cb91f50e12fa,
       type: 3}
   ClawComingAttackSettings:
     prefab: {fileID: 0}
@@ -371,6 +371,14 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  sporeSettings:
+    spore1: {fileID: 0}
+    spore2: {fileID: 0}
+    spore3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
   MagmaStickySettings:
     prefab: {fileID: 0}
