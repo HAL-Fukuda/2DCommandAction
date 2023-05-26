@@ -1648,6 +1648,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2003935794672161303, guid: 1d235e22d2cf8bd449a7f5c9ce76c236,
         type: 3}
+      propertyPath: deathSE
+      value: 
+      objectReference: {fileID: 7852723948317783661, guid: 7cf54de47ffae134a96df288d0d9b94e,
+        type: 3}
+    - target: {fileID: 2003935794672161303, guid: 1d235e22d2cf8bd449a7f5c9ce76c236,
+        type: 3}
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1799209949}
@@ -1765,6 +1771,7 @@ MonoBehaviour:
   player: {fileID: 1799209941}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
+  clearSEPrefab: {fileID: 0}
   battleNum: 1
   deathFlag: 0
 --- !u!114 &1573626335
