@@ -12,6 +12,8 @@ public partial class EnemyMgr : MonoBehaviour
     public int enemyNum;  //何番目の敵を生成するかを指定する変数
 
     private GameObject enemy; // 生成するエネミー
+    public Transform enemySpawnPos; //Enemyを生成する位置
+
     
     public int SpawnEnemy(int enemyNum)  //敵を生成する
     {
@@ -34,14 +36,14 @@ public partial class EnemyMgr : MonoBehaviour
     //敵生成の関数
     void FirstEnemySpawn()  //一体目
     {
-        enemy = Instantiate(enemyObj1, new Vector3(0, 4, 0), enemyObj1.transform.rotation);
+        enemy = Instantiate(enemyObj1,enemySpawnPos);
     }
     void SecondEnemySpawn()  //二体目
     {
-        enemy = Instantiate(enemyObj2, new Vector3(0, 4, 0), enemyObj2.transform.rotation);
+        enemy = Instantiate(enemyObj2, enemySpawnPos);
     }
     void ThirdEnemySpawn()  //三体目
     {
-        enemy = Instantiate(enemyObj3, new Vector3(0, 4, 0), enemyObj3.transform.rotation);
+        enemy = Instantiate(enemyObj3,enemySpawnPos);
     }
 }
