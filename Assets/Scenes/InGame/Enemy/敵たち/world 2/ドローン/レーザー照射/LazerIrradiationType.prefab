@@ -243,10 +243,10 @@ MonoBehaviour:
     kamaitachiSpawnPos: {fileID: 0}
     kamaitachiComing: {fileID: 0}
   laserirradiationSettings:
-    LaserPoint: {fileID: 1000376515715579805, guid: ff87e95a39c044144afb9ddaebbaf8b8,
+    LaserPoint: {fileID: 5019287860521964813, guid: ff87e95a39c044144afb9ddaebbaf8b8,
       type: 3}
-    spawnInterval: 1
-    maxSpawnValue: 1
+    spawnInterval: 5
+    maxSpawnValue: 5
     spawnValue: 0
     timer: 0
   longlaserirradiationSettings:
