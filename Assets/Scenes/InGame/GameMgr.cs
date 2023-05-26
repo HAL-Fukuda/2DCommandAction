@@ -51,6 +51,7 @@ public partial class GameMgr : MonoBehaviour
 
     private bool stageClear = false;
     public GameObject stageClearEffectPrefab; // ステージクリア演出
+    public GameObject clearSEPrefab;
     
     public int battleNum;  //バトル数を設定する変数(各ステージで設定する)
     public bool deathFlag = false;  //敵が消えているかどうか
@@ -86,6 +87,7 @@ public partial class GameMgr : MonoBehaviour
     {
         battle = false;
         Instantiate(stageClearEffectPrefab);
+        Instantiate(clearSEPrefab);
     }
 
     // 敵を生成する
