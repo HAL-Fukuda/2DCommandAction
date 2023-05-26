@@ -149,7 +149,7 @@ MonoBehaviour:
     type: 3}
   SlashingSE: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
-  attackEffectPrefab: {fileID: 8855256153686624580, guid: dcbe264023fdb4d4d97295672ce34b58,
+  attackEffectPrefab: {fileID: 8855256153686624580, guid: 37bdc08a414bd6c4cb8607bc4a1b9555,
     type: 3}
   attackSEPrefab: {fileID: 0}
   commandType: 0
