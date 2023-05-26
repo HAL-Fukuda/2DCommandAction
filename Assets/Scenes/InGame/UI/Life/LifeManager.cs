@@ -17,6 +17,7 @@ public class LifeManager : MonoBehaviour
     public float invincibilityTimer = 1.0f;
 
     public GameObject deadEffect; // 死亡エフェクト
+    public GameObject deathSE;
 
     void Update()
     {
@@ -72,6 +73,7 @@ public class LifeManager : MonoBehaviour
                 {
                     // 死亡エフェクト生成
                     Instantiate(deadEffect);
+                    Instantiate(deathSE);
                     playerManager.DieAnimation();
                     break;
                 }
