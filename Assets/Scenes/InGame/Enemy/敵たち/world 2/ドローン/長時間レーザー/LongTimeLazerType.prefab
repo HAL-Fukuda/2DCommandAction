@@ -249,7 +249,7 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   longlaserirradiationSettings:
-    LaserPoint: {fileID: 8203332522323812310, guid: 8597bbe15d798014c85594f389510e44,
+    LaserPoint: {fileID: 8291704685896821333, guid: 245930ea444f74e40becebbafff9e90b,
       type: 3}
     spawnInterval: 5
     maxSpawnValue: 5

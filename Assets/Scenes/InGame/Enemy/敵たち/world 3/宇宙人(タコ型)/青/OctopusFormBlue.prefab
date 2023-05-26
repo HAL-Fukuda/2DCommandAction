@@ -244,7 +244,7 @@ MonoBehaviour:
     kamaitachiSpawnPos: {fileID: 0}
     kamaitachiComing: {fileID: 0}
   laserirradiationSettings:
-    LaserPoint: {fileID: 7327005206046550582, guid: edb9e5d8821a0134a8263932cefd4b45,
+    LaserPoint: {fileID: 5019287860521964813, guid: ff87e95a39c044144afb9ddaebbaf8b8,
       type: 3}
     spawnInterval: 1
     maxSpawnValue: 1
@@ -372,6 +372,14 @@ MonoBehaviour:
     prefab: {fileID: 0}
     spawnInterval: 0
     life: 0
+    timer: 0
+  sporeSettings:
+    spore1: {fileID: 0}
+    spore2: {fileID: 0}
+    spore3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
     timer: 0
   MagmaStickySettings:
     prefab: {fileID: 0}

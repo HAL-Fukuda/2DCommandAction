@@ -9,10 +9,6 @@ public class LongLaserPoint : MonoBehaviour
     private Transform target;
     private float timer;
 
-    public float forcusTimer;
-    public float fireTimer;
-    public float destroyTimer;
-
     [SerializeField] LongLaser longlaser;
 
     public AudioClip chargeSE;
@@ -40,19 +36,19 @@ public class LongLaserPoint : MonoBehaviour
         timer += Time.deltaTime;
 
         //ターゲットの方向に合わせる
-        if (timer <= forcusTimer)
+        if (timer <= 2.0f)
         {
             ForcusTarget();
         }
 
         //発射
-        if (timer >= fireTimer)
+        if (timer >= 3.0f)
         {
             Fire();
         }
 
         //削除
-        if (timer >= destroyTimer)
+        if (timer >= 6.0f)
         {
             Destroy(this.gameObject);
         }
