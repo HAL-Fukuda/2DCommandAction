@@ -7,13 +7,29 @@ public class CommandRandom : MonoBehaviour
     public GameObject[] objectPrefabs; // 生成するオブジェクトのプレハブのリスト
     public Transform spawnPoint; // スポーンポイントのTransform
     public int numberOfObjects = 3; // 生成するオブジェクトの数
+    public float respawnInterval = 5f; // 再生成の間隔
 
     private GameObject[] spawnedObjects; // 生成されたオブジェクトの配列
+    private float timer; // タイマー
 
     private void Start()
     {
         spawnedObjects = new GameObject[numberOfObjects];
         SpawnObjects();
+        timer = respawnInterval;
+    }
+
+    private void Update()
+    {
+        // タイマーを更新
+        timer -= Time.deltaTime;
+
+        // タイマーが0以下になったらオブジェクトを再生成
+        if (timer <= 0f)
+        {
+            RespawnObject();
+            timer = respawnInterval;
+        }
     }
 
     private void SpawnObjects()
@@ -36,9 +52,8 @@ public class CommandRandom : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void RespawnObject()
     {
-        // 破棄されたオブジェクトを再生成
         for (int i = 0; i < spawnedObjects.Length; i++)
         {
             if (spawnedObjects[i] == null)
@@ -51,6 +66,9 @@ public class CommandRandom : MonoBehaviour
 
                 // オブジェクトを再生成し、ランダムな位置に配置
                 spawnedObjects[i] = Instantiate(randomPrefab, new Vector3(randomX, spawnPoint.position.y, spawnPoint.position.z), Quaternion.identity);
+
+                // 一つのオブジェクトを再生成したら終了
+                return;
             }
         }
     }

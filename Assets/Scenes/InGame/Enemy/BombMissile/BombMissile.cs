@@ -29,7 +29,7 @@ public class BombMissile : MonoBehaviour
         // 生成されたらタイマーリセット
         timer = 0.0f;
 
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        //spriteRenderer = this.GetComponent<SpriteRenderer>();
 
         ForcusTarget();
     }
@@ -97,6 +97,7 @@ public class BombMissile : MonoBehaviour
                 Instantiate(explosionPrefab, this.transform);
 
                 // ミサイルを透明にする
+                spriteRenderer = this.GetComponent<SpriteRenderer>();
                 Color spriteColor = spriteRenderer.color;
                 spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
                 spriteRenderer.color = spriteColor;

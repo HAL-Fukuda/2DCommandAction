@@ -6,12 +6,15 @@ public class CommandSpawn : MonoBehaviour
 {
     public GameObject[] objectPrefabs; // 生成するオブジェクトのプレハブの配列
     public Transform spawnPoint; // スポーンポイントのTransform
+    public float respawnTime = 5f; // 再生成の間隔
 
     private GameObject spawnedObject; // 生成されたオブジェクトの参照
+    private float elapsedTime; // 経過時間
 
     private void Start()
     {
         SpawnObject();
+        elapsedTime = 0f;
     }
 
     private void SpawnObject()
@@ -26,10 +29,14 @@ public class CommandSpawn : MonoBehaviour
 
     private void Update()
     {
-        // オブジェクトが破棄されたら再生成
         if (spawnedObject == null)
         {
-            SpawnObject();
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= respawnTime)
+            {
+                SpawnObject();
+                elapsedTime = 0f;
+            }
         }
     }
 }
