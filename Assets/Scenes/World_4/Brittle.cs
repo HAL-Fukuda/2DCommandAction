@@ -12,10 +12,10 @@ public class Brittle : MonoBehaviour
         currentHealth = maxHealth; // ‰Šú‰»
     }
 
-    void Update()
-    {
-        Debug.Log(currentHealth);
-    }
+    //void Update()
+    //{
+    //    Debug.Log(currentHealth);
+    //}
 
     void OnTriggerEnter2D(Collider2D collision)
     {

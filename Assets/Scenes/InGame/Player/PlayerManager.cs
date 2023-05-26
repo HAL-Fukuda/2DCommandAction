@@ -103,7 +103,7 @@ public class PlayerManager : MonoBehaviour
         // ƒRƒ}ƒ“ƒh‚ğ‚Á‚Ä‚¢‚é‚ÍUŒ‚‚Å‚«‚È‚¢
         if (isHaveCommand == false)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))
             {
                 Attack();
             }
