@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5169030378749814710}
   - component: {fileID: 6059328830147064236}
   - component: {fileID: 8372968228444042513}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Magma
   m_TagString: Platform
   m_Icon: {fileID: 0}
