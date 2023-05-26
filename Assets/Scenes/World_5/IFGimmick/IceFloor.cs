@@ -8,6 +8,7 @@ public class IceFloor : MonoBehaviour
     private float timer = 0f;
     private bool isColliding = false;
     GameObject player;
+    [SerializeField] private GameObject objectToSpawnPrefab;
 
     // public AudioClip se;
 
@@ -29,7 +30,6 @@ public class IceFloor : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 3f)
             {
-                Debug.Log("ice");
                 timer = 0f;
                 StartCoroutine(DisablePlayerMovementForSeconds(2f));
                 //AudioSource.PlayClipAtPoint(se, transform.position);
@@ -59,18 +59,22 @@ public class IceFloor : MonoBehaviour
 
     private IEnumerator DisablePlayerMovementForSeconds(float seconds)
     {
-        // PlayerManagerスクリプトがアタッチされているゲームオブジェクトを取得
-        //GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         // PlayerManagerコンポーネントを取得
         PlayerManager playerManager = player.GetComponent<PlayerManager>();
+        Vector3 playerpos = player.transform.position;
+        playerpos.y += 0.9f;
 
         // PlayerManagerのisMoveを無効にする
         playerManager.isMove = false;
+
+        GameObject objectToSpawn = Instantiate(objectToSpawnPrefab, playerpos, Quaternion.identity);
 
         yield return new WaitForSeconds(seconds);
 
         // 指定時間待機後、PlayerManagerのisMoveを有効にする
         playerManager.isMove = true;
+
+        Destroy(objectToSpawn);
+        timer = 0f;
     }
 }
