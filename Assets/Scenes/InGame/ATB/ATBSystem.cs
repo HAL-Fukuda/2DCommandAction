@@ -28,15 +28,14 @@ public partial class GameMgr : MonoBehaviour
     // ATB風のシステムを使った戦闘処理
     public void ActiveTimeBattleUpdate()
     {
-        if (deathFlag) // 敵が死んでいたら
-        {
-            battleState = eBattleState.NEXT_FLOOR;
-        }
-
         // バトルステートに応じた処理
         switch (battleState)
         {
             case eBattleState.COMMAND_SELECT: // 待機中
+                if (killedEnemy) // 敵が死んでいたら
+                {
+                    battleState = eBattleState.ENEMY_DIE;
+                }
                 // アクションバーを更新する
                 playerActionBar.gameObject.GetComponent<ActionBarControl>().ActionBarUpdate();
                 enemyActionBar.gameObject.GetComponent<ActionBarControl>().ActionBarUpdate();
@@ -114,8 +113,15 @@ public partial class GameMgr : MonoBehaviour
                     }
                 }
                 break;
-            case eBattleState.NEXT_FLOOR:
+            case eBattleState.ENEMY_DIE:
+                if (deathFlag) // 敵が死んでいたら
+                {
+                    killedEnemy = false;
+                    battleState = eBattleState.NEXT_FLOOR;
+                }
 
+                break;
+            case eBattleState.NEXT_FLOOR:
                 // クリアしたかどうか
                 if (stageClear)
                 {

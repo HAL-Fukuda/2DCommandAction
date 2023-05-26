@@ -33,6 +33,7 @@ public partial class GameMgr : MonoBehaviour
         COMMAND_SELECT,
         PLAYER,
         ENEMY,
+        ENEMY_DIE,
         NEXT_FLOOR,
         DEBUG,
     }
