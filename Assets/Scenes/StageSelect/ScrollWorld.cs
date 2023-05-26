@@ -41,8 +41,8 @@ public class ScrollWorld : MonoBehaviour
 
     public void moveCenter()
     {
-            worldObject[NowC].transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f)
-            .OnComplete(IsScrollFalse);
+        worldObject[NowC].transform.DOLocalMove(new Vector3(0, 0, 0), 0.2f)
+        .OnComplete(IsScrollFalse);
     }
 
     public void IsScrollFalse()
@@ -73,10 +73,11 @@ public class ScrollWorld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyUp(KeyCode.A))    // 左キー代わり
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if ((Input.GetKeyUp(KeyCode.A) || (horizontalInput < 0)))    // 左キー代わり
         {
-            if (NowC > 0 && IsScroll == false)  
+            if (NowC > 0 && IsScroll == false)
             {
                 IsScroll = true;
                 NowL -= 1;
@@ -88,7 +89,7 @@ public class ScrollWorld : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.D))  // 右キー代わり
+        if ((Input.GetKeyUp(KeyCode.D) || (horizontalInput > 0)))  // 右キー代わり
         {
             if (NowC < 4 && IsScroll == false)
             {
@@ -98,7 +99,7 @@ public class ScrollWorld : MonoBehaviour
                 NowR += 1;
                 moveLeft();
                 moveCenter();
-                moveRight();   
+                moveRight();
             }
         }
 
