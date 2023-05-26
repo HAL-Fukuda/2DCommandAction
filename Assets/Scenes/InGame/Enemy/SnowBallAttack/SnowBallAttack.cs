@@ -16,7 +16,7 @@ public partial class EnemyAttack : MonoBehaviour
             snowballAttackSettings.timer = 0f;
 
             // 画面左端にオブジェクトを生成する
-            Vector3 spawnPos = new Vector3(-10f, Random.Range(-1f, 0f), 0f);
+            Vector3 spawnPos = new Vector3(-10f, Random.Range(2f, 3f), 0f);
             GameObject obj = Instantiate(snowballAttackSettings.prefab, spawnPos, Quaternion.identity);
 
             obj.transform.DOMoveX(
