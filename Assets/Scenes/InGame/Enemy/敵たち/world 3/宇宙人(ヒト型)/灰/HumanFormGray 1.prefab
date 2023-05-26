@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: -8382549282019417234}
+  - component: {fileID: -692705350681536593}
   m_Layer: 0
-  m_Name: HumanFormBlack
+  m_Name: HumanFormGray 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd79d1f9917c1c842a176b0bdc0c3714, type: 2}
+  - {fileID: 2100000, guid: 480fbb00e1285b94b8f8febcca55a0c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,8 +138,7 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   bulletsMachineGunAttackSettings:
-    focusPoint: {fileID: 6075148368909072132, guid: 6adff325c0fd6fc43ba44d30cb755b2b,
-      type: 3}
+    focusPoint: {fileID: 0}
   ClawComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -244,9 +243,10 @@ MonoBehaviour:
     kamaitachiSpawnPos: {fileID: 0}
     kamaitachiComing: {fileID: 0}
   laserirradiationSettings:
-    LaserPoint: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
+    LaserPoint: {fileID: 7327005206046550582, guid: edb9e5d8821a0134a8263932cefd4b45,
+      type: 3}
+    spawnInterval: 5
+    maxSpawnValue: 5
     spawnValue: 0
     timer: 0
   longlaserirradiationSettings:
@@ -258,8 +258,8 @@ MonoBehaviour:
   meteorAttackSettings:
     prefab: {fileID: 7768713339813116289, guid: a1b96a4bc783bad45b9791267893c76c,
       type: 3}
-    spawnInterval: 1
-    life: 4
+    spawnInterval: 0
+    life: 1
     timer: 0
   nailAttackSettings:
     prefab: {fileID: 0}
@@ -393,7 +393,7 @@ MonoBehaviour:
     maxSpawnValue: 0
     spawnValue: 0
     timer: 0
---- !u!114 &-8382549282019417234
+--- !u!114 &-692705350681536593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c0712674a764b48bce37a6edf5722d, type: 3}
+  m_Script: {fileID: 11500000, guid: 66cbbbccf6a95db4cab8c84b4511731e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}
