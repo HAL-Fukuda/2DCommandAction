@@ -19,6 +19,8 @@ public partial class Command : MonoBehaviour
 
     public bool isActive = false; // 実行中かどうか
 
+    bool oneceFlag = false;
+
 
     // 関数定義-------------------------
 
@@ -35,10 +37,20 @@ public partial class Command : MonoBehaviour
         switch (commandType)
         {
             case eCommandType.ATTACK:// 攻撃の処理    
-                AttackCommand();
 
-                // 処理が終わったら非アクティブ状態にする
-                Deactivate();
+                if (oneceFlag == false)
+                {
+                    oneceFlag = true;
+                    AttackCommand();
+                }
+
+                if (_attackEffectInstance.GetComponent<AbsorbEffect>().IsFinished())
+                {
+                    // 処理が終わったら非アクティブ状態にする
+                    Deactivate();
+                    // エフェクトオブジェクトを削除
+                    _attackEffectInstance.GetComponent<AbsorbEffect>().DestroyObject();
+                }
 
                 break;
             case eCommandType.DEFENCE:// 防御の処理    
@@ -53,6 +65,7 @@ public partial class Command : MonoBehaviour
                 // 処理が終わったら非アクティブ状態にする
                 Deactivate();
                 break;
+
         }
     }
 

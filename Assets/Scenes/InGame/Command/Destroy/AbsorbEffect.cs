@@ -16,6 +16,8 @@ public class AbsorbEffect : MonoBehaviour
     public float speed = 5.0f;
     public string attackMessage = "";
 
+    bool isFinished = false;
+
     void Start()
     {
         target = GameObject.FindWithTag("Enemy").transform;
@@ -24,20 +26,27 @@ public class AbsorbEffect : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 absorbPos = this.transform.position;
-
-        AbsorbMove();
-
-        if (targetPos == absorbPos)
+        if (!isFinished)
         {
-            Destroy(this.gameObject);
-            SlashEffectPlay();
-            SlashSEPlay();
+            Vector3 absorbPos = this.transform.position;
 
-            //Enemyにダメージを与える
-            enemy.GetComponent<Enemy>().GetDamage();
-            //メッセージを表示
-            MessageWindow.Instance.SetDebugMessage(attackMessage);
+            AbsorbMove();
+            if (targetPos == absorbPos)
+            {
+                SlashEffectPlay();
+                SlashSEPlay();
+
+                isFinished = true;
+
+                //Enemyにダメージを与える
+                enemy.GetComponent<Enemy>().GetDamage();
+                //メッセージを表示
+                MessageWindow.Instance.SetDebugMessage(attackMessage);
+
+                // 透明にする
+                ParticleSystem particleSystem = gameObject.GetComponent<ParticleSystem>();
+                particleSystem.Stop();
+            }
         }
     }
 
@@ -59,5 +68,15 @@ public class AbsorbEffect : MonoBehaviour
         enemy = GameObject.FindWithTag("Enemy");
         _slashSEInstance = Instantiate(slashSEPrefab);
         _slashSEInstance.transform.position = enemy.transform.position;
+    }
+
+    public bool IsFinished()
+    {
+        return isFinished;
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(this.gameObject);
     }
 }

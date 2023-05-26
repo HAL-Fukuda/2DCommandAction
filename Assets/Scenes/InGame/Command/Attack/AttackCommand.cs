@@ -31,16 +31,6 @@ public partial class Command : MonoBehaviour
     public void AttackCommand()
     {
         AttackEffectPlay();
-        //AttackSEPlay();
-
-        //// エネミーのオブジェクト取得
-        //enemy = GameObject.Find("Enemy");
-        //SlashEffectPlay();
-        //SlashSoundPlay();
-        ////Enemyにダメージを与える
-        //enemy.GetComponent<EnemyGetDamage>().GetDamage();
-        ////メッセージを表示
-        //MessageWindow.Instance.SetDebugMessage(attackMessage);
     }
 
     //斬撃のエフェクトを再生

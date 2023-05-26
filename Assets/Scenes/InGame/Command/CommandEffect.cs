@@ -62,6 +62,14 @@ public partial class Command : MonoBehaviour
 
             GameMgr.Instance.SetCommand(this.gameObject);
 
+            // “§–¾‚É‚·‚é
+            MeshRenderer meshRenderer = this.GetComponent<MeshRenderer>();
+            meshRenderer.enabled = false;
+
+            // “–‚½‚è”»’è‚ğÁ‚·
+            BoxCollider2D boxCollider = this.GetComponent<BoxCollider2D>();
+            boxCollider.enabled = false;
+
             //Destroy(this.gameObject); // ƒRƒ}ƒ“ƒh‚ğíœ
         }
     }
