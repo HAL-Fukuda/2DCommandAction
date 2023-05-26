@@ -66,7 +66,7 @@ public class Virus : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = 4;
-        //attackNum = Random.Range(0, 5);
+        //attackNum = 4;
+        attackNum = Random.Range(0, 5);
     }
 }
