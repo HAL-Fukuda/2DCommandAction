@@ -11,9 +11,9 @@ public class Magma : MonoBehaviour
     {
         // 無限ループ
         DOTween.Sequence()
-              .AppendInterval(3)//三秒後
+              .AppendInterval(5)//三秒後
               .Append(transform.DOMoveY(-1, 6))//-1に6秒かけて向かう
-              .AppendInterval(3)//三秒後
+              .AppendInterval(5)//三秒後
               .Append(transform.DOMoveY(-7, 6))//-7に6秒かけて向かう
               .SetLoops(-1);//ループさせる
 

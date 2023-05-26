@@ -8,7 +8,7 @@ public class MGCollision : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
-    public AudioClip se;
+   // public AudioClip se;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,7 @@ public class MGCollision : MonoBehaviour
         {
             lifeManager.GetDamage(1);
             //Debug.Log("1damage");
-            AudioSource.PlayClipAtPoint(se, transform.position);
+           // AudioSource.PlayClipAtPoint(se, transform.position);
         }
         else
         {
