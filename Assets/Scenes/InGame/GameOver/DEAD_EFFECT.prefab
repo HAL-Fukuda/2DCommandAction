@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU DIDE
+  m_Text: YOU DIED
 --- !u!95 &4950737775913378371
 Animator:
   serializedVersion: 5
