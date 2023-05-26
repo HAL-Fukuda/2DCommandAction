@@ -41,6 +41,7 @@ public partial class EnemyAttack : MonoBehaviour
     {
         CBrgd.AddForce(new Vector3(0.0f, -1.0f, 0.0f) * 1000.0f);  // 下方向に力をかける
         Invoke("CBobjDestroy", 0.5f);   // 数秒後にオブジェクトを消す
+        // 計3.5秒
     }
 
     public void ClubBeating()

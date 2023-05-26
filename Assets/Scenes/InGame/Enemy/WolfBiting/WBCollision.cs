@@ -20,6 +20,12 @@ public class WBCollision : MonoBehaviour
         // Box Collider 2D コンポーネントの参照を取得する
         boxCollider = this.GetComponent<BoxCollider2D>();
 
+        Invoke("objDestroy", 3.5f); // 保険で3.5秒後に消えてもらう
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     public void ToggleCollider(bool enabled)

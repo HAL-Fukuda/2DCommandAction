@@ -22,6 +22,13 @@ public class GrabbingAttackCollision : MonoBehaviour
 
 
         MovingPlayer = false;
+
+        Invoke("objDestroy", 2.0f);
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

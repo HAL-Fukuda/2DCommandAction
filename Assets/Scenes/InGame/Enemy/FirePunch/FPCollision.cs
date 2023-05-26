@@ -19,6 +19,13 @@ public class FPCollision : MonoBehaviour
 
         //Component‚ğæ“¾
         audioSource = GetComponent<AudioSource>();
+
+        Invoke("objDestroy", 3.5f); // •ÛŒ¯‚Å3.5•bŒã‚ÉÁ‚¦‚Ä‚à‚ç‚¤
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

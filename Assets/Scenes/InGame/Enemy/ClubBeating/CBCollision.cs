@@ -19,6 +19,13 @@ public class CBCollision : MonoBehaviour
 
         //Component‚ðŽæ“¾
         audioSource = GetComponent<AudioSource>();
+
+        Invoke("objDestroy", 4.0f);
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
