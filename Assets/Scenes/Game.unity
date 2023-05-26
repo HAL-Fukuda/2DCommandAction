@@ -934,6 +934,7 @@ MonoBehaviour:
   enemyObj2: {fileID: 0}
   enemyObj3: {fileID: 0}
   enemyNum: 0
+  enemySpawnPos: {fileID: 0}
   enemyName: 
 --- !u!1001 &1657352935
 PrefabInstance:

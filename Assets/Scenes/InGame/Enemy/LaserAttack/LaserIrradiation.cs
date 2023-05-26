@@ -6,6 +6,7 @@ using DG.Tweening;
 public partial class EnemyAttack : MonoBehaviour
 {
     [System.Serializable]
+
     public struct LaserIrradiationSettings
     {
         public GameObject LaserPoint;
