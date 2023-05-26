@@ -1272,6 +1272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceFloor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
 --- !u!1001 &1105371563
@@ -1636,6 +1641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
 --- !u!1 &1573626328
@@ -1771,6 +1781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DamageFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 399811372988152072, guid: ff80ce809b8024d49ad9e42a6604c343,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 7686875739007387297, guid: ff80ce809b8024d49ad9e42a6604c343,
         type: 3}
@@ -1916,6 +1931,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceFloor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
 --- !u!1001 &1657352935
@@ -2020,6 +2040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DamageFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 399811372988152072, guid: ff80ce809b8024d49ad9e42a6604c343,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 7686875739007387297, guid: ff80ce809b8024d49ad9e42a6604c343,
         type: 3}

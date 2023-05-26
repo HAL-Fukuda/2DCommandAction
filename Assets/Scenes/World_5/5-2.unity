@@ -479,6 +479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
 --- !u!1 &490663471 stripped
@@ -1699,6 +1704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceFloor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
 --- !u!1 &1799209941 stripped
@@ -1789,6 +1799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IceFloor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420935661714536151, guid: a96b5e076474fd240b6d97aa3b014e93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b5e076474fd240b6d97aa3b014e93, type: 3}
