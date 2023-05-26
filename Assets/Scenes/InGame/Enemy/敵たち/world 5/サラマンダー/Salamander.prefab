@@ -371,6 +371,14 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  sporeSettings:
+    spore1: {fileID: 0}
+    spore2: {fileID: 0}
+    spore3: {fileID: 0}
+    spawnInterval: 0
+    maxSpawnValue: 0
+    spawnValue: 0
+    timer: 0
   MagmaStickySettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -439,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: speed
-      value: 0.8
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
