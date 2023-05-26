@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadEffect: {fileID: 6549238823672329408}
+  fadetime: 1
 --- !u!1 &7648493567532780193
 GameObject:
   m_ObjectHideFlags: 0

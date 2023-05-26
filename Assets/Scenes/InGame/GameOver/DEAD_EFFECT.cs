@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DEAD_EFFECT : MonoBehaviour
 {
     public PlayableDirector deadEffect;
+    public float fadetime;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class DEAD_EFFECT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if ((Input.GetKeyDown(KeyCode.Return))||(Input.anyKey))
         {
             // エフェクトが終わってたらシーン遷移
             if(deadEffect.time >= deadEffect.duration)
@@ -26,7 +27,7 @@ public class DEAD_EFFECT : MonoBehaviour
                 int currentSceneIdx = SceneManager.GetActiveScene().buildIndex;
                 PlayerPrefs.SetInt("preSceneIdx", currentSceneIdx);
                 // GameOverシーンへ
-                SceneManager.LoadScene("GameOver");
+                FadeManager.Instance.LoadScene("GameOver", fadetime);
             }
             else
             {
