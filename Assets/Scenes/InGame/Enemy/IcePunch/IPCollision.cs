@@ -32,6 +32,14 @@ public class IPCollision : MonoBehaviour
 
         // LifeManagerコンポーネントを取得する
         enemyAttack = enemyManagerObject.GetComponent<EnemyAttack>();
+
+
+        Invoke("objDestroy", 3.5f); // 保険で3.5秒後に消えてもらう
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

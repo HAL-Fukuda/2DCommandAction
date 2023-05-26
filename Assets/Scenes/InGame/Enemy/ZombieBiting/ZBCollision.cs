@@ -20,6 +20,13 @@ public class ZBCollision : MonoBehaviour
         // Box Collider 2D コンポーネントの参照を取得する
         boxCollider = this.GetComponent<BoxCollider2D>();
 
+        Invoke("objDestroy", 4.0f); // 保険で4秒後に消えてもらう
+
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     public void ToggleCollider(bool enabled)
