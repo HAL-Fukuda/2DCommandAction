@@ -21,6 +21,8 @@ public class ScrollWorld : MonoBehaviour
 
     private GameObject[] worldObject = new GameObject[5];
 
+    public float fadetime;
+
     public void moveLeft()
     {
         if (NowL != -1)
@@ -103,11 +105,11 @@ public class ScrollWorld : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if ((Input.GetKeyUp(KeyCode.Escape)) || (Input.GetButtonUp("B")))
         {
             if (IsScroll == false)
             {
-                SceneManager.LoadScene("Title");
+                FadeManager.Instance.LoadScene("Title", fadetime);
             }
         }
     }

@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
-  fadetime: 0
+  fadetime: 1
 --- !u!114 &643117831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
-  fadetime: 0
+  fadetime: 1
 --- !u!114 &1107175692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
-  fadetime: 0
+  fadetime: 1
 --- !u!114 &1137579644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
-  fadetime: 0
+  fadetime: 1
 --- !u!114 &1592117697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +1866,7 @@ MonoBehaviour:
   world3: {fileID: 1107175688}
   world4: {fileID: 2010058426}
   world5: {fileID: 1592117693}
+  fadetime: 1
 --- !u!1 &1896253551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,7 +2204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
-  fadetime: 0
+  fadetime: 1
 --- !u!114 &2010058430
 MonoBehaviour:
   m_ObjectHideFlags: 0

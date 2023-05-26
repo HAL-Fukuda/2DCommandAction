@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class BackWorldSelect : MonoBehaviour
 {
+    public float fadetime;
     //public GameObject WorldCanvas;
     //public GameObject StageCanvas;
     //public GameObject FirstSelect;
@@ -25,9 +26,9 @@ public class BackWorldSelect : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if ((Input.GetKeyUp(KeyCode.Escape)) || (Input.GetButtonUp("B")))
         {
-            SceneManager.LoadScene("StageSelect");
+            FadeManager.Instance.LoadScene("StageSelect", fadetime);
         }
     }
 

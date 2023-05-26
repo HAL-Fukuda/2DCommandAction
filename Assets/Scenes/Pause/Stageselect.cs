@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Stageselect : MonoBehaviour
 {
+    public float fadetime;
+
     public void ButtonClicked()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StageSelect");
+        FadeManager.Instance.LoadScene("StageSelect", fadetime);
         Debug.Log("‚¨‚³‚ê‚Ü‚µ‚½");
     }
 }
