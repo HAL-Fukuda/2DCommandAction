@@ -19,6 +19,7 @@ TagManager:
   - EnemyAttack
   - Swamp
   - ForcusPoint
+  - snowball
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - SideVanishAttack
   - Platform
   - AbsorbEffect
-  - 
+  - SnowBall
   - 
   - 
   - 

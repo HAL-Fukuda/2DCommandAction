@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyObj1: {fileID: 3457319677352876851, guid: b6ca757e3b83a704aa74da3e2f164e34,
     type: 3}
-  enemyObj2: {fileID: 5870116295634957448, guid: f6463929854fcba469365869ceb316c8,
+  enemyObj2: {fileID: 5870116295634957448, guid: 64e0401cf3680df4a882dbf62d3a86d5,
     type: 3}
   enemyObj3: {fileID: 5791156539345578517, guid: ddc56eb7569a5db41a01698854e90bc9,
     type: 3}

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2885408179575380779}
   - component: {fileID: 174478189587352171}
   - component: {fileID: 1177711555521634405}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ATSnowBall
-  m_TagString: Untagged
+  m_TagString: snowball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
