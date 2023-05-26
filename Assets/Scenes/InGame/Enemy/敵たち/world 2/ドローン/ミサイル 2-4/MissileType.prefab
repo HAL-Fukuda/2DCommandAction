@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8856705461754135051}
   - component: {fileID: 9169267101376693257}
   - component: {fileID: -3758229872225376430}
-  - component: {fileID: -3754006548635442617}
+  - component: {fileID: -5615191416314712197}
   m_Layer: 0
-  m_Name: LongTimeMachineGunType
+  m_Name: MissileType
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5870116295634957448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935680216168669282}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39f92bf74d28827449aa1636f353dde7, type: 2}
+  - {fileID: 2100000, guid: 64f7713dc963efb47b2a6739030c9f53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,9 +121,10 @@ MonoBehaviour:
     life: 0
     timer: 0
   bombMissileAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
+    prefab: {fileID: 4676547163145465790, guid: 665e0b0f91f7e1f4cbbdbe9773c1c768,
+      type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 2
     spawnValue: 0
     timer: 0
   BoneThrowSettings:
@@ -138,8 +139,7 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   bulletsMachineGunAttackSettings:
-    focusPoint: {fileID: 6075148368909072132, guid: 54e90771984c6624cbbce55834cdb070,
-      type: 3}
+    focusPoint: {fileID: 0}
   ClawComingAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
@@ -208,14 +208,16 @@ MonoBehaviour:
     spawnValue: 0
     timer: 0
   homingAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    life: 0
+    prefab: {fileID: 4676547163145465790, guid: b4c9bc260dd3bdd4a82f7a3b4f94bb6e,
+      type: 3}
+    spawnInterval: 1
+    life: 5
     timer: 0
   HomingBombMissileAttackSettings:
-    prefab: {fileID: 0}
-    spawnInterval: 0
-    maxSpawnValue: 0
+    prefab: {fileID: 4676547163145465790, guid: b4c9bc260dd3bdd4a82f7a3b4f94bb6e,
+      type: 3}
+    spawnInterval: 1
+    maxSpawnValue: 1
     spawnValue: 0
     timer: 0
   HomingenergyAttackSettings:
@@ -392,7 +394,7 @@ MonoBehaviour:
     maxSpawnValue: 0
     spawnValue: 0
     timer: 0
---- !u!114 &-3754006548635442617
+--- !u!114 &-5615191416314712197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,7 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5870116295634957448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741e6356d21674b458aeac14b2d72e93, type: 3}
+  m_Script: {fileID: 11500000, guid: b5e3086d59cc2ce4599d8a1a0919ab1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
@@ -414,7 +416,7 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   enemySound: {fileID: 0}
-  enemyType: 18
+  enemyType: 11
   ColorDuration: 0.1
   shakeIntensity: 0.1
   shakeDuration: 0.2
@@ -447,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: speed
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}

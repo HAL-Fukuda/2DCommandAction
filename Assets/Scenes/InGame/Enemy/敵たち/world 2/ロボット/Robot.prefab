@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5870116295634957448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935680216168669282}
@@ -448,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: speed
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
@@ -522,8 +522,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015925676803836511, guid: 64f89c22634220d4299b6883a8f2475f,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f89c22634220d4299b6883a8f2475f, type: 3}
