@@ -102,7 +102,8 @@ MonoBehaviour:
   spawnSE: {fileID: 8300000, guid: 25b6fb093e2d6934fa98e243a88d828a, type: 3}
   explosionPrefab: {fileID: 2306163709613892010, guid: d0a698fb62548774690fe5a58abd47af,
     type: 3}
-  speed: 1.5
+  speed: 4
+  lifeTime: 4
 --- !u!61 &4676547163145465786
 BoxCollider2D:
   m_ObjectHideFlags: 0

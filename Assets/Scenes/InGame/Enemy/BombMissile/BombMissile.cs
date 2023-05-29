@@ -15,6 +15,7 @@ public class BombMissile : MonoBehaviour
     public GameObject explosionPrefab; // 爆発エフェクトのプレハブ
     private Tweener tweener;
     public float speed;
+    public float lifeTime = 4.0f; // 生存時間
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,24 @@ public class BombMissile : MonoBehaviour
                 Fire();
             }
         }
+
+        if(timer >= lifeTime)
+        {
+            // tweenを強制終了させる
+            tweener.Kill();
+
+            // 爆発エフェクト生成
+            Instantiate(explosionPrefab, this.transform);
+
+            // ミサイルを透明にする
+            spriteRenderer = this.GetComponent<SpriteRenderer>();
+            Color spriteColor = spriteRenderer.color;
+            spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
+            spriteRenderer.color = spriteColor;
+
+            // オブジェクトを削除する
+            Invoke("DestroyObject", 0.2f);
+        }
     }
 
     // ターゲットの方向を向く
@@ -69,16 +88,8 @@ public class BombMissile : MonoBehaviour
         AudioSource.PlayClipAtPoint(windSE, transform.position);
         // トランスフォームを取得
         Transform objectTransform = this.transform;
-        // ローカルX軸に向かって１秒で10f移動
-        tweener = this.transform.DOLocalMove(objectTransform.right * 10f, speed).SetRelative(true).OnComplete(() =>
-        {
-            // 移動後に1秒でMaterialのアルファを0にする
-            tweener = spriteRenderer.material.DOFade(0.0f, 1.0f).OnComplete(() =>
-            {
-                // 透明になったら削除
-                Destroy(this.gameObject);
-            });
-        });
+        // ローカルX軸に向かって移動
+        tweener = this.transform.DOLocalMove(objectTransform.right * 30f, speed).SetRelative(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
