@@ -14,7 +14,7 @@ public class LifeManager : MonoBehaviour
 
     bool invincibility = false;
 
-    public float invincibilityTimer = 1.0f;
+    public static float invincibilityTimer = 0.0f;
 
     public GameObject deadEffect; // 死亡エフェクト
     public GameObject deathSE;
@@ -55,11 +55,12 @@ public class LifeManager : MonoBehaviour
     // 引数の値の文だけHPが減る
     public void GetDamage(int value)
     {
-        playerManager.DamegeAnimation();
-
         if (invincibility == false)
         {
-            // 無敵をON
+            // 被ダメージアニメーション
+            playerManager.DamegeAnimation();
+
+            // １秒無敵にする
             InvincibilityWithTimer(1.0f);
 
             for (int i = 0; i < value; i++)
