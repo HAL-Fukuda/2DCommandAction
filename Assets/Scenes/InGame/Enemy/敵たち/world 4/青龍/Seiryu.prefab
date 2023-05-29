@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a5defedd12024a8b40796a0d81c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 5
   speed: 0
   patternCnt: 0
   attackMode: 0

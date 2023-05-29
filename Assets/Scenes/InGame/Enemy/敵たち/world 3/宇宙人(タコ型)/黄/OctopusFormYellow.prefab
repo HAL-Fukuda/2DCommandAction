@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11bc4025f831a6140aa55c19b839294e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 3
   speed: 0
   patternCnt: 0
   attackMode: 0
