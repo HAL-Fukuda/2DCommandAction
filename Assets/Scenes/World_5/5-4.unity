@@ -1955,11 +1955,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cd205b2cb4a194da266fbd5bac4973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyObj1: {fileID: 5870116295634957448, guid: 62af57930e9e60e4ebdc8156a77a6265,
+  enemyObj1: {fileID: 5870116295634957448, guid: 7d832884497dd644da049a9d1aeb1e19,
     type: 3}
   enemyObj2: {fileID: 5870116295634957448, guid: 89e62db5f9eb9484da127791d3c39f20,
     type: 3}
-  enemyObj3: {fileID: 5870116295634957448, guid: 7d832884497dd644da049a9d1aeb1e19,
+  enemyObj3: {fileID: 5870116295634957448, guid: 62af57930e9e60e4ebdc8156a77a6265,
     type: 3}
   enemyNum: 0
   enemySpawnPos: {fileID: 1841428015}
