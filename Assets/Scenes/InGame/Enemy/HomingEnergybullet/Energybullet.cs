@@ -99,7 +99,7 @@ public class Energybullet : MonoBehaviour
             oneceHit = true;
 
             // ‰½‚©‚É‚Ô‚Â‚©‚Á‚½‚ç”š”­
-            if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Command") || other.gameObject.CompareTag("Platform"))
+            if (other.gameObject.CompareTag("Player"))
             {
                 Explosion();
             }
