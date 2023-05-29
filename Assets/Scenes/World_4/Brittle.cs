@@ -12,11 +12,6 @@ public class Brittle : MonoBehaviour
         currentHealth = maxHealth; // 初期化
     }
 
-    //void Update()
-    //{
-    //    Debug.Log(currentHealth);
-    //}
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -30,16 +25,6 @@ public class Brittle : MonoBehaviour
                 {
                     Destroy(gameObject); // HPが0以下になったらオブジェクトを破壊する
                 }
-            }
-        }
-
-        if (collision.gameObject.CompareTag("EnemyAttack")) // EnemyAttackのプレハブに当たると
-        {
-            currentHealth--; // HPを減らす
-
-            if (currentHealth <= 0)
-            {
-                Destroy(gameObject); // HPが0以下になったらオブジェクトを破壊する
             }
         }
     }
