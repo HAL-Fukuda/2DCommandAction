@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class PlayerManager : MonoBehaviour
     public float moveSpeed;          //移動速度
     //public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
+    public float cooldownTime = 1.0f;
     //private bool isDoubleJump;
     private bool notJump = false;
     public bool isHaveCommand = false;
+    private bool isCooldown = false;
 
     public Transform attackPoint;
     public float attackRadius;
@@ -30,6 +33,7 @@ public class PlayerManager : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    private Button button;
 
     public float length = 0.6f;         //コマンドを判定する頭上のレイの長さ
     private int direction;              //向きを判定する
@@ -103,10 +107,17 @@ public class PlayerManager : MonoBehaviour
         // コマンドを持っている時は攻撃できない
         if (isHaveCommand == false)
         {
-            if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))
+            if (!isCooldown)
             {
-                Attack();
+                if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))
+                {
+                    Attack();
+
+                    isCooldown = true;
+                    Invoke("ResetCooldown", cooldownTime);
+                }
             }
+            
             ////ため中
             //if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//追加
             //{
@@ -154,6 +165,11 @@ public class PlayerManager : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(x));
         rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
 
+    }
+
+    private void ResetCooldown()
+    {
+        isCooldown = false;
     }
 
     //接地判定
@@ -249,15 +265,9 @@ public class PlayerManager : MonoBehaviour
     //攻撃の処理
     void Attack()
     {
-        //animator.SetBool("ChargingNow", false);
+        
         animator.SetTrigger("isAttack");
-        //Debug.Log("攻撃");
-        //エネミーに
-        //Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
-        //foreach (Collider2D hitEnemy in hitEnemys)
-        //{
-        //    hitEnemy.GetComponent<Enemy>().GetDamage();
-        //}
+        
         //コマンドに
         Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);
         foreach (Collider2D hitCommand in hitCommands)
