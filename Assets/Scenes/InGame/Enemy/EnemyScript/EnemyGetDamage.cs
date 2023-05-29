@@ -14,7 +14,7 @@ public partial class Enemy : MonoBehaviour
 
     [SerializeField][Header("フェードイン、アウト用")]
     float fadeInSpeed = 0.01f;    //フェードインスピード
-    float fadeOutSpeed = 0.001f;  //フェードアウトスピード
+    float fadeOutSpeed = 0.01f;  //フェードアウトスピード
     float red, green, blue, alfa;  //Materialの色
     public Renderer fadeMaterial;  //Materialにアクセスするための容器
     public bool isFadeOut = false;  //フェードアウト状態の管理
