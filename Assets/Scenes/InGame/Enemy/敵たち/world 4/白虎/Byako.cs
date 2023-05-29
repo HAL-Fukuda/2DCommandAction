@@ -58,7 +58,7 @@ public class Byako : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = 2;
-        //attackNum = Random.Range(0, 3);
+        //attackNum = 2;
+        attackNum = Random.Range(0, 3);
     }
 }

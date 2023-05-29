@@ -58,7 +58,7 @@ public class BossRobot : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = 2;
-        //attackNum = Random.Range(0, 2);
+        //attackNum = 2;
+        attackNum = Random.Range(0, 2);
     }
 }
