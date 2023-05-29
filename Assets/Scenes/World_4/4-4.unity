@@ -1771,7 +1771,8 @@ MonoBehaviour:
   player: {fileID: 1799209941}
   stageClearEffectPrefab: {fileID: 8874100001024821880, guid: e16d56c8a1baccb4cb03b18e9e488718,
     type: 3}
-  clearSEPrefab: {fileID: 0}
+  clearSEPrefab: {fileID: 6773945717952473261, guid: 7a8bdcf16c9dba6479989c6a39c7051b,
+    type: 3}
   battleNum: 3
   deathFlag: 0
 --- !u!114 &1573626335
@@ -1809,7 +1810,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
