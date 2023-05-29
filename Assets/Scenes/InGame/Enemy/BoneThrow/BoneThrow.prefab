@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8541536019415611631}
   - component: {fileID: 7778720487498400661}
   - component: {fileID: -6308944404700451786}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: BoneThrow
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}

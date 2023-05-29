@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8047116280825905726}
   - component: {fileID: 9004891529224430272}
   - component: {fileID: 7558134776397915191}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: IceFloor
   m_TagString: Platform
   m_Icon: {fileID: 0}
