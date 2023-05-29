@@ -124,6 +124,7 @@ public partial class GameMgr : MonoBehaviour
         {
             // 選択されているコマンドを削除
             Destroy(command);
+            return;
         }
 
         if (battleState == eBattleState.COMMAND_SELECT && // コマンドセレクトの時
