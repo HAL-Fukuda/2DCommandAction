@@ -251,8 +251,8 @@ MonoBehaviour:
   longlaserirradiationSettings:
     LaserPoint: {fileID: 8291704685896821333, guid: 245930ea444f74e40becebbafff9e90b,
       type: 3}
-    spawnInterval: 5
-    maxSpawnValue: 5
+    spawnInterval: 1
+    maxSpawnValue: 1
     spawnValue: 0
     timer: 0
   meteorAttackSettings:
