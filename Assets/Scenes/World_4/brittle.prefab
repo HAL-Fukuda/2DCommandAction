@@ -109,3 +109,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 0
+  newMaterial: {fileID: 2100000, guid: 26cb5171bef53694da81358bc71c5b1c, type: 2}

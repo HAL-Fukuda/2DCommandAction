@@ -6,10 +6,13 @@ public class Brittle : MonoBehaviour
 {
     public int maxHealth = 3; // 最大HP
     public int currentHealth; // 現在のHP
+    Renderer objectRenderer;
+    public Material newMaterial;
 
     private void Start()
     {
         currentHealth = maxHealth; // 初期化
+        objectRenderer = GetComponent<Renderer>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +27,10 @@ public class Brittle : MonoBehaviour
                 if (currentHealth <= 0)
                 {
                     Destroy(gameObject); // HPが0以下になったらオブジェクトを破壊する
+                }
+                else if (currentHealth == 1)
+                {
+                    objectRenderer.material = newMaterial;
                 }
             }
         }
