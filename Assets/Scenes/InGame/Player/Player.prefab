@@ -272,6 +272,7 @@ MonoBehaviour:
   HitDamageSE: {fileID: 8300000, guid: 8a2cb8d099183bc4dbed18789d671cec, type: 3}
   moveSpeed: 6
   upForce: 350
+  cooldownTime: 0.5
   isHaveCommand: 0
   attackPoint: {fileID: 154224578952292945}
   attackRadius: 0.27
