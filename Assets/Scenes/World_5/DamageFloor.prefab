@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4239070660824556496}
   - component: {fileID: 5870606764244118161}
   - component: {fileID: 8020439461689306425}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DamageFloor
   m_TagString: Platform
   m_Icon: {fileID: 0}
