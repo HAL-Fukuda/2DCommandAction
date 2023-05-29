@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     public float moveSpeed;          //移動速度
     //public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
-    public float cooldownTime = 1.0f;
+    public float cooldownTime;
     //private bool isDoubleJump;
     private bool notJump = false;
     public bool isHaveCommand = false;
