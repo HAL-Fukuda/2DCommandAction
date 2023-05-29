@@ -10,7 +10,7 @@ public class Swamp : MonoBehaviour
         {
             PlayerManager playerManager = other.GetComponent<PlayerManager>();
             playerManager.moveSpeed /= 2f;
-            playerManager.upForce /= 2f;
+            playerManager.upForce /= 1.5f;
         }
     }
 
@@ -20,7 +20,7 @@ public class Swamp : MonoBehaviour
         {
             PlayerManager playerManager = other.GetComponent<PlayerManager>();
             playerManager.moveSpeed *= 2f;
-            playerManager.upForce *= 2f;
+            playerManager.upForce *= 1.5f;
         }
     }
 }

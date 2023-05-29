@@ -265,7 +265,7 @@ MonoBehaviour:
   nailAttackSettings:
     prefab: {fileID: 8844032880036574106, guid: 5a4317de461c0014cb2b9bb28ea678f2,
       type: 3}
-    spawnInterval: 5
+    spawnInterval: 2
     life: 10
     timer: 0
   pofflamesSettings:

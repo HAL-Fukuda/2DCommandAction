@@ -9,8 +9,11 @@ public class NailCollider : MonoBehaviour
     private Collider2D collider;
     private Color objectColor;
     private bool isTransparent = true;
-    public float destroyTime;
+    public float fadeTime = 1f; // 透明度が1になるまでの時間（秒）
     public AudioClip se;
+
+    private float currentAlpha = 0f;
+    private float fadeSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,9 @@ public class NailCollider : MonoBehaviour
         objectColor = objectRenderer.material.color;
         objectColor.a = 0f;
         objectRenderer.material.color = objectColor;
-        Destroy(gameObject, destroyTime);
+
+        fadeSpeed = 1f / fadeTime; // フェード速度を計算
+        Destroy(gameObject, fadeTime);
     }
 
     // Update is called once per frame
@@ -34,9 +39,10 @@ public class NailCollider : MonoBehaviour
     {
         if (isTransparent)
         {
-            objectColor.a += Time.deltaTime;
+            currentAlpha += fadeSpeed * Time.deltaTime;
+            objectColor.a = Mathf.Lerp(0f, 1f, currentAlpha);
             objectRenderer.material.color = objectColor;
-            if (objectColor.a >= 1f)
+            if (currentAlpha >= 1f)
             {
                 isTransparent = false;
                 collider.isTrigger = true;
