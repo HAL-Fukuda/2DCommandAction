@@ -9,15 +9,6 @@ public class AttackCollider : MonoBehaviour
     public int damage = 1; // ダメージ数
     private bool oneceFlag = false;
 
-    void Start()
-    {
-        // LifeManagerスクリプトがアタッチされているオブジェクトを取得する
-        GameObject lifeManagerObject = GameObject.Find("Life");
-
-        // LifeManagerコンポーネントを取得する
-        lifeManager = lifeManagerObject.GetComponent<LifeManager>();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         // プレイヤーに当たったら
@@ -33,6 +24,12 @@ public class AttackCollider : MonoBehaviour
 
                 oneceFlag = true;
             }
+
+            // LifeManagerスクリプトがアタッチされているオブジェクトを取得する
+            GameObject lifeManagerObject = GameObject.Find("Life");
+
+            // LifeManagerコンポーネントを取得する
+            lifeManager = lifeManagerObject.GetComponent<LifeManager>();
 
             // プレイヤーにダメージを与える
             lifeManager.GetDamage(damage);

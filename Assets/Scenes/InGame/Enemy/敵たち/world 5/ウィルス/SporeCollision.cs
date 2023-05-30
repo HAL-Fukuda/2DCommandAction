@@ -29,12 +29,6 @@ public class SporeCollision : MonoBehaviour
         timer = 0.0f;
 
         spriteRenderer = this.GetComponent<SpriteRenderer>();
-
-        // LifeManagerスクリプトがアタッチされているオブジェクトを取得する
-        GameObject lifeManagerObject = GameObject.Find("Life");
-
-        // LifeManagerコンポーネントを取得する
-        lifeManager = lifeManagerObject.GetComponent<LifeManager>();
     }
 
     // Update is called once per frame
@@ -99,6 +93,13 @@ public class SporeCollision : MonoBehaviour
         {
             if (oneceHit == false)
             {
+                // LifeManagerスクリプトがアタッチされているオブジェクトを取得する
+                GameObject lifeManagerObject = GameObject.Find("Life");
+
+                // LifeManagerコンポーネントを取得する
+                lifeManager = lifeManagerObject.GetComponent<LifeManager>();
+
+                // １ダメージ
                 lifeManager.GetDamage(1);
                 oneceHit = true;
             }
