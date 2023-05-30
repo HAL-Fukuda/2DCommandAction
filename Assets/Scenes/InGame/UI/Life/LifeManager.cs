@@ -99,4 +99,24 @@ public class LifeManager : MonoBehaviour
             }
         }
     }
+
+    public void Kill()
+    {
+        for (int i = 0; i < 99; i++)
+        {
+            if (lifePoint > 0)
+            {
+                lifeArray[lifePoint - 1].SetActive(false);
+                lifePoint--;
+            }
+            if (lifePoint <= 0)
+            {
+                // 死亡エフェクト生成
+                Instantiate(deadEffect);
+                Instantiate(deathSE);
+                playerManager.DieAnimation();
+                break;
+            }
+        }
+    }
 }
