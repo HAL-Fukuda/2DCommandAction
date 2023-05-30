@@ -7,6 +7,7 @@ public class KamaitachiPrefab : MonoBehaviour
     private LifeManager lifeManager;  //LifeManagerコンポーネント
     private GameObject lifeObj;  //LifeManagerスクリプトがあるオブジェクト
     private AudioSource audio;  //
+    private float timer;  //
     public AudioClip sound1;  //
 
     void Start()
@@ -33,6 +34,10 @@ public class KamaitachiPrefab : MonoBehaviour
             Destroy(this.gameObject);
         }
         if (other.gameObject.CompareTag("Platform"))
+        {
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("Swamp"))
         {
             Destroy(this.gameObject);
         }
