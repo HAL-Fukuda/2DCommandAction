@@ -35,7 +35,7 @@ public class HumanFormSilver : Enemy
 
     public override void Attack()
     {
-        attackScript.LongLaserIrradiation();
+        attackScript.LaserIrradiation();
         initialized = false;
         //base.EnemySoundPlay();
     }
