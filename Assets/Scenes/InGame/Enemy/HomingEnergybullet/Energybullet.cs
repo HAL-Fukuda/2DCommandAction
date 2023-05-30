@@ -15,7 +15,7 @@ public class Energybullet : MonoBehaviour
     private float timer;
     private float MaxAngle = 15;
     private SpriteRenderer spriteRenderer;
-    private bool oneceHit; // ‚P“x‚µ‚©“–‚½‚ç‚È‚¢‚æ‚¤‚É
+    private bool oneceHit = false; // ‚P“x‚µ‚©“–‚½‚ç‚È‚¢‚æ‚¤‚É
     private Tweener tweener;
 
     // Start is called before the first frame update
@@ -96,11 +96,10 @@ public class Energybullet : MonoBehaviour
     {
         if (oneceHit == false)
         {
-            oneceHit = true;
-
             // ‰½‚©‚É‚Ô‚Â‚©‚Á‚½‚ç”š”­
             if (other.gameObject.CompareTag("Player"))
             {
+                oneceHit = true;
                 Explosion();
             }
         }
