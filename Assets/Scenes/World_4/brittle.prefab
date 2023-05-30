@@ -109,4 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 0
-  newMaterial: {fileID: 2100000, guid: 26cb5171bef53694da81358bc71c5b1c, type: 2}
+  recoveryTime: 7
+  materialAtHealth1: {fileID: 2100000, guid: 26cb5171bef53694da81358bc71c5b1c, type: 2}
+  materialAtHealth2: {fileID: 2100000, guid: d60ef68672d15124e93bc34e3b24c3d7, type: 2}
+  materialAtHealth3: {fileID: 2100000, guid: b081bb035814c4d429474b14a3f562cc, type: 2}

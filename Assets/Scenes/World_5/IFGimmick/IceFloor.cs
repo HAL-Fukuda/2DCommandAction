@@ -65,14 +65,14 @@ public class IceFloor : MonoBehaviour
         playerpos.y += 0.9f;
 
         // PlayerManagerのisMoveを無効にする
-        playerManager.isMove = false;
+        playerManager.moveSpeed = 0.0f;
 
         GameObject objectToSpawn = Instantiate(objectToSpawnPrefab, playerpos, Quaternion.identity);
 
         yield return new WaitForSeconds(seconds);
 
         // 指定時間待機後、PlayerManagerのisMoveを有効にする
-        playerManager.isMove = true;
+        playerManager.moveSpeed = 6.0f;
 
         Destroy(objectToSpawn);
         timer = 0f;
