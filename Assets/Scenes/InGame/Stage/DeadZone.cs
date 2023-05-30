@@ -15,7 +15,7 @@ public class DeadZone : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             lifeObject = GameObject.Find("Life");
-            lifeObject.GetComponent<LifeManager>().GetDamage(99);
+            lifeObject.GetComponent<LifeManager>().Kill();
         }
         
         if(collision.gameObject.tag == "Command")
