@@ -25,10 +25,14 @@ public partial class Enemy : MonoBehaviour
     public bool hitFlag = false;  //ヒットエフェクト用
     [SerializeField] private GameObject hitEffectPrefab;  //ヒットエフェクト用
     [SerializeField] private GameObject destroyEffectPrefab;  //死亡時エフェクト用
-    [SerializeField] private GameObject rangeAPrefab;  //エフェクト生成範囲A
-    [SerializeField] private GameObject rangeBPrefab;  //エフェクト生成範囲B
+    [SerializeField] private GameObject rangeAPrefab;  //敵死亡時エフェクト生成範囲A
+    [SerializeField] private GameObject rangeBPrefab;  //敵死亡時エフェクト生成範囲B
     public float hitTime;  //ヒットエフェクトを生成する時間
-    private float spawnTime;  //エフェクト用
+    private float spawnTime;  //敵死亡時エフェクト用
+    private GameObject effectSpawnPos;  //エフェクト生成の基準の位置
+    private GameObject rangeA;  //RangeAの位置
+    private GameObject rangeB;  //RangeBの位置
+
     
     // 初期化処理。必ずStart()で呼び出すこと。
     public void GetDamageInitialize()
@@ -42,8 +46,19 @@ public partial class Enemy : MonoBehaviour
         green = fadeMaterial.material.color.g;
         blue = fadeMaterial.material.color.b;
         alfa = fadeMaterial.material.color.a;
+
+        //エフェクトを生成する位置を取得
+        effectSpawnPos = GameObject.Find("EnemySpawnPoint");
+
+        //敵死亡時エフェクト生成範囲を生成
+        EffectRangeSpawn();
+
+        //敵死亡時エフェクト生成範囲を取得
+        rangeA = GameObject.Find("DestroyEffectRangeA(Clone)");
+        rangeB = GameObject.Find("DestroyEffectRangeB(Clone)");
     }
 
+    //普通のコマンドのダメージ
     public void GetDamage()
     {
         GetDamageInitialize();
@@ -75,6 +90,7 @@ public partial class Enemy : MonoBehaviour
         StartCoroutine(ShakeCoroutine());
     }
 
+    //デカコマンドのダメージ
     public void GetBigDamage()
     {
         GetDamageInitialize();
@@ -145,6 +161,7 @@ public partial class Enemy : MonoBehaviour
         transform.position = originalPosition;
     }
 
+    //フェードイン
     public void FadeIn()
     {
         fadeMaterial.enabled = true;
@@ -157,6 +174,7 @@ public partial class Enemy : MonoBehaviour
         }
     }
 
+    //フェードアウト
     public void FadeOut()
     {
         alfa -= fadeOutSpeed;
@@ -173,30 +191,51 @@ public partial class Enemy : MonoBehaviour
         }
     }
 
+    //フェードイン、アウト用α値セット
     public void SetAlfa()
     {
         fadeMaterial.material.color = new Color(red, green, blue, alfa);
     }
 
+    //エフェクト生成範囲生成
+    public void EffectRangeSpawn()
+    {
+        //RangeA
+        float Ax = effectSpawnPos.transform.position.x - 1;
+        float Ay = effectSpawnPos.transform.position.y + 1;
+        float Az = effectSpawnPos.transform.position.z;
+
+        Instantiate(rangeAPrefab, new Vector3(Ax, Ay, Az), rangeAPrefab.transform.rotation);
+
+        //RangeB
+        float Bx = effectSpawnPos.transform.position.x + 1;
+        float By = effectSpawnPos.transform.position.y - 1;
+        float Bz = effectSpawnPos.transform.position.z;
+
+        Instantiate(rangeBPrefab, new Vector3(Bx, By, Bz), rangeBPrefab.transform.rotation);
+    }
+
+    //敵死亡時エフェクト生成
     public void DestroyEffectSpawn()
     {
         spawnTime = spawnTime + Time.deltaTime;
 
         if (spawnTime > 0.1f)
         {
-            float x = Random.Range(rangeAPrefab.transform.position.x, rangeBPrefab.transform.position.x);
-            float y = Random.Range(rangeAPrefab.transform.position.y, rangeBPrefab.transform.position.y);
-            float z = Random.Range(rangeAPrefab.transform.position.z, rangeBPrefab.transform.position.z);
+            float x = Random.Range(rangeA.transform.position.x, rangeB.transform.position.x);
+            float y = Random.Range(rangeA.transform.position.y, rangeB.transform.position.y);
+            float z = Random.Range(rangeA.transform.position.z, rangeB.transform.position.z);
 
             Instantiate(destroyEffectPrefab, new Vector3(x, y, z), destroyEffectPrefab.transform.rotation);
             spawnTime = 0f;
         }
     }
 
+    //ヒットエフェクト生成
     public void GetDamegeEffectSpawn()
     {
         spawnTime = spawnTime + Time.deltaTime;
-        //Debug.Log("Hit");
+        
         if (spawnTime > 0.1f)
         {
             float x = Random.Range(rangeAPrefab.transform.position.x, rangeBPrefab.transform.position.x);
