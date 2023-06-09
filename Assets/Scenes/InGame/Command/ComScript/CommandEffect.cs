@@ -16,8 +16,8 @@ public partial class Command : MonoBehaviour
     private GameObject _hitSEInstance;
 
     Renderer objectRenderer;
-    private int currentHealth;  //
-    public Material materialCom;  //
+    private int currentHealth;  //現在のHp
+    public Material materialCom;  //変更するマテリアルPrefab
 
     public int commandHP;  //コマンドのHP
 
@@ -36,24 +36,6 @@ public partial class Command : MonoBehaviour
     {
        
     }
-
-    ////Playerタグが付いたオブジェクトが一定回数当たったらコマンドを消す
-    //private void CommandEffectOnCollisionEnter(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        Debug.Log("HIT");
-    //        commandHP -= 1;  //コマンドのHP減少
-    //        Debug.Log(commandHP);
-
-    //        if (commandHP <= 0)
-    //        {
-    //            EffectPlay();  //Effect再生
-    //            Destroy(gameObject);  //コマンドを削除
-    //        }
-
-    //    }
-    //}
 
     //コマンドにHPを持たせる
     public void CommandHit()  
@@ -81,7 +63,6 @@ public partial class Command : MonoBehaviour
             BoxCollider2D boxCollider = this.GetComponent<BoxCollider2D>();
             boxCollider.enabled = false;
 
-            //Destroy(this.gameObject); // コマンドを削除
         }
     }
 
@@ -121,7 +102,7 @@ public partial class Command : MonoBehaviour
         _hitSEInstance.transform.position = this.transform.position;
     }
     
-    //
+    //コマンドのマテリアルを変更する
     void ChangeMaterial()
     {
         currentHealth = commandHP;
@@ -130,6 +111,5 @@ public partial class Command : MonoBehaviour
         {
             objectRenderer.material = materialCom;
         }
-        Debug.Log(currentHealth);
     }
 }
