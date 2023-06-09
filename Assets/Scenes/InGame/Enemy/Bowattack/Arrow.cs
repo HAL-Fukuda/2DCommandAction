@@ -85,7 +85,7 @@ public class Arrow : MonoBehaviour
         this.transform.DOMove(goalPosition, 1.0f).OnComplete(() =>
         {
             // ˆÚ“®Œã‚É1•b‚ÅMaterial‚ÌƒAƒ‹ƒtƒ@‚ğ0‚É‚·‚é
-            spriteRenderer.material.DOFade(0.0f, 1.0f).OnComplete(() =>
+            spriteRenderer.material.DOFade(0.0f, 0.0f).OnComplete(() =>
             {
                 // “§–¾‚É‚È‚Á‚½‚çíœ
                 Destroy(this.gameObject);
