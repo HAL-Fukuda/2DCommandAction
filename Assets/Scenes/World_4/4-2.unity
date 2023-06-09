@@ -517,6 +517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: swamp (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 81731185764665709, guid: 7cb0727dd8026a14e9409d67fdac7682,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000226151297866681, guid: 7cb0727dd8026a14e9409d67fdac7682,
         type: 3}
       propertyPath: m_RootOrder
@@ -1023,6 +1028,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: swamp (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 81731185764665709, guid: 7cb0727dd8026a14e9409d67fdac7682,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4000226151297866681, guid: 7cb0727dd8026a14e9409d67fdac7682,
         type: 3}
       propertyPath: m_RootOrder
@@ -1439,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: swamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 81731185764665709, guid: 7cb0727dd8026a14e9409d67fdac7682,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000226151297866681, guid: 7cb0727dd8026a14e9409d67fdac7682,
         type: 3}
@@ -2170,6 +2185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: swamp (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 81731185764665709, guid: 7cb0727dd8026a14e9409d67fdac7682,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4000226151297866681, guid: 7cb0727dd8026a14e9409d67fdac7682,
         type: 3}

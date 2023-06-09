@@ -33,11 +33,7 @@ public class KamaitachiPrefab : MonoBehaviour
             lifeManager.GetDamage(1);
             Destroy(this.gameObject);
         }
-        if (other.gameObject.CompareTag("Platform"))
-        {
-            Destroy(this.gameObject);
-        }
-        if (other.gameObject.CompareTag("Swamp"))
+        if (other.gameObject.CompareTag("DeadZone"))
         {
             Destroy(this.gameObject);
         }

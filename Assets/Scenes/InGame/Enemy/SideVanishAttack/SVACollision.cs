@@ -26,6 +26,6 @@ public class SVACollision : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+
     }
 }
