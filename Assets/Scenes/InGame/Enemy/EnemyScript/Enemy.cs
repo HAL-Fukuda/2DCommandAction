@@ -67,6 +67,11 @@ public partial class Enemy : MonoBehaviour
         //patternCnt = 1;
     }
 
+    public int SendEnemyHp()
+    {
+        return hp;
+    }
+
     public virtual void Attack()
     {
         attackScript.MeteorAttack();
