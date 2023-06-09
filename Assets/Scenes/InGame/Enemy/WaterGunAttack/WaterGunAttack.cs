@@ -18,9 +18,12 @@ public partial class EnemyAttack : MonoBehaviour
             // ランダムな方向を決定する
             bool moveRight = Random.value < 0.5f; // 50%の確率で右方向に移動する
 
+            // プレイヤーのy座標を取得する
+            float playerY = GameObject.FindGameObjectWithTag("Player").transform.position.y + 0.5f;
+
             // 画面左端または右端にオブジェクトを生成する
             float spawnX = moveRight ? -12f : 12f;
-            Vector3 spawnPos = new Vector3(spawnX, -1.76f, 0f);
+            Vector3 spawnPos = new Vector3(spawnX, playerY, 0f);
 
             // 移動量と目標位置を設定する
             float moveAmount = moveRight ? 40f : -40f; // 右から生成された場合は-40f、左から生成された場合は40f
