@@ -50,7 +50,7 @@ public class Feather : MonoBehaviour
         }
 
         // 生成後3.5秒経ったら発射
-        if (timer >= 3.5f)
+        if (timer >= 2.5f)
         {
             if(isFired == false) // 発射したかどうか
             {
@@ -85,7 +85,7 @@ public class Feather : MonoBehaviour
         this.transform.DOMove(goalPosition, 1.0f).OnComplete(() =>
         {
             // 移動後に1秒でMaterialのアルファを0にする
-            spriteRenderer.material.DOFade(0.0f, 1.0f).OnComplete(() =>
+            spriteRenderer.material.DOFade(0.0f, 0.5f).OnComplete(() =>
             {
                 // 透明になったら削除
                 Destroy(this.gameObject);
