@@ -14,8 +14,18 @@ public partial class Command : MonoBehaviour
     private GameObject _soundInstance;
     private ParticleSystem _hitEffectInstance;
     private GameObject _hitSEInstance;
-    
+
+    Renderer objectRenderer;
+    private int currentHealth;  //
+    public Material materialCom;  //
+
     public int commandHP;  //コマンドのHP
+
+    void Start()
+    {
+        currentHealth = commandHP;
+        objectRenderer = GetComponent<Renderer>();
+    }
    
     void CommandEffectInitialize()
     {
@@ -51,6 +61,7 @@ public partial class Command : MonoBehaviour
         commandHP -= 1;  //コマンドのHP減少
 
         HitEffectPlay();
+        ChangeMaterial();
         HitSEPlay();
 
         if (commandHP <= 0)
@@ -110,4 +121,15 @@ public partial class Command : MonoBehaviour
         _hitSEInstance.transform.position = this.transform.position;
     }
     
+    //
+    void ChangeMaterial()
+    {
+        currentHealth = commandHP;
+
+        if (currentHealth == 1)
+        {
+            objectRenderer.material = materialCom;
+        }
+        Debug.Log(currentHealth);
+    }
 }
