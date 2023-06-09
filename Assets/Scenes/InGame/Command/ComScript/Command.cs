@@ -16,10 +16,9 @@ public partial class Command : MonoBehaviour
     }
 
     public eCommandType commandType;
-
+    
     public bool isActive = false; // Às’†‚©‚Ç‚¤‚©
-
-    bool oneceFlag = false;
+    private bool oneceFlag = false;
 
 
     // ŠÖ”’è‹`-------------------------
