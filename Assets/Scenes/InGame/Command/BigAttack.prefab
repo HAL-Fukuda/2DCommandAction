@@ -149,10 +149,10 @@ MonoBehaviour:
     type: 3}
   SlashingSE: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
-  attackEffectPrefab: {fileID: 8855256153686624580, guid: 37bdc08a414bd6c4cb8607bc4a1b9555,
+  attackEffectPrefab: {fileID: 8855256153686624580, guid: dcbe264023fdb4d4d97295672ce34b58,
     type: 3}
   attackSEPrefab: {fileID: 0}
-  commandType: 0
+  commandType: 1
   isActive: 0
   EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,
     type: 3}
@@ -163,7 +163,7 @@ MonoBehaviour:
   hitSEPrefab: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
   materialCom: {fileID: 2100000, guid: b48c6657a81bca94e8c2ef3844eab2ac, type: 2}
-  commandHP: 2
+  commandHP: 3
   shield: {fileID: 6715556842858644572, guid: 923fd89968c90ae44a874601c63dfead, type: 3}
   defenceMessage: "\u30B7\u30FC\u30EB\u30C9\u3092\u5C55\u958B\uFF01"
   healEffect: {fileID: 1901016804877901321, guid: 1c5b78cb3b91bc542a4365b7438156ee,
