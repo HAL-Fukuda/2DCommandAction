@@ -34,6 +34,8 @@ public class Spider : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
+        string text = "‚­‚à‚Ì…‚±‚¤‚°‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.SpiderNeedle();
         initialized = false;
         //base.EnemySoundPlay();

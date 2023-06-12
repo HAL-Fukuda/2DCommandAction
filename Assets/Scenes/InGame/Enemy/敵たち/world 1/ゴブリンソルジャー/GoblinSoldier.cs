@@ -33,6 +33,8 @@ public class GoblinSoldier : Enemy
 
     public override void Attack()
     {
+        string text = "ƒSƒuƒŠƒ“‚ÌØ‚è•t‚¯‚±‚¤‚°‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.SlashingSword();
         initialized = false;
         //base.EnemySoundPlay();

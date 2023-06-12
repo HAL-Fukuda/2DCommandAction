@@ -33,6 +33,8 @@ public class NormalGoblin : Enemy
 
     public override void Attack()
     {
+        string text = "ƒSƒuƒŠƒ“‚Ì‚±‚ñ–_‚±‚¤‚°‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.ClubBeating();
         initialized = false;
         //base.EnemySoundPlay();

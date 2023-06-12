@@ -40,15 +40,23 @@ public class Dragon : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "ドラゴンのメテオ！";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.MeteorAttack();
                 break;
             case 1:
+                text = "ドラゴンの覇気！";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.InevitableAttack();
                 break;
             case 2:
+                text = "ドラゴンのひっかき！";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.NailAttack();
                 break;
         }
