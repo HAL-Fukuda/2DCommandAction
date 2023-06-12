@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ActionBarControl : MonoBehaviour
 {
     public Slider slider;
+    public Image barImage; // バーの画像
     public float speed = 0.1f; // 増加スピード
     private bool isReady = false; // 100%かどうか
 
@@ -52,7 +53,16 @@ public class ActionBarControl : MonoBehaviour
         // アクションバーが100％かどうか
         if (slider.value >= 1.0f)
         {
-            isReady = true;
+            if(isReady == false)
+            {
+                isReady = true;
+
+                // 100％になったタイミングでエフェクト処理
+                if (isReady)
+                {
+                    ChangeColor(Color.red); // バーを赤色にする
+                }
+            }
         }
 
         // 100%じゃなければ値を増加させる
@@ -66,7 +76,8 @@ public class ActionBarControl : MonoBehaviour
     public void SetEmpty()
     {
         isReady = false;
-        slider.value = 0.0f;
+        slider.value = 0.0f; // 0％にする
+        ChangeColor(Color.yellow); // バーを黄色にする
     }
 
     // isReadyの値を取得
@@ -75,4 +86,9 @@ public class ActionBarControl : MonoBehaviour
         return isReady;
     }
 
+    // ゲージの色を変える
+    public void ChangeColor(Color color)
+    {
+        barImage.color = color;
+    }
 }
