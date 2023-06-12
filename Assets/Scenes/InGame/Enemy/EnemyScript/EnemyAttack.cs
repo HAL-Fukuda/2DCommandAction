@@ -39,9 +39,7 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
 
     void EnemyAttackUpdate()
     {
-        //MeteorAttack();
         SidewaysAttack();
-        //EnemysAttack();  //最終これだけにする
     }
 
     public bool IsReady()
@@ -131,22 +129,4 @@ public partial class EnemyAttack : MonoBehaviour //partial C++のクラス
             //InevitableAttack();
         }
     }
-
-    //public Enemy.eEnemyType EnemysAttack(Enemy.eEnemyType enemyType)
-    //{
-    //    //Debug.Log("EnemysAttack");
-    //    //GameObject attackEnemy;  //攻撃している敵
-
-    //    //attackEnemy = GameObject.FindWithTag("Enemy");
-    //    //string name = attackEnemy.EnemyType;
-
-    //    //Debug.Log(enemyType);
-
-    //    switch (enemyType)
-    //    {
-    //        case Enemy.eEnemyType.Demon:
-    //            //Demonの攻撃処理
-    //            break;
-    //    }
-    //}
 }

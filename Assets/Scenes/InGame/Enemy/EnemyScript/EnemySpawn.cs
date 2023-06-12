@@ -9,8 +9,6 @@ public partial class EnemyMgr : MonoBehaviour
     [SerializeField] private GameObject enemyObj2;
     [SerializeField] private GameObject enemyObj3;
 
-    public int enemyNum;  //何番目の敵を生成するかを指定する変数
-
     private GameObject enemy; // 生成するエネミー
     public Transform enemySpawnPos; //Enemyを生成する位置
 
