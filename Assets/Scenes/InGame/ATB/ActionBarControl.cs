@@ -17,6 +17,8 @@ public class ActionBarControl : MonoBehaviour
     private RectTransform uiElement;
     private RectTransform canvasRectTransform;
 
+    public AudioClip FullSE;
+
     void Start()
     {
         if (isFollowTarget)
@@ -60,7 +62,8 @@ public class ActionBarControl : MonoBehaviour
                 // 100％になったタイミングでエフェクト処理
                 if (isReady)
                 {
-                    ChangeColor(Color.red); // バーを赤色にする
+                    AudioSource.PlayClipAtPoint(FullSE,new Vector3(0,0,0)); // SEを再生
+                    ChangeColor(Color.cyan); // アクションバーの色を変更
                 }
             }
         }
