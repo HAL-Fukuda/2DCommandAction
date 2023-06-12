@@ -34,6 +34,8 @@ public class Slime: Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
+        string text = "ƒXƒ‰ƒCƒ€‚Ì‚Ë‚Î‚Ë‚Î‚±‚¤‚°‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.BindAttack();
         initialized = false;
         //base.EnemySoundPlay();

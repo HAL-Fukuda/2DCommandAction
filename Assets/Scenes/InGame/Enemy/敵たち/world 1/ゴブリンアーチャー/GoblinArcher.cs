@@ -36,6 +36,8 @@ public class GoblinArcher : Enemy
 
     public override void Attack()
     {
+        string text = "ƒSƒuƒŠƒ“‚Ì‹|–î‚±‚¤‚°‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.BowAttack();
         initialized = false;
         //base.EnemySoundPlay();

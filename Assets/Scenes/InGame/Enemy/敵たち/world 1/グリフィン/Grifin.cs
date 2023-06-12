@@ -42,12 +42,18 @@ public class Grifin : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "グリフィンのはねとばし！";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FeatherAttack();
                 break;
             case 1:
+                text = "グリフィンのわしづかみ！";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.GrabbingAttack();
                 break;
         }

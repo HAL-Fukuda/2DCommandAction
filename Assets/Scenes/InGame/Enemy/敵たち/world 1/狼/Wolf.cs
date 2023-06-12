@@ -34,6 +34,8 @@ public class Wolf : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
+        string text = "‚¨‚¨‚©‚İ‚ÌŠš‚İ‚Â‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.WolfBiting();
         initialized = false;
         //base.EnemySoundPlay();

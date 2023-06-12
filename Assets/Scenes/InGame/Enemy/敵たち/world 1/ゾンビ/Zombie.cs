@@ -34,6 +34,8 @@ public class Zombie : Enemy
     public override void Attack()
     {
         //Debug.Log(attackNum);
+        string text = "ƒ]ƒ“ƒr‚ÌŠš‚İ‚Â‚«I";
+        MessageWindow.Instance.SetDebugMessage(text);
         attackScript.ZombieBiting();
         initialized = false;
         //base.EnemySoundPlay();
