@@ -11,6 +11,7 @@ public partial class Command : MonoBehaviour
     public enum eCommandType
     {
         ATTACK,
+        BIGATTACK,
         DEFENCE,
         HEAL
     }
@@ -49,6 +50,23 @@ public partial class Command : MonoBehaviour
                     Deactivate();
                     // エフェクトオブジェクトを削除
                     _attackEffectInstance.GetComponent<AbsorbEffect>().DestroyObject();
+                }
+
+                break;
+            case eCommandType.BIGATTACK:// 攻撃の処理    
+
+                if (oneceFlag == false)
+                {
+                    oneceFlag = true;
+                    AttackCommand();
+                }
+
+                if (_attackEffectInstance.GetComponent<BigAbsorbEffect>().IsFinished())
+                {
+                    // 処理が終わったら非アクティブ状態にする
+                    Deactivate();
+                    // エフェクトオブジェクトを削除
+                    _attackEffectInstance.GetComponent<BigAbsorbEffect>().DestroyObject();
                 }
 
                 break;

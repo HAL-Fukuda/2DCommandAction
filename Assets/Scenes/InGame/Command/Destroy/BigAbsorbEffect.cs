@@ -11,32 +11,42 @@ public class BigAbsorbEffect : MonoBehaviour
     private GameObject enemy;
     private ParticleSystem _slashEffectInstance;
     private GameObject _slashSEInstance;
+    private Vector3 targetPos;
 
     public float speed = 5.0f;
     public string attackMessage = "";
 
+    bool isFinished = false;
+
     void Start()
     {
         target = GameObject.FindWithTag("Enemy").transform;
+        targetPos = target.transform.position;
     }
 
     void FixedUpdate()
     {
-        Vector3 targetPos = target.transform.position;
-        Vector3 absorbPos = this.transform.position;
-
-        AbsorbMove();
-
-        if (targetPos == absorbPos)
+        if (!isFinished)
         {
-            Destroy(this.gameObject);
-            SlashEffectPlay();
-            SlashSEPlay();
+            Vector3 absorbPos = this.transform.position;
 
-            //Enemyにダメージを与える
-            enemy.GetComponent<Enemy>().GetBigDamage();
-            //メッセージを表示
-            MessageWindow.Instance.SetDebugMessage(attackMessage);
+            AbsorbMove();
+            if (targetPos == absorbPos)
+            {
+                SlashEffectPlay();
+                SlashSEPlay();
+
+                isFinished = true;
+
+                //Enemyにダメージを与える
+                enemy.GetComponent<Enemy>().GetBigDamage();
+                //メッセージを表示
+                MessageWindow.Instance.SetDebugMessage(attackMessage);
+
+                // 透明にする
+                ParticleSystem particleSystem = gameObject.GetComponent<ParticleSystem>();
+                particleSystem.Stop();
+            }
         }
     }
 
@@ -58,5 +68,15 @@ public class BigAbsorbEffect : MonoBehaviour
         enemy = GameObject.FindWithTag("Enemy");
         _slashSEInstance = Instantiate(slashSEPrefab);
         _slashSEInstance.transform.position = enemy.transform.position;
+    }
+
+    public bool IsFinished()
+    {
+        return isFinished;
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(this.gameObject);
     }
 }
