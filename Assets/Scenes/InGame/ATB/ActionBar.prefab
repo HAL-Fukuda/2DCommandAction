@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 7265250482532664179}
+  barImage: {fileID: 1864335459084389938}
   speed: 0.1
   isFollowTarget: 0
   target: {fileID: 0}
