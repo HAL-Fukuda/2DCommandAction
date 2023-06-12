@@ -44,7 +44,7 @@ public class EnemyHpBar : MonoBehaviour
 
             slider.maxValue = 1;
 
-            Debug.Log("ˆê‰ñ‚¾‚¯");
+            //Debug.Log("ˆê‰ñ‚¾‚¯");
 
             FindAlready = true;
         }
@@ -64,7 +64,7 @@ public class EnemyHpBar : MonoBehaviour
 
         slider.value = (float)NOW_HP / (float)MAX_HP;
 
-        Debug.Log(MAX_HP);
-        Debug.Log(NOW_HP);
+        //Debug.Log(MAX_HP);
+        //Debug.Log(NOW_HP);
     }
 }
