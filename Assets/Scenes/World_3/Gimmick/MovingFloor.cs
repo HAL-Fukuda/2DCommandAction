@@ -44,7 +44,7 @@ public class MovingFloor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 床の上にオブジェクトが乗ったときにリストに追加する
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Command"))
+        if (other.gameObject.CompareTag("Player"))
         {
             colliders.Add(other);
             Debug.Log("乗った");
@@ -54,9 +54,29 @@ public class MovingFloor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // 床からオブジェクトが離れたときにリストから削除する
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Command"))
+        if (other.gameObject.CompareTag("Player"))
         {
             colliders.Remove(other);
+            Debug.Log("降りた");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // 床の上にオブジェクトが乗ったときにリストに追加する
+        if (collision.gameObject.CompareTag("Command"))
+        {
+            colliders.Add(collision.collider);
+            Debug.Log("コマンド乗った");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // 床からオブジェクトが離れたときにリストから削除する
+        if (collision.gameObject.CompareTag("Command"))
+        {
+            colliders.Remove(collision.collider);
             Debug.Log("降りた");
         }
     }
