@@ -24,7 +24,7 @@ public class BossRobot : Enemy
         {
             base.DestroyEffectSpawn();
         }
-        // ゲージがたまったら
+        // アクションバーが溜まったら実行
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             attackScript.BombMissileInitialize();
@@ -35,7 +35,7 @@ public class BossRobot : Enemy
 
     public override void Attack()
     {
-        PatternRandom();
+        PatternRandom();  //攻撃を呼ぶ
         initialized = false;
         //base.EnemySoundPlay();
     }
@@ -58,7 +58,6 @@ public class BossRobot : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 2;
         attackNum = Random.Range(0, 2);
     }
 }

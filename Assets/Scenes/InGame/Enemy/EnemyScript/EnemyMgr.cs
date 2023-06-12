@@ -8,9 +8,6 @@ using UnityEngine;
 
 public partial class EnemyMgr : MonoBehaviour
 {
-    //public Enemy.eEnemyType enemyType;
-    //public static EnemyMgr instance;
-
     void EnemyMgrInitialize()
     {
         
@@ -18,13 +15,5 @@ public partial class EnemyMgr : MonoBehaviour
 
     void Update()
     {
-    //    //GetEnemyTypeInitialize();
-
-    //    if (Input.GetKeyDown(KeyCode.F))
-    //    {
-    //        //EnemySpawn();
-    //        SpawnEnemy(enemyType);
-    //        //GetEnemyTypeInitialize();
-    //    }
     }
 }

@@ -6,12 +6,8 @@ public partial class Enemy : MonoBehaviour
 {
     [SerializeField][Header("ステータス用")]
     public int hp = 2;
-    public int speed;
 
     [SerializeField][Header("攻撃用")]
-    public int patternCnt = 0;          //攻撃の回数によって攻撃を切り替える用
-    public int attackMode;     //攻撃のパターンを切り替える用 
-    public bool patternSwitch = true;  //毎回攻撃が切り替わる用
     public int attackNum;  //攻撃切り替え用
     public bool initialized = false;  //ATBバーが溜まっているか
     public Transform actionBar;     //アクションバー
@@ -75,7 +71,6 @@ public partial class Enemy : MonoBehaviour
     public virtual void Attack()
     {
         attackScript.MeteorAttack();
-        //attackScript.EnemysAttack();  //敵ごとの攻撃選択用関数
     }
 
     public void EnemySoundPlay()
@@ -83,59 +78,6 @@ public partial class Enemy : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(enemySound);
     }
 
-    public void AttackMode()
-    {
-        //switch (attackMode)
-        //{
-        //    case 1:
-        //        PatternSwitch();
-        //        break;
-        //    case 2:
-        //        PatternCnt();
-        //        break;
-        //    case 3:
-        //        PatternRandom();
-        //        break;
-        //}
-    }
-
-    //コピペ用
-    public virtual void PatternSwitch()  //攻撃するたびに攻撃を切り替える
-    {
-        if (patternSwitch)
-        {
-            attackScript.MeteorAttack();  //攻撃を呼ぶ
-            patternSwitch = false;
-            //Debug.Log(patternSwitch);
-        }
-        else
-        {
-            attackScript.MeteorAttack();  //攻撃を呼ぶ
-            patternSwitch = true;
-        }
-    }
-
-    //コピペ用
-    public virtual void PatternCnt()  //２回に１回別の攻撃をはさむ
-    {
-        ////Debug.Log("Cnt");
-        //if (patternCnt <= 2)
-        //{
-        //    attackScript.MeteorAttack();  //攻撃を呼ぶ
-        //    //Debug.Log("一つ目の攻撃");
-        //    //Debug.Log(patternCnt);
-        //}
-        //else if (patternCnt >= 3)
-        //{
-        //    attackScript.MeteorAttack();  //攻撃を呼ぶ
-        //    //Debug.Log("二つ目の攻撃");
-        //    patternCnt = 1;
-        //}
-
-        //patternCnt++;
-    }
-
-    //コピペ用
     public virtual void PatternRandom()  //ランダムで攻撃する
     {
         switch(attackNum)

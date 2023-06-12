@@ -24,7 +24,7 @@ public class MissileType : Enemy
         {
             base.DestroyEffectSpawn();
         }
-        // ƒQ[ƒW‚ª‚½‚Ü‚Á‚½‚ç
+        // アクションバーが溜まったら実行
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
             attackScript.BombMissileInitialize();
@@ -34,7 +34,7 @@ public class MissileType : Enemy
 
     public override void Attack()
     {
-        attackScript.BombMissileAttack();
+        attackScript.BombMissileAttack();  //攻撃を呼ぶ
         initialized = false;
         //base.EnemySoundPlay();
     }

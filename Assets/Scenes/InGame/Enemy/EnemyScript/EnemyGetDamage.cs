@@ -8,6 +8,7 @@ public partial class Enemy : MonoBehaviour
     private Color originalColor; // Œ³‚ÌF
     private Vector3 originalPosition; // U“®‘O‚ÌÀ•W
 
+    [SerializeField][Header("UŒ‚‚Ì—\’›—p")]
     public float ColorDuration = 0.1f; // Ô‚­‚È‚éŠÔ
     public float shakeIntensity = 0.1f; // —h‚ê‚Ì‹­‚³
     public float shakeDuration = 0.2f; // —h‚ê‚éŠÔ
