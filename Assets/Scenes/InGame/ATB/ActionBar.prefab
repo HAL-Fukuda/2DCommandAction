@@ -141,7 +141,8 @@ MonoBehaviour:
   isFollowTarget: 0
   target: {fileID: 0}
   localPosition: {x: 0, y: 0, z: 0}
-  FullSE: {fileID: 8300000, guid: 6fa9e3859092b3741a5bd9d83c175f8a, type: 3}
+  fullSE: {fileID: 8300000, guid: 6fa9e3859092b3741a5bd9d83c175f8a, type: 3}
+  readyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3049439357841588823
 GameObject:
   m_ObjectHideFlags: 0
