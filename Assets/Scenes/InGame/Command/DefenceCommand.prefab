@@ -151,7 +151,7 @@ MonoBehaviour:
     type: 3}
   attackEffectPrefab: {fileID: 0}
   attackSEPrefab: {fileID: 0}
-  commandType: 1
+  commandType: 2
   isActive: 0
   EffectPrefab: {fileID: 4259819370136977529, guid: bac3807361359d249b04b05104fdb51a,
     type: 3}
