@@ -717,7 +717,7 @@ PrefabInstance:
     - target: {fileID: -6970776795557301272, guid: a1e553c8a10bd284e9e14f82e962f9d3,
         type: 3}
       propertyPath: interval
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -6970776795557301272, guid: a1e553c8a10bd284e9e14f82e962f9d3,
         type: 3}
@@ -1491,7 +1491,6 @@ MonoBehaviour:
     type: 3}
   enemyObj2: {fileID: 0}
   enemyObj3: {fileID: 0}
-  enemyNum: 0
   enemySpawnPos: {fileID: 1667436263}
   enemyName: 
 --- !u!82 &1573626336

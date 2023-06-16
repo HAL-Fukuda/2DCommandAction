@@ -406,10 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
