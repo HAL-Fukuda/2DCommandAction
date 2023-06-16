@@ -21,6 +21,12 @@ public class FBBCollision : MonoBehaviour
         // Box Collider 2D コンポーネントの参照を取得する
         boxCollider = this.GetComponent<BoxCollider2D>();
 
+        Invoke("objDestroy", 7.0f);
+    }
+
+    private void objDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     public void ToggleCollider(bool enabled)
