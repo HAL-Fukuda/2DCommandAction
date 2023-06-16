@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3149903282961528392}
   - component: {fileID: -5128815410852538657}
   - component: {fileID: -4173354025187939886}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: MeleeShockwave
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
