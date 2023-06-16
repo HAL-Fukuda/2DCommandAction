@@ -62,7 +62,7 @@ public class ActionBarControl : MonoBehaviour
                 // 100％になったタイミングでエフェクト処理
                 if (isReady)
                 {
-                    AudioSource.PlayClipAtPoint(FullSE,new Vector3(0,0,0)); // SEを再生
+                    AudioSource.PlayClipAtPoint(FullSE,new Vector3(0,2,-10)); // 3D空間で再生されるのでカメラの位置で再生 
                     ChangeColor(Color.cyan); // アクションバーの色を変更
                 }
             }
