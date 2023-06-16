@@ -17,7 +17,9 @@ public class ActionBarControl : MonoBehaviour
     private RectTransform uiElement;
     private RectTransform canvasRectTransform;
 
-    public AudioClip FullSE;
+    public AudioClip fullSE;
+    private Color normalColor;
+    public Color readyColor; 
 
     void Start()
     {
@@ -26,11 +28,14 @@ public class ActionBarControl : MonoBehaviour
             canvasRectTransform = this.transform.Find("Canvas") as RectTransform;
             uiElement = canvasRectTransform.transform.Find("Slider") as RectTransform;
         }
+
+        normalColor = barImage.color; // バーの元の色を取得
     }
 
     // 追従処理
     void FixedUpdate()
     {
+        // オブジェクトに追従させる
         if(isFollowTarget)
         {
             Vector3 worldPos = target.position + localPosition; // 追従する位置を指定
@@ -62,8 +67,8 @@ public class ActionBarControl : MonoBehaviour
                 // 100％になったタイミングでエフェクト処理
                 if (isReady)
                 {
-                    AudioSource.PlayClipAtPoint(FullSE,new Vector3(0,2,-10)); // 3D空間で再生されるのでカメラの位置で再生 
-                    ChangeColor(Color.cyan); // アクションバーの色を変更
+                    AudioSource.PlayClipAtPoint(fullSE,new Vector3(0,2,-10)); // 3D空間で再生されるのでカメラの位置で再生 
+                    ChangeColor(readyColor); // アクションバーの色を変更
                 }
             }
         }
@@ -80,7 +85,7 @@ public class ActionBarControl : MonoBehaviour
     {
         isReady = false;
         slider.value = 0.0f; // 0％にする
-        ChangeColor(Color.yellow); // バーを黄色にする
+        ChangeColor(normalColor);
     }
 
     // isReadyの値を取得
