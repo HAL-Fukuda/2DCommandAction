@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9021484618544012148}
   - component: {fileID: 4908765347416191751}
   - component: {fileID: 7150207364968002259}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: InvisibleBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,4 +72,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: {x: 1, y: 1}
-  fitToCollider: 1
+  fitToObject: 0
