@@ -24,6 +24,9 @@ public class Energybullet : MonoBehaviour
         //SE再生
         //AudioSource.PlayClipAtPoint(MoveSE, transform.position);
 
+        CapsuleCollider2D capsuleCollider = GetComponent<CapsuleCollider2D>();
+        capsuleCollider.enabled = false;
+
         // プレイヤーをターゲットにする
         GameObject player = GameObject.Find("Player");
         target = player.transform;
@@ -43,8 +46,8 @@ public class Energybullet : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // 0.5f秒経ったらホーミング開始
-        if (timer >= 3.0f)
+        // 2f秒経ったらホーミング開始
+        if (timer >= 1.0f)
         {
             HomingUpdate();
         }
@@ -87,6 +90,8 @@ public class Energybullet : MonoBehaviour
         // 回転角度を自分自身のオブジェクトに適用する。
         this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+        CapsuleCollider2D capsuleCollider = GetComponent<CapsuleCollider2D>();
+        capsuleCollider.enabled = true;
 
         // 移動する
         this.transform.Translate(speed * Time.deltaTime, 0, 0);
