@@ -25,7 +25,7 @@ public partial class EnemyAttack : MonoBehaviour
 
             // エネミーの位置に生成
             Transform enemyTransform = GameObject.FindWithTag("Enemy").transform;
-            Vector3 spawnPos = new Vector3(0f, 2f, 0f);
+            Vector3 spawnPos = new Vector3(0f, 9f, 0f);
             Instantiate(HomingenergyAttackSettings.prefab, spawnPos, Quaternion.identity);
         }
     }
