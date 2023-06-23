@@ -1840,9 +1840,8 @@ MonoBehaviour:
     type: 3}
   enemyObj2: {fileID: 5870116295634957448, guid: fa5d08d776747cd44914edf587164639,
     type: 3}
-  enemyObj3: {fileID: 5870116295634957448, guid: 793827f226701174283f5f060ffed4f0,
+  enemyObj3: {fileID: 5870116295634957448, guid: 9ec8898ccc9682749a94f2d0a2338916,
     type: 3}
-  enemyNum: 0
   enemySpawnPos: {fileID: 1877343117}
   enemyName: 
 --- !u!82 &1573626336

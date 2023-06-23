@@ -163,6 +163,7 @@ MonoBehaviour:
   hitSEPrefab: {fileID: 1775604713768043433, guid: 001727e129930de43b94418dcf717349,
     type: 3}
   materialCom: {fileID: 2100000, guid: b48c6657a81bca94e8c2ef3844eab2ac, type: 2}
+  materialBigCom: {fileID: 2100000, guid: f26abd98fd871e94683843eddc07b805, type: 2}
   commandHP: 3
   shield: {fileID: 6715556842858644572, guid: 923fd89968c90ae44a874601c63dfead, type: 3}
   defenceMessage: "\u30B7\u30FC\u30EB\u30C9\u3092\u5C55\u958B\uFF01"
