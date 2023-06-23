@@ -19,7 +19,7 @@ public partial class EnemyAttack : MonoBehaviour
             Vector3[] spawnPositions = new Vector3[]
             {
                 new Vector3(-8f, -10f, 0f),   // 位置1
-                new Vector3(8f, -10f, 0f)     // 位置2
+                new Vector3(8f, -10f, 0f)    // 位置2 
             };
 
             for (int i = 0; i < spawnPositions.Length; i++)
@@ -37,7 +37,7 @@ public partial class EnemyAttack : MonoBehaviour
                     3f // 上昇時間
                 ).OnComplete(() =>
                 {
-                    StartCoroutine(StopAndDescend(obj, spawnPos, 10f)); // 上昇後の停止と下降処理を開始
+                    StartCoroutine(StopAndDescend(obj, spawnPos, 5f)); // 上昇後の停止と下降処理を開始
                 });
             }
         }

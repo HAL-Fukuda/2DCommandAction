@@ -407,11 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf4e270bd577594ab9b10f21a3bd2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
-  speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 1
+  hp: 7
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
@@ -580,7 +576,7 @@ PrefabInstance:
     - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: speed
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
