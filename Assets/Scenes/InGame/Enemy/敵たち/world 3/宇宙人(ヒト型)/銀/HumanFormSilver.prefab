@@ -246,8 +246,8 @@ MonoBehaviour:
   laserirradiationSettings:
     LaserPoint: {fileID: 5019287860521964813, guid: ff87e95a39c044144afb9ddaebbaf8b8,
       type: 3}
-    spawnInterval: 5
-    maxSpawnValue: 5
+    spawnInterval: 1
+    maxSpawnValue: 1
     spawnValue: 0
     timer: 0
   longlaserirradiationSettings:
@@ -408,10 +408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 1
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
