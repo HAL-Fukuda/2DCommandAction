@@ -740,6 +740,11 @@ PrefabInstance:
       propertyPath: pauseScript
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 9103355406031196414, guid: 544cef89a979ed943ad7ef8368b365bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 1-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 544cef89a979ed943ad7ef8368b365bb, type: 3}
 --- !u!4 &708504059 stripped
@@ -1334,7 +1339,6 @@ MonoBehaviour:
     type: 3}
   enemyObj3: {fileID: 7167637077539775022, guid: 744d28a7e13b63c4d9f97ebfd1eb1904,
     type: 3}
-  enemyNum: 0
   enemySpawnPos: {fileID: 708504059}
   enemyName: 
 --- !u!82 &1573626336
