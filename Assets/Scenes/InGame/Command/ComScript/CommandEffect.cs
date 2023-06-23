@@ -16,8 +16,9 @@ public partial class Command : MonoBehaviour
     private GameObject _hitSEInstance;
 
     Renderer objectRenderer;
-    private int currentHealth;  //現在のHp
+    private int currentHealth;  //現在のHP
     public Material materialCom;  //変更するマテリアルPrefab
+    public Material materialBigCom;  //変更するマテリアルPrefabデカコマンド用
 
     public int commandHP;  //コマンドのHP
 
@@ -110,6 +111,10 @@ public partial class Command : MonoBehaviour
         if (currentHealth == 1)
         {
             objectRenderer.material = materialCom;
+        }
+        if (currentHealth == 2)
+        {
+            objectRenderer.material = materialBigCom;
         }
     }
 }
