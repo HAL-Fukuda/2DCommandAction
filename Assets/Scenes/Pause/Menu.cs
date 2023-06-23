@@ -43,7 +43,7 @@ public class Menu : MonoBehaviour
         pauseNow = true;
     }
 
-    private void Resume()
+    public void Resume()
     {
         Time.timeScale = 1;  // ÄŠJ
         pausePanel.SetActive(false);

@@ -7,9 +7,6 @@ using UnityEngine.EventSystems;
 
 public class StageSelectManeger : MonoBehaviour
 {
-    //public GameObject WorldCanvas;
-    //public GameObject StageCanvas;
-    //public GameObject FirstSelect;
     public float fadetime;
 
     public void StageSelect(string stage)
@@ -18,18 +15,6 @@ public class StageSelectManeger : MonoBehaviour
         FadeManager.Instance.LoadScene(stage, fadetime);
         //SceneManager.LoadScene(stage);
     }
-
-    //public void BackWorldSelecting()
-    //{
-    //    WorldCanvas.SetActive(true);
-    //    EventSystem.current.SetSelectedGameObject(FirstSelect);
-    //    StageCanvas.SetActive(false);
-    //}
-
-    //private void Start()
-    //{
-    //    WorldCanvas = GameObject.Find("WorldSelectCanvas");
-    //}
 
     private void Update()
     {

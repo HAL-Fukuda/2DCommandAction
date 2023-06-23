@@ -734,6 +734,11 @@ PrefabInstance:
       propertyPath: pauseScript
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 9103355406031196414, guid: 544cef89a979ed943ad7ef8368b365bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 1-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 544cef89a979ed943ad7ef8368b365bb, type: 3}
 --- !u!4 &708504059 stripped
