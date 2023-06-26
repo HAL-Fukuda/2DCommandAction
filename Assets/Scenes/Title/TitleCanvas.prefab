@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9014274080789582955}
   - component: {fileID: 3484467720278376386}
   - component: {fileID: 1409740403805242461}
+  - component: {fileID: 984884491814968818}
   m_Layer: 5
   m_Name: gamestart
   m_TagString: Untagged
@@ -148,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
+  fadetime: 0
 --- !u!95 &1409740403805242461
 Animator:
   serializedVersion: 5
@@ -168,6 +170,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &984884491814968818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813194263155146192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &956642877736247492
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +455,7 @@ GameObject:
   - component: {fileID: 7085349783031335940}
   - component: {fileID: 4680321841978684968}
   - component: {fileID: 3427487661057276413}
+  - component: {fileID: 3533566805498789893}
   m_Layer: 5
   m_Name: setting
   m_TagString: Untagged
@@ -568,6 +585,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3533566805498789893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366707991534706852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &4211768909224662948
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +613,7 @@ GameObject:
   - component: {fileID: 2852854155404387711}
   - component: {fileID: 5940626598184827373}
   - component: {fileID: 1828532490057774168}
+  - component: {fileID: 6606189535944745626}
   m_Layer: 5
   m_Name: exit
   m_TagString: Untagged
@@ -716,6 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: StageSelect
+  fadetime: 0
 --- !u!95 &1828532490057774168
 Animator:
   serializedVersion: 5
@@ -736,6 +769,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &6606189535944745626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4211768909224662948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &4981796103975627533
 GameObject:
   m_ObjectHideFlags: 0
