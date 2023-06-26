@@ -33,11 +33,28 @@ public class Slime: Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        string text = "スライムのねばねばこうげき！";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.BindAttack();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "スライムのねばねばこうげき！";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.BindAttack();
+                break;
+        }
+
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

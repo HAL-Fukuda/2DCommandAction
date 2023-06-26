@@ -34,8 +34,27 @@ public class LongTimeLazerType : Enemy
 
     public override void Attack()
     {
-        attackScript.LongLaserIrradiation();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.LongLaserIrradiation();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

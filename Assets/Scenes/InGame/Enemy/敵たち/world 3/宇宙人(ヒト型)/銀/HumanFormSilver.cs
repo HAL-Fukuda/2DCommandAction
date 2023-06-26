@@ -35,8 +35,27 @@ public class HumanFormSilver : Enemy
 
     public override void Attack()
     {
-        attackScript.LaserIrradiation();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.LaserIrradiation();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

@@ -42,12 +42,18 @@ public class Yukionna : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ArareAttack();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.IceThorn();
                 break;
         }
@@ -55,7 +61,6 @@ public class Yukionna : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
         attackNum = Random.Range(0, 2);
     }
 }

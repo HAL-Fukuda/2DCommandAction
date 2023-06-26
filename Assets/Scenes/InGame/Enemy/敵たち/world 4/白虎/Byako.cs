@@ -42,15 +42,23 @@ public class Byako : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ThunderboltAttack();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClawAttackRight();
                 break;
             case 2:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClawAttackLeft();
                 break;
         }
@@ -58,7 +66,6 @@ public class Byako : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 2;
         attackNum = Random.Range(0, 3);
     }
 }

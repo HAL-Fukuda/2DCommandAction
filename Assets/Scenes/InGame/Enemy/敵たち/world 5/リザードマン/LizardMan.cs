@@ -33,8 +33,27 @@ public class LizardMan : Enemy
 
     public override void Attack()
     {
-        attackScript.SideVanishAttack();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.SideVanishAttack();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

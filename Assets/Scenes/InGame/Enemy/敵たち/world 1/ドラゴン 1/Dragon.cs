@@ -63,7 +63,6 @@ public class Dragon : Enemy
     }
     public override void NextAttackNum()
     {
-        //attackNum = 2;
         attackNum = Random.Range(0, 3);
     }
 }

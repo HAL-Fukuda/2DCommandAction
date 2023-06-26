@@ -33,8 +33,27 @@ public class Kappa : Enemy
 
     public override void Attack()
     {
-        attackScript.WaterGunAttack();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.WaterGunAttack();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

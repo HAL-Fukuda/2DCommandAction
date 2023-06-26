@@ -33,10 +33,27 @@ public class NormalGoblin : Enemy
 
     public override void Attack()
     {
-        string text = "ƒSƒuƒŠƒ“‚Ì‚±‚ñ–_‚±‚¤‚°‚«I";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.ClubBeating();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "ƒSƒuƒŠƒ“‚Ì‚±‚ñ–_‚±‚¤‚°‚«I";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.ClubBeating();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

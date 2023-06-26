@@ -41,12 +41,18 @@ public class HumanFormGold : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClubBeating();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SatelliteBeam();
                 break;
         }
@@ -54,7 +60,6 @@ public class HumanFormGold : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
         attackNum = Random.Range(0, 2);
     }
 }

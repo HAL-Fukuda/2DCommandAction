@@ -44,21 +44,33 @@ public class Virus : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.InevitableAttack();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.Spore();
                 break;
             case 2:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingBombMissileAttack();
                 break;
             case 3:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingenergyAttack();
                 break;
             case 4:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ThunderboltAttack();
                 break;
         }
@@ -66,7 +78,6 @@ public class Virus : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 4;
         attackNum = Random.Range(0, 5);
     }
 }
