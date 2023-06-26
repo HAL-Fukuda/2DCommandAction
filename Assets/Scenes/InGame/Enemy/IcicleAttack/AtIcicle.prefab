@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6660456476217449962}
   - component: {fileID: 3543544185353797036}
   - component: {fileID: 7751225437145801421}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: AtIcicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,6 +153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875005546716869324, guid: 024b69f9c84ece14e8692ee2bc97ef93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5701002328323310091, guid: 024b69f9c84ece14e8692ee2bc97ef93,
         type: 3}

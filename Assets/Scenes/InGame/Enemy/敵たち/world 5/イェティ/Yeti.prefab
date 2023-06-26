@@ -310,7 +310,7 @@ MonoBehaviour:
   snowballAttackSettings:
     prefab: {fileID: 5092462027848227468, guid: c6afe12e26d30df4c9da7fac19020e9b,
       type: 3}
-    spawnInterval: 5
+    spawnInterval: 1
     life: 10
     timer: 0
   SpiderNeedleSettings:
@@ -405,11 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43863b45d0a98b469b8ad7e6e145f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
-  speed: 0
-  patternCnt: 0
-  attackMode: 0
-  patternSwitch: 1
+  hp: 4
   attackNum: 0
   initialized: 0
   actionBar: {fileID: 0}
@@ -448,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 4089560461752832499, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
       propertyPath: speed
-      value: 0.2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4853622587967428466, guid: 64f89c22634220d4299b6883a8f2475f,
         type: 3}
