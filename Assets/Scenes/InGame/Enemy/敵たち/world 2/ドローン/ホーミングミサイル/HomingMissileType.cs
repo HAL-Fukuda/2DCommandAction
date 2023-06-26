@@ -57,6 +57,11 @@ public class HomingMissileType : Enemy
 
     public override void NextAttackNum()
     {
+        int attackType = 0;
+
         attackNum = 0;
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
     }
 }

@@ -63,6 +63,24 @@ public class Dragon : Enemy
     }
     public override void NextAttackNum()
     {
+        int attackType = 0;
+
         attackNum = Random.Range(0, 3);
+
+        switch (attackNum)
+        {
+            case 0:
+                attackType = 0;  //弱い攻撃の時
+                break;
+            case 1:
+                attackType = 1;  //強い攻撃の時
+                break;
+            case 2:
+                attackType = 0;
+                break;
+        }
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
     }
 }

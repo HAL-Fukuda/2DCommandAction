@@ -78,6 +78,30 @@ public class Virus : Enemy
 
     public override void NextAttackNum()
     {
+        int attackType = 0;
+
         attackNum = Random.Range(0, 5);
+
+        switch (attackNum)
+        {
+            case 0:
+                attackType = 1;
+                break;
+            case 1:
+                attackType = 0;
+                break;
+            case 2:
+                attackType = 0;
+                break;
+            case 3:
+                attackType = 0;
+                break;
+            case 4:
+                attackType = 1;
+                break;
+        }
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
     }
 }
