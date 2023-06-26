@@ -7,16 +7,16 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
+    //SE
+    public AudioClip JumpSE;
+    public AudioClip AttackSE;
+    public AudioClip ThrowSE;
     public AudioClip HitDamageSE;
-    //[SerializeField] GameObject slash;
-    //[SerializeField] GameObject Bigslash;
+   
 
-    //インスペクターで設定する
     public float moveSpeed;          //移動速度
-    //public int AvoidanceForce;     //回避速度
     public float upForce;            //ジャンプ力
     public float cooldownTime;
-    //private bool isDoubleJump;
     private bool notJump = false;
     public bool isHaveCommand = false;
     private bool isCooldown = false;
@@ -26,10 +26,8 @@ public class PlayerManager : MonoBehaviour
     public LayerMask enemyLayer;
     public LayerMask commandLayer;
 
-    //private float Chargeingcount = 0.0f;
-
-    public bool isGround;         //接地判定
-    public bool isMove;
+    public bool isGround;         //地面についているか
+    public bool isMove;           //動いていいか
 
     Rigidbody2D rb;
     Animator animator;
@@ -63,16 +61,6 @@ public class PlayerManager : MonoBehaviour
             Movement();
             HoldThrowUpdate();
         }
-        //CantJump();
-
-        //if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    DamegeAnimation();
-        //}
-        //if (Input.GetKeyDown(KeyCode.M))
-        //{
-        //    DieAnimation();
-        //}
     }
 
     //移動の処理
@@ -85,23 +73,12 @@ public class PlayerManager : MonoBehaviour
         {
             direction = 1;
             transform.localScale = new Vector3(-2, 2, 1);
-            //if (Input.GetKeyDown(KeyCode.LeftShift))
-            //{
-            //    //Debug.Log("右回避");
-            //    rb.AddForce(new Vector3(AvoidanceForce, 0, 0));
-            //}
         }
         //左向き
         else if (x < 0)
         {
             direction = -1;
             transform.localScale = new Vector3(2, 2, 1);
-            ////回避
-            //if (Input.GetKeyDown(KeyCode.LeftShift))
-            //{
-            //    //Debug.Log("左回避");
-            //    rb.AddForce(new Vector3(-AvoidanceForce, 0, 0));
-            //}
         }
 
         // コマンドを持っている時は攻撃できない
@@ -117,54 +94,17 @@ public class PlayerManager : MonoBehaviour
                     Invoke("ResetCooldown", cooldownTime);
                 }
             }
-            
-            ////ため中
-            //if ((Input.GetKey(KeyCode.Return) && isGround) || (Input.GetButtonDown("B")) && isGround)//追加
-            //{
-            //    Chargeing();
-            //}
-            ////ため攻撃
-            //if ((Input.GetKeyUp(KeyCode.Return)) || (Input.GetButtonUp("B")))//追加
-            //{
-
-            //    if (Chargeingcount >= 0.0f && Chargeingcount < 400.0f)
-            //    {
-            //        //Debug.Log("攻撃：一段階");
-            //        Attack();
-            //    }
-            //    else if (Chargeingcount >= 400.0f)
-            //    {
-            //        //Debug.Log("攻撃：二段階");
-            //        Attack();
-            //    }
-
-            //    Chargeingcount = 0.0f;
-            //}
         }
 
         //ジャンプ
         if ((Input.GetKeyDown(KeyCode.Space) && isGround) || (Input.GetButtonDown("A")) && isGround)//追加
         {
-            //isDoubleJump = false;
+            AudioSource.PlayClipAtPoint(JumpSE, transform.position);
             rb.AddForce(new Vector3(0, upForce, 0));
         }
-        //else if ((Input.GetKeyDown(KeyCode.Space) && isDoubleJump == false) || (Input.GetButtonDown("A")) && isDoubleJump == false)//追加
-        //{
-        //    if (rb.velocity.y < 0) // 下降中に二段目のジャンプを行う場合
-        //    {
-        //        rb.velocity = new Vector2(rb.velocity.x, 0); // 落下速度をリセットする
-        //        rb.AddForce(new Vector3(0, upForce * 1.5f, 0)); // 上方向に大きな力を加える
-        //    }
-        //    else // 上昇中に二段目のジャンプを行う場合
-        //    {
-        //        rb.AddForce(new Vector3(0, upForce, 0));
-        //    }
-        //    isDoubleJump = true;
-        //}
 
         animator.SetFloat("Speed", Mathf.Abs(x));
         rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
-
     }
 
     private void ResetCooldown()
@@ -215,14 +155,6 @@ public class PlayerManager : MonoBehaviour
         notJump = false;
     }
 
-    //void CantJump()
-    //{
-    //    if (notJump)
-    //    {
-    //        //isDoubleJump = true;
-    //    }
-    //}
-
     //ジャンプのアニメーション
     void JumpAnimation()
     {
@@ -242,7 +174,6 @@ public class PlayerManager : MonoBehaviour
         // SE再生
         AudioSource.PlayClipAtPoint(HitDamageSE, transform.position);
         animator.SetTrigger("isDamege");
-        //Debug.Log("ダメージを受けています");
     }
 
     //ゲームオーバーのアニメーション
@@ -250,24 +181,14 @@ public class PlayerManager : MonoBehaviour
     {
         isMove = false;
         animator.SetTrigger("isDie");
-        //Debug.Log("死にました");
     }
-
-    ////溜め中
-    //void Chargeing()
-    //{
-    //    animator.SetBool("ChargingNow", true);
-    //    Chargeingcount += 0.1f;
-    //    //Debug.Log("溜め中");
-    //    //Debug.Log(Chargeingcount);
-    //}
 
     //攻撃の処理
     void Attack()
     {
-        
+        AudioSource.PlayClipAtPoint(AttackSE, transform.position);
         animator.SetTrigger("isAttack");
-        
+
         //コマンドに
         Collider2D[] hitCommands = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, commandLayer);
         foreach (Collider2D hitCommand in hitCommands)
@@ -327,6 +248,8 @@ public class PlayerManager : MonoBehaviour
     {
         if (commandObject != null)
         {
+            AudioSource.PlayClipAtPoint(ThrowSE, transform.position);
+
             // "command"オブジェクトのRigidbody2Dコンポーネントを取得し、速度と方向を設定して投げる
             Rigidbody2D rigidbody = commandObject.GetComponent<Rigidbody2D>();
             rigidbody.simulated = true;
@@ -335,43 +258,6 @@ public class PlayerManager : MonoBehaviour
             isHaveCommand = false;
         }
     }
-
-    //void specialattack()
-    //{
-    //    this.transform.DOMove(new Vector3(-3.689993f, -2.374583f, 0f), 1.5f);
-    //    transform.localScale = new Vector3(-2, 2, 1);
-    //    StartCoroutine("SPChargingNow");
-    //    Invoke(nameof(Slash), 2.0f);
-    //    Invoke(nameof(Slash), 3.0f);
-    //    Invoke(nameof(Slash), 4.0f);
-    //    Invoke(nameof(BigSlash), 5.5f);
-    //}
-
-    //void Slash()
-    //{
-    //    animator.SetTrigger("isSPAttack");
-    //    //プレイヤーの座標を取得
-    //    Vector2 position = transform.position;
-    //    //プレイヤーとかぶらなくする
-    //    position.x += 1;
-    //    position.y += 1;
-    //    Instantiate(slash, position, transform.rotation);
-    //}
-
-    //void BigSlash()
-    //{
-    //    animator.SetTrigger("isSPAttack");
-    //    Instantiate(Bigslash, transform.position, transform.rotation);
-    //}
-
-    //IEnumerator SPChargingNow()
-    //{
-    //    animator.SetBool("SPChargingNow", true);
-    //    isMove = false;
-    //    yield return new WaitForSeconds(5.5f);
-    //    animator.SetBool("SPChargingNow", false);
-    //    isMove = true;
-    //}
 
     //当たり判定のとこを赤い円で描く
     private void OnDrawGizmosSelected()
