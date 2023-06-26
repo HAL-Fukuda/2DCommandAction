@@ -8,6 +8,8 @@ public class Shield : MonoBehaviour
     private GameObject lifeMgr;
     public float lifeTimer = 3.0f; // 生存時間
 
+    bool isEnemy = false;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -19,14 +21,14 @@ public class Shield : MonoBehaviour
     {
         FollowPlayerPosition();
 
-        // タイマーを減らす
-        lifeTimer -= Time.deltaTime;
-
-        // 生存時間が０になったら削除
-        if(lifeTimer < 0)
+        // 敵のターンが終わったらシールドを無効にする
+        if (GameMgr.Instance.battleState == GameMgr.eBattleState.ENEMY)
         {
-            lifeMgr.GetComponent<LifeManager>().InvincibilityOff();    // 無敵off
-            Destroy(this.gameObject);
+            isEnemy = true;
+        }
+        if (isEnemy && GameMgr.Instance.battleState != GameMgr.eBattleState.ENEMY)
+        {
+            DestroyShield();
         }
     }
 
@@ -36,5 +38,11 @@ public class Shield : MonoBehaviour
         Vector3 pos = player.transform.position;
         pos += new Vector3(0, 1, 0);
         this.transform.position = pos;
+    }
+
+    public void DestroyShield() // シールドを削除
+    {
+        lifeMgr.GetComponent<LifeManager>().InvincibilityOff();    // 無敵off
+        Destroy(this.gameObject);
     }
 }
