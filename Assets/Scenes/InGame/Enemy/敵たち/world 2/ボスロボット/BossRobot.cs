@@ -42,15 +42,23 @@ public class BossRobot : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SatelliteBeam();
                 break;
             case 2:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;
         }
@@ -58,6 +66,6 @@ public class BossRobot : Enemy
 
     public override void NextAttackNum()
     {
-        attackNum = Random.Range(0, 2);
+        attackNum = Random.Range(0, 3);
     }
 }

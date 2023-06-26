@@ -33,11 +33,27 @@ public class Wolf : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        string text = "‚¨‚¨‚©‚İ‚ÌŠš‚İ‚Â‚«I";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.WolfBiting();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "‚¨‚¨‚©‚İ‚ÌŠš‚İ‚Â‚«I";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.WolfBiting();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

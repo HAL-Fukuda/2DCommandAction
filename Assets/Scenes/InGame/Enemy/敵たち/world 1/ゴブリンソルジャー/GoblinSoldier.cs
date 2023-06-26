@@ -33,10 +33,27 @@ public class GoblinSoldier : Enemy
 
     public override void Attack()
     {
-        string text = "ゴブリンの切り付けこうげき！";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.SlashingSword();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "ゴブリンの切り付けこうげき！";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.SlashingSword();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

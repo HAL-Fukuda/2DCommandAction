@@ -33,11 +33,27 @@ public class Zombie : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        string text = "ゾンビの噛みつき！";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.ZombieBiting();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "ゾンビの噛みつき！";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.ZombieBiting();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

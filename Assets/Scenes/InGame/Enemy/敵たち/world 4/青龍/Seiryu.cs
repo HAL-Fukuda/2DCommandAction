@@ -40,12 +40,18 @@ public class Seiryu : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.TorrentAttack();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.WofwaterAttack();
                 break;
         }
@@ -53,7 +59,6 @@ public class Seiryu : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
         attackNum = Random.Range(0, 2);
     }
 }

@@ -33,11 +33,27 @@ public class Spider : Enemy
 
     public override void Attack()
     {
-        //Debug.Log(attackNum);
-        string text = "‚­‚à‚Ì…‚±‚¤‚°‚«I";
-        MessageWindow.Instance.SetDebugMessage(text);
-        attackScript.SpiderNeedle();
+        PatternRandom();
         initialized = false;
         //base.EnemySoundPlay();
+    }
+
+    public override void PatternRandom()
+    {
+        string text;
+
+        switch (attackNum)
+        {
+            case 0:
+                text = "‚­‚à‚Ì…‚±‚¤‚°‚«I";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.SpiderNeedle();
+                break;
+        }
+    }
+
+    public override void NextAttackNum()
+    {
+        attackNum = 0;
     }
 }

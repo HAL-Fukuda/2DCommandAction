@@ -44,12 +44,18 @@ public class Robot : Enemy
 
     public override void PatternRandom()
     {
+        string text;
+
         switch (attackNum)
         {
             case 0:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;
             case 1:
+                text = "";
+                MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;
         }
@@ -57,7 +63,6 @@ public class Robot : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
         attackNum = Random.Range(0, 2);
     }
 }
