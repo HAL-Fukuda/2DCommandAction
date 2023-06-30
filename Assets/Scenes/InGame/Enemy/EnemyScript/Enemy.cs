@@ -13,8 +13,7 @@ public partial class Enemy : MonoBehaviour
     public Transform actionBar;     //アクションバー
     public EnemyAttack attackScript;
     public GameObject cd;  //子オブジェクト
-    public GameObject gcd;  //孫オブジェクト
-    public SpriteSwitcher spriteSwitcher;  //孫オブジェクトのスクリプト
+    public SpriteSwitcher spriteSwitcher;  //子オブジェクトのスクリプト
 
     public AudioClip enemySound;  //敵の音声
 
@@ -124,10 +123,8 @@ public partial class Enemy : MonoBehaviour
     {
         //子オブジェクトの取得
         cd = transform.GetChild(2).gameObject;
-        //孫オブジェクトの取得
-        gcd = cd.GetComponent<Transform>().transform.GetChild(0).gameObject;
 
-        //孫オブジェクトのスクリプトを取得
-        spriteSwitcher = gcd.GetComponent<SpriteSwitcher>();
+        //子オブジェクトのスクリプトを取得
+        spriteSwitcher = cd.GetComponent<SpriteSwitcher>();
     }
 }
