@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5894524122151378062}
   - component: {fileID: 9103355406031196414}
   - component: {fileID: 8629561682617681965}
+  - component: {fileID: 7654563292501486183}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -135,6 +136,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7654563292501486183}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8629561682617681965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +160,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245c1ec87d71fca449123f68641510d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7654563292501486183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266036004105711900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &7300353591214001713
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +343,7 @@ GameObject:
   - component: {fileID: 7300353591525820128}
   - component: {fileID: 7300353591525820129}
   - component: {fileID: 6314086518524439475}
+  - component: {fileID: 7098645424057595230}
   m_Layer: 5
   m_Name: StageSelect
   m_TagString: Untagged
@@ -438,6 +466,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7098645424057595230}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6314086518524439475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +491,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+--- !u!114 &7098645424057595230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300353591525820143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &7300353591572029169
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +597,7 @@ GameObject:
   - component: {fileID: 7300353592080871954}
   - component: {fileID: 7300353592080871955}
   - component: {fileID: 7300353592080871952}
+  - component: {fileID: 7696968161988467858}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -652,7 +707,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7300353592080871955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7696968161988467858}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7696968161988467858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300353592080871966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &7300353592561777667
 GameObject:
   m_ObjectHideFlags: 0
