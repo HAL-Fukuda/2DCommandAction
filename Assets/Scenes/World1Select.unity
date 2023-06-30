@@ -551,6 +551,11 @@ PrefabInstance:
       propertyPath: fadetime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4589410590743777613, guid: fc4bba5486a1869418dd906da5b44f10,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 304
+      objectReference: {fileID: 0}
     - target: {fileID: 4802520281212477114, guid: fc4bba5486a1869418dd906da5b44f10,
         type: 3}
       propertyPath: fadetime
@@ -560,6 +565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fadetime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484712260767660148, guid: fc4bba5486a1869418dd906da5b44f10,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: World1Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 8384559104659889735, guid: fc4bba5486a1869418dd906da5b44f10,
         type: 3}
