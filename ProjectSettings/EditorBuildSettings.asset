@@ -113,4 +113,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World5Select.unity
     guid: 8b2471b38335443439c088710a1fe6de
+  - enabled: 1
+    path: Assets/Scenes/World_1/World1Tutorial.unity
+    guid: 63e3e54ccdc9ef743b90832c0680007d
+  - enabled: 1
+    path: Assets/Scenes/World_2/World2Tutorial.unity
+    guid: c20ac22f8da742c49b6040cf2540863a
+  - enabled: 1
+    path: Assets/Scenes/World_3/World3Tutorial.unity
+    guid: 6a258ae69802eb1428c1c782428d4237
+  - enabled: 1
+    path: Assets/Scenes/World_4/World4Tutorial.unity
+    guid: 15012942b29347a4a956218209750fbe
+  - enabled: 1
+    path: Assets/Scenes/World_5/World5Tutorial.unity
+    guid: 221706abbe0b0554485a88b29862c688
   m_configObjects: {}

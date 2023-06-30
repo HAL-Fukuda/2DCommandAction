@@ -20,7 +20,7 @@ public class StageSelectManeger : MonoBehaviour
     {
         if ((Input.GetKeyUp(KeyCode.Escape)) || (Input.GetButtonUp("B")))
         {
-            FadeManager.Instance.LoadScene("StageSelect", fadetime);
+            //FadeManager.Instance.LoadScene("StageSelect", fadetime);
         }
     }
 
