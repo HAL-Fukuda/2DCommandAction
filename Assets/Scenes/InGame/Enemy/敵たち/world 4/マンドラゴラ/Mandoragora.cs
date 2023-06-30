@@ -46,7 +46,7 @@ public class Mandoragora : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ƒ}ƒ“ƒhƒ‰ƒSƒ‰‚Ì‹©‚ÑI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ShoutAttack();
                 break;

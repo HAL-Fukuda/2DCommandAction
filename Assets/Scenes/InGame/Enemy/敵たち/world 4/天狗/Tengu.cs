@@ -45,7 +45,7 @@ public class Tengu : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "“V‹ç‚Ì‚Í‚½‚«—‚Æ‚µI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.KnockAttack();
                 break;

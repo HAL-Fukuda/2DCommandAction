@@ -47,17 +47,17 @@ public class BossRobot : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ミサイル発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;
             case 1:
-                text = "";
+                text = "サテライトビーム発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SatelliteBeam();
                 break;
             case 2:
-                text = "";
+                text = "照射式レーザー発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;

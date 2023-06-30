@@ -47,17 +47,17 @@ public class Byako : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "白虎の落雷！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ThunderboltAttack();
                 break;
             case 1:
-                text = "";
+                text = "白虎の右爪裂！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClawAttackRight();
                 break;
             case 2:
-                text = "";
+                text = "白虎の左爪裂！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClawAttackLeft();
                 break;

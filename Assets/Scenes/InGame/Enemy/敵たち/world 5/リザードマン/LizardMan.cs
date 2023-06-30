@@ -45,7 +45,7 @@ public class LizardMan : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "リザードマンの斬りつけ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SideVanishAttack();
                 break;

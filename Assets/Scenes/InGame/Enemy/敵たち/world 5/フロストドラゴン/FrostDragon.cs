@@ -45,7 +45,7 @@ public class FrostDragon : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "フロストドラゴンのアイシクルフォール！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.IcicleAttack();
                 break;

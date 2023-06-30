@@ -46,7 +46,7 @@ public class LongTimeMachineGunType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "マシンガン・改発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BulletsMachineGunAttack();
                 break;

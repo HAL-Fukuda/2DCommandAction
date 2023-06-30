@@ -45,7 +45,7 @@ public class Suzaku : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "é‚Ì‰Š’ŒI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.PofflamesAttack();
                 break;

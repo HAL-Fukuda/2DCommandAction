@@ -47,12 +47,12 @@ public class Grifin : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "グリフィンのはねとばし！";
+                text = "グリフィンのフェザーレイン！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FeatherAttack();
                 break;
             case 1:
-                text = "グリフィンのわしづかみ！";
+                text = "グリフィンの掴みかかり！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.GrabbingAttack();
                 break;

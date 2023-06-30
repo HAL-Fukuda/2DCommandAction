@@ -47,7 +47,7 @@ public class HumanFormSilver : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "銀星人の照射式レーザー";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;

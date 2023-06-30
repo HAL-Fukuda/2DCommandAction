@@ -46,7 +46,7 @@ public class MissileType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ミサイル発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;

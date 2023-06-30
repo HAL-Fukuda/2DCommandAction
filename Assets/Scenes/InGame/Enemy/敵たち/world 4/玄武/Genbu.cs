@@ -45,7 +45,7 @@ public class Genbu : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "Œº•‚ÌŠš‚İ‚Â‚«I";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.GenbuBiting();
                 break;

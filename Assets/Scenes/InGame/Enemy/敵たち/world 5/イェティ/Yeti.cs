@@ -45,7 +45,7 @@ public class Yeti : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "イエティの豪雪球！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SnowBallAttack();
                 break;

@@ -45,7 +45,7 @@ public class MagmaSlime : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "マグマスライムのミューカスラーヴァ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.MagmaSticky();
                 break;

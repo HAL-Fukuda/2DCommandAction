@@ -46,7 +46,7 @@ public class LazerIrradiationType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "照射式レーザー発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;

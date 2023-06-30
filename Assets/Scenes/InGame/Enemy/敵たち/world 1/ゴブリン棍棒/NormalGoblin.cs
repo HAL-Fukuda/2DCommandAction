@@ -45,7 +45,7 @@ public class NormalGoblin : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "ƒSƒuƒŠƒ“‚Ì‚±‚ñ–_‚±‚¤‚°‚«I";
+                text = "ƒSƒuƒŠƒ“‚Ì’@‚«‚Â‚¯I";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClubBeating();
                 break;

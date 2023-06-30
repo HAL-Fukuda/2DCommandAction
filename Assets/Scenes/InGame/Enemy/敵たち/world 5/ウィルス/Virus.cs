@@ -49,27 +49,27 @@ public class Virus : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "コード:フェイカー【ドラゴン】";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.InevitableAttack();
                 break;
             case 1:
-                text = "";
+                text = "エンバグ";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.Spore();
                 break;
             case 2:
-                text = "";
+                text = "コード:フェイカー【ボスロボット】";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingBombMissileAttack();
                 break;
             case 3:
-                text = "";
+                text = "コード:フェイカー【宇宙船】";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingenergyAttack();
                 break;
             case 4:
-                text = "";
+                text = "コード:フェイカー【白虎】";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ThunderboltAttack();
                 break;

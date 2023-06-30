@@ -46,12 +46,12 @@ public class HumanFormGold : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "金星人の殴打";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClubBeating();
                 break;
             case 1:
-                text = "";
+                text = "金星人のサテライトビーム";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SatelliteBeam();
                 break;

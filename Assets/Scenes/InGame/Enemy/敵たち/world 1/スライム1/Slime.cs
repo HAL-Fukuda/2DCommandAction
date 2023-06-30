@@ -45,7 +45,7 @@ public class Slime: Enemy
         switch (attackNum)
         {
             case 0:
-                text = "スライムのねばねばこうげき！";
+                text = "スライムの粘液！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BindAttack();
                 break;

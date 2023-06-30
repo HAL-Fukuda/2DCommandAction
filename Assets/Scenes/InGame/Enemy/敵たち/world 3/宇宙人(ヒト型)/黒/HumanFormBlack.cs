@@ -47,7 +47,7 @@ public class HumanFormBlack : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "黒星人のレーザーマシンガン";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BulletsMachineGunAttack();
                 break;

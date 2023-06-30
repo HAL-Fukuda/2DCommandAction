@@ -45,7 +45,7 @@ public class Spider : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "‚­‚à‚Ì…‚±‚¤‚°‚«I";
+                text = "‚­‚à‚Ì“ÅjI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SpiderNeedle();
                 break;

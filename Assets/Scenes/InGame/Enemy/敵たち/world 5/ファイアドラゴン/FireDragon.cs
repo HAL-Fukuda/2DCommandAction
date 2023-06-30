@@ -45,7 +45,7 @@ public class FireDragon : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ファイアドラゴンの却火球！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FlameSplash();
                 break;

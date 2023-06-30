@@ -46,7 +46,7 @@ public class BulletsMachineGunType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ƒ}ƒVƒ“ƒKƒ“”­ËI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BulletsMachineGunAttack();
                 break;

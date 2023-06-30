@@ -47,7 +47,7 @@ public class OctopusFormYellow : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "黄星人の照射式レーザー";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingenergyAttack();
                 break;

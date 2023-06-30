@@ -46,7 +46,7 @@ public class LazerMachineGunType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "レーザーマシンガン発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BulletsMachineGunAttack();
                 break;
