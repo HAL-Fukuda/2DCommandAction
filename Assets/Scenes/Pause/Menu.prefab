@@ -138,7 +138,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7654563292501486183}
         m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
-        m_MethodName: PlayPushSound
+        m_MethodName: PlayPushSoundAndDestroy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245c1ec87d71fca449123f68641510d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadetime: 0.2
 --- !u!114 &7654563292501486183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +469,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7098645424057595230}
         m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
-        m_MethodName: PlayPushSound
+        m_MethodName: PlayPushSoundAndDestroy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -710,7 +711,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7696968161988467858}
         m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
-        m_MethodName: PlayPushSound
+        m_MethodName: PlayPushSoundAndDestroy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
