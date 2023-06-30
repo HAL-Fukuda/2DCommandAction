@@ -12,6 +12,8 @@ public partial class Enemy : MonoBehaviour
     public bool initialized = false;  //ATBバーが溜まっているか
     public Transform actionBar;     //アクションバー
     public EnemyAttack attackScript;
+    public Transform attackIcon;  //アタックアイコン
+    public SpriteSwitcher spriteSwitcher;  //アタックアイコンのスクリプト
 
     public AudioClip enemySound;  //敵の音声
 
@@ -60,7 +62,9 @@ public partial class Enemy : MonoBehaviour
     {
         attackScript = GetComponent<EnemyAttack>();
         actionBar = transform.Find("ActionBar");
-        //patternCnt = 1;
+        attackIcon = transform.Find("AIcon");
+        spriteSwitcher = GetComponent<SpriteSwitcher>();
+        Debug.Log(attackIcon);
     }
 
     public int SendEnemyHp()
@@ -99,6 +103,22 @@ public partial class Enemy : MonoBehaviour
 
     public virtual void NextAttackNum()
     {
+        int attackType = 0;
+
         attackNum = Random.Range(0, 5);
+
+        switch (attackNum)
+        {
+            case 0:
+                attackType = 0;  //弱い攻撃の時
+                break;
+            case 1:
+                attackType = 1;  //強い攻撃の時
+                break;
+        }
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
+        Debug.Log(attackType);
     }
 }

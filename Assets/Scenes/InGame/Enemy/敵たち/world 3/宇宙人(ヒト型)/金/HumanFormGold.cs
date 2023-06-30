@@ -60,6 +60,21 @@ public class HumanFormGold : Enemy
 
     public override void NextAttackNum()
     {
+        int attackType = 0;
+
         attackNum = Random.Range(0, 2);
+
+        switch (attackNum)
+        {
+            case 0:
+                attackType = 0;
+                break;
+            case 1:
+                attackType = 1;
+                break;
+        }
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
     }
 }

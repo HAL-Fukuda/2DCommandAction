@@ -61,7 +61,21 @@ public class Grifin : Enemy
 
     public override void NextAttackNum()
     {
-        //attackNum = 1;
+        int attackType = 0;
+
         attackNum = Random.Range(0, 2);
+
+        switch (attackNum)
+        {
+            case 0:
+                attackType = 1;
+                break;
+            case 1:
+                attackType = 0;
+                break;
+        }
+
+        //アタックアイコンを強さによって表示
+        spriteSwitcher.SwitchSprite(attackType);
     }
 }
