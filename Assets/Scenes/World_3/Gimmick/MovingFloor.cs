@@ -47,7 +47,7 @@ public class MovingFloor : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             colliders.Add(other);
-            Debug.Log("èÊÇ¡ÇΩ");
+            //Debug.Log("èÊÇ¡ÇΩ");
         }
     }
 
@@ -57,7 +57,7 @@ public class MovingFloor : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             colliders.Remove(other);
-            Debug.Log("ç~ÇËÇΩ");
+            //Debug.Log("ç~ÇËÇΩ");
         }
     }
 
@@ -67,7 +67,7 @@ public class MovingFloor : MonoBehaviour
         if (collision.gameObject.CompareTag("Command"))
         {
             colliders.Add(collision.collider);
-            Debug.Log("ÉRÉ}ÉìÉhèÊÇ¡ÇΩ");
+            //Debug.Log("ÉRÉ}ÉìÉhèÊÇ¡ÇΩ");
         }
     }
 
@@ -77,7 +77,7 @@ public class MovingFloor : MonoBehaviour
         if (collision.gameObject.CompareTag("Command"))
         {
             colliders.Remove(collision.collider);
-            Debug.Log("ç~ÇËÇΩ");
+            //Debug.Log("ç~ÇËÇΩ");
         }
     }
 }

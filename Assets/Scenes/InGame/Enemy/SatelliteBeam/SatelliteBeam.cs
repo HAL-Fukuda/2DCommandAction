@@ -43,7 +43,7 @@ public partial class EnemyAttack : MonoBehaviour
 
         objectPosition = PlayerObject.transform.position;
 
-        Debug.Log("ポジション取得");
+        //Debug.Log("ポジション取得");
     }
 
     void premonition()
@@ -79,7 +79,7 @@ public partial class EnemyAttack : MonoBehaviour
     void SBflgTrue()
     {
         SBflg = true;
-        Debug.Log("フラグがトゥルー");
+        //Debug.Log("フラグがトゥルー");
     }
 
     public void SatelliteBeam()
