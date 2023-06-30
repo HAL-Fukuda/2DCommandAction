@@ -22,8 +22,6 @@ public class MeteorCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
-            Debug.Log("dwkodkw");
             lifeManager.GetDamage(1);
             Destroy(gameObject);
             // パーティクルシステムの再生
