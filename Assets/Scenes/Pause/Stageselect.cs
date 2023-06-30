@@ -11,6 +11,6 @@ public class Stageselect : MonoBehaviour
     {
         Time.timeScale = 1;
         FadeManager.Instance.LoadScene("StageSelect", fadetime);
-        Debug.Log("‚¨‚³‚ê‚Ü‚µ‚½");
+        //Debug.Log("‚¨‚³‚ê‚Ü‚µ‚½");
     }
 }
