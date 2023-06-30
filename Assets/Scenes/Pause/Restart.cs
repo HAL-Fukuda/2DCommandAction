@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     private Menu menu;
+    public float fadetime;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class Restart : MonoBehaviour
     {
         menu.Resume();
         // ステージをリロードする
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FadeManager.Instance.LoadScene(SceneManager.GetActiveScene().name, fadetime);
     }
 }

@@ -49,6 +49,18 @@ public class ButtonSE : MonoBehaviour
     public void PlayPushSound()
     {
         audioSource.PlayOneShot(pushSound);
-        Debug.Log("PUSH");
+    }
+
+    public void PlayPushSoundAndDestroy()
+    {
+        // SE再生用のオブジェクトを生成
+        GameObject soundObject = new GameObject("PushSoundObject");
+        AudioSource soundSource = soundObject.AddComponent<AudioSource>();
+
+        // ボタン押下SEを再生
+        soundSource.PlayOneShot(pushSound);
+
+        // 再生終了後にオブジェクトを破壊
+        Destroy(soundObject, pushSound.length);
     }
 }
