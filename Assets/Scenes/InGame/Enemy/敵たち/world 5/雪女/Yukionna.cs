@@ -48,14 +48,14 @@ public class Yukionna : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "雪女のヘイルストーム！";
-                MessageWindow.Instance.SetDebugMessage(text);
-                attackScript.ArareAttack();
-                break;
-            case 1:
                 text = "雪女のアイシクルレイ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.IceThorn();
+                break;
+            case 1:
+                text = "雪女のヘイルストーム！";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.ArareAttack();
                 break;
         }
     }
@@ -69,10 +69,10 @@ public class Yukionna : Enemy
         switch (attackNum)
         {
             case 0:
-                attackType = 1;
+                attackType = 0;
                 break;
             case 1:
-                attackType = 0;
+                attackType = 1;
                 break;
         }
 

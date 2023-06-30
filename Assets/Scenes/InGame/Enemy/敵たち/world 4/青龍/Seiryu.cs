@@ -45,14 +45,14 @@ public class Seiryu : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "Â—´‚ÌŒƒ—¬I";
-                MessageWindow.Instance.SetDebugMessage(text);
-                attackScript.TorrentAttack();
-                break;
-            case 1:
                 text = "Â—´‚Ì…•ÇI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.WofwaterAttack();
+                break;
+            case 1:
+                text = "Â—´‚ÌŒƒ—¬I";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.TorrentAttack();
                 break;
         }
     }
@@ -66,10 +66,10 @@ public class Seiryu : Enemy
         switch (attackNum)
         {
             case 0:
-                attackType = 1;
+                attackType = 0;
                 break;
             case 1:
-                attackType = 0;
+                attackType = 1;
                 break;
         }
 
