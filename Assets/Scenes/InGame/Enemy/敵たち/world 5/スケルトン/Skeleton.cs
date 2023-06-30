@@ -45,7 +45,7 @@ public class Skeleton : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "スケルトンの骸投げ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BoneThrow();
                 break;

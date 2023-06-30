@@ -46,7 +46,7 @@ public class Kamaitachi : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "かまいたちの鎌風！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.KamaitachiAttack();
                 break;

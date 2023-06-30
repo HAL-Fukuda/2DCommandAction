@@ -47,7 +47,7 @@ public class OctopusFormBlue : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "青星人の照射式レーザー";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;

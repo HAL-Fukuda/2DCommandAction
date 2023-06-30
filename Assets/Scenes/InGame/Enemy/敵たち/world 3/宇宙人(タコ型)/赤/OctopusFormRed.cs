@@ -47,7 +47,7 @@ public class OctopusFormRed : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "赤星人の追尾式レーザー弾";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingenergyAttack();
                 break;

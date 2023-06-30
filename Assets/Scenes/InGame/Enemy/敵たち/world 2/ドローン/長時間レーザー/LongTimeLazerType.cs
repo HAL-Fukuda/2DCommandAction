@@ -46,7 +46,7 @@ public class LongTimeLazerType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "照射式レーザー・改発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LongLaserIrradiation();
                 break;

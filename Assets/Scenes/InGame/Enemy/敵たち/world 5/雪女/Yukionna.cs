@@ -48,12 +48,12 @@ public class Yukionna : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "雪女のヘイルストーム！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ArareAttack();
                 break;
             case 1:
-                text = "";
+                text = "雪女のアイシクルレイ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.IceThorn();
                 break;

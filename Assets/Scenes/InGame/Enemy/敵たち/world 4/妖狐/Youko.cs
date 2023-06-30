@@ -45,7 +45,7 @@ public class Youko : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "—dŒÏ‚Ì‹S‰ÎI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FoxOnibi();
                 break;

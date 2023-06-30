@@ -46,7 +46,7 @@ public class HumanFormWhite : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "”’¯l‚Ì‰£‘Å";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.ClubBeating();
                 break;

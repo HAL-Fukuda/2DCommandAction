@@ -45,7 +45,7 @@ public class Kappa : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "‰Í“¶‚Ì…“S–CI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.WaterGunAttack();
                 break;

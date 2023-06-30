@@ -49,12 +49,12 @@ public class Robot : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "照射式レーザー発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.LaserIrradiation();
                 break;
             case 1:
-                text = "";
+                text = "ミサイル発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;

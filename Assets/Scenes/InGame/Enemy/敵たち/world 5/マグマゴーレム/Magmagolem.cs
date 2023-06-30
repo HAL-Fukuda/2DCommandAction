@@ -45,7 +45,7 @@ public class Magmagolem : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "マグマゴーレムのファイアパンチ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FirePunch();
                 break;

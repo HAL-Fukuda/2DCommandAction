@@ -45,7 +45,7 @@ public class Salamander : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "サラマンダーのインシネレート！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FloorburnAttack();
                 break;

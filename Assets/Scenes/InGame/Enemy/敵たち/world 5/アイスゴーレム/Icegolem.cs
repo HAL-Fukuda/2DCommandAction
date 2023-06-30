@@ -45,7 +45,7 @@ public class Icegolem : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "アイスゴーレムのフロストパンチ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.FirePunch();
                 break;

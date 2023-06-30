@@ -48,7 +48,7 @@ public class GoblinArcher : Enemy
         switch(attackNum)
         {
             case 0:
-                text = "ƒSƒuƒŠƒ“‚Ì‹|–î‚±‚¤‚°‚«I";
+                text = "ƒSƒuƒŠƒ“‚Ì—‚ê‚¤‚¿I";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BowAttack();
                 break;

@@ -45,7 +45,7 @@ public class Bakegasa : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "‰»‚¯P‚Ìãär‚ßI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.TongueLicking();
                 break;

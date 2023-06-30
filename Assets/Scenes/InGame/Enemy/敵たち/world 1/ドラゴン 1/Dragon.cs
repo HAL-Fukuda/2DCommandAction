@@ -50,12 +50,12 @@ public class Dragon : Enemy
                 attackScript.MeteorAttack();
                 break;
             case 1:
-                text = "ドラゴンの覇気！";
+                text = "ドラゴンのスーパーノヴァ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.InevitableAttack();
                 break;
             case 2:
-                text = "ドラゴンのひっかき！";
+                text = "ドラゴンの切り裂き！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.NailAttack();
                 break;

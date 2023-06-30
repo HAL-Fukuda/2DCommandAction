@@ -45,12 +45,12 @@ public class Seiryu : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "Â—´‚ÌŒƒ—¬I";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.TorrentAttack();
                 break;
             case 1:
-                text = "";
+                text = "Â—´‚Ì…•ÇI";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.WofwaterAttack();
                 break;

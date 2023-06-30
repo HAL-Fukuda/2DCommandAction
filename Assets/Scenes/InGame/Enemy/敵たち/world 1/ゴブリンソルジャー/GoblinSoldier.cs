@@ -45,7 +45,7 @@ public class GoblinSoldier : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "ゴブリンの切り付けこうげき！";
+                text = "ゴブリンの斬りつけ！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SlashingSword();
                 break;

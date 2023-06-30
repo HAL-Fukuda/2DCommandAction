@@ -48,7 +48,7 @@ public class HomingMissileType : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "";
+                text = "ホーミングミサイル発射！";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.HomingBombMissileAttack();
                 break;
