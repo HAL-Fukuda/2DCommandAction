@@ -39,6 +39,7 @@ public class SpriteSwitcher : MonoBehaviour
 
         // ‰æ‘œ‚ğ•ÏX
         GetComponent<SpriteRenderer>().sprite = Images[currentIdx];
+
     }
 
     public void SwitchSprite() // ˜A”Ô‚ÅØ‚è‘Ö‚¦‚é
