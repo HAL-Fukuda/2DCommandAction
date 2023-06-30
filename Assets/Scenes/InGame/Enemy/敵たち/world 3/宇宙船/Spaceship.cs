@@ -47,14 +47,14 @@ public class Spaceship : Enemy
         switch (attackNum)
         {
             case 0:
-                text = "宇宙船からの対艦式エネルギー波";
-                MessageWindow.Instance.SetDebugMessage(text);
-                attackScript.InevitableAttack();
-                break;
-            case 1:
                 text = "宇宙船からのサテライトビーム";
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.SatelliteBeam();
+                break;
+            case 1:
+                text = "宇宙船からの対艦式エネルギー波";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.InevitableAttack();
                 break;
             case 2:
                 text = "宇宙船からの追尾式ミサイル";
@@ -73,10 +73,10 @@ public class Spaceship : Enemy
         switch (attackNum)
         {
             case 0:
-                attackType = 1;
+                attackType = 0;
                 break;
             case 1:
-                attackType = 0;
+                attackType = 1;
                 break;
             case 2:
                 attackType = 1;

@@ -12,8 +12,9 @@ public partial class Enemy : MonoBehaviour
     public bool initialized = false;  //ATBバーが溜まっているか
     public Transform actionBar;     //アクションバー
     public EnemyAttack attackScript;
-    public Transform attackIcon;  //アタックアイコン
-    public SpriteSwitcher spriteSwitcher;  //アタックアイコンのスクリプト
+    public GameObject cd;  //子オブジェクト
+    public GameObject gcd;  //孫オブジェクト
+    public SpriteSwitcher spriteSwitcher;  //孫オブジェクトのスクリプト
 
     public AudioClip enemySound;  //敵の音声
 
@@ -56,15 +57,13 @@ public partial class Enemy : MonoBehaviour
     {
         EnemyInitialize();
         GetDamageInitialize();
+        GetAttackIconAndScript();
     }
 
     void EnemyInitialize()
     {
         attackScript = GetComponent<EnemyAttack>();
         actionBar = transform.Find("ActionBar");
-        attackIcon = transform.Find("AIcon");
-        spriteSwitcher = GetComponent<SpriteSwitcher>();
-        Debug.Log(attackIcon);
     }
 
     public int SendEnemyHp()
@@ -119,6 +118,16 @@ public partial class Enemy : MonoBehaviour
 
         //アタックアイコンを強さによって表示
         spriteSwitcher.SwitchSprite(attackType);
-        Debug.Log(attackType);
+    }
+
+    void GetAttackIconAndScript()
+    {
+        //子オブジェクトの取得
+        cd = transform.GetChild(2).gameObject;
+        //孫オブジェクトの取得
+        gcd = cd.GetComponent<Transform>().transform.GetChild(0).gameObject;
+
+        //孫オブジェクトのスクリプトを取得
+        spriteSwitcher = gcd.GetComponent<SpriteSwitcher>();
     }
 }

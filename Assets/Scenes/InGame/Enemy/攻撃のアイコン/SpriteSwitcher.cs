@@ -59,4 +59,9 @@ public class SpriteSwitcher : MonoBehaviour
         // ‰æ‘œ‚ğ•ÏX
         GetComponent<SpriteRenderer>().sprite = Images[currentIdx];
     }
+
+    public void DebugMode()
+    {
+        Debug.Log("SpriteSwitcher‚ªŒÄ‚Î‚ê‚½");
+    }
 }
