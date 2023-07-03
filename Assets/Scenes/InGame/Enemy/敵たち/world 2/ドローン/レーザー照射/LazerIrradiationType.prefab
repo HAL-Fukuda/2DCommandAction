@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a8637a78a91c0f4479077e50606be1d8, type: 2}
+  - {fileID: 2100000, guid: d9a7a16484cd9864fa203e81dbeb5a75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -412,7 +412,6 @@ MonoBehaviour:
   actionBar: {fileID: 0}
   attackScript: {fileID: 0}
   cd: {fileID: 0}
-  gcd: {fileID: 0}
   spriteSwitcher: {fileID: 0}
   enemySound: {fileID: 0}
   enemyType: 12
