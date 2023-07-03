@@ -13,7 +13,8 @@ public partial class Enemy : MonoBehaviour
     public Transform actionBar;     //アクションバー
     public EnemyAttack attackScript;
     public GameObject cd;  //子オブジェクト
-    public SpriteSwitcher spriteSwitcher;  //子オブジェクトのスクリプト
+    public GameObject gcd;  //孫オブジェクト
+    public ImageSwicher imageSwicher;//孫オブジェクトのスクリプト
 
     public AudioClip enemySound;  //敵の音声
 
@@ -116,7 +117,7 @@ public partial class Enemy : MonoBehaviour
         }
 
         //アタックアイコンを強さによって表示
-        spriteSwitcher.SwitchSprite(attackType);
+        imageSwicher.SwitchSprite(attackType);
     }
 
     void GetAttackIconAndScript()
@@ -124,7 +125,10 @@ public partial class Enemy : MonoBehaviour
         //子オブジェクトの取得
         cd = transform.GetChild(2).gameObject;
 
+        //孫オブジェクトの取得
+        gcd = transform.GetChild(0).gameObject;
+
         //子オブジェクトのスクリプトを取得
-        spriteSwitcher = cd.GetComponent<SpriteSwitcher>();
+        imageSwicher = gcd.GetComponent<ImageSwicher>();
     }
 }
