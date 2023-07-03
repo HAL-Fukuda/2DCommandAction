@@ -61,6 +61,6 @@ public class HumanFormGray : Enemy
         attackNum = 0;
 
         //アタックアイコンを強さによって表示
-        spriteSwitcher.SwitchSprite(attackType);
+        imageSwicher.SwitchSprite(attackType);
     }
 }
