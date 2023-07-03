@@ -553,6 +553,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589410590743777613, guid: fc4bba5486a1869418dd906da5b44f10,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589410590743777613, guid: fc4bba5486a1869418dd906da5b44f10,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589410590743777613, guid: fc4bba5486a1869418dd906da5b44f10,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 304
       objectReference: {fileID: 0}
@@ -571,6 +581,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: World1Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 6577696062942945573, guid: fc4bba5486a1869418dd906da5b44f10,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c6b0e9844785a844afdc91e938e33d8,
+        type: 3}
     - target: {fileID: 8384559104659889735, guid: fc4bba5486a1869418dd906da5b44f10,
         type: 3}
       propertyPath: m_Pivot.x
