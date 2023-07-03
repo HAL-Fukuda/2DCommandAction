@@ -76,6 +76,6 @@ public class Grifin : Enemy
         }
 
         //アタックアイコンを強さによって表示
-        spriteSwitcher.SwitchSprite(attackType);
+        imageSwicher.SwitchSprite(attackType);
     }
 }
