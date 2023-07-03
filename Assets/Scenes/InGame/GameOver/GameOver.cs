@@ -23,11 +23,15 @@ public class GameOver : MonoBehaviour
             int idx = corsor.GetComponent<CorsorController>().GetIndex();
             menuIdx = (eMenuCommand)idx;
 
+            int sceneIndex = PlayerPrefs.GetInt("preSceneIdx");
+            string sceneName = SceneIndexMapper.instance.GetSceneNameByIndex(sceneIndex);
+
             switch (menuIdx)
             {
                 case eMenuCommand.CONTINUE:
                     // 同じステージを再開
-                    SceneManager.LoadScene(PlayerPrefs.GetInt("preSceneIdx"));
+                    FadeManager.Instance.LoadScene(sceneName, fadetime);
+                    //SceneManager.LoadScene(PlayerPrefs.GetInt("preSceneIdx"));
                     break;
                 case eMenuCommand.STAGESELECT:
                     // ステージセレクト画面へ
