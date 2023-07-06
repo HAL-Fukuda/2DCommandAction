@@ -126,7 +126,7 @@ public partial class Enemy : MonoBehaviour
         cd = transform.GetChild(2).gameObject;
 
         //孫オブジェクトの取得
-        gcd = transform.GetChild(0).gameObject;
+        gcd = cd.transform.GetChild(0).gameObject;
 
         //子オブジェクトのスクリプトを取得
         imageSwicher = gcd.GetComponent<ImageSwicher>();
