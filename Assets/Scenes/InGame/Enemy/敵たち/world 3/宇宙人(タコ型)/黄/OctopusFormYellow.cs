@@ -28,7 +28,7 @@ public class OctopusFormYellow : Enemy
         // ゲージがたまったら
         if (actionBar.GetComponent<ActionBarControl>().IsReady() && initialized == false)
         {
-            attackScript.HomingenergyInitialize();
+            attackScript.LaserIrradiationInitialize();
             initialized = true;
         }
     }
@@ -49,7 +49,7 @@ public class OctopusFormYellow : Enemy
             case 0:
                 text = "黄星人の照射式レーザー";
                 MessageWindow.Instance.SetDebugMessage(text);
-                attackScript.HomingenergyAttack();
+                attackScript.LaserIrradiation();
                 break;
         }
     }
