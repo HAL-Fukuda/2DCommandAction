@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public float fadetime;
     public GameObject corsor;
+    public AudioClip selectSE;
 
     private enum eMenuCommand
     {
@@ -30,11 +31,13 @@ public class GameOver : MonoBehaviour
             {
                 case eMenuCommand.CONTINUE:
                     // 同じステージを再開
+                    AudioSource.PlayClipAtPoint(selectSE, new Vector3(0, 2, -10));
                     FadeManager.Instance.LoadScene(sceneName, fadetime);
                     //SceneManager.LoadScene(PlayerPrefs.GetInt("preSceneIdx"));
                     break;
                 case eMenuCommand.STAGESELECT:
                     // ステージセレクト画面へ
+                    AudioSource.PlayClipAtPoint(selectSE, new Vector3(0, 2, -10));
                     FadeManager.Instance.LoadScene("StageSelect", fadetime);
                     //SceneManager.LoadScene("StageSelect");
                     break;

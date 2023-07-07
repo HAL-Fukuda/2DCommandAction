@@ -89,3 +89,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a940266d7400aa4e998f13046751bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSE: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}

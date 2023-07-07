@@ -320,7 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a52a864d8649cd4d94c6f3689a731cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadetime: 0
   corsor: {fileID: 7824841173844742422}
+  selectSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &6222859180681860469
 GameObject:
   m_ObjectHideFlags: 0

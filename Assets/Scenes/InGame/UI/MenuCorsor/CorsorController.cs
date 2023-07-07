@@ -10,6 +10,8 @@ public class CorsorController : MonoBehaviour
     private int index = 0;
     private int maxIndex;
 
+    public AudioClip moveSE;
+
     void Awake()
     {
         // •Ï”‰Šú‰»
@@ -39,10 +41,12 @@ public class CorsorController : MonoBehaviour
         // ƒL[‚ª‰Ÿ‚³‚ê‚é‚ÆŸ‚ÌÀ•W‚ÉˆÚ“®
         if (Input.GetKeyDown(KeyCode.W) || (Axis < 0 && beforeAxis == 0.0f))
         {
+            PlayMoveSE();
             NextIndex();
         }
         if (Input.GetKeyDown(KeyCode.S) || (Axis > 0 && beforeAxis == 0.0f))
         {
+            PlayMoveSE();
             BackIndex();
         }
 
@@ -68,6 +72,11 @@ public class CorsorController : MonoBehaviour
             index = maxIndex - 1;
         }
         transform.position = children[index];
+    }
+
+    void PlayMoveSE()
+    {
+        AudioSource.PlayClipAtPoint(moveSE, new Vector3(0, 2, -10));
     }
 
     public int GetIndex()
