@@ -7,6 +7,7 @@ public class StageClear : MonoBehaviour
 {
     public float fadetime;
     public GameObject corsor;
+    public AudioClip selectSE;
 
     private enum eMenuCommand
     {
@@ -29,10 +30,13 @@ public class StageClear : MonoBehaviour
                     // 次のステージへ
                     int sceneIdx = PlayerPrefs.GetInt("preSceneIdx");
                     sceneIdx++;
-                    SceneManager.LoadScene(sceneIdx);
+                    string sceneName = SceneIndexMapper.instance.GetSceneNameByIndex(sceneIdx);
+                    AudioSource.PlayClipAtPoint(selectSE, new Vector3(0, 2, -10));
+                    FadeManager.Instance.LoadScene(sceneName, fadetime);
                     break;
                 case eMenuCommand.STAGESELECT:
                     // ステージセレクト画面へ
+                    AudioSource.PlayClipAtPoint(selectSE, new Vector3(0, 2, -10));
                     FadeManager.Instance.LoadScene("StageSelect", fadetime);
                     break;
             }
