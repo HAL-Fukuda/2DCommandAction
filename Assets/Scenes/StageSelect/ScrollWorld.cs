@@ -22,6 +22,7 @@ public class ScrollWorld : MonoBehaviour
     private GameObject[] worldObject = new GameObject[5];
 
     public float fadetime;
+    public AudioClip selectSE;
 
     public void moveLeft()
     {
@@ -57,6 +58,10 @@ public class ScrollWorld : MonoBehaviour
         return IsScroll;
     }
 
+    public void SelectSoundEffect()
+    {
+        AudioSource.PlayClipAtPoint(selectSE, new Vector3(0, 2, -10));
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +86,7 @@ public class ScrollWorld : MonoBehaviour
         {
             if (NowC > 0 && IsScroll == false)
             {
+                SelectSoundEffect();
                 IsScroll = true;
                 NowL -= 1;
                 NowC -= 1;
@@ -95,6 +101,7 @@ public class ScrollWorld : MonoBehaviour
         {
             if (NowC < 4 && IsScroll == false)
             {
+                SelectSoundEffect();
                 IsScroll = true;
                 NowL += 1;
                 NowC += 1;

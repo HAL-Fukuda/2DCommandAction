@@ -854,6 +854,7 @@ MonoBehaviour:
   stageselectButton: {fileID: 7300353591525820129}
   pauseScript: {fileID: 0}
   player: {fileID: 0}
+  startSE: {fileID: 8300000, guid: 2932528e962c4ad40b401309bccb2d4e, type: 3}
 --- !u!1 &7300353592715680868
 GameObject:
   m_ObjectHideFlags: 0
