@@ -535,6 +535,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: World1Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 7429188970551818852, guid: 0dc321bf1eaa63c449041a89ea5b4444,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27f046221fe1ddb4f94248f06b633b64,
+        type: 3}
     - target: {fileID: 7863129633417985527, guid: 0dc321bf1eaa63c449041a89ea5b4444,
         type: 3}
       propertyPath: m_Pivot.x
