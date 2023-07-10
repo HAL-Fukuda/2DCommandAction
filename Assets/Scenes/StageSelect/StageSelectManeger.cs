@@ -8,20 +8,13 @@ using UnityEngine.EventSystems;
 public class StageSelectManeger : MonoBehaviour
 {
     public float fadetime;
+    public AudioClip callSE;
 
     public void StageSelect(string stage)
     {
+        //AudioSource.PlayClipAtPoint(callSE, new Vector3(0, 2, -10));
         // ステージ名入力
         FadeManager.Instance.LoadScene(stage, fadetime);
         //SceneManager.LoadScene(stage);
     }
-
-    private void Update()
-    {
-        if ((Input.GetKeyUp(KeyCode.Escape)) || (Input.GetButtonUp("B")))
-        {
-            //FadeManager.Instance.LoadScene("StageSelect", fadetime);
-        }
-    }
-
 }

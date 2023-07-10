@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
 
     public Pause pauseScript;
     public GameObject player;
+    public AudioClip startSE;
     private bool pauseNow;
     //public PlayerManager playerManager;
 
@@ -25,6 +26,7 @@ public class Menu : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetButtonDown("pause"))) && (pauseNow == false))
         {
+            AudioSource.PlayClipAtPoint(startSE, new Vector3(0, 2, -10));
             Pause();
             pauseScript.InitializePause();
         }

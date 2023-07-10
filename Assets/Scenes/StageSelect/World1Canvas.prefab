@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6484712260767660148}
   - component: {fileID: 839450817007023690}
   - component: {fileID: 2401484731955886949}
+  - component: {fileID: 7377652290047733729}
   m_Layer: 5
   m_Name: tutorial
   m_TagString: Untagged
@@ -135,6 +136,18 @@ MonoBehaviour:
           m_StringArgument: 1-5
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7377652290047733729}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &839450817007023690
 Animator:
   serializedVersion: 5
@@ -168,6 +181,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &7377652290047733729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848626927822111754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &1810706661664966446
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +210,7 @@ GameObject:
   - component: {fileID: 8030135042074177173}
   - component: {fileID: 142286355267190435}
   - component: {fileID: 8030135042074177172}
+  - component: {fileID: 4095941952570707832}
   m_Layer: 5
   m_Name: 1-1
   m_TagString: Untagged
@@ -303,6 +332,18 @@ MonoBehaviour:
           m_StringArgument: 1-1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4095941952570707832}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &142286355267190435
 Animator:
   serializedVersion: 5
@@ -336,6 +377,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &4095941952570707832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810706661664966446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &2144715332554988547
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &2889853284206046554
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +497,7 @@ GameObject:
   - component: {fileID: 3890749985652088705}
   - component: {fileID: 795350834301980326}
   - component: {fileID: 4802520281212477114}
+  - component: {fileID: 181040249199531807}
   m_Layer: 5
   m_Name: 1-2
   m_TagString: Untagged
@@ -561,6 +619,18 @@ MonoBehaviour:
           m_StringArgument: 1-2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 181040249199531807}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &795350834301980326
 Animator:
   serializedVersion: 5
@@ -594,6 +664,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &181040249199531807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889853284206046554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &3502847548131971547
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +693,7 @@ GameObject:
   - component: {fileID: 3502847548131971543}
   - component: {fileID: 3502847548131971545}
   - component: {fileID: 3502847548131971540}
+  - component: {fileID: 1999134597146925730}
   m_Layer: 5
   m_Name: 1-4
   m_TagString: Untagged
@@ -729,6 +815,18 @@ MonoBehaviour:
           m_StringArgument: 1-4
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1999134597146925730}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &3502847548131971545
 Animator:
   serializedVersion: 5
@@ -762,6 +860,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &1999134597146925730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502847548131971547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &3502847548165162171
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +889,7 @@ GameObject:
   - component: {fileID: 3502847548165162167}
   - component: {fileID: 3502847548165162169}
   - component: {fileID: 4566029462901808954}
+  - component: {fileID: 19634107518254600}
   m_Layer: 5
   m_Name: 1-5
   m_TagString: Untagged
@@ -897,6 +1011,18 @@ MonoBehaviour:
           m_StringArgument: 1-5
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 19634107518254600}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &3502847548165162169
 Animator:
   serializedVersion: 5
@@ -930,6 +1056,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &19634107518254600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502847548165162171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &3504307531543973125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1193,7 @@ GameObject:
   - component: {fileID: 5952122809334500566}
   - component: {fileID: 4465607222996255491}
   - component: {fileID: 5952122809334500565}
+  - component: {fileID: 6385710173054897499}
   m_Layer: 5
   m_Name: 1-3
   m_TagString: Untagged
@@ -1173,6 +1315,18 @@ MonoBehaviour:
           m_StringArgument: 1-3
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6385710173054897499}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlayPushSoundAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &4465607222996255491
 Animator:
   serializedVersion: 5
@@ -1206,6 +1360,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
+--- !u!114 &6385710173054897499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382306824408472154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6342ba58c0d52eb46943ad13f422dac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSound: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  pushSound: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &8963580297528725233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,3 +1465,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}

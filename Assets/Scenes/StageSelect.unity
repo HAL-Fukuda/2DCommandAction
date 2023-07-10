@@ -646,6 +646,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 0
+  callSE: {fileID: 0}
 --- !u!95 &632709449
 Animator:
   serializedVersion: 5
@@ -961,6 +962,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &674765376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1624,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &1137579640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1813,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &1248842593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,6 +2119,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 0
+  callSE: {fileID: 0}
 --- !u!95 &1527746965
 Animator:
   serializedVersion: 5
@@ -2430,6 +2435,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &1656219037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,6 +2493,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 0
+  callSE: {fileID: 0}
 --- !u!95 &1656219040
 Animator:
   serializedVersion: 5
@@ -2740,6 +2747,7 @@ MonoBehaviour:
   world4: {fileID: 2010058426}
   world5: {fileID: 1592117693}
   fadetime: 1
+  selectSE: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
 --- !u!1 &1896253551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2805,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 0
+  callSE: {fileID: 0}
 --- !u!95 &1896253554
 Animator:
   serializedVersion: 5
@@ -3189,6 +3198,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 1
+  callSE: {fileID: 8300000, guid: 00562f68f251b3a4294cad7351da867f, type: 3}
 --- !u!1 &2018088185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,6 +3256,7 @@ MonoBehaviour:
   StageCanvas: {fileID: 0}
   FirstSelect: {fileID: 0}
   fadetime: 0
+  callSE: {fileID: 0}
 --- !u!95 &2018088188
 Animator:
   serializedVersion: 5

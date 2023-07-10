@@ -16,8 +16,7 @@ public class WorldSelectManager : MonoBehaviour
     private bool CanPush = false;
 
     public float fadetime;
-
-    //private GameObject eventSystem;
+    public AudioClip callSE;
 
     private void Start()
     {
@@ -31,18 +30,9 @@ public class WorldSelectManager : MonoBehaviour
 
     public void WorldSelecting(string world)
     {
+        AudioSource.PlayClipAtPoint(callSE, new Vector3(0, 2, -10));
         // ÉèÅ[ÉãÉhñºì¸óÕ
         FadeManager.Instance.LoadScene(world, fadetime);
         //SceneManager.LoadScene(world);
     }
-
-    //public void WorldSelecting()
-    //{
-    //    if (scrollWorld.IsScrollWhich() == false)
-    //    {
-    //        StageCanvas.SetActive(true);
-    //        EventSystem.current.SetSelectedGameObject(FirstSelect);
-    //        WorldCanvas.SetActive(false);
-    //    }
-    //}
 }
