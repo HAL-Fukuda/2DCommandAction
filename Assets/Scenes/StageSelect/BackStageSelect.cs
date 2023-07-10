@@ -20,7 +20,12 @@ public class BackStageSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((Input.GetKeyUp(KeyCode.Escape))||(Input.GetKeyUp(KeyCode.Return))||(Input.GetKeyUp(KeyCode.Space)))
+        //if((Input.GetKeyUp(KeyCode.Escape))||(Input.GetKeyUp(KeyCode.Return))||(Input.GetKeyUp(KeyCode.Space)))
+        //{
+        //    BackToStageSelect();
+        //}
+
+        if(Input.anyKey)
         {
             BackToStageSelect();
         }
