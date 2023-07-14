@@ -31,6 +31,7 @@ public class Robot : Enemy
         {
             attackScript.BombMissileInitialize();
             attackScript.LaserIrradiationInitialize();
+            attackScript.SideMissileInitialize();
             initialized = true;
         }
     }
@@ -58,6 +59,11 @@ public class Robot : Enemy
                 MessageWindow.Instance.SetDebugMessage(text);
                 attackScript.BombMissileAttack();
                 break;
+            case 2:
+                text = "ミサイル連射！";
+                MessageWindow.Instance.SetDebugMessage(text);
+                attackScript.SideMissileAttack();
+                break;
         }
     }
 
@@ -65,7 +71,8 @@ public class Robot : Enemy
     {
         int attackType = 0;
 
-        attackNum = Random.Range(0, 2);
+        attackNum = 2;
+        //attackNum = Random.Range(0, 2);
 
         switch (attackNum)
         {
@@ -73,6 +80,9 @@ public class Robot : Enemy
                 attackType = 0;
                 break;
             case 1:
+                attackType = 1;
+                break;
+            case 2:
                 attackType = 1;
                 break;
         }
