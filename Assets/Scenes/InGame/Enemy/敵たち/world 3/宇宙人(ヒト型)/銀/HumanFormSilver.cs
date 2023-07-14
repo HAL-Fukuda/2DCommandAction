@@ -49,7 +49,7 @@ public class HumanFormSilver : Enemy
             case 0:
                 text = "銀星人の照射式レーザー";
                 MessageWindow.Instance.SetDebugMessage(text);
-                attackScript.LaserIrradiation();
+                attackScript.LongLaserIrradiation();
                 break;
         }
     }

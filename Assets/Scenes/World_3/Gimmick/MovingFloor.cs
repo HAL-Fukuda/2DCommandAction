@@ -9,14 +9,25 @@ public class MovingFloor : MonoBehaviour
 
     private Vector3 originalPosition; // 床の初期位置
     private Vector3 targetPosition; // 床の目標位置
-    private int direction = 1; // 移動方向（1:右、-1:左）
+    public int direction = 1; // 移動方向（1:右、-1:左）
 
     private List<Collider2D> colliders = new List<Collider2D>(); // 床の上に乗っているオブジェクトのリスト
+
+    private GameObject checkAreaL;  //
+    private GameObject checkAreaR;  //
+    private CheckAreaL checkAreaLCS;  //
+    private CheckAreaR checkAreaRCS;  //
 
     private void Start()
     {
         originalPosition = transform.position;
         targetPosition = originalPosition + new Vector3(distance * direction, 0f, 0f);
+
+        //
+        checkAreaL = transform.GetChild(0).gameObject;
+        checkAreaR = transform.GetChild(1).gameObject;
+        checkAreaLCS = checkAreaL.GetComponent<CheckAreaL>();
+        checkAreaRCS = checkAreaR.GetComponent<CheckAreaR>();
     }
 
     private void FixedUpdate()
@@ -43,6 +54,16 @@ public class MovingFloor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //
+        //if (checkAreaLCS.frontFlagL == true && checkAreaRCS.frontFlagR == false)
+        //{
+        //    // 床の上にオブジェクトが乗ったときにリストに追加する
+        //    if (other.gameObject.CompareTag("Player"))
+        //    {
+        //        colliders.Add(other);
+        //        //Debug.Log("乗った");
+        //    }
+        //}
         // 床の上にオブジェクトが乗ったときにリストに追加する
         if (other.gameObject.CompareTag("Player"))
         {
