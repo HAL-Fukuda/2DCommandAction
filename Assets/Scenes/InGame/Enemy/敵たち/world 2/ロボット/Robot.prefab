@@ -297,6 +297,15 @@ MonoBehaviour:
     spawnInterval: 0
     life: 0
     timer: 0
+  sideMissileAttackSettings:
+    prefab: {fileID: 8242108713843469629, guid: 88a9bb883b5f75f49822757404ec6267,
+      type: 3}
+    spawnInterval: 0.1
+    maxSpawnValue: 8
+    direction: 0
+    spawnValue: 0
+    timer: 0
+    spawnPosition: {x: 0, y: 0, z: 0}
   SideVanishAttackSettings:
     prefab: {fileID: 0}
     spawnInterval: 0
