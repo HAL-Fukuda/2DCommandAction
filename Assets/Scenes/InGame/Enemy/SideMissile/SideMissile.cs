@@ -32,7 +32,7 @@ public class SideMissile : MonoBehaviour
 
         // 発射方向に合わせて回転
         Vector3 rot = Vector3.zero;
-        if(direction == eDirection.left)
+        if (direction == eDirection.left)
         {
             rot.z = 180;
         }
@@ -59,21 +59,11 @@ public class SideMissile : MonoBehaviour
 
         if (timer >= lifeTime)
         {
-            // tweenを強制終了させる
-            tweener.Kill();
-
-            // 爆発エフェクト生成
-            Instantiate(explosionPrefab, this.transform);
-
-            // ミサイルを透明にする
-            spriteRenderer = this.GetComponent<SpriteRenderer>();
-            Color spriteColor = spriteRenderer.color;
-            spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
-            spriteRenderer.color = spriteColor;
-
-            // オブジェクトを削除する
-            Invoke("DestroyObject", 0.2f);
+            // 生存時間が切れると爆発
+            Explosion();
         }
+
+        // 何かにぶつかると爆発
     }
 
     // 発射
@@ -87,9 +77,40 @@ public class SideMissile : MonoBehaviour
         tweener = this.transform.DOLocalMove(objectTransform.right * 50f, speed).SetRelative(true);
     }
 
+    void Explosion()
+    {
+        // tweenを強制終了させる
+        if (tweener != null)
+        {
+            tweener.Kill();
+        }
+
+        // 爆発エフェクト生成
+        Instantiate(explosionPrefab, this.transform);
+
+        // ミサイルを透明にする
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        Color spriteColor = spriteRenderer.color;
+        spriteColor.a = 0f; // アルファ値を0に設定（完全に透明）
+        spriteRenderer.color = spriteColor;
+
+        // オブジェクトを削除する
+        Invoke("DestroyObject", 0.2f);
+    }
+
     // 1秒後にオブジェクトを削除する関数
     void DestroyObject()
     {
         Destroy(this.gameObject);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // 何かにぶつかったら爆発
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Command") || other.gameObject.CompareTag("Platform"))
+        {
+            Explosion();
+        }
     }
 }
