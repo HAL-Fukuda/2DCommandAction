@@ -10,30 +10,19 @@ public class MovingFloor : MonoBehaviour
     private Vector3 originalPosition; // 床の初期位置
     private Vector3 targetPosition; // 床の目標位置
     public int direction = 1; // 移動方向（1:右、-1:左）
-
-    private List<Collider2D> colliders = new List<Collider2D>(); // 床の上に乗っているオブジェクトのリスト
-
-    private GameObject checkAreaL;  //
-    private GameObject checkAreaR;  //
-    private CheckAreaL checkAreaLCS;  //
-    private CheckAreaR checkAreaRCS;  //
+    public Vector3 moveVal;
 
     private void Start()
     {
         originalPosition = transform.position;
         targetPosition = originalPosition + new Vector3(distance * direction, 0f, 0f);
-
-        //
-        checkAreaL = transform.GetChild(0).gameObject;
-        checkAreaR = transform.GetChild(1).gameObject;
-        checkAreaLCS = checkAreaL.GetComponent<CheckAreaL>();
-        checkAreaRCS = checkAreaR.GetComponent<CheckAreaR>();
     }
 
     private void FixedUpdate()
     {
         // 床を移動する
-        transform.position += new Vector3(speed * Time.fixedDeltaTime * direction, 0f, 0f);
+        moveVal= new Vector3(speed * Time.fixedDeltaTime * direction, 0f, 0f);
+        transform.position += moveVal;
 
         // 目標位置に到達したら移動方向を反転する
         if ((transform.position - targetPosition).sqrMagnitude < 0.001f)
@@ -42,63 +31,13 @@ public class MovingFloor : MonoBehaviour
             targetPosition = originalPosition + new Vector3(distance * direction, 0f, 0f);
         }
 
-        // 床の上に乗っているオブジェクトを移動させる
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider != null && collider.gameObject != null)
-            {
-                collider.gameObject.transform.position += new Vector3(speed * Time.fixedDeltaTime * direction, 0f, 0f);
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //
-        //if (checkAreaLCS.frontFlagL == true && checkAreaRCS.frontFlagR == false)
+        //// 床の上に乗っているオブジェクトを移動させる
+        //foreach (Collider2D collider in colliders)
         //{
-        //    // 床の上にオブジェクトが乗ったときにリストに追加する
-        //    if (other.gameObject.CompareTag("Player"))
+        //    if (collider != null && collider.gameObject != null)
         //    {
-        //        colliders.Add(other);
-        //        //Debug.Log("乗った");
+        //        collider.gameObject.transform.position += new Vector3(speed * Time.fixedDeltaTime * direction, 0f, 0f);
         //    }
         //}
-        // 床の上にオブジェクトが乗ったときにリストに追加する
-        if (other.gameObject.CompareTag("Player"))
-        {
-            colliders.Add(other);
-            //Debug.Log("乗った");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        // 床からオブジェクトが離れたときにリストから削除する
-        if (other.gameObject.CompareTag("Player"))
-        {
-            colliders.Remove(other);
-            //Debug.Log("降りた");
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // 床の上にオブジェクトが乗ったときにリストに追加する
-        if (collision.gameObject.CompareTag("Command"))
-        {
-            colliders.Add(collision.collider);
-            //Debug.Log("コマンド乗った");
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // 床からオブジェクトが離れたときにリストから削除する
-        if (collision.gameObject.CompareTag("Command"))
-        {
-            colliders.Remove(collision.collider);
-            //Debug.Log("降りた");
-        }
     }
 }
