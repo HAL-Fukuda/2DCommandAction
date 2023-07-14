@@ -2748,6 +2748,7 @@ MonoBehaviour:
   world5: {fileID: 1592117693}
   fadetime: 1
   selectSE: {fileID: 8300000, guid: 71c15bf88c1b742488f5e5900a1fd53e, type: 3}
+  firstSelectedObject: {fileID: 643117827}
 --- !u!1 &1896253551
 GameObject:
   m_ObjectHideFlags: 0
