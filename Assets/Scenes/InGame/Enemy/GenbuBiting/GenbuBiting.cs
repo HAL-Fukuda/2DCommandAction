@@ -39,6 +39,8 @@ public partial class EnemyAttack : MonoBehaviour
 
     void GBitingTooth()
     {
+        GBobjUpper.GetComponent<WBCollision>().BitingSoundPlay();
+
         GBobjUpper.transform.DOMove(new Vector3(GBUpperPosition.x, GBUpperPosition.y - 2, 0), 0.2f);
         GBobjUnder.transform.DOMove(new Vector3(GBUnderPosition.x, GBUnderPosition.y + 2, 0), 0.2f);
 

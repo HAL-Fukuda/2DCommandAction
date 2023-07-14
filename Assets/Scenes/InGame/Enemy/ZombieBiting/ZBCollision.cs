@@ -8,6 +8,10 @@ public class ZBCollision : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
+    private AudioSource audioSource;
+    public AudioClip BitingSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,9 @@ public class ZBCollision : MonoBehaviour
 
         // Box Collider 2D コンポーネントの参照を取得する
         boxCollider = this.GetComponent<BoxCollider2D>();
+
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
 
         Invoke("objDestroy", 4.0f); // 保険で4秒後に消えてもらう
 
@@ -35,6 +42,11 @@ public class ZBCollision : MonoBehaviour
         boxCollider.enabled = enabled;
     }
 
+    public void BitingSoundPlay()
+    {
+        audioSource.PlayOneShot(BitingSound);  // サウンドを鳴らす
+        Debug.Log("サウンド出てほしい");
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

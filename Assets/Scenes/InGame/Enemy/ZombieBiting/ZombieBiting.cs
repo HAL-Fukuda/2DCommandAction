@@ -39,6 +39,8 @@ public partial class EnemyAttack : MonoBehaviour
 
     void ZombieBitingTooth()
     {
+        ZBobjUpper.GetComponent<ZBCollision>().BitingSoundPlay();
+
         ZBobjUpper.transform.DOMove(new Vector3(ZBUpperPosition.x, ZBUpperPosition.y - 2.5f, 0), 1.0f);
         ZBobjUnder.transform.DOMove(new Vector3(ZBUnderPosition.x, ZBUnderPosition.y + 2, 0), 1.0f);
 

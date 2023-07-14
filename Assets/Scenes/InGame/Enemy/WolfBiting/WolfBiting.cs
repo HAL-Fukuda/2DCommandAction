@@ -39,6 +39,8 @@ public partial class EnemyAttack : MonoBehaviour
 
     void BitingTooth()
     {
+        WBobjUpper.GetComponent<WBCollision>().BitingSoundPlay();
+
         WBobjUpper.transform.DOMove(new Vector3(WBUpperPosition.x, WBUpperPosition.y - 2, 0), 0.2f);
         WBobjUnder.transform.DOMove(new Vector3(WBUnderPosition.x, WBUnderPosition.y + 2, 0), 0.2f);
 
@@ -65,7 +67,6 @@ public partial class EnemyAttack : MonoBehaviour
 
         if (WBflg)
         {
-
             GetPlayerPositionToWB();
 
             spawnPos = new Vector3(WBUpperPosition.x, WBUpperPosition.y, 0.0f);
