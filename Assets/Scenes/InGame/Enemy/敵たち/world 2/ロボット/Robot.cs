@@ -71,8 +71,8 @@ public class Robot : Enemy
     {
         int attackType = 0;
 
-        attackNum = 2;
-        //attackNum = Random.Range(0, 2);
+        //attackNum = 2;
+        attackNum = Random.Range(0, 2);
 
         switch (attackNum)
         {
