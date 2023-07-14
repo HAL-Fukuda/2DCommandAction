@@ -6,7 +6,11 @@ public class WBCollision : MonoBehaviour
 {
     private LifeManager lifeManager;
 
+    public AudioClip BitingSound;
+
     private BoxCollider2D boxCollider;
+
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,9 @@ public class WBCollision : MonoBehaviour
         // Box Collider 2D コンポーネントの参照を取得する
         boxCollider = this.GetComponent<BoxCollider2D>();
 
+        //Componentを取得
+        audioSource = GetComponent<AudioSource>();
+
         Invoke("objDestroy", 3.5f); // 保険で3.5秒後に消えてもらう
     }
 
@@ -32,6 +39,12 @@ public class WBCollision : MonoBehaviour
     {
         // Box Collider 2D コンポーネントの enabled プロパティを設定する
         boxCollider.enabled = enabled;
+    }
+
+    public void BitingSoundPlay()
+    {
+        audioSource.PlayOneShot(BitingSound);  // サウンドを鳴らす
+        //Debug.Log("サウンド出てほしい");
     }
 
 

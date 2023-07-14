@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66f761564caea84f8413b17146813f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BitingSound: {fileID: 8300000, guid: ae1cb86f8bd4b6648806d47c00461d03, type: 3}
