@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 789482836357339922}
   - component: {fileID: 942395228756306093}
   - component: {fileID: 2213285377094167908}
+  - component: {fileID: 8238960386274111961}
   m_Layer: 0
   m_Name: SideMissile
   m_TagString: Untagged
@@ -104,3 +105,17 @@ MonoBehaviour:
     type: 3}
   windSE: {fileID: 8300000, guid: 1415389aab9245c448c0415c4977c3e3, type: 3}
   spawnSE: {fileID: 8300000, guid: 25b6fb093e2d6934fa98e243a88d828a, type: 3}
+--- !u!114 &8238960386274111961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242108713843469629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0014eecce69bb4aab114bff77437df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneceHit: 1
+  damage: 1
