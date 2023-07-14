@@ -7,7 +7,6 @@ public class KnockCollider : MonoBehaviour
     private LifeManager lifeManager;
     private PlayerManager playerManager;
     public AudioClip BeatingSound;
-    private AudioSource audioSource;
 
     private void Start()
     {
@@ -16,8 +15,6 @@ public class KnockCollider : MonoBehaviour
 
         GameObject playerManagerObject = GameObject.Find("Player");
         playerManager = playerManagerObject.GetComponent<PlayerManager>();
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,11 +27,11 @@ public class KnockCollider : MonoBehaviour
                 playerManager.Throw();
             }
             //Debug.Log("1damage");
-            audioSource.PlayOneShot(BeatingSound);  // ƒTƒEƒ“ƒh‚ð–Â‚ç‚·
+            AudioSource.PlayClipAtPoint(BeatingSound, new Vector3(0, 2, -10));
         }
         else
         {
-            audioSource.PlayOneShot(BeatingSound);
+            AudioSource.PlayClipAtPoint(BeatingSound, new Vector3(0, 2, -10));
         }
 
     }
