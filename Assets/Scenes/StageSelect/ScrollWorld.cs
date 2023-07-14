@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class ScrollWorld : MonoBehaviour
@@ -24,6 +25,8 @@ public class ScrollWorld : MonoBehaviour
     public float fadetime;
     public AudioClip selectSE;
 
+
+    public GameObject firstSelectedObject;
     public void moveLeft()
     {
         if (NowL != -1)
@@ -75,6 +78,8 @@ public class ScrollWorld : MonoBehaviour
         NowL = -1;
         NowC = 0;
         NowR = 1;
+
+        EventSystem.current.SetSelectedGameObject(firstSelectedObject);
     }
 
     // Update is called once per frame
